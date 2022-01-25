@@ -1,0 +1,294 @@
+<type access-modifier="private" name="ChangePassComplexity" display-name="CreateGroup_1" uuid="4abb6432-13a9-4d96-8709-c7744af44bd3" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="200" ver="2"/>
+	<designed target="Height" value="130" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="200" ver="2"/>
+	<designed target="WindowHeight" value="130" ver="2"/>
+	<designed target="WindowCaption" value="Сложность пароля" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="be91eccd-a68c-4e1e-b5d0-ad82c5c61a55" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="28" ver="2"/>
+		<designed target="Y" value="95" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="62" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Изменить" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[temp_value: uint4 = 0;
+if (Checkbox_1.State == true)
+{
+temp_value = temp_value|1;
+}
+if (Checkbox_2.State == true)
+{
+temp_value = temp_value|2;
+}
+if (Checkbox_3.State == true)
+{
+temp_value = temp_value|4;
+}
+if (Checkbox_4.State == true)
+{
+temp_value = temp_value|8;
+}
+
+if (!Button_1.choiseParam)
+{
+	WriteNewComplexityGroup(Button_1.param_AppID,Button_1.param_ID,Str.ToString(temp_value),"");
+}
+else
+{	
+	WriteNewComplexityUser(Button_1.param_AppID,Button_1.param_ID,Str.ToString(temp_value),"");
+}
+
+unit.SecurityParams.needSave = true;
+Action_Close.Invoke();]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="param_AppID" display-name="param_AppID" uuid="7fc5183a-b65f-48ce-83fa-7b2fc36278aa" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+		<object access-modifier="private" name="param_ID" display-name="param_ID" uuid="93e3405c-4c95-4f64-994e-3fb5101f176c" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+		<object access-modifier="private" name="param_CurValue" display-name="param_CurValue" uuid="2374135a-3e9b-42d2-a3c0-08bbb88f764f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="2"/>
+		<init target="param_AppID" ver="2" ref="init_AppID"/>
+		<init target="param_ID" ver="2" ref="init_tokenID "/>
+		<init target="param_CurValue" ver="2" ref="init_param_CurValue"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<object access-modifier="private" name="choiseParam" display-name="choiseParam" uuid="46dd13b0-610b-43ba-9aaa-f3f7de63c1f5" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+		<init target="choiseParam" ver="2" ref="init_false(Group)true(user)"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="624b9a4c-1497-4cbc-a005-7b4d5e660e94" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="113.35" ver="2"/>
+		<designed target="Y" value="95" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="62" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="Action_Close" display-name="Action_Close" uuid="7d7cebf5-26bb-4a4e-abed-a3c38708b2a3" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="Checkbox_1" display-name="Checkbox_1" uuid="560ea2c6-cd00-4234-b1b1-7d162404f40b" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="18" ver="2"/>
+		<designed target="Y" value="11" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="70" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Цифры" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<init target="State" ver="2" value="false"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Checkbox_2" display-name="Checkbox_2" uuid="79d3f7fe-cb6d-4ced-9a96-362a6ded039e" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="18" ver="2"/>
+		<designed target="Y" value="31" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="157" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Буквы нижнего регистра" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<init target="State" ver="2" value="false"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Checkbox_3" display-name="Checkbox_3" uuid="f8263af2-44c0-4067-8f5e-28ed480765ae" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="18" ver="2"/>
+		<designed target="Y" value="51" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="157" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Буквы верхнего регистра" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Checkbox_4" display-name="Checkbox_4" uuid="e58fc4d8-9ff3-4c61-8ba9-59abf327bad5" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="18" ver="2"/>
+		<designed target="Y" value="71" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="157" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Специальные символы" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<init target="State" ver="2" value="false"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="2fa0e4f4-fd49-47c5-bfd1-9713ca2c8453" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<param access-modifier="private" name="init_param_CurValue" display-name="init_param_CurValue" uuid="344b6dd4-6097-4df8-8974-8725eb6e726f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[if ((Button_1.param_CurValue&1)==1)// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы
+{		
+	Checkbox_1.State=true;
+}
+if ((Button_1.param_CurValue&2)==2)
+{		
+	Checkbox_2.State=true;
+}
+if ((Button_1.param_CurValue&4)==4)
+{		
+	Checkbox_3.State=true;
+}
+if ((Button_1.param_CurValue&8)==8)
+{		
+	Checkbox_4.State=true;
+}]]>
+		</body>
+	</do-on>
+	<param access-modifier="private" name="init_AppID" display-name="init_AppID" uuid="a0efaa1d-b9a2-438f-aac3-28b172ce441b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<param access-modifier="private" name="init_tokenID " display-name="init_tokenID " uuid="590f9144-2d44-45cd-9786-8f3815f68b89" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<param access-modifier="private" name="init_false(Group)true(user)" display-name="init_false(Group)true(user)" uuid="1ec5d018-bb08-4f9c-8f49-800d423d03cc" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do access-modifier="private" name="WriteNewComplexityUser" display-name="WriteNewComplexityUser" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[var currentRight = JSON.parse(unit.SecurityParams.CurrentUser_Rights).data;
+
+for (var i = 0; i < currentRight.length; i++) {
+	if (currentRight[i].appName == appName && currentRight[i].tokenName == tokenName && currentRight[i].tokenValueAllow != tokenValueAllow) {
+		currentRight[i].tokenValueAllow = tokenValueAllow;
+		currentRight[i].tokenValueDeny = tokenValueDeny;
+	}
+}
+
+var obj = {};
+obj.data = currentRight;
+unit.SecurityParams.CurrentUser_Rights = JSON.stringify(obj);
+]]>
+		</body>
+		<param access-modifier="private" name="appName" display-name="" uuid="b94f7eac-0fb5-4c53-9cdc-6c5541ad9ebf" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenName" display-name="" uuid="41e7b310-5fb3-40f7-aa58-3ffa3ebf7a08" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenValueAllow" display-name="" uuid="a5374727-a882-4e63-9773-f3d2439ce34c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenValueDeny" display-name="" uuid="d694009c-e835-4355-ba46-77062c056a62" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+	<do access-modifier="private" name="WriteNewComplexityGroup" display-name="WriteNewComplexityGroup" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[var currentRight = JSON.parse(unit.SecurityParams.CurrentGroup_Rights).data;
+
+for (var i = 0; i < currentRight.length; i++) {
+	if (currentRight[i].appName == appName && currentRight[i].tokenName == tokenName && currentRight[i].tokenValueAllow != tokenValueAllow) {
+		currentRight[i].tokenValueAllow = tokenValueAllow;
+		currentRight[i].tokenValueDeny = tokenValueDeny;
+	}
+}
+
+var obj = {};
+obj.data = currentRight;
+unit.SecurityParams.CurrentGroup_Rights = JSON.stringify(obj);
+]]>
+		</body>
+		<param access-modifier="private" name="appName" display-name="" uuid="b94f7eac-0fb5-4c53-9cdc-6c5541ad9ebf" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenName" display-name="" uuid="41e7b310-5fb3-40f7-aa58-3ffa3ebf7a08" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenValueAllow" display-name="" uuid="a5374727-a882-4e63-9773-f3d2439ce34c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="tokenValueDeny" display-name="" uuid="d694009c-e835-4355-ba46-77062c056a62" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+</type>
+

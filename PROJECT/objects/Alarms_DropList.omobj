@@ -1,0 +1,259 @@
+<type access-modifier="private" name="Alarms_DropList" display-name="Form_1" uuid="da6d7b24-1a01-4745-80e8-01a4a02c9624" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="1" ver="3"/>
+	<designed target="Height" value="1" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="4293980400" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="1920" ver="3"/>
+	<designed target="WindowHeight" value="1080" ver="3"/>
+	<designed target="WindowCaption" value="MainForm" ver="3"/>
+	<designed target="ShowWindowCaption" value="false" ver="3"/>
+	<designed target="ShowWindowMinimize" value="true" ver="3"/>
+	<designed target="ShowWindowMaximize" value="true" ver="3"/>
+	<designed target="ShowWindowClose" value="true" ver="3"/>
+	<designed target="AlwaysOnTop" value="true" ver="3"/>
+	<designed target="WindowSizeMode" value="0" ver="3"/>
+	<designed target="WindowBorderStyle" value="2" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="0" ver="3"/>
+	<object access-modifier="private" name="Alarms" display-name="Alarms" uuid="1000e0ff-f669-4d1c-b1af-4b37cf33cde9" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="WindowActivationChanged">
+		<body kind="javascript">
+			<![CDATA[if (!WindowActive) Close();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="Opened">
+		<body kind="javascript">
+			<![CDATA[if (ListChoise == 0) List.UserFilter.Title = "Фильтр пользователя";
+else  List.UserFilter.Title = "Запрос с фильтрацией";
+
+//Задаем размеры в соответствии с наполнением
+List.Width = List.WithoutFilter.Field.Width;
+List.Height = List.WithoutFilter.Field.Height * 2 + List.Line.Field.Height;
+
+Width = List.Width;
+Height = List.Height;
+
+WindowWidth = Width;
+WindowHeight = Height;
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="ListChoise" display-name="ListChoise" uuid="704d7fa2-5979-4e49-9b79-2335609812c9" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	<object access-modifier="private" name="List" display-name="List" uuid="1d186598-0ef8-4688-a898-ed1e0309c110" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="225" ver="3"/>
+		<designed target="Height" value="50.439" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="0" ver="3"/>
+		<designed target="BrushColor" value="0xffffffff" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="Blanker" display-name="Blanker" uuid="1fb252ef-db4b-4b53-9a49-44903f0b3080" base-type="Blanker" base-type-id="91658436-6b0b-47e1-bf20-c5092f6fa242" ver="3">
+			<designed target="X" value="112" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="WithoutFilter" display-name="WithoutFilter" uuid="85a48107-e531-4ca8-b1d4-df3a306c9f9e" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="114.5" ver="3"/>
+			<designed target="Y" value="576.333" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Alarms.StatePanel.ViewFilterON && (ListChoise == 0)]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Alarms.StatePanel.RequestFilterON && (ListChoise == 1)]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="3" event="MousePress">
+				<body kind="javascript">
+					<![CDATA[//Сброс фильтрации
+if (ListChoise == 1) {
+	Alarms.SetAdvancedRequestFilterAsJson("");
+	/*Alarms.Main_panel.private.RequestFilter.severity = "";
+	Alarms.Main_panel.private.RequestFilter.message = "";
+	Alarms.Main_panel.private.RequestFilter.source = "";
+	Alarms.Main_panel.private.RequestFilter.acknow = "";*/
+	Alarms.Main_panel.private.LoadHistory();
+} else {
+	var TableColumnID = [];
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_1.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_2.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_3.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_4.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_5.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_6.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_7.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_8.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_9.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_10.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_14.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_17.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_19.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_20.Id);
+	TableColumnID.push(Alarms.Main_tables_Operative.Table_Operative_mode.Colum_21.Id);
+	
+	for (let i = 0; i < TableColumnID.length; i++) {
+		Alarms.SetAdvancedFilterAsJson(TableColumnID[i],"");
+	}
+}
+
+Close();]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Alarms.StatePanel.ViewFilterON && (ListChoise == 0)]]>
+					</condition>
+					<expr>
+						<![CDATA["Alarms_Icons/alarms_base_checkmark_16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Alarms.StatePanel.RequestFilterON && (ListChoise == 1)]]>
+					</condition>
+					<expr>
+						<![CDATA["Alarms_Icons/alarms_base_checkmark_16.png"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[""
+]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="Title" ver="3" value="Без фильтра"/>
+			<init target="initWidth" ver="3" value="180"/>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body kind="om">
+					<![CDATA[Permission]]>
+				</body>
+			</do-trace>
+			<init target="Permission" ver="3" value="true"/>
+		</object>
+		<object access-modifier="private" name="Line" display-name="Line" uuid="843068d4-0092-4aac-95cc-46d28289760d" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="40.5599" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="180"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="b48a3614-2eb4-43a2-a8e5-a05f2103e4b6" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+			<designed target="Orientation" value="2" ver="3"/>
+			<designed target="Gap" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="UserFilter" display-name="UserFilter" uuid="5387d02a-0ec8-4506-87bc-5ac6f06bd615" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="556.432" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Alarms.StatePanel.ViewFilterON && (ListChoise == 0)]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Alarms.StatePanel.RequestFilterON && (ListChoise == 1)]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (ListChoise == 0) Alarms.Main_panel.private.Action_ViewFilterForm.Invoke();
+else Alarms.Main_panel.private.Action_RequestFilterForm.Invoke();]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Alarms.StatePanel.ViewFilterON && (ListChoise == 0)]]>
+					</condition>
+					<expr>
+						<![CDATA["Alarms_Icons/alarms_base_checkmark_16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Alarms.StatePanel.RequestFilterON && (ListChoise == 1)]]>
+					</condition>
+					<expr>
+						<![CDATA["Alarms_Icons/alarms_base_checkmark_16.png"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[""
+]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="initWidth" ver="3" value="180"/>
+			<init target="Permission" ver="3" value="true"/>
+		</object>
+		<object access-modifier="private" name="Blanker_1" display-name="Blanker_1" uuid="3066016f-daa9-49cc-8540-9a107a7af990" base-type="Blanker" base-type-id="91658436-6b0b-47e1-bf20-c5092f6fa242" ver="3">
+			<designed target="X" value="112" ver="3"/>
+			<designed target="Y" value="384.719" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

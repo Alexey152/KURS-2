@@ -1,0 +1,36 @@
+<type access-modifier="private" name="AplicationList" display-name="Form_1" uuid="c6faad6e-67c8-4b4f-bf95-b33f147b65df" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="400" ver="2"/>
+	<designed target="Height" value="300" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="976" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="1" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="0" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

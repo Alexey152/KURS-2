@@ -1,0 +1,785 @@
+<type access-modifier="private" name="Kran" display-name="Kran" uuid="01f5f792-bc3e-4cf5-a994-2c47b12b05a9" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<object access-modifier="private" name="G_Imit" display-name="G_Imit" uuid="f37d58c9-35b2-4ef0-a958-a18a7c1ab9ce" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="-3.75" ver="4"/>
+		<designed target="Y" value="-19.25" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="47.5" ver="4"/>
+		<designed target="Height" value="56.5" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xffffffff" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<init target="Visible" ver="4" value="false"/>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<body>
+				<![CDATA[Math.TestBit(here.AP_State2,0)]]>
+			</body>
+		</do-trace>
+		<init target="BrushColor" ver="4" ref="unit.Color.Orange"/>
+	</object>
+	<object access-modifier="private" name="G_Back" display-name="G_Back" uuid="6a3be55c-75d3-40a2-99a5-ea3aefe86f64" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="5.5" ver="4"/>
+		<designed target="Y" value="3" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="30" ver="4"/>
+		<designed target="Height" value="15" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xfff0f0f0" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="BrushColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(AP_State2,0)]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Color.Magenta]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xfff0f0f0]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="G_Left" display-name="G_Left" uuid="799ab468-5987-4acb-8dfe-f7b4624e6ab4" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="20" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xfff0f0f0" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="9386dcb2-9c74-4420-92a2-16e61ee6bb42" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="99ce3762-4e29-41ae-a64c-7ac2f3c1e842" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="20" ver="4"/>
+			<designed target="Y" value="10" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="39db36b9-9a8d-42ba-b434-fd59440fccf9" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="20" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="6c553bc3-c14d-4e21-a65b-390cee5ddf20" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="1e6164cb-fbb2-44ee-adff-02f9fb6ea0b0" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="4">
+			<designed target="Period" value="1000" ver="4"/>
+			<designed target="Active" value="false" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="BrushColor" value="0xffaaffff" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<do-trace access-modifier="private" target="Active" ver="4">
+				<body>
+					<![CDATA[Math.TestBit(here.AP_State1,7) || Math.TestBit(here.AP_State1,8)]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="LinearGradient_1" display-name="LinearGradient_1" uuid="c44ddf18-d928-4624-8854-453cb6e45f6b" base-type="LinearGradient" base-type-id="3fca3251-ff83-4d88-b94d-b3ac37a76ba0" ver="4">
+			<designed target="Rotation" value="90" ver="4"/>
+			<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="4d45bf70-5c9d-4507-a343-a59ab39e32b0" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="0" ver="4"/>
+				<designed target="Color" value="0xff000000" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff0000ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffff00]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00aa00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xff8c8c8c]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="b0472fa9-f6e4-4b4c-bb84-54973263acf4" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="0.5" ver="4"/>
+				<designed target="Color" value="0xffffffff" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffcde6ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffffcd]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffcdcd]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffaaff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xffcdcdcd]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="GradientPoint_3" display-name="GradientPoint_3" uuid="cbf33d47-b868-4cc5-bd71-519bbbe0c056" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="1" ver="4"/>
+				<designed target="Color" value="0xff000000" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff0000ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffff00]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00aa00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xffcdcdcd]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<do-trace access-modifier="private" target="PenColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(AP_State2,0)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffffff]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="8dfb3308-64bf-4455-9a6d-e8108221d415" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<object access-modifier="private" name="AP_State1" display-name="AP_State1" uuid="d728f198-1e59-4a86-9bd0-d194fd55a509" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".State1"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="AP_Sign" display-name="AP_Sign" uuid="d48f9dbb-1d49-48a8-af1a-54806a77e074" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".Sign"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="AP_State2" display-name="AP_State2" uuid="b0464a5e-c85b-4ca8-8bcc-b416971b7527" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".State2"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="G_Right" display-name="G_Right" uuid="ca6cba5f-8c2d-4ca3-89c6-94ad983d705d" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+		<designed target="X" value="20" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="180" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="20" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xfff0f0f0" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="8e1037a5-4c4c-480e-8825-ebf84b1c55b3" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="3297aa07-2049-4dab-b2fd-d47a5ab20449" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="20" ver="4"/>
+			<designed target="Y" value="10" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="ebaf7463-81b2-49d3-b7b5-90e110ec2258" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="20" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="91ba40f3-3482-4fdc-8f05-5fbba2c1892e" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="08c191c4-2a23-4880-88b3-7e22d497331f" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="4">
+			<designed target="Period" value="1000" ver="4"/>
+			<designed target="Active" value="false" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="BrushColor" value="0xffaaffff" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<do-trace access-modifier="private" target="Active" ver="4">
+				<body>
+					<![CDATA[Math.TestBit(here.AP_State1,7) || Math.TestBit(here.AP_State1,8)]]>
+				</body>
+			</do-trace>
+		</object>
+		<do-trace access-modifier="private" target="PenColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(AP_State2,0)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffffff]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="LinearGradient_1" display-name="LinearGradient_1" uuid="c0c684e8-fe41-4ef9-b467-b228b7527182" base-type="LinearGradient" base-type-id="3fca3251-ff83-4d88-b94d-b3ac37a76ba0" ver="4">
+			<designed target="Rotation" value="90" ver="4"/>
+			<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="23c71508-9d6f-4078-b426-08af1c559044" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="0" ver="4"/>
+				<designed target="Color" value="0xff000000" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff0000ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffff00]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00aa00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xff8c8c8c]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="d9d80d05-eab5-4291-80a6-8739c9083ffb" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="0.5" ver="4"/>
+				<designed target="Color" value="0xffffffff" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffcde6ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffffcd]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffcdcd]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffaaff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xffcdcdcd]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="GradientPoint_3" display-name="GradientPoint_3" uuid="7e708110-742c-4804-b3b0-2547d479b578" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="4">
+				<designed target="Position" value="1" ver="4"/>
+				<designed target="Color" value="0xff000000" ver="4"/>
+				<do-trace access-modifier="private" target="Color" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,3)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff0000ff]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,0)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffffff00]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(Math.TestBit(here.AP_State1,2)) || (Math.TestBit(here.AP_State2,2))]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_State1,1) || Math.TestBit(here.AP_State2,1)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00aa00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xffcdcdcd]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Line_3" display-name="Line_3" uuid="a13c61d1-be56-4456-b0bc-6b01b486ef5c" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+		<designed target="X" value="20" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="0" ver="4"/>
+		<designed target="Height" value="10" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="a17a58c5-d0d3-4762-b8d4-1cd83bb1c47f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="a9bbda21-9ca5-4c99-883e-495cb74a2c62" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="10" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="G_Head" display-name="G_Head" uuid="29d2761e-4e93-4f41-9fc8-35f3b70e7c54" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd" ver="4">
+		<designed target="X" value="10" ver="4"/>
+		<designed target="Y" value="-17.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="20" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<designed target="PieAngle" value="360" ver="4"/>
+		<designed target="PieAngleStart" value="360" ver="4"/>
+		<designed target="HoleSize" value="0" ver="4"/>
+		<do-trace access-modifier="private" target="BrushColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(here.AP_State1,4)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xfff0f0f0]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="bc731d86-d3c2-490f-8b21-a8c08f779f8b" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="4">
+			<designed target="Period" value="1000" ver="4"/>
+			<designed target="Active" value="false" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="BrushColor" value="0xffaaffff" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<do-trace access-modifier="private" target="Active" ver="4">
+				<body>
+					<![CDATA[Math.TestBit(here.AP_State1,4)]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="G_CO" display-name="G_CO" uuid="5c83b464-548e-4655-b71b-d25cd6a0bd97" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="10" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="20" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffffffff" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xffff0000" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="ee01f75b-747b-4b59-8040-cd9e8969aca3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="19" ver="4"/>
+			<designed target="Height" value="19" ver="4"/>
+			<designed target="Text" value="CO" ver="4"/>
+			<designed target="Font" value="Roboto,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xffffffff" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(here.AP_State1,5)]]>
+				</condition>
+				<expr>
+					<![CDATA[true]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[false]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="G_CZ" display-name="G_CZ" uuid="a4651ba8-a0af-4cdc-84b3-ac9a4744ef40" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="10" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="20" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffffffff" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xffff0000" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3291aff8-fd77-419d-aba0-cd6c9dd1d2ff" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="19" ver="4"/>
+			<designed target="Height" value="19" ver="4"/>
+			<designed target="Text" value="CЗ" ver="4"/>
+			<designed target="Font" value="Roboto,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xffffffff" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(here.AP_State1,6)]]>
+				</condition>
+				<expr>
+					<![CDATA[true]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[false]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="G_Kontur" display-name="G_Kontur" uuid="991c1ecb-8f35-4a0e-8950-c425c81fc0de" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="-4" ver="4"/>
+		<designed target="Y" value="-19.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="47.5" ver="4"/>
+		<designed target="Height" value="56.5" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<init target="Visible" ver="4" value="false"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseEnter">
+		<body kind="om">
+			<![CDATA[here.G_Kontur.Visible = true;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseLeave">
+		<body kind="om">
+			<![CDATA[here.G_Kontur.Visible = false;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="G_Sign" display-name="G_Sign" uuid="6326ff7f-474b-4424-969c-51b8ad9164cf" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="16" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="40" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="Text" value="Номер" ver="4"/>
+		<designed target="Font" value="Roboto,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+		<designed target="FontColor" value="0xff000000" ver="4"/>
+		<designed target="TextAlignment" value="132" ver="4"/>
+		<do-trace access-modifier="private" target="Text" ver="4">
+			<body>
+				<![CDATA[here.AP_Sign.ValueAsString]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="FontColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Math.TestBit(AP_State2,0)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffffff]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="db9db1ee-5cf0-4227-a1f6-6491c688b069" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<init target="Alias" ver="4">
+		<expr>
+			<![CDATA[here.in_Alias]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="OpenAccessDenied" display-name="OpenAccessDenied" uuid="7cf664c9-7120-46e3-960d-d21590be2b3e" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="ee8a4eed-94a6-4773-8fd5-d164344d1866" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="IsOKOnly" ver="1" value="true"/>
+				<init target="in_Title" ver="1" value="Внимание"/>
+				<init target="in_Message" ver="1" value="Отказано в доступе. Недостаточно прав! "/>
+				<init target="MessageType" ver="1" value="error.png"/>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="AccessDeniedMsg" display-name="AccessDeniedMsg" ver="4" event="Invoked">
+			<body kind="om">
+				<![CDATA[unit.Security.ObjName.Value = here.AP_ObjName.Value + ". ";
+unit.Security.Msg_AccessDenied.Send.Invoke();
+unit.Security.ObjName.Value = "";]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OpenPopup" display-name="OpenPopup" uuid="2b1831bf-19a3-4e56-bff2-492a2560e398" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="4">
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="InvokeTrigger" value="false" ver="4"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked" form-by-id="false" form-action="open-new">
+			<object access-modifier="private" uuid="76767753-9de9-488f-95e9-4526b85c96bf" base-type="PopupKran" base-type-id="adf732e0-2ae9-4334-94d6-19b4be67cf3e" ver="4">
+				<init target="in_Alias" ver="4">
+					<expr>
+						<![CDATA[here.Alias]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="AP_ObjName" display-name="AP_ObjName" uuid="2e90557d-ab5d-4e1a-b0cd-36b418493547" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".ObjName"]]>
+			</expr>
+		</init>
+	</object>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (unit.Security.EnableControl.Value){
+	if (unit.OpenWindows.Popup_Kran)
+		{unit.OpenWindows.Kran_Alias=here.Alias;}
+	else
+	{unit.OpenWindows.Kran_Alias=here.Alias;
+	OpenPopup.Invoke();}
+}
+else
+{OpenAccessDenied.Invoke();}]]>
+		</body>
+	</do-on>
+</type>
+

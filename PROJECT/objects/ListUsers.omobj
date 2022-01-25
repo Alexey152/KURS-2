@@ -1,0 +1,189 @@
+<type access-modifier="private" name="ListUsers" display-name="Выбор пользователей" uuid="334eea0f-2472-4504-a72a-c7a688acff5a" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="575" ver="2"/>
+	<designed target="Height" value="350" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="575" ver="2"/>
+	<designed target="WindowHeight" value="350" ver="2"/>
+	<designed target="WindowCaption" value="Выбор пользователей" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="3" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="9b891c35-836a-4a37-82a0-d4372c9f8213" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Width" value="575" ver="2"/>
+		<designed target="Height" value="350" ver="2"/>
+		<designed target="SelectionBehavior" value="0" ver="2"/>
+		<designed target="SelectionMode" value="3" ver="2"/>
+		<object access-modifier="private" name="Table_UserID" display-name="Table_UserID" uuid="9d36bd32-6caf-4bf7-94b2-c6f54297e700" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="UserID" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="uid" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="true" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Table_DisplayName" display-name="Table_DisplayName" uuid="6af3814e-5898-4e19-bd8b-3dfd6cc91f2e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Отображаемое имя" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="symbolicId" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="120" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseDoubleClick">
+				<body kind="om">
+					<![CDATA[//Выбор ID пользователя для запроса информации
+unit.SecurityParams.CurentUserSeleted =  Variant.ToString(Table_1.GetCellData(row,0),"Nan");
+Frame_ASC.Action_Visib_Littel_Frame.Invoke();
+Frame_ASC.Action_Users_Param.Invoke();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Table_Position" display-name="Table_Position" uuid="f217b757-ef44-44b7-9e2f-2f64439d78f9" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Должность" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="Position" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Table_Unit" display-name="Table_Unit" uuid="083010e5-4a50-4bac-8fb1-3dd4a857efe8" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Подразделение" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="Unit" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+		</object>
+		<object access-modifier="private" name="InMemoryTable" display-name="InMemoryTable" uuid="1166e502-8382-4083-9f63-44212819d085" base-type="InMemoryTable" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="2">
+			<designed target="MaxRowCount" value="2" ver="2"/>
+			<designed target="Frozen" value="false" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Table_Group" display-name="Table_Group" uuid="f456c508-1a84-473f-833f-6d9a87478a75" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Группы" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="Group" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+		</object>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="30" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<designed target="LatestRowTracking" value="false" ver="3"/>
+		<designed target="SelectionOverlayEnabled" value="true" ver="4"/>
+		<designed target="HorizontalScrollMode" value="0" ver="4"/>
+		<designed target="VerticalScrollMode" value="0" ver="4"/>
+		<designed target="HorizontalScrollBarPolicy" value="0" ver="4"/>
+		<designed target="VerticalScrollBarPolicy" value="0" ver="4"/>
+	</object>
+	<object access-modifier="private" name="SecurityManager" display-name="SecurityManager" uuid="58e2977c-b43a-4af5-9033-426cb76f4de3" base-type="SecurityManager" base-type-id="179958e0-f45a-40f3-9668-98e4ea2987da" ver="2">
+		<init target="SecurityContext" ver="2">
+			<object access-modifier="private" uuid="bfcbd94c-57b6-4b83-9246-ff87c0b72bf3" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="2"/>
+		</init>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="om">
+			<![CDATA[unit.SecurityParams.SecurityManager.RequestUsersList();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Frame_ASC" display-name="Frame_ASC" uuid="50a47189-85b7-4f9a-857c-32b6191f9ef9" base-type="Security.Configurator" base-type-id="5bd02e6e-72d8-47c1-8f17-67355b6bdfd0" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="FUserList" display-name="FUserList" uuid="7d24d211-392d-46fc-b640-70d202687917" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if(Value!="")
+{
+Table_1.InMemoryTable.SetDataAsJson(Value);
+Table_1.TableModel.BeginReadAsync();
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<do-trace access-modifier="private" target="FUserList" ver="2">
+		<body>
+			<![CDATA[unit.SecurityParams.UserList]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="74d00b18-5c9b-4f80-ac5f-84698a5319c5" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

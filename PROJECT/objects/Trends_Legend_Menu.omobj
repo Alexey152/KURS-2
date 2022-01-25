@@ -1,0 +1,889 @@
+<type access-modifier="private" name="Trends_Legend_Menu" display-name="popup_SWITCH_menu_1" uuid="731d1ce9-ac4c-4005-bffe-733e02562691" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="245" ver="2"/>
+	<designed target="Height" value="164" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="false" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="false" ver="2"/>
+	<designed target="AlwaysOnTop" value="true" ver="2"/>
+	<designed target="WindowSizeMode" value="2" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="0" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="7bdb7fe5-a8b0-4dfb-ab21-aca8e000fdd2" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="2">
+		<designed target="Orientation" value="1" ver="2"/>
+		<designed target="Gap" value="2" ver="2"/>
+	</object>
+	<object access-modifier="private" name="pTrends" display-name="pTrends" uuid="5ade3c21-c042-48f3-98f7-52a95839dc17" base-type="Trends_1" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="Opened">
+		<body kind="javascript">
+			<![CDATA[var Lines = [];
+Lines[1] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_1;
+Lines[2] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_2;
+Lines[3] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_3;
+Lines[4] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_4;
+Lines[5] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_5;
+Lines[6] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_6;
+Lines[7] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_7;
+Lines[8] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_8;
+Lines[9] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_9;
+Lines[10] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_10;
+Lines[21] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_1;
+Lines[22] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_2;
+Lines[23] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_3;
+Lines[24] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_4;
+Lines[25] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_5;
+Lines[26] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_6;
+Lines[27] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_7;
+Lines[28] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_8;
+Lines[29] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_9;
+Lines[30] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_10;
+Lines[31] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_11;
+Lines[34] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_12;
+Lines[33] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_13;
+Lines[34] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_14;
+Lines[35] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_15;
+Lines[36] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_16;
+Lines[37] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_17;
+Lines[38] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_18;
+Lines[39] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_19;
+Lines[40] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_20;
+here.Width = Const.MainWidth;
+var iconPath = "Trends_Icons/";
+
+						// Определяем значения чекбоксов
+vIndex = pTrends.Main_Panel.private.GetIndexRowSelected();
+vIndex = pTrends.Main_Panel.private.NowParams.iItemInLegend[vIndex];
+if (pTrends.Main_Panel.private.NowParams.bShowMarkerLabels[vIndex] == true){
+	recMainMenu.itemRepers.ImagePath = iconPath + "checkmark_16.png";
+	recMainMenu.bCheckState[0] = true;
+}else{
+	recMainMenu.bCheckState[0] = false;
+}
+if (Lines[vIndex].Visible == true){
+	recMainMenu.itemGraphVisible.ImagePath = iconPath + "checkmark_16.png";
+	recMainMenu.bCheckState[1] = true;
+}else{
+	recMainMenu.bCheckState[1] = false;
+}
+
+						// Определяем нужен ли пункт выбора шкалы
+var i,ItemsCount=0;
+var bItemNeed = false;
+if (pTrends.GlobalRanges==false && vIndex<pTrends.Const.MAX_LINES)		// Для графика загруженного из файла смена оси заблокирована
+{ 
+	for (i=1; i<=pTrends.Const.MAX_LINES; i++){
+		if (pTrends.Main_Panel.private.NowParams.Tags[i] != "**") ItemsCount++;
+	}
+	if (ItemsCount>1) bItemNeed = true;
+}
+if (!bItemNeed) {
+	recMainMenu.itemReplaceScale.Set_Size(0);
+	here.Height = here.Height - Const.ButtonHeight;
+	recMainMenu.itemReplaceScale.LayoutWeight_1 = 0;
+	recMainMenu.itemReplaceScale.Triangle.Y = 0;
+	recMainMenu.itemReplaceScale.Triangle.Height = 0;
+}else{
+	recMainMenu.itemReplaceScale.ImagePath = iconPath + "trends_linechart16.png";
+};
+
+
+						// Определяем доступность команды добавления графика по времени источника
+recMainMenu.itemAddTSource.Permission = false;
+recMainMenu.itemAddTServer.Permission = false;
+var bPara=false;  // Признак существования пары сигналу
+if (pTrends.ActiveMode==pTrends.Const.amHISTORY && pTrends.UseServerTime)
+{
+	recMainMenu.itemAddTSource.ImagePath = iconPath + "add16.png";
+	recMainMenu.itemAddTServer.ImagePath = iconPath + "add16.png";
+	if (vIndex <= pTrends.Const.MAX_LINES )// Для линий графиков
+	{		
+		var nColumn0 = Lines[vIndex].ColumnNumberTime;
+		for (i=1; i<=pTrends.Const.MAX_LINES; i++)
+		{
+			if (pTrends.Main_Panel.private.NowParams.Tags[i]==pTrends.Main_Panel.private.NowParams.Tags[vIndex] && i!=vIndex){
+				if (nColumn0 != Lines[i].ColumnNumberTime)	bPara= true;
+			}
+		}
+		if (!bPara)
+		{
+			if (nColumn0==2) 
+			{
+//			btnAddTSource.Text = "Добавить график по Т сервера";
+				recMainMenu.itemAddTServer.Permission = true;
+				nColumnT = 3;
+			}else{
+//		 	btnAddTSource.Text = "Добавить график по Т источника";
+				recMainMenu.itemAddTSource.Permission = true;
+			 	nColumnT = 2;
+			}
+		}
+	}
+}
+else		// В опeративном режиме скрываем пункты меню
+{
+	recMainMenu.itemAddTSource.Set_Size(0);
+	recMainMenu.itemAddTServer.Set_Size(0);
+	here.Height = here.Height - Const.ButtonHeight*2;
+	recMainMenu.itemAddTSource.LayoutWeight_1 = 0;
+	recMainMenu.itemAddTServer.LayoutWeight_1 = 0;
+}
+recMainMenu.itemRemoveSelect.ImagePath = iconPath + "delete16.png";
+recMainMenu.itemRemoveAll.ImagePath = iconPath + "delete16.png";
+
+bInit = true;
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="da0aa420-9bd6-45d8-856b-812c8fdcf52d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<object access-modifier="private" name="menu_1_Item" display-name="menu_1_Item" uuid="3001c02f-7c80-4b49-9039-5148b6f8d3ad" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2" cardinal="9"/>
+	<object access-modifier="private" name="menu_1_Item_Count" display-name="menu_1_Item_Count" uuid="a276ebeb-82dc-4553-a4a5-56251cc95cb5" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="2"/>
+	<init target="menu_1_Item_Count" ver="2" value="0"/>
+	<object access-modifier="private" name="mX" display-name="mX" uuid="f0422607-b3d0-4da9-a002-0ff77c956b14" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+	<object access-modifier="private" name="mY" display-name="mY" uuid="fc02232f-03bc-4489-8dbe-bcab7791023b" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+	<object access-modifier="private" name="bSubMenu" display-name="bSubMenu" uuid="be68861a-268f-40e5-855d-77b77757a849" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<init target="bSubMenu" ver="2" value="false"/>
+	<object access-modifier="private" name="nColumnT" display-name="nColumnT" uuid="d8009350-b7eb-4696-871c-08dc32fc6cc4" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<object access-modifier="private" name="vIndex" display-name="vIndex" uuid="6aa0d6f4-94d3-415d-9b29-c9400b0a999b" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="MonitorList_1" display-name="MonitorList_1" uuid="9801d62d-d24a-4df2-a11d-4d1256c7ade6" base-type="MonitorList" base-type-id="c74bfc5a-253e-4144-8b20-917cf4cf333b" ver="4"/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="e827dbb9-31fd-45fd-8c01-abe232fc290b" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="4">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Initialized">
+			<body kind="om">
+				<![CDATA[i:int4 = 0;		
+n:int4 = 0;		// номер монитора
+
+while (i < MonitorList_1.Count())		// Перебираем мониторы и определяем на котором находится курсор
+{
+	x0:int4 = MonitorList_1.GetX(i);
+	y0:int4 = MonitorList_1.GetY(i);
+	if (WindowX>x0 && WindowX<x0+MonitorList_1.GetResolutionX(i)){
+		if (WindowY>y0 && WindowY<y0+MonitorList_1.GetResolutionY(i)){
+			n = i;	// запоминаем номер монитора
+		}		
+	}
+	i = i +1;
+}
+
+if (MonitorList_1.GetResolutionX(n)==0 || MonitorList_1.GetResolutionY(n)==0){
+	maxX = TypeConvert.ToFloat(WindowX + pTrends.Width);
+	maxY = TypeConvert.ToFloat(WindowY + pTrends.Height);
+	return;
+}
+
+//pTrends.DebugTool_1.Log("LegendMenu. Monitor-"+Str.ToString(n)+" ("+Str.ToString(MonitorList_1.GetX(n))+","+Str.ToString(MonitorList_1.GetY(n))+")");
+//pTrends.DebugTool_1.Log("LegendMenu. MonitorResolution: "+Str.ToString(MonitorList_1.GetResolutionX(n))+"x"+Str.ToString(MonitorList_1.GetResolutionY(n)));
+//pTrends.DebugTool_1.Log("LegendMenu. Window (X,Y): "+Str.ToString(WindowX)+","+Str.ToString(WindowY));
+maxX = MonitorList_1.GetX(n)+MonitorList_1.GetResolutionX(n);		// Запоминаем правую границу разрешения мониторов для коррекции положения меню при расширении
+maxY = MonitorList_1.GetY(n)+MonitorList_1.GetResolutionY(n);		// Запоминаем Нижнюю границу разрешения мониторов для коррекции положения меню при расширении
+//pTrends.DebugTool_1.Log("LegendMenu. maxX: "+Str.ToString(maxX)+" ,maxY"+Str.ToString(maxY));
+if (WindowX+Width > maxX) WindowX = TypeConvert.ToInt4(maxX - Width);
+if (WindowY+Height > maxY)	WindowY = TypeConvert.ToInt4(maxY - Height);
+
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[	if (!WindowActive ) Close();
+//pTrends.DebugTool_1.Log("MenuActivationChanged. bSubMenu="+Str.ToString(bSubMenu));]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Trends_Blanker_1" display-name="Trends_Blanker_1" uuid="5d40fcd9-3bfb-4508-8d5b-458ade47d5d4" base-type="Trends_Blanker" base-type-id="200c9577-8f43-41e7-9c38-4f5bb96a3cd1" ver="4">
+		<designed target="X" value="-0.5" ver="4"/>
+		<designed target="Y" value="-0.5" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="0a83ef2e-070c-4797-8b83-750546136dd4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="false" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="2" ver="4"/>
+			<designed target="Height" value="2" ver="4"/>
+			<designed target="RoundingRadius" value="0" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="1" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="BrushColor" value="4278190080" ver="4"/>
+			<designed target="BrushStyle" value="0" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="recMainMenu" display-name="recMainMenu" uuid="29f239aa-e585-48b6-b62f-b7aed0779a6e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="-115" ver="4"/>
+		<designed target="Y" value="-12.5882" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="230" ver="4"/>
+		<designed target="Height" value="25.1765" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="itemRepers" display-name="itemRepers" uuid="1309966b-51dc-432f-8e12-50e54f883617" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="108.5" ver="4"/>
+			<designed target="Y" value="444.833" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Выноски  реперов"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="true"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MousePress">
+				<body kind="javascript">
+					<![CDATA[var Lines = [];
+Lines[21]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_1;
+Lines[22]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_2;
+Lines[23]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_3;
+Lines[24]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_4;
+Lines[25]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_5;
+Lines[26]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_6;
+Lines[27]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_7;
+Lines[28]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_8;
+Lines[29]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_9;
+Lines[30]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_10;
+Lines[31]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_11;
+Lines[32]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_12;
+Lines[33]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_13;
+Lines[34]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_14;
+Lines[35]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_15;
+Lines[36]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_16;
+Lines[37]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_17;
+Lines[38]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_18;
+Lines[39]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_19;
+Lines[40]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_20;
+
+if (bInit)
+{
+	var vIndex = pTrends.Main_Panel.private.GetIndexRowSelected();		// Получаем индекс выделенной строки
+//	vIndex = pTrends.Main_Panel.private.GetIndexItemInRow(vIndex);			// Получаем индекс элемента АР
+	vIndex = pTrends.Main_Panel.private.NowParams.iItemInLegend[vIndex];
+	if (vIndex <= pTrends.Const.MAX_LINES){
+		pTrends.SetGraphicMarkerLabelVisible(pTrends.Main_Panel.private.NowParams.Tags[vIndex], !bCheckState[0]);
+	}else{
+		Lines[vIndex].ShowActiveControllineLabels = !bCheckState[0];
+	}
+}
+Close();]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="itemGraphVisible" display-name="itemGraphVisible" uuid="e7a28a41-97cc-4863-b1f0-6bbc5f774a5c" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="127.5" ver="4"/>
+			<designed target="Y" value="258.333" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Видимость графика"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="true"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MousePress">
+				<body kind="javascript">
+					<![CDATA[if (bInit)
+{
+	pTrends.Main_Panel.private.SetVisibleSelectLine(!bCheckState[1]);
+}
+Close();]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Trends_Blanker_1" display-name="Trends_Blanker_1" uuid="497f5406-37ae-4f4c-9316-57765a43896a" base-type="Trends_Blanker" base-type-id="200c9577-8f43-41e7-9c38-4f5bb96a3cd1" ver="4">
+			<designed target="X" value="-0.5" ver="4"/>
+			<designed target="Y" value="-0.5" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="d72b54c9-b00a-498c-ae48-9dda486b08db" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="2">
+				<designed target="X" value="6" ver="2"/>
+				<designed target="Y" value="2" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="210" ver="2"/>
+				<designed target="Height" value="0" ver="2"/>
+				<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+				<designed target="PenStyle" value="1" ver="2"/>
+				<designed target="PenWidth" value="1" ver="2"/>
+				<designed target="BrushColor" value="4278190080" ver="2"/>
+				<designed target="BrushStyle" value="0" ver="2"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="e8d38e66-5473-4b9d-b535-caa80038c256" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="0" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="6fff050a-c70f-47af-bbe1-2c35d0296401" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="210" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="daf2d380-2270-45e9-921c-af2475897db4" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="2">
+					<designed target="X" value="0" ver="2"/>
+					<designed target="Y" value="1" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="210" ver="2"/>
+					<designed target="Height" value="0" ver="2"/>
+					<designed target="PenColor" value="0xffffffff" ver="2"/>
+					<designed target="PenStyle" value="1" ver="2"/>
+					<designed target="PenWidth" value="1" ver="2"/>
+					<designed target="BrushColor" value="4278190080" ver="2"/>
+					<designed target="BrushStyle" value="0" ver="2"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="272a67f3-ec27-45f3-9b5b-c9fd37c90d14" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+						<designed target="X" value="0" ver="2"/>
+						<designed target="Y" value="0" ver="2"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="313ffb50-2cd6-494a-a235-6de915483694" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+						<designed target="X" value="210" ver="2"/>
+						<designed target="Y" value="0" ver="2"/>
+					</object>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="itemReplaceScale" display-name="itemReplaceScale" uuid="f43c8d70-f2d1-40c6-ad00-7c7415b01a4b" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="68.4289" ver="4"/>
+			<designed target="Y" value="224.492" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Разместить на шкале"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="false"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MousePress">
+				<body kind="javascript">
+					<![CDATA[var Lines = [];
+Lines[21]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_1;
+Lines[22]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_2;
+Lines[23]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_3;
+Lines[24]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_4;
+Lines[25]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_5;
+Lines[26]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_6;
+Lines[27]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_7;
+Lines[28]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_8;
+Lines[29]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_9;
+Lines[30]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_10;
+Lines[31]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_11;
+Lines[32]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_12;
+Lines[33]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_13;
+Lines[34]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_14;
+Lines[35]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_15;
+Lines[36]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_16;
+Lines[37]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_17;
+Lines[38]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_18;
+Lines[39]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_19;
+Lines[40]=pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_20;
+
+if (bInit)
+{
+	var vIndex = pTrends.Main_Panel.private.GetIndexRowSelected();		// Получаем индекс выделенной строки
+//	vIndex = pTrends.Main_Panel.private.GetIndexItemInRow(vIndex);			// Получаем индекс элемента АР
+	vIndex = pTrends.Main_Panel.private.NowParams.iItemInLegend[vIndex];
+	var state = pTrends.Main_Panel.private.NowParams.bShowMarkerLabels[vIndex]
+	if (vIndex <= pTrends.Const.MAX_LINES){
+		pTrends.SetGraphicMarkerLabelVisible(pTrends.Main_Panel.private.NowParams.Tags[vIndex], !state);
+	}else{
+		Lines[vIndex].ShowActiveControllineLabels = !state;
+	}
+}
+Close();]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Triangle" display-name="Triangle" uuid="a33f5976-061c-4182-a94e-7ad9bf2e120e" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="2">
+				<designed target="X" value="230" ver="2"/>
+				<designed target="Y" value="6" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="5" ver="2"/>
+				<designed target="Height" value="10" ver="2"/>
+				<designed target="PenColor" value="4278190080" ver="2"/>
+				<designed target="PenStyle" value="1" ver="2"/>
+				<designed target="PenWidth" value="1" ver="2"/>
+				<designed target="BrushColor" value="4278190080" ver="2"/>
+				<designed target="BrushStyle" value="1" ver="2"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="ece052b0-3d48-4c57-b5d0-8f7f06776de9" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="0" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="5ca5d073-5d9c-47f0-85dd-cb138565e2c0" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="5" ver="2"/>
+					<designed target="Y" value="5" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="4330cf78-fb20-4eac-8a98-33d50699a993" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="0" ver="2"/>
+					<designed target="Y" value="10" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Point_4" display-name="Point_4" uuid="eba518f5-d762-42ea-8e94-50a7632ffae7" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+					<designed target="X" value="0" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="Enabled" value="false" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseEnter">
+				<body kind="javascript">
+					<![CDATA[var ApItems=[];
+var n = pTrends.Main_Panel.private.GetIndexRowSelected();
+//n = pTrends.Main_Panel.private.GetIndexItemInRow(n);
+n= pTrends.Main_Panel.private.NowParams.iItemInLegend[n]; // Выбранный график
+var i = 0;
+if (pTrends.Main_Panel.private.NowParams.Item_numAxis[n]!=n){
+	menu_1_Item[i]="отдельная шкала";
+	i=i+1;
+}
+var j = 1;
+while (j <= pTrends.Const.MAX_LINES)			// Перебираем АР элементы в cписках подключенных сигналов
+{
+	if (pTrends.Main_Panel.private.GetItemPath(j)!="**" && j!=n){	// Если найден сигнал отличный от текущего добавляем его в список
+		// Добавляем графики которые привязаны к своим осям и к которым не привязан выбранный график
+		if (pTrends.Main_Panel.private.NowParams.Item_numAxis[j]==j && pTrends.Main_Panel.private.NowParams.Item_numAxis[n]!=j){
+			menu_1_Item[i] = pTrends.Main_Panel.private.GetItemPath(j);
+			i=i+1;
+		}
+	}
+	j= j +1;
+}
+menu_1_Item_Count = i;
+//pTrends.DebugTool_1.Log("ContextMenu. menu_1_Item_Count: "+menu_1_Item_Count);
+//mX = (ScreenX(btnReplaceScale.X,MouseY))+btnReplaceScale.Width;
+//mY = (ScreenY(MouseX,here.Y));
+
+recSubMenu.Show();
+]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="bd91dd68-4771-4248-a7af-f7a0414fadf3" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1" ver="3"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="itemAddTSource" display-name="itemAddTSource" uuid="8d33cdca-d383-4f6c-881d-495db3676efa" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="17.5" ver="4"/>
+			<designed target="Y" value="21" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Добавить график по времени источника"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="false"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="1600360c-8243-4a37-8549-f3d3af58f32f" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[path:string = pTrends.Main_Panel.private.NowParams.Tags[vIndex];
+EU:string = pTrends.Main_Panel.private.NowParams.Units[vIndex];
+description:string = pTrends.Main_Panel.private.NowParams.Description[vIndex];
+pTrends.Main_Panel.private.AddItem(path,EU,description,2);
+Close();]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+			<designed target="Enabled" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="itemAddTServer" display-name="itemAddTServer" uuid="163df86b-05f6-4cf3-b69a-d8a1384be510" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="37.5" ver="4"/>
+			<designed target="Y" value="41" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Добавить график по времени сервера"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="false"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="cd92db60-abea-4ce0-8b78-4c2736ca4079" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[path:string = pTrends.Main_Panel.private.NowParams.Tags[vIndex];
+EU:string = pTrends.Main_Panel.private.NowParams.Units[vIndex];
+description:string = pTrends.Main_Panel.private.NowParams.Description[vIndex];
+pTrends.Main_Panel.private.AddItem(path,EU,description,3);
+Close();]]>
+				</body>
+			</do-on>
+			<designed target="Enabled" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="itemRemoveSelect" display-name="itemRemoveSelect" uuid="4409ec62-908f-4fd0-9616-4065537d8812" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="17.5" ver="4"/>
+			<designed target="Y" value="132" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Удалить"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="false"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="7cf0f3db-21bf-467f-8f00-3df3acf3bb9f" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+			<designed target="Enabled" value="false" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[pTrends.Main_Panel.private.RemoveSelectItem.Invoke();
+Close();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="itemRemoveAll" display-name="itemRemoveAll" uuid="2d5b5dbd-b811-44ff-996b-d942864522b7" base-type="Trends_MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47d151" ver="4">
+			<designed target="X" value="37.5" ver="4"/>
+			<designed target="Y" value="152" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="Title" ver="4" value="Удалить все"/>
+			<init target="Checked" ver="4" value="false"/>
+			<init target="Active" ver="4" value="false"/>
+			<init target="initWidth" ver="4" value="245"/>
+			<init target="Permission" ver="4" value="true"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="be64290d-1a5b-4d52-8d64-40a4a22b33c5" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[if (here.Width > Const.MainWidth) recSubMenu.Hide();]]>
+				</body>
+			</do-on>
+			<designed target="Enabled" value="false" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MousePress">
+				<body kind="om">
+					<![CDATA[pTrends.ClearData();
+Close();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="1b9e0eb9-e22d-46a4-9674-bd812abf679b" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+			<designed target="Orientation" value="2" ver="4"/>
+			<designed target="Gap" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="687be85a-6cb5-45c0-a134-703a42d7b63e" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="241" ver="4"/>
+		</object>
+		<do access-modifier="private" name="GetNeededHeight" display-name="GetNeededHeight" ver="4" type="float8" type-id="7ad62ecf-96dd-4751-9b96-e77954b44409">
+			<body kind="om">
+				<![CDATA[vHeight: double = 0;
+vHeight = vHeight + 2;
+//vHeight = vHeight + 0.5;
+vHeight = vHeight + itemReplaceScale.LayoutWeight_1.Weight;
+vHeight = vHeight + itemAddTSource.LayoutWeight_1.Weight;
+vHeight = vHeight + itemAddTServer.LayoutWeight_1.Weight;
+vHeight = vHeight + 2;
+return vHeight;
+]]>
+			</body>
+		</do>
+		<object access-modifier="private" name="bCheckState" display-name="bCheckState" uuid="3256478b-4595-42d5-a39a-8961d4ca1c45" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4" cardinal="2"/>
+		<object access-modifier="private" name="recFillSpace" display-name="recFillSpace" uuid="6a130bfd-5b8c-45d4-9665-e5880b5ed501" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="230" ver="2"/>
+			<designed target="Height" value="10" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="4fb9de0a-5e6b-4ca2-b2f0-cc945a2a6cf7" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="2">
+				<designed target="Weight" value="0.5" ver="2"/>
+			</object>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Line_Separator" display-name="Line_Separator" uuid="03e0dadc-28d5-463d-8fbd-dcc7ec3a6baf" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="2">
+		<designed target="X" value="77.3333" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="0" ver="2"/>
+		<designed target="Height" value="150" ver="2"/>
+		<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="e85f6175-72be-44e3-a5e0-7c001a140998" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="cc472cd8-96c1-40c2-a9dd-6fea99ab60c8" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="150" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="691c77aa-051c-41df-b514-9a054fa9a741" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="2">
+			<designed target="X" value="1" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="0" ver="2"/>
+			<designed target="Height" value="150" ver="2"/>
+			<designed target="PenColor" value="0xffffffff" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="8ebbaebd-be92-428b-a447-6933f8267060" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+				<designed target="X" value="0" ver="2"/>
+				<designed target="Y" value="0" ver="2"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="6e457c32-d247-4900-b2d2-589510f66cd8" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="2">
+				<designed target="X" value="0" ver="2"/>
+				<designed target="Y" value="150" ver="2"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="6734a806-c296-4c99-9623-84f07a1ac8e1" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="0" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="recSubMenu" display-name="recSubMenu" uuid="53a2fd91-3639-4ed1-9fb2-41cf2ca5b671" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="-57" ver="4"/>
+		<designed target="Y" value="-115" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="114" ver="4"/>
+		<designed target="Height" value="230" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="bcd403d0-6f55-4efb-b654-40f30b757892" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="0" ver="4"/>
+		</object>
+		<do access-modifier="private" name="Show" display-name="Show" ver="4" type="" type-id="">
+			<body kind="om">
+				<![CDATA[i:uint4 = 0;
+maxLength:int4 = 0;
+while (i < Buttons.Length)		// перебираем кнопки подменю
+{
+	if (i < menu_1_Item_Count)		// Если кнопка используется
+	{
+		Buttons[i].Text = "    " + menu_1_Item[i];
+		vLength:int4 = String.Length(menu_1_Item[i]);
+		if (vLength > maxLength) maxLength = vLength;		// Определяем максимальную длину надписи на кнопке
+//		Buttons[i].Visible = true;
+		Buttons[i].LayoutWeight_1= 1;		// Проявляем кнопку
+		Buttons[i].Enabled = true;		
+	}
+	else													// Если кнопка не используется
+	{
+//		Buttons[i].Visible = false;
+		Buttons[i].Text = "";
+		if ( i*Const.ButtonHeight >= here.Height ) {	// Если кнопка выходит за пределы видемой области
+			Buttons[i].LayoutWeight_1= 0;					// Обнулем ее вес, чтоб она не влияла на размер видимых кнопок
+		} else {															// Если кнопка входит в видимую область
+			Buttons[i].LayoutWeight_1= 1;				// Сохраняем ее вес, чтобы размер видимых кнопок сохранялся в заданных пределах
+			Buttons[i].Enabled = false;
+		}
+	}
+	i= i +1;
+}
+if (menu_1_Item_Count * Const.ButtonHeight > here.Height)		// Если видимые кнопки не помещаются
+{
+	here.Height = menu_1_Item_Count * Const.ButtonHeight;			// Увеличиваем высоту всего окна меню
+	vf:double = recMainMenu.GetNeededHeight();
+  if (WindowY+here.Height > maxY) 									// Если после увеличения размера окна оно вышло за пределы экрана по Y
+		WindowY = TypeConvert.ToInt4(maxY - here.Height);		// Меняем Y координату окна
+}
+
+//pTrends.DebugTool_1.Log("SubMenu.Show.WinHeight: "+Str.ToString(here.Height));
+maxLength = maxLength *6 ;  // Количество символов преобразуем в количество пикселей
+//Height = pParentMenu.menu_1_Item_Count*30;
+if ( maxLength < Const.SubWidth ) maxLength = Const.SubWidth;
+here.Width = Const.MainWidth + maxLength;
+if (WindowX+here.Width > maxX) WindowX = TypeConvert.ToInt4(maxX - here.Width);
+
+LayoutWeight_1 = maxLength + 5;
+Line_Separator.Visible = true;
+]]>
+			</body>
+		</do>
+		<do access-modifier="private" name="Hide" display-name="Hide" ver="4" type="" type-id="">
+			<body kind="om">
+				<![CDATA[recSubMenu.LayoutWeight_1 = 0;
+Line_Separator.Visible = false;
+here.Width = Const.MainWidth;]]>
+			</body>
+		</do>
+		<object access-modifier="private" name="Buttons" display-name="Buttons" uuid="2ccadd6c-bc9e-4a5c-b98e-47eb7b42c1c0" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2" cardinal="9">
+			<designed target="X" value="-223.5" ver="2"/>
+			<designed target="Y" value="63.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="137" ver="2"/>
+			<designed target="Height" value="23" ver="2"/>
+			<designed target="Text" value="Item_1" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="5" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="0" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="a89d5685-d7f8-4a26-809c-dc136ad54ec2" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="2" cardinal="1">
+				<designed target="Weight" value="1" ver="2"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MousePress">
+				<body kind="om">
+					<![CDATA[newScaleTag:string = String.SubString(Text, 4);
+if (newScaleTag != "")
+{			// Замена шкалы выбранного графика
+	n0:int4 = pTrends.Main_Panel.private.GetIndexRowSelected(); // определяем выделенную строку
+	tag:string = Variant.ToString( pTrends.WS.RS.Main_Legend.Table_1.TableModel_1.GetCellData(n0,2),"_"); // читаем тэг из строки
+//	pTrends.DebugTool_1.Log(st);
+	if (newScaleTag == "отдельная шкала") newScaleTag = tag;
+	pTrends.SetGraphicAxis(tag, newScaleTag);  // устанавливаем новую шкалу для выбранного графика
+}
+
+Close();
+
+
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="4"/>
+			<designed target="DisabledBrushStyle" value="1" ver="4"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="4"/>
+			<designed target="DisabledPenStyle" value="1" ver="4"/>
+			<designed target="DisabledPenWidth" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="68dfff3e-6d3f-4eb0-a05e-808707bb75da" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+			<designed target="Orientation" value="2" ver="4"/>
+			<designed target="Gap" value="0" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Const" display-name="Const" uuid="fcb0e8b5-5051-4efa-8e21-5445e49b68d9" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="-0.484848" ver="4"/>
+		<designed target="Y" value="-115" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="false" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="0.969697" ver="4"/>
+		<designed target="Height" value="230" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="814fc82a-2f8c-4abd-8469-955fdb5fed02" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="MainWidth" display-name="MainWidth" uuid="15d2f6ae-04ad-4ae1-9d57-b27642ea125b" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="4"/>
+		<init target="MainWidth" ver="4" value="245"/>
+		<object access-modifier="private" name="SubWidth" display-name="SubWidth" uuid="194f5f17-bad1-4faf-b3c4-6fc0eb709bc8" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="4"/>
+		<init target="SubWidth" ver="4" value="150"/>
+		<object access-modifier="private" name="ButtonHeight" display-name="ButtonHeight" uuid="2477dfde-bde2-4753-addd-cea3383118ea" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="4"/>
+		<init target="ButtonHeight" ver="4" value="22"/>
+	</object>
+	<object access-modifier="private" name="maxX" display-name="maxX" uuid="08e52a59-eafd-49a5-b6e6-e37ead50c05d" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+	<object access-modifier="private" name="maxY" display-name="maxY" uuid="1a6be9d9-dbf1-4b34-bd22-0a5f7915e6f2" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+</type>
+

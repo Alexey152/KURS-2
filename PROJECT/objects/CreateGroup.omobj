@@ -1,0 +1,149 @@
+<type access-modifier="private" name="CreateGroup" display-name="Создать группу" uuid="21dfd0b5-8860-47a7-a2cb-4deceb2a9644" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="160" ver="2"/>
+	<designed target="Height" value="80" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="160" ver="2"/>
+	<designed target="WindowHeight" value="80" ver="2"/>
+	<designed target="WindowCaption" value="Данные группы" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="3" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="482e23cb-3ff1-4953-9092-3266a6f7d151" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="5" ver="2"/>
+		<designed target="Y" value="26" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="e8d91633-f3ba-4253-9abf-e5500da72f80" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="9.66667" ver="2"/>
+		<designed target="Y" value="3.30556" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="97.611" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Название группы:" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="cdb1cb3c-31d9-4eef-9b79-b02af9175b4d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="10" ver="2"/>
+		<designed target="Y" value="50" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="62" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Сохранить" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[unit.SecurityParams.SecurityManagerGroup.GroupName = TextEdit_1.Text;
+unit.SecurityParams.SecurityManagerGroup.GroupDescription = TextEdit_1.Text;
+unit.SecurityParams.SecurityManagerGroup.Save();//запрос нового списка только после сохранения
+unit.SecurityParams.SecurityManager.RequestGroupList();
+Action_Close.Invoke();]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="3876d278-3ca3-45d3-a3ab-0bc10115b8b3" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="87.35" ver="2"/>
+		<designed target="Y" value="50" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="62" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="Action_Close" display-name="Action_Close" uuid="b5c31fcd-609f-48db-bf7e-95f823961984" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="close"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

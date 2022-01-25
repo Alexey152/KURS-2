@@ -1,0 +1,1756 @@
+<type access-modifier="private" name="Alarms_TestForm" display-name="Form_1" uuid="c39634de-00e5-46fc-b9cf-c281448376c9" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="1100" ver="2"/>
+	<designed target="Height" value="600" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1100" ver="2"/>
+	<designed target="WindowHeight" value="400" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="1" ver="2"/>
+	<designed target="WindowBorderStyle" value="1" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="1" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Test" display-name="Test" uuid="75087a73-3099-40d6-9aa7-ba3414136576" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="452" ver="2"/>
+		<designed target="Y" value="11" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="71" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="vi" display-name="vi" uuid="5b244b6e-be47-4c46-9978-2617cec922af" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="2"/>
+		<object access-modifier="private" name="val" display-name="val" uuid="4006c963-e73f-4148-a744-a4603e7a84fe" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3" cardinal="5"/>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="02ca29c7-47a5-401f-bcf2-5bdae0740bd5" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="187.5" ver="2"/>
+		<designed target="Y" value="6.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="LogOn" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="0xff000000" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (Alarms_1.UseSecurity)
+{
+	Alarms_1.Main_panel.private.SecurityContext_1.AsyncLogin("admin","1");
+	Alarms_1.Main_panel.private.SecurityContext_1.AsyncLogin("vasya","vasya");
+	DebugTool_1.Log(Alarms_1.Main_panel.private.SecurityContext_1.Connected);
+	DebugTool_1.Log(Alarms_1.Main_panel.private.SecurityContext_1.CurrentUser);
+}
+else
+{
+	if (!Alarms_1.LogOn("user_1"))
+	{
+		Button_1.OnHoverBrushColor = 0xffff0000;
+	}
+	else
+	{
+		Button_1.OnHoverBrushColor = 0xff70ff70;
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="5cb82c20-75ca-42f3-9001-f0b480a87fef" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="273.5" ver="2"/>
+		<designed target="Y" value="6.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="LogOff" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (Alarms_1.UseSecurity)
+{
+	Alarms_1.Main_panel.private.SecurityContext_1.Logout();
+}
+else
+{
+	if (!Alarms_1.LogOff())
+	{
+		Button_2.OnHoverBrushColor = 0xffff0000;
+	}
+	else
+	{
+		Button_2.OnHoverBrushColor = 0xff70ff70;
+	}
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_3" display-name="Button_3" uuid="d8dcd634-93ab-4b96-b27e-3861dd2a4480" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="358.5" ver="2"/>
+		<designed target="Y" value="6.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="+Аларм" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[vi:uint4 = DateTime.MSecond(DateTime.Now());
+if (vi>9) vi=vi/10;
+if (vi>9) vi=vi/10;
+ApItemInt1_1 = TypeConvert.ToInt1(vi);
+DebugTool_1.Log("Message "+Str.ToString(vi));]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="ApSource_1" display-name="ApSource_1" uuid="5c87dcc3-8ade-4f0d-9a44-2e94b3332580" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="2">
+		<designed target="Active" value="true" ver="2"/>
+		<init target="Location" ver="2" value="127.0.0.1"/>
+		<init target="Port" ver="2" value="4388"/>
+		<init target="HistoryPort" ver="2" value="4950"/>
+		<init target="Timeout" ver="2" value="1000"/>
+		<init target="ConnectionEstablishTimeout" ver="2" value="1000"/>
+		<init target="MaxBufferPoolSize" ver="2" value="100000"/>
+		<designed target="ReAdvise" value="0" ver="3"/>
+		<designed target="Path" value="" ver="4"/>
+	</object>
+	<object access-modifier="private" name="ApItemInt1_1" display-name="ApItemInt1_1" uuid="56c4f512-3120-4cbc-ad7c-058f6b9cee9b" base-type="ApItemInt1" base-type-id="cd64e904-29a0-4c27-82f3-5e4a0b2c09ee" ver="2">
+		<init target="Source" ver="2" ref="ApSource_1"/>
+		<init target="Path" ver="2" value="Msg.genMsg"/>
+	</object>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="2a142174-41d7-4127-8ab2-b92607c31903" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="2">
+		<designed target="Period" value="10" ver="2"/>
+		<designed target="Active" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="OnTimer">
+			<body kind="om">
+				<![CDATA[vi:uint4 = DateTime.MSecond(DateTime.Now());
+if (vi>9) vi=vi/10;
+if (vi>9) vi=vi/10;
+ApItemInt1_1 = TypeConvert.ToInt1( vi);
+
+Text_1.Text = Str.ToString(Alarms_1.Main_tables_Operative.Table_Operative_mode.TableModel.GetRowCount());]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="39c73562-9086-4537-a905-526a70347b2d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="22" ver="2"/>
+		<designed target="Y" value="9" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="50" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="строк" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_6" display-name="Button_6" uuid="f8c485d5-42f1-40f8-8b0d-d0e2f5da2975" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="96.5" ver="2"/>
+		<designed target="Y" value="7.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Генерация" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[Timer_1.Active = !Timer_1.Active;]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_7" display-name="Button_7" uuid="36fe5423-cc45-4d82-818d-17c181ea76ec" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="444.5" ver="2"/>
+		<designed target="Y" value="6.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Тest Sounds" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[// процедура создания заданного порядка следования сообщений, для тестирования алгоритмов
+
+Test.vi=0;
+Test.val[0] = 7;
+//Test.val[1] = 4;
+//Test.val[2] = 2;
+//Test.val[3] = 5;
+//Test.val[4] = 7;
+//Test.val[5] = 9;
+Timer_2.Active=true;]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Timer_2" display-name="Timer_2" uuid="d04dc0ed-172e-4dae-aefe-9c744982c28d" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="2">
+		<designed target="Period" value="10" ver="2"/>
+		<designed target="Active" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="OnTimer">
+			<body kind="om">
+				<![CDATA[ApItemInt1_1.Value = Variant.ToInt1( Test.val[Test.vi],0);
+//Text_2.Text = Text_2.Text+Str.ToString(Test.val[Test.vi]);
+Test.vi +=1;
+if (Test.vi>=Test.val.Length) Timer_2.Active=false;
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="4a3eb4ef-4781-42b9-8fb5-411fcd8baef1" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Button_8" display-name="Button_8" uuid="ed69afe1-12fb-48e0-9b51-5a9587b973dd" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="535.5" ver="2"/>
+		<designed target="Y" value="6.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="ClearAcked" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="uint4_1" display-name="uint4_1" uuid="d37031ae-9f41-4785-bd9c-f66af5d69bec" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="2"/>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="fdcf3fcb-97a5-480a-88b1-f1c195147619" base-type="Alarms_1" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" ver="2">
+		<designed target="X" value="9" ver="2"/>
+		<designed target="Y" value="91" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Width" value="1008" ver="2"/>
+		<designed target="Height" value="492" ver="2"/>
+		<init target="AcknowledgmentDoubleClick" ver="2" value="true"/>
+		<init target="RequestAcknowledgmentComment" ver="2" value="true"/>
+		<init target="AcknowledgmentAvailable" ver="2" value="true"/>
+		<init target="ClearingCurrentEventsAvailable" ver="2" value="true"/>
+		<init target="EditingSettingsAvailable" ver="2" value="true"/>
+		<init target="ExportDataAvailability" ver="2" value="true"/>
+		<init target="FilterAvailable" ver="2" value="true"/>
+		<init target="SoundPlaybackManagmentAvailable" ver="2" value="true"/>
+		<init target="SnapshotAvailable" ver="2" value="true"/>
+		<init target="CurrentEventsAvailable" ver="2" value="true"/>
+		<init target="EventHistoryAvailable" ver="2" value="true"/>
+		<init target="RequestEventsStart" ver="2" value="true"/>
+		<init target="AllowActionInSourceColumn" ver="2" value="true"/>
+		<init target="FollowLatestEvent" ver="2" value="false"/>
+		<init target="Mute" ver="2" value="false"/>
+		<init target="EventTableSortAvailability" ver="2" value="true"/>
+		<init target="FileSystemAccess" ver="2" value="true"/>
+		<init target="PrintingAvailable" ver="2" value="true"/>
+		<init target="init_ApSource" ver="3" ref="here.ApSource_1"/>
+		<init target="AllowAckSequence" ver="3" value="false"/>
+		<init target="DisplayToolbar" ver="3" value="true"/>
+		<init target="DisplayStatePanel" ver="3" value="true"/>
+		<init target="ActiveMode" ver="3" value="0"/>
+		<init target="ConfigurationFolder" ver="3" value=""/>
+		<init target="ActiveConditionsList" ver="3" value="false"/>
+		<init target="DisplayToolbarAtStartup" ver="3" value="true"/>
+		<init target="DisplayStatePanelAtStartup" ver="3" value="true"/>
+		<init target="AllowAddComment" ver="3" value="true"/>
+		<init target="WriteComputerNameToComment" ver="3" value="false"/>
+		<init target="HideColumnTitle" ver="3" value="false"/>
+		<init target="AlwaysOnTopForm" ver="3" value="true"/>
+		<init target="LookLatestEvent" ver="3" value="true"/>
+		<init target="MaxVisibleOrdinaryEvents" ver="3" value="500"/>
+		<init target="LineTransfer" ver="3" value="true"/>
+		<init target="HideAckedEvents" ver="3" value="false"/>
+		<init target="ClearSoundQueryTag " ver="3" value=""/>
+		<init target="NotAckOtherEvents" ver="3" value="false"/>
+		<init target="ShowRelativeTag" ver="3" value="false"/>
+		<init target="UseSecurity" ver="3" value="false"/>
+		<init target="SubscriptionAdvancedFilter" ver="3" value=""/>
+		<init target="EnableSortingOnGridHeader" ver="3" value="true"/>
+		<init target="GUIModificationAvailable" ver="3" value="true"/>
+		<init target="ShowMilliseconds" ver="3" value="true"/>
+		<init target="IsFullAccessAllowed" ver="3" value="true"/>
+		<init target="DefaultHistoricalInterval" ver="3" value="24"/>
+		<init target="SecurityApplication" ver="4" value="Alpha.Alarms"/>
+		<init target="HorizontalScrollBarPolicy" ver="3" value="0"/>
+		<init target="VerticalScrollBarPolicy" ver="3" value="0"/>
+		<init target="ExportFileNameFormat" ver="4" value="Events_%d-%m-%Y_%H-%M-%S"/>
+	</object>
+	<do-trace access-modifier="private" target="uint4_1" ver="2">
+		<body>
+			<![CDATA[Alarms_1.objectId]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="d46887e1-7c62-4fd7-bbfc-e86b74dc1732" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="797" ver="2"/>
+		<designed target="Y" value="59" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="216" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Drag&amp;Drop перетащить сюда" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+		<object access-modifier="private" name="DragNDrop_1" display-name="DragNDrop_1" uuid="942710ab-57dc-4901-815c-16e462dfe4f7" base-type="DragNDrop" base-type-id="c4ddb32f-3653-44c8-be57-3a595e10c2fb" ver="3">
+			<designed target="DragEnabled" value="false" ver="3"/>
+			<designed target="DropEnabled" value="true" ver="3"/>
+			<designed target="Image" value="" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnDrop">
+				<body kind="om">
+					<![CDATA[Text = data.GetText();]]>
+				</body>
+			</do-on>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="MonitorList_1" display-name="MonitorList_1" uuid="a4c4acd2-090b-4a56-ad13-1d35b2b0e232" base-type="MonitorList" base-type-id="c74bfc5a-253e-4144-8b20-917cf4cf333b" ver="3"/>
+	<object access-modifier="private" name="Button_16" display-name="Button_16" uuid="1415ccee-666c-44a7-9327-ec31a2994e0f" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="1022.17" ver="3"/>
+		<designed target="Y" value="380.167" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="71" ver="3"/>
+		<designed target="Height" value="200" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Свернуть" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (Alarms_1.Height <300 ) 
+{
+	Alarms_1.SetSize(Alarms_1.X,88,Alarms_1.Width,TextEdit_2.Text);
+	Text = "Свернуть";
+}
+else 
+{
+	Alarms_1.SetSize(Alarms_1.X,378,Alarms_1.Width,200);
+	Text = "Развернуть";
+}]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="TextEdit_2" display-name="TextEdit_2" uuid="076bd49f-ac62-4c28-a22c-4ca5d1ddba09" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="1032" ver="2"/>
+		<designed target="Y" value="357" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="47" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="500" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="34ee84e9-679f-4d6f-8db5-d494a8c16887" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+		<designed target="X" value="1034.45" ver="3"/>
+		<designed target="Y" value="329.727" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="47.0909" ver="3"/>
+		<designed target="Height" value="38.9091" ver="3"/>
+		<designed target="Text" value="Полный размер:" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="33" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_17" display-name="Button_17" uuid="ae41d3f0-1811-4d83-9aa3-2e54b1a664af" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="22.5" ver="2"/>
+		<designed target="Y" value="34.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="22" ver="2"/>
+		<designed target="Text" value="Генерация одного события" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[vi:uint4 = DateTime.MSecond(DateTime.Now());
+if (vi>9) vi=vi/10;
+if (vi>9) vi=vi/10;
+ApItemInt1_1 = TypeConvert.ToInt1( vi);
+
+Text_1.Text = Str.ToString(Alarms_1.Main_tables_Operative.Table_Operative_mode.TableModel.GetRowCount());]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<init target="uint4_1" ver="3" value="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="Button_20" display-name="Button_20" uuid="9095253e-8da3-467a-aa1d-a23214e0d0cf" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="788.5" ver="2"/>
+		<designed target="Y" value="5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="22" ver="2"/>
+		<designed target="Text" value="SetAdvancedFilterAsJson" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ButtonPressed">
+			<body kind="om">
+				<![CDATA[lastHour: uint8 = DateTime.AddDays(DateTime.Now(), -1);
+
+filter: string = "{\">\":{\"data\":" + String.ToString(lastHour) + "}}";
+if (Alarms_1.SetAdvancedFilterAsJson("time", filter))
+	DebugTool_1.Log("Colum_1.JsonFilter: " + Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_1.JsonFilter);
+else DebugTool_1.Log("Не удалось установить фильтр пользователя: " + filter);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Button_21" display-name="Button_21" uuid="3ef9ba92-1f47-4454-bb0e-543580a2e71d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="790.5" ver="2"/>
+		<designed target="Y" value="31" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="22" ver="2"/>
+		<designed target="Text" value="SetAdvancedRequestFilterAsJson" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[log(Alarms_1.SetAdvancedRequestFilterAsJson("{\"AND\":[{\"OR\":[{\"AND\":[{\">=\":{\"severity\":1}},{\"<\":{\"severity\":4}}]},{\"==\":{\"severity\":4}}]},{\"message\":\"*9*\"}]}"));
+]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="Button_26" display-name="Button_26" uuid="9c388856-5b09-4065-9e4a-72a1ae785fb5" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="952.5" ver="2"/>
+		<designed target="Y" value="34" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="111" ver="2"/>
+		<designed target="Height" value="16" ver="2"/>
+		<designed target="Text" value="Написать в ЖВИ" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[log("UPDATE");]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_27" display-name="Button_27" uuid="957e83aa-73d2-4de3-ae30-05f613fcfd22" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="627.5" ver="2"/>
+		<designed target="Y" value="9" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="16" ver="2"/>
+		<designed target="Text" value="RequestRecentEvents" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[Alarms_1.RequestRecentEvents(10,true,"{\"!=\":{\"severity\":500}}");
+//Alarms_1.RequestRecentEvents(10,false,"");]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_28" display-name="Button_28" uuid="5d3e9149-01ff-4258-9724-758387c9dca4" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="945.7" ver="2"/>
+		<designed target="Y" value="5.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="148.6" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Парсинг фильтра столбцов" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[//Алгоритм парсинга фильтра столбцов(в разработке)
+var nameProp;
+var nameArray;
+var str;
+var resStr = "";
+var obj = {};
+
+//var jsonStr = '{"AND":[{"OR":[{"==":{"severity":800}},{">":{"severity":600}}]},{"message":"123"}]}';
+
+//var jsonStr = '{"OR":[{"==":{"":800}},{">":{"":600}}]}';
+
+var jsonStr = "{\"==\":{\"\":800}}";
+
+//var jsonStr = "{\"\":\"message2\"}";
+
+var columnName = "severity";
+
+	//Алгоритм парсинга фильтра запроса
+	var resStr = "";
+	var signPattern = /([><=]+)/g;//Шаблон операнда (><=)
+	log(jsonStr);
+	jsonStr = JSON.parse(jsonStr, function(key,value)
+	{
+		log("key: " + key + "; value: " + JSON.stringify(value));
+		log(Number.isNaN(key));
+
+		//Если ключ - номер элемента массива, то возвращаем накополенную строку
+
+		//if (key == "" && typeof(value) == "object") return resStr;
+		//Если свойство есть массив, то образуем строку в виде суммы или произведения элементов
+		/*if (Array.isArray(value))
+		{
+			log("arra");
+			resStr = "";
+			for (let i = 0; i < value.length; i++)
+			{
+				if (key == "AND") value[i] = "(" + value[i] + ")";
+				if (resStr == "") resStr = value[i];
+				else resStr += " " + key + " " + value[i];
+			}
+			return resStr;
+		}*/
+		//Если ключ является операндом(=><), то вставляет операнд между словом и значением
+		if (signPattern.test(key))
+		{
+			return obj;
+		}
+		//Если свойство не является объектом
+		
+		if (typeof(value) != "object") {
+			obj[`${columnName}`] = value;
+			return obj;
+		}
+		
+		if (key == "" && typeof(value) == "object") return obj;
+		
+		return value;
+		/*if (typeof(value) != "object") 
+		{
+			if (columnName != "severity" && columnName != "acked") resStr = columnName + " LIKE " + value; //Если свойство это не важность и не квитировано
+			else if (columnName == "acked") resStr = columnName + " = " + value;//Если свойство это квитировано
+			else resStr = columnName + value;//Если свойство это просто строка
+			obj[`${columnName}`] = value;
+			return obj;
+			return resStr;
+		}
+		if (key == "NOT")//Обратываем отрицание
+		{
+			resStr = key +"(" + resStr + ")";
+		}*/
+	});
+	//return jsonStr;
+
+//var jsonStr = JSON.parse(jsonStr);
+//jsonStr = getProp(jsonStr);
+log(JSON.stringify(jsonStr));
+
+
+
+]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="GenerationEvents" display-name="GenerationEvents" uuid="387d5f99-b7f7-4f72-accc-5d33bcd7b68d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="1022.5" ver="3"/>
+		<designed target="Y" value="88" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="71" ver="3"/>
+		<designed target="Height" value="233.2" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="a58f2106-43f2-488f-b9c6-6c2d8c18d1c5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="1" ver="3"/>
+			<designed target="Y" value="2" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="67.5" ver="3"/>
+			<designed target="Height" value="26" ver="3"/>
+			<designed target="Text" value="Генерация событий" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_30" display-name="Button_30" uuid="437e9038-fb34-4955-b3b0-9c3119f88347" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="30" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="1" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_31" display-name="Button_31" uuid="c40e1e0d-e266-433d-9c70-786b0c89c6f5" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="50" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="2" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_32" display-name="Button_32" uuid="a076ab42-729c-4118-81d2-bb579dba3559" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="70" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="3" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_33" display-name="Button_33" uuid="01b45127-b477-4888-b94e-bbd39325703d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="90" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="4" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_34" display-name="Button_34" uuid="640b4005-405b-46d7-8aad-3e0264595935" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="110" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="5" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_35" display-name="Button_35" uuid="d5cb1876-a884-45f6-b247-c9f1dd43b017" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="130" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="6" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_36" display-name="Button_36" uuid="b57ac842-e5ca-4731-8b33-c785fd904de7" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="150" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="7" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_37" display-name="Button_37" uuid="b2cc87d1-7cd4-4bf4-a7c5-180979ff36c8" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="170" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="8" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_38" display-name="Button_38" uuid="7996da33-c8dd-4a92-bb9f-ece8333c2932" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="190" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="9" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = parseInt(Text, 10);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_39" display-name="Button_39" uuid="6b12c331-f416-4ada-bb22-0dd44f22ae74" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="7.5" ver="2"/>
+			<designed target="Y" value="217" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="14" ver="2"/>
+			<designed target="Text" value="Деактив" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="4293980400" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApItemInt1_1.Value = 0;]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Button_29" display-name="Button_29" uuid="1ac61416-be6c-406c-a8b3-5e1e507af1af" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="22.5" ver="2"/>
+		<designed target="Y" value="61" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="22" ver="2"/>
+		<designed target="Text" value="Свободная кнопка" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[//Alarms_1.Main_panel.private.ObjectDescription.OtherEventsDecorating(Alarms_1.Main_tables_Operative.Table_Operative_mode.TableDecorator_1.JsonDecorator);
+//log(JSON.stringify(JSON.parse(Alarms_1.Main_tables_Operative.Table_Operative_mode.TableDecorator_1.JsonDecorator), null, 2));
+Alarms_1.RequestRecentEvents(10,true,"{\"==\":{\"severity\":200}}");]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do access-modifier="private" name="SetSubscriptionFilter" display-name="SetSubscriptionFilter" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var Filter1 = "{\"AND\":[{\">\":{\"severity\":400}},{\"<\":{\"severity\":800}}]}";
+
+Alarms_1.SubscriptionAdvancedFilter = Filter1;]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Button_30" display-name="Button_30" uuid="ceadee42-d4c0-406a-a319-41d8b56f3d56" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="627.5" ver="2"/>
+		<designed target="Y" value="31" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="16" ver="2"/>
+		<designed target="Text" value="Выключить декоратор" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (Alarms_1.ActiveMode == 0) Alarms_1.Main_tables_Operative.Table_Operative_mode.TableDecorator_1.JsonDecorator = "";
+else Alarms_1.Main_tables_Historical.Table_History_mode.TableDecorator_1.JsonDecorator = "";]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_31" display-name="Button_31" uuid="c5d3c1b6-c403-4138-bb9a-86581f43615c" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="627.5" ver="2"/>
+		<designed target="Y" value="47" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="16" ver="2"/>
+		<designed target="Text" value="Оперативный декоратор" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[log(JSON.stringify(JSON.parse(Alarms_1.Main_tables_Operative.Table_Operative_mode.TableDecorator_1.JsonDecorator), null, 2));]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_32" display-name="Button_32" uuid="a9a21ff8-5696-4055-8849-d4a0278d245d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="627.5" ver="2"/>
+		<designed target="Y" value="63" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="149" ver="2"/>
+		<designed target="Height" value="16" ver="2"/>
+		<designed target="Text" value="Исторический декоратор" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[log(JSON.stringify(JSON.parse(Alarms_1.Main_tables_Historical.Table_History_mode.TableDecorator_1.JsonDecorator), null, 2));]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_33" display-name="Button_33" uuid="fb1084b3-50d4-4895-b344-20108c918fc9" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="504.5" ver="2"/>
+		<designed target="Y" value="57" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="110" ver="2"/>
+		<designed target="Height" value="22" ver="2"/>
+		<designed target="Text" value="Test MakeJsonString" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[log("-=Testing MakeJSONstring=-");
+
+var count=0;
+var errors=0;
+
+function Test(s1,e1)
+{
+	count++;
+	try
+		{
+			var v1 = Alarms_1.Main_panel.private.EventSettings.MakeJSONstring(s1,"col");
+			if (v1!=e1)
+				{
+					log("error in test-"+count.toString());
+					log("  inputString: "+s1);
+					log("  expected: "+e1);
+					log("  returned: "+v1);
+					errors++;
+				}
+		}catch (exception)
+		{
+			log("except in test-"+count.toString()+": "+exception.message);
+			log("  inputString: "+s1);
+		}
+}
+
+//tests
+Test("11",JSON.stringify({'AND':[{'==':[{'data:col':11}]}]}));
+Test("11-55",JSON.stringify({'AND':[{'>=':[{'data:col':11}]},{'<=':[{'data:col':55}]}]}));
+Test("9,10",JSON.stringify({'OR':[{'==':[{'data:col':9}]},{'==':[{'data:col':10}]}]}));
+Test("1-4,6,8-10",JSON.stringify({'OR':[{'AND':[{'>=':[{'data:col':1}]},{'<=':[{'data:col':4}]}]},{'==':[{'data:col':6}]},	{'AND':[{'>=':[{'data:col':8}]},{'<=':[{'data:col':10}]}]}]}));
+
+//report
+log("MakeJSONstring total "+errors.toString()+" errors from "+count.toString()+" tests.");]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+</type>
+

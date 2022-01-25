@@ -1,0 +1,87 @@
+<object access-modifier="private" name="Security_1" display-name="Security_1" uuid="40d0f04f-88eb-4d2e-9e4e-8bd7922aa943" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="3">
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="1a41e464-cfed-4f0b-b309-568a1a30e473" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="CurrentUserChanged">
+			<body kind="om">
+				<![CDATA[unit.OpenWindows.WindowGroup.SendToAll("close","Закрыть окно");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="EnableTU_1" display-name="EnableTU_1" uuid="5d7094df-4e15-494f-8a22-3e2e1403f806" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableTU"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableTR_1" display-name="EnableTR_1" uuid="ee77e6fb-0d20-4548-b55b-af3a4a2d9c37" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableTR"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableControl_1" display-name="EnableControl_1" uuid="11dbb65f-ecba-4f69-b411-1dcc0280a24f" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="DisableLCK_1" display-name="DisableLCK_1" uuid="6974248d-6f06-4b37-ba19-554b621fb1f9" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="DisableLCK"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableIMIT" display-name="EnableIMIT" uuid="8f84bbd2-33b4-450b-9cb6-e79b04ad00d3" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableIMIT"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="Msg_AccessDenied" display-name="Msg_AccessDenied" uuid="6b445f3a-34f9-4b20-9c12-44f3ca0f1134" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="Msg_ControlDenied" display-name="Msg_ControlDenied" uuid="3389a512-05fc-444b-bf60-e487a6f54d28" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<do-trace access-modifier="private" target="Msg_ControlDenied" ver="3">
+		<body>
+			<![CDATA["<Subcondition Message='Управление невозможно, недостаточно прав! " + "[" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]] ' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />"]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="Msg_AccessDenied" ver="4">
+		<body>
+			<![CDATA["<Subcondition Message='Доступ заблокирован, недостаточно прав! " + "[" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]] ' Value='' Sound='Alarm01' Severity='4' Enabled='1' SoundEnabled='0' />"]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Operator" display-name="Operator" uuid="1a405567-e190-4041-9969-f74e13368181" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="Operator"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="Ingineer" display-name="Ingineer" uuid="64ad13cf-e7cc-4e7b-a858-50d7ed12fcca" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="Ingineer"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="Administrator" display-name="Administrator" uuid="0a383f36-4d9f-4453-8cad-00021b8cb2b0" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="Administrator"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableOpenWindow" display-name="EnableOpenWindow" uuid="702472a0-2788-4841-b8a3-f08ad7d71760" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableOpenWindow"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableOpenWindowSU" display-name="EnableOpenWindowSU" uuid="e9f1e5f2-1ca3-4046-9583-82d573407792" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableOpenWindowSU"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableRem" display-name="EnableRem" uuid="0719add0-32ff-4e0e-b936-c1eaf576a823" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableRem"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableControl" display-name="EnableControl" uuid="1bf94715-8e93-4c2e-bedc-af554c5cad55" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableControl_2" display-name="EnableControl_2" uuid="4cfa6a0a-2f57-4ca2-be64-b76e0041852e" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+</object>
+

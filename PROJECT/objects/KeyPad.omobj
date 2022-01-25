@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--13.04.2018 16:22:52-->
+<!--13.04.2018 16:41:08-->
+<!--13.04.2018 16:47:59-->
+<!--13.04.2018 16:49:52-->
+<!--04.05.2018 11:57:08-->
+<!--04.05.2018 14:00:53-->
+<!--04.05.2018 17:37:14-->
+<type access-modifier="private" name="KeyPad" display-name="KeyPad" uuid="29968eb8-bc14-44b3-aea5-5ee1d2016dbf" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="1">
+	<designed target="X" value="0" ver="1"/>
+	<designed target="Y" value="0" ver="1"/>
+	<designed target="Rotation" value="0" ver="1"/>
+	<designed target="Scale" value="1" ver="1"/>
+	<designed target="Visible" value="true" ver="1"/>
+	<designed target="Enabled" value="true" ver="1"/>
+	<designed target="Tooltip" value="" ver="1"/>
+	<designed target="Width" value="241" ver="1"/>
+	<designed target="Height" value="320" ver="1"/>
+	<designed target="PenColor" value="0xff000000" ver="1"/>
+	<designed target="PenStyle" value="0" ver="1"/>
+	<designed target="PenWidth" value="1" ver="1"/>
+	<designed target="BrushColor" value="0xffc1c1c1" ver="1"/>
+	<designed target="BrushStyle" value="1" ver="1"/>
+	<designed target="WindowX" value="400" ver="1"/>
+	<designed target="WindowY" value="150" ver="1"/>
+	<designed target="WindowWidth" value="241" ver="1"/>
+	<designed target="WindowHeight" value="320" ver="1"/>
+	<designed target="WindowCaption" value="Введите число" ver="1"/>
+	<designed target="ShowWindowCaption" value="true" ver="1"/>
+	<designed target="ShowWindowMinimize" value="false" ver="1"/>
+	<designed target="ShowWindowMaximize" value="false" ver="1"/>
+	<designed target="ShowWindowClose" value="true" ver="1"/>
+	<designed target="WindowSizeMode" value="1" ver="1"/>
+	<designed target="WindowScalingMode" value="0" ver="1"/>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="5797d95b-08e9-401b-a56a-f7ebb2e38f57" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="1" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="TextEdit" display-name="TextEdit" uuid="88445714-84c7-4c2b-b749-c5056a0c23c2" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="7" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="231" ver="1"/>
+		<designed target="Height" value="37" ver="1"/>
+		<designed target="Text" ver="1" value=""/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="132" ver="1"/>
+		<designed target="HideInput" value="false" ver="1"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="2e8409cb-9d0f-414f-b687-8f8b931b2f11" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="0" ver="1"/>
+			<designed target="Y" value="0" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="false" ver="1"/>
+			<designed target="Tooltip" ver="1" value=""/>
+			<designed target="Width" value="231" ver="1"/>
+			<designed target="Height" value="37" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff000000" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xff000000" ver="1"/>
+			<designed target="BrushStyle" value="0" ver="1"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="PlaceholderText" value="" ver="1"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<object access-modifier="private" name="NativeValidationRegex" display-name="NativeValidationRegex" uuid="cd6a290b-a086-4578-a64a-256bbc44a9af" base-type="NativeValidationRegex" base-type-id="aa199343-4d4b-4a86-ba57-076fd145fe99" ver="3">
+			<designed target="PartialValidPattern" value="" ver="3"/>
+			<designed target="ValidPattern" value="^-?\d+[,]?\d*" ver="3"/>
+		</object>
+		<object access-modifier="private" name="InputValidatorRegex" display-name="InputValidatorRegex" uuid="cb19d21b-a0f0-43d3-b161-330568d92c1e" base-type="InputValidator" base-type-id="d3926631-8c96-4ca0-b80c-d1953fff515c" ver="3">
+			<designed target="Input" value="" ver="3"/>
+			<init target="ValidationType" ver="3" ref="NativeValidationRegex"/>
+			<do-trace access-modifier="private" target="Input" ver="4">
+				<body>
+					<![CDATA[parent.Text]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="ValidationFloat" display-name="ValidationFloat" uuid="c1f67e1d-65bd-4411-8fee-0d92694a56d2" base-type="ValidationFloat" base-type-id="667a11f7-d486-467f-92a4-12de7d5290f4" ver="3">
+			<designed target="DigitsCount" value="2" ver="3"/>
+			<designed target="Bottom" value="-1.79769e+308" ver="3"/>
+			<designed target="Top" value="1.79769e+308" ver="3"/>
+			<do-trace access-modifier="private" target="Bottom" ver="4">
+				<body>
+					<![CDATA[LoLimit.Value]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Top" ver="3">
+				<body>
+					<![CDATA[HiLimit.Value]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="DigitsCount" ver="3">
+				<body>
+					<![CDATA[Round.Value]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="InputValidatorValue" display-name="InputValidatorValue" uuid="0bd27d68-aeef-48bf-887e-3c3d37947760" base-type="InputValidator" base-type-id="d3926631-8c96-4ca0-b80c-d1953fff515c" ver="3">
+			<designed target="Input" value="" ver="3"/>
+			<init target="ValidationType" ver="3" ref="ValidationFloat"/>
+			<do-trace access-modifier="private" target="Input" ver="4">
+				<body>
+					<![CDATA[TextEdit.Text]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="9945ffe2-4ef9-40f8-bed5-19060659ba95" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="2" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_3" display-name="Button_3" uuid="9d423e60-0888-4c2c-b224-9aa2762a445d" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="3" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_4" display-name="Button_4" uuid="1c9a991a-0a0d-465b-a3fd-2822bc51d8cf" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="4" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_5" display-name="Button_5" uuid="7c1ab5f9-1a04-40c6-bb34-df427485be78" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="5" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_6" display-name="Button_6" uuid="e926307f-e258-4f80-9fbe-6edcb2c56f18" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="6" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_7" display-name="Button_7" uuid="7bfc2e42-3e75-4fa2-9068-1ef90460a39b" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="7" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_8" display-name="Button_8" uuid="ce51f99a-60dd-4593-a6a7-69c3a2c89cdc" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="8" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_9" display-name="Button_9" uuid="07b41519-84fb-489e-b752-1ba76caa9658" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="9" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_0" display-name="Button_0" uuid="2bd480fc-1739-41e9-9d06-4b37d23d79e4" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="0" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_minus" display-name="Button_minus" uuid="d066884c-f4b0-4cd1-8f9f-bcc509514afd" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="−" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="om">
+				<![CDATA[val: string = TextEdit.Text;
+if(Pressed)
+{
+	if(Str.StartsWith(val,"-"))
+	{
+		val = Str.Remove(val, 0, 1);
+	}
+	else
+	{
+		val = Str.Concat("-", val);
+	}
+}
+else
+{
+	val = "-";
+	Pressed = true;
+}
+
+TextEdit.Text = val;]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_dot" display-name="Button_dot" uuid="55395daa-3c8d-4e23-9e88-a7e76cf9158b" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="," ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit.Text.length < 21){	
+	TextEdit.Text += me.Text;
+	}else {
+	TextEdit.Text= TextEdit.Text.substring(0, TextEdit.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text += me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_back" display-name="Button_back" uuid="fb8a5de5-5a14-47eb-b796-d9bff99eebb3" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="185" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="←" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="om">
+				<![CDATA[val: string = TextEdit.Text;
+if(Str.Length(val) > 0)
+{
+	val = Str.Remove(val, Str.Length(val) - 1, 1);
+}
+Pressed = true;
+TextEdit.Text = val;
+if (Str.Length(val)==0){
+Pressed = false;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_clear" display-name="Button_clear" uuid="4db813ed-f988-4a67-bf6d-d5c5c360736d" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="185" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="C" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="3">
+			<body kind="om">
+				<![CDATA[TextEdit.Text = "";
+Pressed = true;
+if (Str.Length(TextEdit.Text) == 0){
+Pressed = false;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_OK" display-name="Button_OK" uuid="378a0fb5-9051-4a7d-a8b5-f08dfd6a31c5" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="15" ver="1"/>
+		<designed target="Y" value="271" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="100" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="OK" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="ButtonPressed">
+			<body kind="om">
+				<![CDATA[if (TextEdit.InputValidatorRegex.Result == 2 && TextEdit.InputValidatorValue.Result == 2){
+	here.msg = "Вы действительно хотите изменить  уставку:" + here.opcObjName.ValueAsString + ". " + String.Replace(here.opcwValue.Description,"~", TextEdit.Text) + " (текущее значение "+ here.opcValue.ValueAsString +")?";
+	here.RunConfirm.Invoke();
+} else {
+	OpenMismatch.Invoke();
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_Cancel" display-name="Button_Cancel" uuid="62558822-45db-4477-b2e1-699a38e2d218" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="271" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="100" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="Отмена" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="ButtonPressed" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="TimerStartup" display-name="TimerStartup" uuid="1585169c-f19d-4180-96bf-aee64e17c764" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="1">
+		<designed target="Period" value="100" ver="1"/>
+		<designed target="Active" value="true" ver="1"/>
+	</object>
+	<object access-modifier="private" name="TimerClose" display-name="TimerClose" uuid="bc3c88aa-2a1b-4e4f-888b-f904b2d87266" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="1">
+		<designed target="Period" value="50" ver="1"/>
+		<designed target="Active" value="false" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="OnTimer" ver="1">
+			<body kind="om">
+				<![CDATA[TimerClose.Active = false;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" form-action="close" event="OnTimer" ver="1"/>
+	</object>
+	<object access-modifier="private" name="Pressed" display-name="Pressed" uuid="c2e66ba6-8dd5-4e16-89a9-09516c85a8e3" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="1"/>
+	<init target="Pressed" value="false" ver="1"/>
+	<object access-modifier="private" name="koef" display-name="koef" uuid="013fa113-1d16-4dd4-8db7-75a503cbc14f" base-type="float32" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="1"/>
+	<object access-modifier="private" name="EUnit" display-name="EUnit" uuid="50214b68-0bad-4ccf-bcf0-f70c81d91885" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<init target="koef" value="1" ver="1"/>
+	<object access-modifier="private" name="InputValue" display-name="InputValue" uuid="f056e5a5-5481-429d-b42c-030b6510e79e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<object access-modifier="private" name="OldValue" display-name="OldValue" uuid="0a4fc4f3-ae3a-4a37-a4b4-a391bf6ac6cd" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<object access-modifier="private" name="msg" display-name="msg" uuid="7be686b6-5fc8-48b1-964a-ac56765e8daf" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<object access-modifier="private" name="alarm" display-name="alarm" uuid="5eed4567-eb3a-43eb-8fab-b58fd6bca981" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<init target="alarm" value='"&lt;Subcondition Message=&apos;~&apos; Value=&apos;&apos; Sound=&apos;&apos; Severity=&apos;3&apos; Enabled=&apos;1&apos; SoundEnabled=&apos;0&apos; /&gt;"' ver="1"/>
+	<designed target="WindowCloseMode" value="0" ver="1"/>
+	<object access-modifier="private" name="opcwValue" display-name="opcwValue" uuid="b8ec6657-7bac-41b2-9c80-ec4a4f84c879" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" base-const="true" base-ref="true" ver="1"/>
+	<object access-modifier="private" name="opcValue" display-name="opcValue" uuid="db949223-8972-4164-beed-2a1658298843" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" base-const="true" base-ref="true" ver="1"/>
+	<object access-modifier="private" name="opcObjName" display-name="opcObjName" uuid="4cb98dcd-46d0-4ac2-8578-c272e6f14598" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" base-const="true" base-ref="true" ver="1"/>
+	<object access-modifier="private" name="opcEUnits" display-name="opcEUnits" uuid="ca2e39dc-479a-408b-a9e2-dc6fbad92aa2" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" base-const="true" base-ref="true" ver="1"/>
+	<object access-modifier="private" name="Preset" display-name="Preset" uuid="000bf558-3abf-4c80-9472-eb866462490a" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" base-const="true" base-ref="true" ver="1"/>
+	<designed target="WindowBorderStyle" value="2" ver="1"/>
+	<designed target="AlwaysOnTop" value="true" ver="1"/>
+	<designed target="WindowState" value="0" ver="1"/>
+	<designed target="MonitorNumber" value="0" ver="1"/>
+	<designed target="WindowPosition" value="2" ver="1"/>
+	<object access-modifier="private" name="WriteUst" display-name="WriteUst" uuid="8a21f020-bfff-49ff-bc79-8c8ea90f4f61" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="Invoked">
+			<body kind="om">
+				<![CDATA[//BAD
+success: bool = false;
+checkUst: bool = false;
+Value: string = "";
+
+//меняем , на . так как через запятую не конвертирует флоат.
+Value = String.Replace(TextEdit.Text, ",", ".");
+
+// проверяем тип уставки
+if (TagType == "float")
+{
+	here.opcwValue.Value=TypeConvert.ToFloat(String.ToDouble(Value,32000));
+	success = true;}
+ else if (TagType == "uint2")
+{
+	here.opcwValue.Value=TypeConvert.ToUint2(String.ToUint4(Value,32000));
+	success = true;
+} else if (TagType == "uint4")
+{
+	here.opcwValue.Value=String.ToUint4(Value,32000);
+	success = true;
+} else
+//выдаём ошибку, если тип не поддерживается.
+{
+	DataFormatError.Invoke();
+	success = false;
+}
+
+/*if (checkUst){
+	if (TagType == "float")
+	{
+		if (TypeConvert.ToFloat(String.ToDouble(Value,32000)) == here.opcwValue.Value) {success = true;	}	
+	} else if (TagType == "uint2")
+	{
+		if (TypeConvert.ToUint2(String.ToUint4(Value,32000)) == here.opcwValue.Value) {success = true;	}	
+	} else if (TagType == "uint4")
+	{
+		if (String.ToUint4(Value,32000) == here.opcwValue.Value) { success = true;}		
+	} else
+	{
+		WriteUstError.Invoke();
+		success = false;
+	}
+}*/
+// выводим сообщение и закрываем фому если уставка записана
+if (success){
+	success = false;
+	here.alarm = here.opcObjName.ValueAsString + ". " + String.Replace(here.opcwValue.Description," установить = ~", ". Команда изменить значение с <<" + here.opcValue.ValueAsString + ">> на <<" + TextEdit.Text + ">>") + " [" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]]";
+	
+	//Запись сообщения переменную, где разруливаем в какой тег ужно записать	
+	here.MessagesOper.Value ="<Subcondition Message='" + here.alarm + "' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />";
+
+	TimerClose.Active = true;
+	here.SendClose.Invoke();	
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SendClose" display-name="SendClose" uuid="d1e7efd6-461c-4a9e-84af-8c003f007b7b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="RunConfirm" display-name="RunConfirm" uuid="ad590d23-5d84-4981-92a5-cf422d2a962f" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="a5035233-e961-42ea-a069-ba71b14c674a" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="in_Title" ver="1" value="Окно подтверждения"/>
+				<init target="in_Message" ver="1" ref="here.msg"/>
+				<init target="MessageType" ver="1" value="help.png"/>
+				<init target="Action" ver="1" ref="WriteUst"/>
+				<init target="SecondsBeforeClose" ver="3" value="30"/>
+			</object>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="WindowPosChanged">
+		<body kind="om">
+			<![CDATA[me.SetBoundingRegion(unit.WindowsLimit.Frame_X,unit.WindowsLimit.Frame_Y,unit.WindowsLimit.Frame_Width,unit.WindowsLimit.Frame_Height);]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="TagType" display-name="TagType" uuid="ea61e43c-e81e-436a-9102-3103baae1684" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="ValueUst" display-name="ValueUst" uuid="0d73157c-0dbe-452a-868a-31bcb7a475c7" base-type="notifying_variant" base-type-id="31323414-1285-4b70-92bf-304e6e81aaf0" ver="2"/>
+	<object access-modifier="private" name="WriteUstInTag" display-name="WriteUstInTag" uuid="3073ec9b-18bf-46e1-82f3-82c631ba125a" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked">
+			<body kind="om">
+				<![CDATA[//Устарело
+//v0: variant;
+//DebugTool_1.Log(TagType);
+/*if ((Variant.ToFloat(ValueUst.Value,32000) > HiLimit.Value) || (Variant.ToFloat(ValueUst.Value,-32000) < LoLimit.Value)){
+	OpenMismatch.Invoke();
+	ValueUst.Value = v0;
+}
+else{*/
+/*if (TagType == "float")
+{
+here.opcwValue.Value=Variant.ToFloat(ValueUst.Value,32000);
+} else if (TagType == "uint2")
+{
+here.opcwValue.Value=Variant.ToUint2(ValueUst.Value,32000);
+} else if (TagType == "uint4")
+{
+here.opcwValue.Value=Variant.ToUint4(ValueUst.Value,32000);
+} else
+{
+here.opcwValue.Value=ValueUst.Value;
+}
+DebugTool_1.Log(opcwValue.ValueAsString);
+
+ValueUst.Value = v0;
+//here.opcwValue.Value=TextEdit.Text; 
+//Формирование и запись сообщения
+//here.msg = here.opcObjName.ValueAsString + ". " + String.Replace(here.opcwValue.Description,"~", TextEdit.Text) + " (текущее значение "+ here.opcValue.ValueAsString +")?";
+
+here.alarm = here.opcObjName.ValueAsString + ". " + String.Replace(here.opcwValue.Description," установить = ~", ". Команда изменить значение с <<" + here.opcValue.ValueAsString + ">> на <<" + TextEdit.Text + ">>") + " [" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]]";
+unit.Global.MessagesOper.Value="<Subcondition Message='" + here.alarm + "' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />";
+TimerClose.Active = true;
+here.SendClose.Invoke();
+//}*/]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="in_TagType" display-name="in_TagType" uuid="d7386152-7aac-408b-b49b-80acfa8942f3" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<init target="TagType" ver="2">
+		<expr>
+			<![CDATA[here.in_TagType]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="abb535af-496e-447c-b412-7380fed42472" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="CloseRequested">
+		<body kind="om">
+			<![CDATA[SendClose.Invoke();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="HiLimit" display-name="HiLimit" uuid="a7334961-80fc-4458-b8cc-7fb24ef523fe" base-type="notifying_float4" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="3"/>
+	<object access-modifier="private" name="LoLimit" display-name="LoLimit" uuid="1320bf97-eb46-404c-b3ff-51bb7480d2ff" base-type="notifying_float4" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="3"/>
+	<init target="HiLimit" ver="3" value="32000"/>
+	<init target="LoLimit" ver="3" value="-32000"/>
+	<object access-modifier="private" name="OpenMismatch" display-name="OpenMismatch" uuid="2b40a03f-d271-4b1e-8384-4e601a115044" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="3c2eeb8f-bfb4-41ff-b466-4c3245f9ac87" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="in_Title" ver="1" value="Ошибка ввода"/>
+				<init target="MessageType" ver="1" value="help.png"/>
+				<init target="SecondsBeforeClose" ver="3" value="30"/>
+				<init target="IsOKOnly" ver="3" value="true"/>
+				<init target="IsAutoClose" ver="3" value="false"/>
+				<init target="in_Message" ver="4">
+					<expr>
+						<![CDATA["Введенное значение должно быть в диапазоне от " + String.Replace(String.ToString("%." + String.ToString(Round.Value) +"f",LoLimit.Value),".",",") +" до " + String.Replace(String.ToString("%." + String.ToString(Round.Value) +"f",HiLimit.Value),".",",") + " и иметь не более " + String.ToString(Round.Value) + " знаков после запятой"]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Round" display-name="Round" uuid="a5c4d62f-bd05-4ea8-8fa4-13e0108ca8f0" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3"/>
+	<init target="Round" ver="3" value="0"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="DataFormatError" display-name="DataFormatError" uuid="acd9de14-28a4-4924-a6e0-6e3b26212d3c" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="c5bea370-9915-4138-b3fc-d59040da345f" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="in_Title" ver="1" value="Ошибка ввода"/>
+				<init target="MessageType" ver="1" value="Error.png"/>
+				<init target="SecondsBeforeClose" ver="3" value="30"/>
+				<init target="IsOKOnly" ver="3" value="true"/>
+				<init target="IsAutoClose" ver="3" value="false"/>
+				<init target="in_Message" ver="3" value="Формат данных не поддерживается!"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="MessagesOper" display-name="MessagesOper" uuid="cf88175f-87f6-4597-b4c4-25ebb07a92c5" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[AltMsgTag.Value + "MessagesOper.GenSource"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AltMsgTag" display-name="Кусок пути для альтеранитивного МСГ, выставляем в кнопках открытия эфкранов" uuid="25ff254c-237c-4285-bdcb-0b42b378a51e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[TextEdit.Text = here.opcValue.ValueAsString;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="LoLim_Var" display-name="LoLim_Var" uuid="cf8e74ff-e1b6-4519-96ff-f26812769812" base-type="notifying_variant" base-type-id="31323414-1285-4b70-92bf-304e6e81aaf0" ver="4"/>
+	<object access-modifier="private" name="use_wValue" display-name="use_wValue" uuid="7c250c82-a5a7-4054-a09d-df7ea2cb0a89" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<init target="use_wValue" ver="4" value="true"/>
+</type>
+

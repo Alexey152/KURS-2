@@ -1,0 +1,191 @@
+<unit uuid="9024f9ef-5b2b-4042-97f2-ad60a9392be9" name="GRS_Volchiha" display-name="GRS_Volchiha" description="" ver="4" main-form-id="36b01345-30c5-4722-a8fa-3042cb457da6">
+	<object file="MainForm.omobj" filter=""/>
+	<object file="SIR.omobj" filter="Табло и сирены"/>
+	<object file="Global.omobj" filter=""/>
+	<object file="Security.omobj" filter=""/>
+	<object file="SecurityParams.omobj" filter=""/>
+	<object file="Security.Configurator.omobj" filter="SecurityConfigurator/Main"/>
+	<object file="Security_1.omobj" filter=""/>
+	<object file="Global_Params.omobj" filter=""/>
+	<object file="GropupUsers.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="User_rights.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="Users.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="ViweUser.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="TrendHist.omobj" filter="TrendsForm"/>
+	<object file="RightRename.omobj" filter="SecurityConfigurator/App"/>
+	<object file="MessageBox.omobj" filter=""/>
+	<object file="LoginPopUp.omobj" filter="SecurityConfigurator/Main"/>
+	<object file="LoginButton.omobj" filter="Кнопки"/>
+	<object file="Login.omobj" filter="Security"/>
+	<object file="ListUsers.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="ListApp.omobj" filter="SecurityConfigurator/App"/>
+	<object file="KeyPad.omobj" filter=""/>
+	<object file="GroupList.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="GroupDetalsUser.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="GroupDetalRights.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="CreateUser.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="CreateRight.omobj" filter="SecurityConfigurator/App"/>
+	<object file="CreateGroup.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="CreateApp.omobj" filter="SecurityConfigurator/App"/>
+	<object file="ChangeUserStringRight.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="ChangeUserRights.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="ChangeUserGroup.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="ChangeRights.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="ChangePswdTime.omobj" filter="Security"/>
+	<object file="ChangePswd.omobj" filter="Security"/>
+	<object file="ChangePassord.omobj" filter="SecurityConfigurator/Users"/>
+	<object file="ChangePassComplexity.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="ChangeGroupStringRight.omobj" filter="SecurityConfigurator/Group"/>
+	<object file="AppRights.omobj" filter="SecurityConfigurator/App"/>
+	<object file="AplicationList.omobj" filter="SecurityConfigurator/Main"/>
+	<object file="AlphaSetPoint.omobj" filter=""/>
+	<object file="AlarmHist.omobj" filter="AlarmsForm"/>
+	<object file="Смена пароля_срок.omobj" filter="SecurityConfigurator/Main"/>
+	<object file="MenuMainMenu.omobj" filter="SecurityConfigurator/Main"/>
+	<object file="WindowsLimit.omobj" filter=""/>
+	<object file="AbsAutoClosingForm.omobj" filter="Security"/>
+	<object file="ВводУставки.omobj" filter=""/>
+	<object file="Tablo.omobj" filter="Табло и сирены"/>
+	<object file="Discret_C.omobj" filter="Дискреты разных форм"/>
+	<object file="Foot.omobj" filter=""/>
+	<object file="PopupSir.omobj" filter="Окна управления"/>
+	<object file="TU.omobj" filter=""/>
+	<object file="Odorant.omobj" filter=""/>
+	<object file="Color.omobj" filter=""/>
+	<object file="PopupDP.omobj" filter="Окна управления"/>
+	<object file="OpenWindows.omobj" filter=""/>
+	<object file="MsgButton.omobj" filter="Кнопки"/>
+	<object file="Discret_S.omobj" filter="Дискреты разных форм"/>
+	<object file="Кран.omobj" filter="Не автоматизируемые"/>
+	<object file="Клапан.omobj" filter="Не автоматизируемые"/>
+	<object file="Начало.omobj" filter="Не автоматизируемые"/>
+	<object file="30-1-4.omobj" filter="Не автоматизируемые"/>
+	<object file="GRS_Main.omobj" filter=""/>
+	<object file="Кран_верт.omobj" filter="Не автоматизируемые"/>
+	<object file="Угол трубы.omobj" filter="Не автоматизируемые"/>
+	<object file="Пересечение трубы.omobj" filter="Не автоматизируемые"/>
+	<object file="Кнопка перехода на экран.omobj" filter="Кнопки"/>
+	<object file="TU_DiagKvit.omobj" filter=""/>
+	<object file="Diag.omobj" filter=""/>
+	<object file="AO_AI 04 011.omobj" filter="Диагностика"/>
+	<object file="DO_DI 08 011.omobj" filter="Диагностика"/>
+	<object file="CU_00_61.omobj" filter="Диагностика"/>
+	<object file="ChD_Mod.omobj" filter="Диагностика"/>
+	<object file="PP 00 011.omobj" filter="Диагностика"/>
+	<object file="ChA_Mod.omobj" filter="Диагностика"/>
+	<object file="DA 01 011.omobj" filter="Диагностика"/>
+	<object file="ChD_pop.omobj" filter="Диагностика"/>
+	<object file="Popup_DiagD.omobj" filter="Окна управления"/>
+	<object file="Kran.omobj" filter="Краны"/>
+	<object file="PopupKran.omobj" filter="Окна управления"/>
+	<object file="TR_Clean_for _All.omobj" filter="Tr"/>
+	<object file="TR_desc_AP.omobj" filter="Tr"/>
+	<object file="TR_desc_For_All.omobj" filter="Tr"/>
+	<object file="TR_desc.omobj" filter="Tr"/>
+	<object file="TR_Popup_TI.omobj" filter="Tr"/>
+	<object file="TR.omobj" filter="Tr"/>
+	<object file="TU_Key.omobj" filter="Кнопки"/>
+	<object file="Analog.omobj" filter="Аналог"/>
+	<object file="PopupAP.omobj" filter="Окна управления"/>
+	<object file="Analog_1.omobj" filter="Аналог"/>
+	<object file="KranV.omobj" filter="Краны"/>
+	<object file="Menu.omobj" filter="Окна управления"/>
+	<object file="Popup_UstMap.omobj" filter=""/>
+	<object file="Analog_2.omobj" filter="Аналог"/>
+	<object file="Popup_APMenu.omobj" filter=""/>
+	<object file="Угол трубы_Рыж.omobj" filter="Не автоматизируемые"/>
+	<object file="Пересечение трубы_Рыж.omobj" filter="Не автоматизируемые"/>
+	<object file="SobstNuz.omobj" filter=""/>
+	<object file="Rashodomer.omobj" filter=""/>
+	<object file="Угол трубы_В.omobj" filter="Не автоматизируемые"/>
+	<object file="Discret_S_Small.omobj" filter="Дискреты разных форм"/>
+	<object file="IntegrityControl.omobj" filter=""/>
+	<object file="Popup_DiagA.omobj" filter="Окна управления"/>
+	<object file="ChA_pop.omobj" filter="Диагностика"/>
+	<object file="Global2.omobj" filter=""/>
+	<object file="GRS_Mode.omobj" filter="Кнопки"/>
+	<object file="GRS_Main_1.omobj" filter=""/>
+	<object file="RD_State.omobj" filter="Окна управления"/>
+	<object file="StartProject.omobj" filter=""/>
+	<object file="Blokirovki.omobj" filter="Окна управления"/>
+	<object file="IBP.omobj" filter="Окна управления"/>
+	<object file="TR_desc_For_All_1.omobj" filter="Tr"/>
+	<object file="TR_desc_For_All_Max.omobj" filter="Tr"/>
+	<object file="TR_desc_For_All_Min.omobj" filter="Tr"/>
+	<object file="PopupAP_Tr_New.omobj" filter="Окна управления"/>
+	<object file="Analog_3.omobj" filter="Аналог"/>
+	<object file="DiagButton.omobj" filter="Кнопки"/>
+	<object file="Panel.omobj" filter="Диагностика"/>
+	<object file="Popup_ARM.omobj" filter=""/>
+	<object file="RGDU.omobj" filter="Окна управления"/>
+	<object file="TR_desc_For_All_0_100.omobj" filter="Tr"/>
+	<object file="PopupAP_Tr.omobj" filter="Окна управления"/>
+	<object file="TR_Without_Ch.omobj" filter="Аналог"/>
+	<object file="Settings_AP.omobj" filter="Окна управления"/>
+	<object file="EK_1.omobj" filter="Окна управления"/>
+	<object file="EK_2.omobj" filter="Окна управления"/>
+	<object file="EK_3.omobj" filter="Окна управления"/>
+	<object file="TR_desc_For_All_2.omobj" filter="Tr"/>
+	<object file="EK_1_View.omobj" filter=""/>
+	<object file="EK_2_View.omobj" filter=""/>
+	<object file="EK_3_View.omobj" filter=""/>
+	<object file="KeyPad_NoWrite.omobj" filter=""/>
+	<object file="Rectangle_1.omobj" filter="Окна управления"/>
+	<object file="Mode_GRS.omobj" filter="Окна управления"/>
+	<object file="Alarms_AuthorizationForm.omobj" filter="Alarms"/>
+	<object file="Alarms_AuthorizationFormChangePassword.omobj" filter="Alarms"/>
+	<object file="Alarms_Blanker.omobj" filter=""/>
+	<object file="Alarms_Calendar.omobj" filter=""/>
+	<object file="Alarms_CalendarForm.omobj" filter="Alarms"/>
+	<object file="Alarms_CommentAck.omobj" filter="Alarms"/>
+	<object file="Alarms_ContextMenu.omobj" filter="Alarms"/>
+	<object file="Alarms_DataField.omobj" filter=""/>
+	<object file="Alarms_DialogWindow.omobj" filter="Alarms"/>
+	<object file="Alarms_DropList.omobj" filter="Alarms"/>
+	<object file="Alarms_ExportAlarms.omobj" filter="Alarms"/>
+	<object file="Alarms_ExportAlarmsSettings.omobj" filter="Alarms"/>
+	<object file="Alarms_FilterRequestForm.omobj" filter="Alarms"/>
+	<object file="Alarms_FilterViewForm.omobj" filter="Alarms"/>
+	<object file="Alarms_Line.omobj" filter=""/>
+	<object file="Alarms_MenuItem.omobj" filter=""/>
+	<object file="Alarms_PrintForm.omobj" filter="Alarms"/>
+	<object file="Alarms_PrintFormSettings.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingEventsChangeColor.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsEvents.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsEventsEdit.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsExport.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsForm.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsPanel.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsPatterns.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsSeverity.omobj" filter="Alarms"/>
+	<object file="Alarms_SettingsView.omobj" filter="Alarms"/>
+	<object file="Alarms_ShowMessage.omobj" filter="Alarms"/>
+	<object file="Alarms_SortForm.omobj" filter="Alarms"/>
+	<object file="Alarms_TestForm.omobj" filter="Alarms"/>
+	<object file="Alarms_TimeField.omobj" filter=""/>
+	<object file="Alarms_ToolButton.omobj" filter=""/>
+	<object file="Alarms.omobj" filter=""/>
+	<object file="Trends_Blanker.omobj" filter=""/>
+	<object file="Trends_Calendar.omobj" filter=""/>
+	<object file="Trends_ChangeColor.omobj" filter="Trends"/>
+	<object file="Trends_Clock.omobj" filter=""/>
+	<object file="Trends_ExportDialog.omobj" filter="Trends"/>
+	<object file="Trends_ImportDialog.omobj" filter="Trends"/>
+	<object file="Trends_ItemsTree.omobj" filter=""/>
+	<object file="Trends_Legend_Menu.omobj" filter="Trends"/>
+	<object file="Trends_MenuItem.omobj" filter=""/>
+	<object file="Trends_popup_Calendar.omobj" filter="Trends"/>
+	<object file="Trends_popup_Clock.omobj" filter="Trends"/>
+	<object file="Trends_popup_REPER_menu.omobj" filter="Trends"/>
+	<object file="Trends_Print.omobj" filter="Trends"/>
+	<object file="Trends_SaveDialog.omobj" filter="Trends"/>
+	<object file="Trends_Settings_ToolBar.omobj" filter="Trends"/>
+	<object file="Trends_SettingsMain.omobj" filter="Trends"/>
+	<object file="Trends_SettingsPrint.omobj" filter="Trends"/>
+	<object file="Trends_ShowMessage.omobj" filter="Trends"/>
+	<object file="Trends_Table.omobj" filter="Trends"/>
+	<object file="Trends_TestForm.omobj" filter="Trends"/>
+	<object file="Trends_ToolButton.omobj" filter=""/>
+	<object file="Trends.omobj" filter=""/>
+</unit>
+

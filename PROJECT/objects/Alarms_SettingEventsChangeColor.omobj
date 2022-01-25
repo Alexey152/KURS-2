@@ -1,0 +1,921 @@
+<type access-modifier="private" name="Alarms_SettingEventsChangeColor" display-name="Form_1" uuid="7f88133f-deaf-4376-a13d-a52efda68de0" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="240" ver="2"/>
+	<designed target="Height" value="120" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="240" ver="2"/>
+	<designed target="WindowHeight" value="120" ver="2"/>
+	<designed target="WindowCaption" value="Выбор цвета" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="3" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[currentColor = pSettingsEvents.private.currentColor;
+Focus = true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="f2ff249a-de14-4f57-bf88-6f3e389dddcd" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="40c034a7-773a-4d41-b1f9-32d6ef140a4a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="2.5" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff000000" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<do-trace access-modifier="private" target="PenWidth" ver="2">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="1553f946-f084-488d-a587-b52e45a5aa65" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="51.1505" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffff0000" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="c1a29013-02c0-428f-aa3e-f7dff799b557" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="101.232" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff550000" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="ee645356-4252-4de1-9e32-d8b373614f1f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="151.313" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff55007f" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_5" display-name="Rectangle_5" uuid="993af4d4-fbd0-4bc9-8a6e-4d739f34b206" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="201.394" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffffaaff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_6" display-name="Rectangle_6" uuid="aad92e8b-f13d-47a0-ac82-be7cc6af8f0f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="2.5" ver="2"/>
+		<designed target="Y" value="33" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff00ff00" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_7" display-name="Rectangle_7" uuid="625c0b32-1cb4-4da6-b049-9ff5fb057c7c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="51.1505" ver="2"/>
+		<designed target="Y" value="33" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffaaaa7f" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_8" display-name="Rectangle_8" uuid="b8999101-05cc-438c-b482-228367d51414" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="101.232" ver="2"/>
+		<designed target="Y" value="33" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffff55ff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_9" display-name="Rectangle_9" uuid="1a28a839-c5fa-4a1b-8dd3-7ba4d9f0010a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="151.313" ver="2"/>
+		<designed target="Y" value="33" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff005500" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_10" display-name="Rectangle_10" uuid="2298b491-9c59-4bf7-aeb8-b2429b08176c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="201.394" ver="2"/>
+		<designed target="Y" value="33" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff00aa00" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_11" display-name="Rectangle_11" uuid="ab3badb2-083b-4e77-9135-4f2271c521f8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="2.5" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff55aaff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_12" display-name="Rectangle_12" uuid="d5bc9bad-3655-4fc1-9864-609c805b3754" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="51.1505" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffffff7f" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_13" display-name="Rectangle_13" uuid="4c34bf0d-67b8-4611-aa81-7a5dce05560e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="101.232" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xff55557f" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_14" display-name="Rectangle_14" uuid="88dd34e7-dc27-4d1f-894f-85323e51a642" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="151.313" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffffaa00" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_15" display-name="Rectangle_15" uuid="d4f22121-9bfd-432a-9965-d427e8cc677f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="201.394" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="35.7724" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffffffff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SetColor(me.BrushColor);]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[if (event.KeyCode==75) Close();]]>
+		</body>
+	</do-on>
+	<designed target="ZValue" value="0" ver="3"/>
+	<do access-modifier="private" name="SetColor" display-name="SetColor" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[currentColor = color;
+]]>
+		</body>
+		<param access-modifier="private" name="color" display-name="" uuid="0687f2f7-f896-4728-9be5-30d4bd154cdc" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+	</do>
+	<object access-modifier="private" name="currentColor" display-name="currentColor" uuid="4532e91d-f146-4219-9f4b-12b3fb613383" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="3"/>
+	<object access-modifier="private" name="pSettingsEvents" display-name="pSettingsEvents" uuid="38468cb2-d0db-475b-9642-5986c71d96b1" base-type="Alarms_SettingsEvents" base-type-id="00182cb1-80f3-4d3a-b705-fed91c28b6fd" base-const="true" base-ref="true" ver="3"/>
+	<do access-modifier="private" name="CreateColor" display-name="CreateColor" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[//Создание цвета
+function rgb2hex(r, g, b, a) {
+	r = r.toString(16);
+	g = g.toString(16);
+	b = b.toString(16);
+	a = a.toString(16);
+	
+	if (r.length == 1) r = "0" + r;
+	if (g.length == 1) g = "0" + g;
+	if (b.length == 1) b = "0" + b;
+	if (a.length == 1) a = "0" + a;
+	
+	return "0x" + a + r + g + b;
+}
+
+var redColor = parseInt(RedColor.Text,10);
+var greenColor = parseInt(GreenColor.Text,10);
+var blueColor = parseInt(BlueColor.Text,10);
+var alpha = parseInt(Alpha.Text,10);
+
+Example.BrushColor = rgb2hex(redColor, greenColor, blueColor, alpha);
+currentColor = Example.BrushColor;
+]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Extra" display-name="Extra" uuid="3203f864-29ee-41b0-9639-33dd955c324a" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="116" ver="3"/>
+		<designed target="Y" value="93" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="121.167" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Дополнительно &gt;&gt;" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[WindowWidth = 420;
+here.Width = 420;
+Enabled = false;
+
+]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="RedColor" display-name="RedColor" uuid="8fbb69d7-707e-4b90-95cb-45a189059dae" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+		<designed target="X" value="326" ver="3"/>
+		<designed target="Y" value="2" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="52" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="Text" value="0" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="129" ver="3"/>
+		<designed target="HideInput" value="false" ver="3"/>
+		<designed target="PlaceholderText" value="" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="001e6815-5489-4983-9937-0524d9f38a4c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="-81" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="73" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="Красный:" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="130" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="EditFinished">
+			<body kind="om">
+				<![CDATA[CreateColor();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+			<body kind="javascript">
+				<![CDATA[var input = parseInt(text,10);
+var str = text;
+
+if (Number.isNaN(input) || /(\D)/g.test(text)) str = "0"; //Если не число
+else if (input > 255) str = "255"; //Если за диапазоном
+if (str.length > 3) str = text.slice(-3); //Если превышена длина
+Text = str;
+CreateColor();]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="GreenColor" display-name="GreenColor" uuid="a24d5685-ac9d-4d96-b89f-ef5939753ab3" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+		<designed target="X" value="326" ver="3"/>
+		<designed target="Y" value="26" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="52" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="Text" value="0" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="129" ver="3"/>
+		<designed target="HideInput" value="false" ver="3"/>
+		<designed target="PlaceholderText" value="" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="972a7fa6-9d80-46a8-8233-c7adaeffc90d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="-81" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="73" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="Зелёный:" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="130" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="EditFinished">
+			<body kind="om">
+				<![CDATA[CreateColor();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+			<body kind="javascript">
+				<![CDATA[var input = parseInt(text,10);
+var str = text;
+
+if (Number.isNaN(input) || /(\D)/g.test(text)) str = "0"; //Если не число
+else if (input > 255) str = "255"; //Если за диапазоном
+if (str.length > 3) str = text.slice(-3); //Если превышена длина
+Text = str;
+CreateColor();]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="BlueColor" display-name="BlueColor" uuid="a001837f-b4a6-429d-a64d-52e31614ce92" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+		<designed target="X" value="325" ver="3"/>
+		<designed target="Y" value="49" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="52" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="Text" value="0" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="129" ver="3"/>
+		<designed target="HideInput" value="false" ver="3"/>
+		<designed target="PlaceholderText" value="" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="6656720f-bc31-4021-b5a7-d176135b9c83" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="-80" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="73" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="Синий:" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="130" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="EditFinished">
+			<body kind="om">
+				<![CDATA[CreateColor();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+			<body kind="javascript">
+				<![CDATA[var input = parseInt(text,10);
+var str = text;
+
+if (Number.isNaN(input) || /(\D)/g.test(text)) str = "0"; //Если не число
+else if (input > 255) str = "255"; //Если за диапазоном
+if (str.length > 3) str = text.slice(-3); //Если превышена длина
+Text = str;
+CreateColor();]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Alpha" display-name="Alpha" uuid="7eb178ab-d6d1-4ff5-922b-2fb32b23c8d4" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+		<designed target="X" value="325" ver="3"/>
+		<designed target="Y" value="72" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="52" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="Text" value="255" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="129" ver="3"/>
+		<designed target="HideInput" value="false" ver="3"/>
+		<designed target="PlaceholderText" value="" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="617415a1-0f0a-4867-91a5-4946abe58e1c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="-80" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="73" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="Альфа-канал:" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="130" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="EditFinished">
+			<body kind="om">
+				<![CDATA[CreateColor();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+			<body kind="javascript">
+				<![CDATA[var input = parseInt(text,10);
+var str = text;
+
+if (Number.isNaN(input) || /(\D)/g.test(text)) str = "0"; //Если не число
+else if (input > 255) str = "255"; //Если за диапазоном
+if (str.length > 3) str = text.slice(-3); //Если превышена длина
+Text = str;
+CreateColor();]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Example" display-name="Example" uuid="28d769ec-1d37-4680-bb68-3d6d3a3d2ef1" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="384.5" ver="2"/>
+		<designed target="Y" value="2.83333" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="30.3333" ver="2"/>
+		<designed target="Height" value="86.3333" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffffffff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="PenWidth" ver="3">
+			<body>
+				<![CDATA[(currentColor == me.BrushColor)?3:1]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Ok" display-name="Ok" uuid="7c6cd000-a2dc-4f6f-9412-bf1daa8aa82b" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="2.5" ver="3"/>
+		<designed target="Y" value="93" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="35" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="OK" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[ApplyColor(currentColor);]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="Cancel" display-name="Cancel" uuid="bc3616c9-9f10-423c-a650-0fe706cfdcd1" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="44.75" ver="3"/>
+		<designed target="Y" value="93" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="63.4999" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Отмена" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[Close();]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do access-modifier="private" name="ApplyColor" display-name="ApplyColor" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[indexElem: int1 = pSettingsEvents.private.indexElem;
+
+if (indexElem == 0) pSettingsEvents.private.colorBackground = color;
+if (indexElem == 1) pSettingsEvents.private.colorText = color;
+if (indexElem == 2) pSettingsEvents.private.colorBackgroundBlinking = color;
+if (indexElem == 3) pSettingsEvents.private.colorTextBlinking = color;
+if (indexElem == 4) pSettingsEvents.pSettingsForm.Settings.Events.DefColBackground = color;
+if (indexElem == 5) pSettingsEvents.pSettingsForm.Settings.Events.DefColText = color;
+if (indexElem == 6) pSettingsEvents.pSettingsForm.Settings.Events.AckColBackground = color;
+if (indexElem == 7) pSettingsEvents.pSettingsForm.Settings.Events.AckColText = color;
+if (indexElem == 8) pSettingsEvents.pSettingsForm.Settings.Events.SelectEventColor = color;
+
+Close();
+
+]]>
+		</body>
+		<param access-modifier="private" name="color" display-name="" uuid="0687f2f7-f896-4728-9be5-30d4bd154cdc" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+	</do>
+</type>
+

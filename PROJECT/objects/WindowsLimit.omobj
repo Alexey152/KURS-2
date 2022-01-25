@@ -1,0 +1,25 @@
+<object access-modifier="private" name="WindowsLimit" display-name="WindowsLimit" uuid="cc1fb094-a641-445d-addd-38eb469f1785" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="1">
+	<object access-modifier="private" name="one" display-name="one" uuid="37b69c18-b4a4-4101-abb6-88d0772d0dd7" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="1"/>
+	<object access-modifier="private" name="two" display-name="two" uuid="d84c716e-8399-4e07-a1cd-3bba416ab7b0" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="1"/>
+	<object access-modifier="private" name="three" display-name="three" uuid="7cb1ebb6-d307-4233-a3af-b73f12e7648b" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="four" display-name="four" uuid="19b78b6c-4da0-4b53-97b5-5810b32ea389" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="one" ver="1" value="277"/>
+	<init target="two" ver="1" value="213"/>
+	<init target="three" ver="1" value="1164"/>
+	<init target="four" ver="1" value="618"/>
+	<object access-modifier="private" name="CnetralX" display-name="CnetralX" uuid="afc1327f-138c-419e-9e27-770882d4dde1" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="1"/>
+	<object access-modifier="private" name="CnetralY" display-name="CnetralY" uuid="00388466-b9f0-4d63-8352-3849e7726bd2" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="1"/>
+	<init target="CnetralX" ver="1" value="500"/>
+	<init target="CnetralY" ver="1" value="250"/>
+	<object access-modifier="private" name="Frame_X" display-name="Frame_X" uuid="0adb6505-24dc-4492-af8e-224f4ab7da29" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="1"/>
+	<object access-modifier="private" name="Frame_Y" display-name="Frame_Y" uuid="07548995-7c41-409c-a58e-808166938270" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="1"/>
+	<object access-modifier="private" name="Frame_Width" display-name="Frame_Width" uuid="3b6c1f32-a7fd-4c6b-a48c-fa8ca3d801ef" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="1"/>
+	<object access-modifier="private" name="Frame_Height" display-name="Frame_Height" uuid="2f65e4be-d5b5-490b-8309-481ed7e9f2eb" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="1"/>
+	<init target="Frame_X" ver="1" value="-100"/>
+	<init target="Frame_Y" ver="1" value="60"/>
+	<init target="Frame_Width" ver="1" value="1123"/>
+	<init target="Frame_Height" ver="1" value="608"/>
+	<object access-modifier="private" name="MouseClick_X" display-name="MouseClick_X" uuid="8ff27611-c4be-47ca-93a1-1c3c6857654a" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="1"/>
+	<object access-modifier="private" name="MouseClick_Y" display-name="MouseClick_Y" uuid="26475e62-faa0-414b-ba07-428288167e17" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="1"/>
+</object>
+

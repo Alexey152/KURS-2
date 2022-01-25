@@ -1,0 +1,624 @@
+<type access-modifier="private" name="MsgButton" display-name="MsgButton" uuid="db3556d4-a078-4c63-a280-7349fce01a62" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<object access-modifier="private" name="Msg" display-name="Msg" uuid="843bf518-8763-4b83-ba0e-d5eaf057f772" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="34" ver="3"/>
+		<designed target="Height" value="34" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xffcdcdcd" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="BitNum" display-name="BitNum" uuid="d709e3de-2d84-471e-b48d-50a14dcf3d2a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="10.3" ver="3"/>
+			<designed target="Y" value="4" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="15" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="3" ver="3"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="33" ver="3"/>
+			<init target="Visible" ver="3" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="5480c444-dc8d-4654-aa28-e43e0dc94d8e" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="34.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="34.5" ver="3"/>
+			<designed target="Height" value="34.5" ver="3"/>
+			<designed target="PenColor" value="0xfff5f5f5" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1.5" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="8c923370-cb2a-4c2c-97cd-e48d46f8125b" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1bb9821f-5921-4524-bf15-375c0e25a212" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="-34.5" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="865ca13b-0e7c-4092-b473-cf7fe5b1c48b" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="34.5" ver="3"/>
+				<designed target="Y" value="-34.5" ver="3"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Math.TestBit(Buttons,String.ToUint1(parent.BitNum.Text,0))]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff626262]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xfff5f5f5]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="30e49a21-5a0f-4992-b9d4-8b33cde2a262" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3" cardinal="1">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="34.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="34.5" ver="3"/>
+			<designed target="Height" value="34.5" ver="3"/>
+			<designed target="PenColor" value="0xff626262" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1.5" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="1a4f1bdc-56bc-4ede-a75d-4e5f0901f114" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="db1d80d1-a0ae-48de-b9d3-957e76a58bf0" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="34.5" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="9e458077-eb52-4d7a-a7ce-320ce5f1828b" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+				<designed target="X" value="34.5" ver="3"/>
+				<designed target="Y" value="-34.5" ver="3"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Math.TestBit(Buttons,String.ToUint1(parent.BitNum.Text,0))]]>
+					</condition>
+					<expr>
+						<![CDATA[0xfff5f5f5]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xff626262]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="MousePress">
+			<body kind="javascript">
+				<![CDATA[if(unit.Security.EnableOpenPopup.Value){
+	//let regexp = (\.\ *\ *);
+	JSONTextFilter = "";
+	let strArr=TextFilter.Value.split(" ");
+	let quitesStr = "\"";
+	let startStr = "{" + quitesStr + "message" + quitesStr + ":" + quitesStr;
+	let endStr = "*" + 	quitesStr + "}";
+	DebugTool_1.Log(startStr);
+	for (var i = 0; i <strArr.length; i++ ){
+	JSONTextFilter=JSONTextFilter + "*" + strArr[i];
+	}
+	JSONTextFilter= startStr + JSONTextFilter +endStr;
+	
+	
+	//JSONTextFilter = here.MakeRequestJSON(TextFilter.Value,"message");
+	DebugTool_1.Log(JSONTextFilter.Value);	
+	OpenPopWindow.Invoke();
+	
+}]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="3" event="MouseRelease">
+			<body kind="om">
+				<![CDATA[Buttons = 0;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_6" display-name="Handler_6" ver="4" event="MousePress">
+			<body kind="om">
+				<![CDATA[if (unit.Security.EnableOpenPopup.Value){Buttons=TypeConvert.ToUint4(Math.Pow(2,String.ToUint4(BitNum.Text,0)));}]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="3b30e103-0eca-4e6d-85b0-39f8aa778045" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="34" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="ImageFile" value="tab_data.png" ver="3"/>
+			<designed target="Active" value="true" ver="3"/>
+			<designed target="CurrentFrameNumber" value="0" ver="3"/>
+			<designed target="Speed" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.Line_5.PenWidth=2;
+me.Line_6.PenWidth=2;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.Line_5.PenWidth=1;
+me.Line_6.PenWidth=1;]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="OpenPopWindow" display-name="OpenPopWindow" uuid="8a97e5e5-03d5-44c8-bf64-9c3aaf70daac" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="open-new" form-by-id="false">
+			<object access-modifier="private" uuid="84ee88fd-546a-43f9-9b9a-f6e0333c53f1" base-type="AlarmHist" base-type-id="ced82ab2-bd98-4cb2-9427-c89bec54d34e" ver="3">
+				<init target="JSONTextFilter" ver="3">
+					<expr>
+						<![CDATA[here.JSONTextFilter.Value]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="TextFilter" display-name="TextFilter" uuid="87ab5509-b6e0-4cf2-8cde-51172549f33e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<do access-modifier="private" name="MakeRequestJSON" display-name="MakeRequestJSON" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[//Функция преобразует исходную строк в формат JSON: проводит поиск по шаблонам и составляет массив элементов, затем применяется обратная польская запись для определения порядка действий;
+//определяются логические операторы и происходит поэтапное формирование логических выражений из элементов массива и происходит формирование строки в json формате
+var resultArray = [];
+var operatorArray = [];
+var gravityPrev = 0;
+var gravity = 0;
+var objectInfo = {};
+var prevPrevElem = '';
+var prevElem = '';
+var jsonStr = '';
+var elementPattern;
+var signPattern;
+var argumentPattern;
+var commonArrayStr;
+var operatorPattern;
+var tempArray =[];
+try{
+//Проверка корректности ввода поля
+DebugTool_1.Log("Chek_1");
+DebugTool_1.Log(source);
+DebugTool_1.Log(inputString);
+
+if (source == "severity") if (!CheckValueInt(inputString)) return "error1";
+DebugTool_1.Log("Chek_1_1");
+if (source == "time") if (!CheckValueDateTime(inputString)) return "error2";
+DebugTool_1.Log("Chek_1_2");
+
+if (source == "message") if (!CheckValueString(inputString)) return "error3";
+DebugTool_1.Log("Chek_1_3");
+
+//Инициализируем шаблон на поиск операторов, чисел и операндов
+if (source == "severity")elementPattern = elementPattern = /[(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|[<>=\d*]+/igu;
+else elementPattern = /[)]\s*(И)\s*[!]*(НЕ)*\s*[(]|[)]\s*(ИЛИ)\s*[!]*(НЕ)*\s*[(]|[)]\s*(&)\s*[!]*(НЕ)*\s*[(]|[)]\s*(\|)\s*[!]*(НЕ)*\s*[(]/g;
+//Шаблон логического оператора
+if (source == "severity") operatorPattern = /([(]|[)])|([&])|([ИЛИ]+)|([|])|(И)|(НЕ)|([!])/;
+else operatorPattern = /^\s*([&])\s*$|^\s*(ИЛИ)\s*$|(^\s*[|]\s*$)|^\s*(И)\s*$|^\s*(НЕ)\s*$|(^\s*[!]\s*$)/;
+
+//Шаблон знака
+if (source == "severity")signPattern = /([><=]+)/g;
+else signPattern = /([=]*)/g;
+//Шаблон числа
+var numberPattern = /(\d+)/g;
+//Шаблон аргумента
+if (source == "severity") argumentPattern = /(\d+)/;
+else argumentPattern = /(.*)/;
+//Шаблон массива
+var arrayPattern = /object/;
+//Заполняем массив символами строки
+var commonArray = inputString.match(elementPattern);
+DebugTool_1.Log("Chek_2");
+//Обработка входной строки в случае работы с фильтром сообщений и источника
+if (source != "severity")
+{	
+	//Логические операторы обозначаем знаками ^^, для разделения строки и записи в массив
+	let temp = inputString.replace(elementPattern,'^$&^');
+	tempArray = temp.split("^");
+		//Если отсутствуют логические элементы
+	if (tempArray.length == 1) 
+	{
+		//Если есть отрицание
+		if (/[!]\s*[(]|(НЕ)\s*[(]/.test(tempArray[0])) 
+		{
+			if (/[!]\s*[(]/.test(tempArray[0])) 
+			{
+				tempArray[0] = tempArray[0].replace(/[!]/,"")
+				tempArray.splice(0,0,"!");
+			}
+			if (/(НЕ)\s*[(]/g.test(tempArray[0])) 
+			{
+				tempArray[0] = tempArray[0].replace(/(НЕ)/,"")
+				tempArray.splice(0,0,"НЕ");
+			}
+			tempArray[1] = tempArray[1].replace(/^[(]/,"");
+			tempArray[1] = tempArray[1].replace(/[)]$/,"");
+			
+			if (!/[""].+[""]/g.test(tempArray[1])) tempArray[1] = tempArray[1].replace(/[А-Яа-яA-Za-z]+/,"*$&*");
+			else tempArray[1] = tempArray[1].replace(/["]["]/g,"");
+		}
+		else
+		{
+			if (!/[""].+[""]/g.test(tempArray[0])) tempArray[0] = tempArray[0].replace(/[А-Яа-яA-Za-z]+/,"*$&*");
+			else tempArray[0] = tempArray[0].replace(/["]["]/g,"");
+		}
+	}
+	else{
+	for (let i = 0; i < tempArray.length; i++)
+	{
+		//Если элемент - логический оператор
+		if (elementPattern.test(tempArray[i])) 
+		{	
+			//удаляем скобки
+			tempArray[i] = tempArray[i].replace(/[)(]/g,"");
+			tempArray[i-1] = tempArray[i-1].replace(/^[(]/,"");
+			tempArray[i+1] = tempArray[i+1].replace(/[)]$/,"");
+			//В случае, если стоят двойные "", то элемент идет как точное соответствие
+			if (!/[""].+[""]/g.test(tempArray[i-1])) tempArray[i-1] = tempArray[i-1].replace(/[А-Яа-яA-Za-z]+/,"*$&*");
+			else tempArray[i-1] = tempArray[i-1].replace(/["]["]/g,"");
+			if (!/[""].+[""]/g.test(tempArray[i+1]) && i == tempArray.length -2) tempArray[i+1] = tempArray[i+1].replace(/[А-Яа-яA-Za-z]+/,"*$&*");
+			else tempArray[i+1] = tempArray[i+1].replace(/["]["]/g,"");
+			//Обработка отрицаний
+			if (/[!]/g.test(tempArray[i])) 
+			{
+				tempArray[i] = tempArray[i].replace(/[!]/,"");
+				tempArray.splice(i+1,0,"!");
+			}
+			if (/НЕ/g.test(tempArray[i])) 
+			{
+				tempArray[i] = tempArray[i].replace(/НЕ/,"");
+				tempArray.splice(i+1,0,"НЕ");
+			}
+		}
+		else
+		{
+			//Обработка отрицаний
+			if (/[!][(]/g.test(tempArray[i])) 
+			{
+				tempArray[i] = tempArray[i].replace(/[!]/,"");
+				tempArray.splice(i,0,"!");
+			}
+			if (/(НЕ)[(]/g.test(tempArray[i])) 
+			{
+				tempArray[i] = tempArray[i].replace(/НЕ/,"");
+				tempArray.splice(i,0,"НЕ");
+			}
+		}
+	}
+	}
+	commonArray = tempArray;
+}
+DebugTool_1.Log("Chek_3");
+//Если пустая строка, то возвращаем 0
+if (commonArray == null) return "error4";
+DebugTool_1.Log("Chek_4");
+//Функция опеределения веса оператора
+function GravityValue(gravity)
+{
+	switch(gravity)
+	{
+		case 'И':
+		case '&':
+			gravity = 2;
+			break;
+		case 'ИЛИ':
+		case '|':
+			gravity = 1;
+			break;
+		case '(':
+			gravity = 4;
+			break;
+		case ')':
+			gravity = 5;
+			break;
+		case 'НЕ':
+		case '!':
+			gravity = 3;
+			break;
+	}
+	return gravity;
+}
+DebugTool_1.Log("Chek_5");
+//Фукнция получения выражения вида ">": { "severity": 10 }"
+function MakeExpression(str)
+{
+	let sign;
+	let number;
+	let argument = str.match(argumentPattern);
+	let expression = {};
+	//Если фильтр по Важности, то заполняем строку в одном формате, если по Исчтонику и Сообщениям, то по другому
+	if (source == 'severity')
+	{
+	 sign = str.match(signPattern);
+	 expression = {[sign[0]]: {[source]:parseInt(argument)}};
+	}
+	else expression = {[source]:argument[0].toString().trim()};
+	return expression
+}
+DebugTool_1.Log("Chek_6");
+//Проходим поэлементно массив
+for (let i = 0; i < commonArray.length; i++)
+{	
+	//Если элемент - логический оператор
+	if (operatorPattern.test(commonArray[i]))
+	{
+		commonArray[i] = commonArray[i].trim();
+		gravity = GravityValue(commonArray[i]);
+		//В случае, если "("
+		if (gravity == 4) 
+		{
+			operatorArray.push(commonArray[i]);
+			continue;
+		}
+
+		//В случае, если ")" - скобка закрылась
+		if (gravity == 5)
+		{
+			let bracketIndex = operatorArray.lastIndexOf("(", operatorArray.length-1)
+			//Операторы, что былт в скобках, записываем в результирующий массив
+			while (operatorArray.length - 1 != bracketIndex)resultArray.push(operatorArray.pop());
+			operatorArray.pop();
+		}
+	
+		//В случае, если предыдущий оператор имеет больший вес - записываем в результирующий массив кроме случае со ()
+		if (operatorArray.length != null) gravityPrev = GravityValue(operatorArray[operatorArray.length-1]);
+		while (gravityPrev >= gravity && gravityPrev != 4 && gravityPrev != 5 && operatorArray.length != 0)
+		{
+			resultArray.push(operatorArray.pop());
+			gravityPrev = GravityValue(operatorArray[operatorArray.length-1]);
+		}
+		
+		//")" - не записываем
+		if (gravity != 5) operatorArray.push(commonArray[i]);
+	}
+	else resultArray.push(commonArray[i]);
+	
+	//Если массив кончился - записываем остатки операндов в результирующий массив
+	if (i == commonArray.length - 1)
+	{
+		while (operatorArray.length != 0)
+		{
+			resultArray.push(operatorArray.pop());
+		}
+	}
+}
+DebugTool_1.Log("Chek_7");
+//Формирование JSON-строки
+for (let i = 0; i < resultArray.length; i++)
+{
+	
+	//Если всего один элемент в массиве, то выводим только это условие
+	if (resultArray.length == 1)if (!arrayPattern.test(resultArray[i]))jsonStr = MakeExpression(resultArray[i]);
+	
+	//Если условий несколько
+	if (operatorPattern.test(resultArray[i]) && resultArray.length > 1)
+	{
+		let notExpression;
+		let operator = resultArray[i].match(/[&]|[|]|[!]|(ИЛИ)+|(И)|(НЕ)/);
+		switch(operator[0])
+		{
+			case '&':
+			case 'И':
+				operator = 'AND';
+				break;
+			case '|':
+			case 'ИЛИ':
+				operator = 'OR';
+				break;
+			case '!':
+			case 'НЕ':
+				operator = 'NOT';
+				//В случае, если есть отрицание, применяем к скобкам или выражению
+				if (!arrayPattern.test(resultArray[i-1]))prevElem = MakeExpression(resultArray[i-1]);
+				else prevElem = resultArray[i-1];
+				notExpression = {'NOT': prevElem};
+				jsonStr = JSON.stringify(notExpression);
+				jsonStr = JSON.parse(jsonStr);
+				resultArray.splice(i-1, 2, jsonStr);
+				i-= 1;
+				objectInfo = {};
+				continue;
+		}
+		
+		//Считываем элемент i-2 и i-1, если это не объекты - преобразуем
+		if (!arrayPattern.test(resultArray[i-2]))prevPrevElem = MakeExpression(resultArray[i-2]);
+		else prevPrevElem = resultArray[i-2];
+		if (!arrayPattern.test(resultArray[i-1]))prevElem = MakeExpression(resultArray[i-1]);
+		else prevElem = resultArray[i-1];
+
+		//Создаем объект с именем оператора, который является массивом и заполняем его
+		objectInfo[`${operator}`] = [];
+		objectInfo[objectInfo[`${operator}`].push(prevPrevElem)];
+		objectInfo[objectInfo[`${operator}`].push(prevElem)];
+		
+		//записываем объект в виде строки
+		jsonStr = JSON.stringify(objectInfo);
+		jsonStr = JSON.parse(jsonStr);
+		
+		//Заменяем элементы i-2 и i-1 на полученное выражение
+		resultArray.splice(i-2, 3, jsonStr);
+		i-= 2;
+		objectInfo = {};
+		
+		//В случае последнего прохода строку не обнуляем
+		if (i >= 2) jsonStr = '';
+	}
+}
+DebugTool_1.Log("Chek_8");
+jsonStr = JSON.stringify(jsonStr);
+DebugTool_1.Log(jsonStr);
+if (jsonStr == '""') throw 'myException';
+log(jsonStr);
+return jsonStr;
+}
+catch(err)
+{
+	return "error5";
+}]]>
+		</body>
+		<param access-modifier="private" name="inputString" display-name="" uuid="94c437ea-dc7c-4590-b340-839d1a301c04" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+		<param access-modifier="private" name="source" display-name="" uuid="2d748526-a04e-4371-be05-dfed3fc08435" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	</do>
+	<object access-modifier="private" name="JSONTextFilter" display-name="JSONTextFilter" uuid="4ef17597-ff6e-41f1-9ee4-673bc00d9c73" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="c38d1849-eef0-42cf-9fe5-61931cd826cd" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<do access-modifier="private" name="CheckValueInt" display-name="CheckValueInt" ver="3" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" form-by-id="true">
+		<param access-modifier="private" name="inputValue" display-name="" uuid="e7478ddd-cb1b-4003-857f-06ea3e5f690a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<body kind="javascript">
+			<![CDATA[//Функция проверки корректности ввода значений типа int
+var str = inputValue;
+//Инициализируем шаблоны
+//последовательная запись аргументов
+var mask1 = /[><=]\d+\s*[><=]\d+/g;
+//повторение или неверная запись логических знаков
+var mask2 = /[>]{2}|[<]{2}|[=]{2}|[!]{2}|(><)|(<>)|(=>)|(=<)|(НЕ!)|(!НЕ)/g;
+//наличие букв латинского алфавита
+var mask3 = /\D[A-Za-z]/g;
+//проверка на соответствие записи типа аргумент-операнд-аргумент
+var mask4 =/[!><=]*\d*[()]*\s*(\&\s*(НЕ)?[!]?|И\s*(НЕ)?[!]?|ИЛИ\s*(НЕ)?[!]?|\|\s*(НЕ)?[!]?|\s*(НЕ)?\s*[!]?){1}\s*[()]*[!><=]+\d+/g;
+//наличие кириллицы
+var mask5 = /[А-Яа-я]/g;
+//число начинается с 0
+var mask6 = /[><=][0][0-9]/;
+var count = 0;
+//общий паттерн
+var elementPattern = /([(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|[<>=\d*]+)/igu;
+var errorArray = [];
+var commonArray = [];
+
+commonArray = str.match(elementPattern);
+//опеределяем количество скобок
+if (commonArray != null) 
+{
+	for (let i = 0; i < commonArray.length; i++)
+	{
+		if (commonArray[i] == "(") count++;
+		if (commonArray[i] == ")") count--;
+	}
+}
+//тестируем строку по каждому шаблону
+errorArray.push(mask1.test(str));
+errorArray.push(mask2.test(str));
+errorArray.push(mask3.test(str));
+errorArray.push(mask6.test(str));
+
+//в этих случаях несовпадение с шаблоном = неправильная запись
+str = str.replace(mask4,"");
+errorArray.push(mask5.test(str));
+//удаляем правильные совпадения
+str = str.replace(/[!]*[><=]+\d+/g,"");
+str = str.replace(/[(]/g,"");
+str = str.replace(/[)]/g,"");
+
+//если в строке что-то осталось или массив ошибок содержит ошибки, то возвращаем false
+if ((str.length > 0 && str != "")|| errorArray[0] || errorArray[1] || errorArray[2] || errorArray[3] || errorArray[4] || count != 0) return false;
+return true;
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="CheckValueString" display-name="CheckValueString" ver="3" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8">
+		<body kind="javascript">
+			<![CDATA[//Функция проверки корректности ввода значений типа string
+var str = inputString;
+//Инициализируем шаблоны
+//повторение знаков
+var mask1 = /[!]{2}|[=]{2}/g;
+var count = 0;
+
+//паттерн элемента
+var elementPattern = /[(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|(\s*[А-Яа-я0-9A-Za-z ?!=;,._-]*[^&()|]\s*)/g;
+//паттер оператора
+var operatorPattern = /([&])|([ИЛИ]+)|([|])|(И)/g;
+var errorArray = [];
+var commonArray = [];
+
+commonArray = str.match(elementPattern);
+//опеределяем количество скобок
+if (commonArray != null) 
+{
+	for (let i = 0; i < commonArray.length; i++)
+	{
+		if (commonArray[i] == "(") count++;
+		if (commonArray[i] == ")") count--;
+	}
+}
+//тестируем строку по каждому шаблону
+errorArray.push(mask1.test(str));
+//если в строке что-то осталось или массив ошибок содержит ошибки, то возвращаем false
+if (errorArray[0] || count != 0) return false;
+return true
+
+]]>
+		</body>
+		<param access-modifier="private" name="inputString" display-name="" uuid="8a6ecd2e-417a-42c7-aec2-04c024d28ae4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+	<object access-modifier="private" name="Buttons" display-name="Buttons" uuid="466903d5-e1c3-4169-bc14-69f2b7ed2c27" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="OpenAccessDenied" display-name="OpenAccessDenied" uuid="f470ca00-81c0-4feb-ba58-84def10601fa" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="9b25a2ac-9163-4100-bc6d-5fd3ba01aefb" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="IsOKOnly" ver="1" value="true"/>
+				<init target="in_Title" ver="1" value="Внимание"/>
+				<init target="in_Message" ver="1" value="Отказано в доступе. Недостаточно прав! "/>
+				<init target="MessageType" ver="1" value="error.png"/>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="AccessDeniedMsg" display-name="AccessDeniedMsg" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[unit.Security.Msg_AccessDenied.Send.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

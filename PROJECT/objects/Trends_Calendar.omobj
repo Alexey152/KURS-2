@@ -1,0 +1,766 @@
+<type access-modifier="private" name="Trends_Calendar" display-name="Trends_Calendar" uuid="f3aff9fb-440f-4048-85f4-2d2d454dfb37" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+	<!-- Базовый тип элемента календаря -->
+	<type access-modifier="private" name="CalendarItem" display-name="CalendarItem" uuid="2caac6f6-fb3f-4246-a15f-b508b913850b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="20"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xffc0c0c0"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="ValueText" display-name="ValueText" uuid="380b37ef-5e1d-4e9c-bf9a-b0fc8aad3ee8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="50"/>
+			<designed target="Height" value="20"/>
+			<designed target="Text" value=""/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0"/>
+			<designed target="FontColor" value="4278190080"/>
+			<designed target="TextAlignment" value="132"/>
+			<init target="Text" ref="TextParam"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="835617e2-f0d2-401a-b36a-d79a8f152166" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718">
+			<designed target="Orientation" value="1"/>
+			<designed target="Gap" value="0"/>
+		</object>
+		<do access-modifier="private" name="SetText" display-name="SetText" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<body kind="om">
+				<![CDATA[ValueText = data;]]>
+			</body>
+			<param access-modifier="private" name="data" display-name="" uuid="e1c55bed-50c4-471b-827b-c3b395d51d28" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+		</do>
+		<param access-modifier="private" name="TextParam" display-name="TextParam" uuid="492096ed-d12f-43bd-ae9e-a7db100e6411" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d"/>
+	</type>
+	<!-- Элемент календаря, соответствующий конкретной дате -->
+	<type access-modifier="private" name="CalendarDateItem" display-name="CalendarDateItem" uuid="a25526ba-b9cb-4892-a3c1-c5199238ad1b" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+		<do access-modifier="private" name="SetDate" display-name="SetDate" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<body kind="om">
+				<![CDATA[// Установка даты
+  dateValue = date;
+
+  // Обновим текст
+  _updateText();
+
+  // Даты текущего месяца должны визуально отличаться от дат остальных месяцов
+  _updateMonth(currentMonth);]]>
+			</body>
+			<param access-modifier="private" name="date" display-name="" uuid="755b72f3-9824-41c7-a1d6-6c728d97c020" base-type="uint64" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561"/>
+			<param access-modifier="private" name="currentMonth" display-name="" uuid="7cec2276-47fb-413c-b1f1-62aab2af0293" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+		</do>
+		<object access-modifier="private" name="dateValue" display-name="dateValue" uuid="b13c3ffc-8443-47e7-856e-d404f14e2bf6" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa"/>
+		<do access-modifier="private" name="_updateText" display-name="_updateText" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<body kind="javascript">
+				<![CDATA[DateFormatter.InValue = dateValue;]]>
+			</body>
+		</do>
+		<object access-modifier="private" name="DateFormatter" display-name="DateFormatter" uuid="c2d7c050-ed93-4333-8e30-ff584259138c" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32">
+			<designed target="InValue" value=""/>
+			<init target="Format">
+				<object access-modifier="private" uuid="4a413470-5022-46a4-af17-668ac8154464" base-type="FormatDateTime" base-type-id="353d14bd-bf52-4abb-8d4c-3b2541bb0de2">
+					<init target="DateTimeFormat" value="d"/>
+					<init target="LocalTime" value="true"/>
+				</object>
+			</init>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ValueChanged" ver="3">
+				<body kind="om">
+					<![CDATA[SetText(DateFormatter.OutValue);]]>
+				</body>
+			</do-on>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="MouseEnter" ver="3">
+			<body kind="om">
+				<![CDATA[// Подсветка даты при наведении мышью
+  if (!_selected)
+	  BrushColor = 0xffdcdcdc;]]>
+			</body>
+		</do-on>
+		<designed target="BrushColor" value="0xffffffff"/>
+		<designed target="BrushStyle" value="1"/>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" event="MouseLeave" ver="3">
+			<body kind="om">
+				<![CDATA[// Сброс подсветки при наведении мышью
+  if (!_selected)
+	  BrushColor = 0xfff0f0f0;]]>
+			</body>
+		</do-on>
+		<init target="TextParam" value=""/>
+		<do access-modifier="private" name="_updateMonth" display-name="_updateMonth" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<param access-modifier="private" name="currentMonth" display-name="" uuid="6377a520-d5c0-4436-9fd0-313cf85f9a23" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+			<body kind="om">
+				<![CDATA[if (currentMonth)
+	  // Текущий месяц - ярко чёрный цвет
+	  ValueText.FontColor = 0xff000000;
+  else
+	  // Остальные месяца - бледно-серый
+	  ValueText.FontColor = 0xffaaaaaa;]]>
+			</body>
+		</do>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" event="MouseClick" ver="3">
+			<body kind="om">
+				<![CDATA[// При нажатии элемента календаря, производится его выбор
+  Select(true);]]>
+			</body>
+		</do-on>
+		<do access-modifier="private" name="Select" display-name="Select" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<param access-modifier="private" name="selected" display-name="" uuid="997c574a-4c93-4f80-87b0-97e47dd72963" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+			<body kind="om">
+				<![CDATA[// Метод выбирает текущую дату в календаре
+
+  // Флаг, необходимый для визуальной отрисовки
+  _selected = selected;
+
+  if (selected)
+  {
+	  // Подсветим выбранную дату голубым
+	  BrushColor = 0xff49c0ff;
+
+	  // Уведомим календарь о смене даты
+	  if (DateCalendarRef.currentDate != dateValue)
+		  DateCalendarRef.ChangeSelection(dateValue);
+  }
+  else
+	  // Сброс выделения даты
+	  BrushColor = 0xfff0f0f0;]]>
+			</body>
+		</do>
+		<object access-modifier="private" name="_selected" display-name="_selected" uuid="db8660e9-e4a0-47c3-82a8-89e203d06793" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+		<object access-modifier="private" name="DateCalendarRef" display-name="DateCalendarRef" uuid="2601cbf8-03ed-4577-88c2-17410eb2b6f9" base-type="Calendar" base-type-id="f3aff9fb-440f-4048-85f4-2d2d454dfb37" base-const="true" base-ref="true"/>
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Width" value="20" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+	</type>
+	<!-- Неделя -->
+	<type access-modifier="private" name="CalendarWeek" display-name="CalendarWeek" uuid="b077b572-4cc8-4a08-92da-945d44901957" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Mon" display-name="Mon" uuid="586e49e9-89da-41d4-b2e9-e6245a00005a" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Tue" display-name="Tue" uuid="3ff86e30-3f0b-4e29-aa87-9e4b60d076ec" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="20"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Wed" display-name="Wed" uuid="23bf29fc-179e-4e34-8682-831e46571c09" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="40"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Thu" display-name="Thu" uuid="34edda09-9f9d-4c80-804d-674279c689d5" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="60"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Fri" display-name="Fri" uuid="d3c4a8c4-7c55-47d4-9daf-1387f3a3567b" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="80"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Sat" display-name="Sat" uuid="90d9a4ab-57a1-4100-a5aa-28c3d5ca70f5" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="100"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="Sun" display-name="Sun" uuid="5752343c-5591-478b-a420-43cce2a87034" base-type="CalendarDateItem" base-type-id="a25526ba-b9cb-4892-a3c1-c5199238ad1b">
+			<designed target="X" value="120"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="20"/>
+			<designed target="Height" value="20"/>
+			<init target="DateCalendarRef" ref="WeekCalendarParam"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="f2879a9f-31ec-44cc-91d0-6995ad5b40b7" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718">
+			<designed target="Orientation" value="1"/>
+			<designed target="Gap" value="0"/>
+		</object>
+		<do access-modifier="private" name="SetStartDate" display-name="SetStartDate" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<param access-modifier="private" name="date" display-name="" uuid="d86f46e0-2cf3-40fb-b100-d8d652e872cb" base-type="uint64" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561"/>
+			<body kind="om">
+				<![CDATA[// Количество отсчётов времени в 1 сутках
+  ticksInDay: uint8 = 864000000000;		//1e7 * 3600 * 24
+
+  dateToSet: var = date;
+
+  // Установим дату для каждого дня
+
+  // dayMonth - значение месяца текущего дня,
+  // необходимо для визуального различия дней текущего месяца и всех остальных
+
+  // Понедельник
+  dayMonth: var = DateTime.Month(dateToSet);
+  Mon.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Вторник
+  dayMonth = DateTime.Month(dateToSet);
+  Tue.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Среда
+  dayMonth = DateTime.Month(dateToSet);
+  Wed.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Четверг
+  dayMonth = DateTime.Month(dateToSet);
+  Thu.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Пятница
+  dayMonth = DateTime.Month(dateToSet);
+  Fri.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Суббота
+  dayMonth = DateTime.Month(dateToSet);
+  Sat.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;
+
+  // Воскресенье
+  dayMonth = DateTime.Month(dateToSet);
+  Sun.SetDate(dateToSet, month == dayMonth);
+  dateToSet += ticksInDay;]]>
+			</body>
+			<param access-modifier="private" name="month" display-name="" uuid="6a18f181-913a-4266-8809-73dc7ad722a2" base-type="uint8" base-type-id="f73099bc-ee13-42cf-82bb-87368b826707"/>
+		</do>
+		<object access-modifier="private" name="WeekCalendarRef" display-name="WeekCalendarRef" uuid="11e6b477-c220-457f-a824-4fa954fc81c1" base-type="Calendar" base-type-id="f3aff9fb-440f-4048-85f4-2d2d454dfb37" base-const="true" base-ref="true"/>
+		<param access-modifier="private" name="WeekCalendarParam" display-name="WeekCalendarParam" uuid="887d2a3d-6232-479e-98f5-0e473e29f209" base-type="Calendar" base-type-id="f3aff9fb-440f-4048-85f4-2d2d454dfb37" base-const="true" base-ref="true"/>
+		<init target="WeekCalendarRef" ref="WeekCalendarParam"/>
+		<do access-modifier="private" name="ClearSelection" display-name="ClearSelection" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<body kind="om">
+				<![CDATA[// Сбросим выделение для каждого дня
+  Mon.Select(false);
+  Tue.Select(false);
+  Wed.Select(false);
+  Thu.Select(false);
+  Fri.Select(false);
+  Sat.Select(false);
+  Sun.Select(false);]]>
+			</body>
+		</do>
+		<do access-modifier="private" name="SelectDate" display-name="SelectDate" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3">
+			<body kind="om">
+				<![CDATA[// Выбор и подсветка желаемой даты
+  // Метод возвращается как только мы нашли нужную дату
+
+  if (date == Mon.dateValue)
+  {
+	  Mon.Select(true);
+	  return true;
+  }
+
+  if (date == Tue.dateValue)
+  {
+	  Tue.Select(true);
+	  return true;
+  }
+
+  if (date == Wed.dateValue)
+  {
+	  Wed.Select(true);
+	  return true;
+  }
+
+  if (date == Thu.dateValue)
+  {
+	  Thu.Select(true);
+	  return true;
+  }
+
+  if (date == Fri.dateValue)
+  {
+	  Fri.Select(true);
+	  return true;
+  }
+
+  if (date == Sat.dateValue)
+  {
+	  Sat.Select(true);
+	  return true;
+  }
+
+  if (date == Sun.dateValue)
+  {
+	  Sun.Select(true);
+	  return true;
+  }
+
+  return false;]]>
+			</body>
+			<param access-modifier="private" name="date" display-name="" uuid="a12ab218-3b94-42b0-9cf4-b75579902270" base-type="uint64" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561"/>
+		</do>
+	</type>
+	<designed target="X" value="0"/>
+	<designed target="Y" value="0"/>
+	<designed target="Rotation" value="0"/>
+	<designed target="Scale" value="1"/>
+	<designed target="Visible" value="true"/>
+	<designed target="Enabled" value="true"/>
+	<designed target="Tooltip" value=""/>
+	<designed target="Width" value="200"/>
+	<designed target="Height" value="200"/>
+	<designed target="RoundingRadius" value="0"/>
+	<designed target="PenColor" value="0xffc0c0c0"/>
+	<designed target="PenStyle" value="1"/>
+	<designed target="PenWidth" value="1"/>
+	<designed target="BrushColor" value="4278190080"/>
+	<designed target="BrushStyle" value="0"/>
+	<object access-modifier="private" name="MonthHeader" display-name="MonthHeader" uuid="682fc587-fd51-4b9e-b0bc-46160ba41954" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="MonthName" display-name="MonthName" uuid="4a6a98c9-2601-4635-8a08-e933d78d5574" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Scale" value="1"/>
+			<designed target="Visible" value="true"/>
+			<designed target="Enabled" value="true"/>
+			<designed target="Tooltip" value=""/>
+			<designed target="Width" value="172.5"/>
+			<designed target="Height" value="25"/>
+			<designed target="Text" value=""/>
+			<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0"/>
+			<designed target="FontColor" value="4278190080"/>
+			<designed target="TextAlignment" value="132"/>
+			<object access-modifier="private" name="MonthFormatter" display-name="MonthFormatter" uuid="e16f9765-b160-4497-8418-b2e43fd61f77" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32">
+				<designed target="InValue" value=""/>
+				<init target="Format">
+					<object access-modifier="private" uuid="0e3673ef-488c-4596-8cd6-516657119f04" base-type="FormatDateTime" base-type-id="353d14bd-bf52-4abb-8d4c-3b2541bb0de2">
+						<init target="DateTimeFormat" value="MMMM yyyy"/>
+					</object>
+				</init>
+			</object>
+			<do-trace access-modifier="private" target="Text" ver="3">
+				<body>
+					<![CDATA[MonthFormatter]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="d5335fb1-7e16-4488-aba7-c682b632db02" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+				<designed target="X" value="2" ver="3"/>
+				<designed target="Y" value="2" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="21" ver="3"/>
+				<designed target="Height" value="21" ver="3"/>
+				<designed target="Checkable" value="false" ver="3"/>
+				<designed target="Text" value="&lt;" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+				<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+				<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+				<designed target="BrushColor" value="0xfff0f0f0" ver="3"/>
+				<designed target="BrushStyle" value="1" ver="3"/>
+				<designed target="OnClickBrushColor" value="0xffa0a0a0" ver="3"/>
+				<designed target="OnClickBrushStyle" value="1" ver="3"/>
+				<designed target="OnHoverBrushColor" value="0xffdbecf9" ver="3"/>
+				<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+				<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+				<designed target="DisabledBrushStyle" value="1" ver="3"/>
+				<designed target="PenColor" value="0xff000000" ver="3"/>
+				<designed target="PenStyle" value="0" ver="3"/>
+				<designed target="PenWidth" value="0" ver="3"/>
+				<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+				<designed target="OnClickPenStyle" value="0" ver="3"/>
+				<designed target="OnClickPenWidth" value="0" ver="3"/>
+				<designed target="OnHoverPenColor" value="0xff00aaff" ver="3"/>
+				<designed target="OnHoverPenStyle" value="1" ver="3"/>
+				<designed target="OnHoverPenWidth" value="0" ver="3"/>
+				<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+				<designed target="DisabledPenStyle" value="1" ver="3"/>
+				<designed target="DisabledPenWidth" value="1" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+					<body kind="om">
+						<![CDATA[t:uint8= currentDate;
+dt:uint8= DateTime.Parse("01.02.1601 00:00:00");
+t= t-dt;
+//DebugTool_1.Log(DateTime.ToString(t));
+ChangeSelection(t);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="ad1091c3-af3d-456d-b585-56f614f7c0a3" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+				<designed target="X" value="150.5" ver="3"/>
+				<designed target="Y" value="2" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="21" ver="3"/>
+				<designed target="Height" value="21" ver="3"/>
+				<designed target="Checkable" value="false" ver="3"/>
+				<designed target="Text" value="&gt;" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+				<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+				<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+				<designed target="BrushColor" value="0xfff0f0f0" ver="3"/>
+				<designed target="BrushStyle" value="1" ver="3"/>
+				<designed target="OnClickBrushColor" value="0xffa0a0a0" ver="3"/>
+				<designed target="OnClickBrushStyle" value="1" ver="3"/>
+				<designed target="OnHoverBrushColor" value="0xffdbecf9" ver="3"/>
+				<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+				<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+				<designed target="DisabledBrushStyle" value="1" ver="3"/>
+				<designed target="PenColor" value="0xff000000" ver="3"/>
+				<designed target="PenStyle" value="0" ver="3"/>
+				<designed target="PenWidth" value="0" ver="3"/>
+				<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+				<designed target="OnClickPenStyle" value="0" ver="3"/>
+				<designed target="OnClickPenWidth" value="0" ver="3"/>
+				<designed target="OnHoverPenColor" value="0xff00aaff" ver="3"/>
+				<designed target="OnHoverPenStyle" value="1" ver="3"/>
+				<designed target="OnHoverPenWidth" value="0" ver="3"/>
+				<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+				<designed target="DisabledPenStyle" value="1" ver="3"/>
+				<designed target="DisabledPenWidth" value="1" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+					<body kind="om">
+						<![CDATA[t:uint8= currentDate;
+dt:uint8= DateTime.Parse("01.02.1601 00:00:00");
+t= t+dt;
+//DebugTool_1.Log(DateTime.ToString(t));
+ChangeSelection(t);]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="442f8289-454a-4818-86b4-ed17f80c9857" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718">
+			<designed target="Orientation" value="1"/>
+			<designed target="Gap" value="0"/>
+		</object>
+		<do access-modifier="private" name="_UpdateHeader" display-name="_UpdateHeader" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+			<body kind="javascript">
+				<![CDATA[MonthName.MonthFormatter.InValue = currentMonth;]]>
+			</body>
+		</do>
+	</object>
+	<object access-modifier="private" name="DaysHeader" display-name="DaysHeader" uuid="5659a36a-6b0a-485f-87a6-952fe27db2fc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="20"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="true"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="4278190080"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<object access-modifier="private" name="Mon" display-name="Mon" uuid="bdae02a9-1539-40eb-abb7-af6003c9109f" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="0"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="ПН"/>
+		</object>
+		<object access-modifier="private" name="Tue" display-name="Tue" uuid="3c466e7d-73df-45cf-831a-8568bca28817" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="28.571428571428573"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="ВТ"/>
+		</object>
+		<object access-modifier="private" name="Wed" display-name="Wed" uuid="c70c5b21-ba76-4d8f-ac05-4989e3828368" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="57.142857142857146"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="СР"/>
+		</object>
+		<object access-modifier="private" name="Thu" display-name="Thu" uuid="02673548-c657-4a2c-bc1d-894322ca3d81" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="85.714285714285722"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="ЧТ"/>
+		</object>
+		<object access-modifier="private" name="Fri" display-name="Fri" uuid="c2672220-9f0b-40ec-b5fe-3a58c048e6ae" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="114.28571428571429"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="ПТ"/>
+		</object>
+		<object access-modifier="private" name="Sat" display-name="Sat" uuid="37bf0a98-d443-483e-84f4-32825bed4979" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="142.85714285714286"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="СБ"/>
+		</object>
+		<object access-modifier="private" name="Sun" display-name="Sun" uuid="7fe839e2-e377-45c1-bbd9-40fb463c71ff" base-type="CalendarItem" base-type-id="2caac6f6-fb3f-4246-a15f-b508b913850b">
+			<designed target="X" value="171.42857142857144"/>
+			<designed target="Y" value="0"/>
+			<designed target="Rotation" value="0"/>
+			<designed target="Width" value="28.571428571428573"/>
+			<designed target="Height" value="20"/>
+			<init target="TextParam" value="ВС"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="562780a7-5f2e-4f42-9570-6224590f6d52" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718">
+			<designed target="Orientation" value="1"/>
+			<designed target="Gap" value="0"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Week_1" display-name="Week_1" uuid="7b80a20d-284a-48c1-9b8c-b574bbd97040" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="-4"/>
+		<designed target="Y" value="52.5"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+		<designed target="PenColor" value="0xffffffff" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Week_2" display-name="Week_2" uuid="8e1711ca-b405-4dbe-8c99-de891c5849c0" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="60"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+		<designed target="PenColor" value="0xffffffff" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Week_3" display-name="Week_3" uuid="0cb207ba-8088-4262-ac40-1e0c859e26ac" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="80"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+		<designed target="PenColor" value="0xffffffff" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Week_4" display-name="Week_4" uuid="230f3cb2-0f25-484e-9d92-8df1151744db" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="100"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+	</object>
+	<object access-modifier="private" name="Week_5" display-name="Week_5" uuid="ccd1ee8e-a956-45bd-8c70-ee42c7f29cfe" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="120"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+	</object>
+	<object access-modifier="private" name="Week_6" display-name="Week_6" uuid="031ca9b2-e2e7-4ac3-bf62-5942456c5310" base-type="CalendarWeek" base-type-id="b077b572-4cc8-4a08-92da-945d44901957">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="140"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Width" value="200"/>
+		<designed target="Height" value="20"/>
+		<init target="WeekCalendarParam" ref="here"/>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="7420841e-646d-4690-ba85-b71a279fd61a" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718">
+		<designed target="Orientation" value="2"/>
+		<designed target="Gap" value="0"/>
+	</object>
+	<do access-modifier="private" name="_UpdateDate" display-name="_UpdateDate" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+		<body kind="om">
+			<![CDATA[// Количество отсчётов времени в 1 сутках
+ticksPerDay: uint8 = 864000000000;		//1e7 * 3600 * 24
+
+// Получим день, месяц и год из значения времени
+year: var = DateTime.Year(currentDate);
+month: uint1 = DateTime.Month(currentDate);
+day: var = DateTime.Day(currentDate);
+
+// Узнаем первый день месяца
+firstDay: uint8 = DateTime.Create(year, month, 1, 0, 0, 0, 0);
+// И его день недели
+firstWeekDay: uint8 = TypeConvert.ToInt8(DateTime.DayOfWeek(firstDay));	//ошибка в документации: 0-вс, 1-пн и тд
+
+// Сдвинем нумерацию с 0 на 1, понедельник - первый день недели
+firstWeekDay = TypeConvert.ToInt1(((firstWeekDay + 6) % 7) + 1);
+
+currentMonth = firstDay;
+
+// Покажем также последнюю неделю предыдущего месяца
+if (firstWeekDay == 1)
+	firstDay -= ticksPerDay * 7;
+
+// Найдём первый понедельник первой недели
+startDate: uint8 = firstDay - (firstWeekDay - 1) * ticksPerDay;
+
+// Установим даты начал для всех недель
+Week_1.SetStartDate(startDate, month);
+startDate += ticksPerDay * 7;
+
+Week_2.SetStartDate(startDate, month);
+startDate += ticksPerDay * 7;
+
+Week_3.SetStartDate(startDate, month);
+startDate += ticksPerDay * 7;
+
+Week_4.SetStartDate(startDate, month);
+startDate += ticksPerDay * 7;
+
+Week_5.SetStartDate(startDate, month);
+startDate += ticksPerDay * 7;
+
+Week_6.SetStartDate(startDate, month);
+
+// Обновим заголовок календаря
+MonthHeader._UpdateHeader();]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="currentDate" display-name="currentDate" uuid="465c9e61-ee11-4f59-86b5-3bbf5635e371" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa"/>
+	<object access-modifier="private" name="InitTimer" display-name="InitTimer" uuid="ef575f8e-8305-405a-851e-1361fc501b81" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a">
+		<designed target="Period" value="100"/>
+		<designed target="Active" value="false"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="OnTimer" ver="3">
+			<body kind="om">
+				<![CDATA[InitTimer.Active = false;
+
+_now: var = Now;
+year: var = DateTime.Year(_now);
+month: var = DateTime.Month(_now);
+day: var = DateTime.Day(_now);
+
+date: var = DateTime.Create(year, month, day, 0, 0, 0, 0);
+ChangeSelection(date);]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="ChangeSelection" display-name="ChangeSelection" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+		<param access-modifier="private" name="date" display-name="" uuid="74577bbb-19a6-42b0-b93d-126279096ad2" base-type="uint64" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561"/>
+		<body kind="om">
+			<![CDATA[currentDate = date;
+
+// Очистим выбранные даты
+ClearSelection();
+// Обновим календарь
+_UpdateDate();
+
+// В случае, если выбрали дату из другого месяца - сменим месяц
+PostReselect.Invoke();
+
+// Уведомление о смене даты
+OnDateChanged.Invoke();]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="ClearSelection" display-name="ClearSelection" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" ver="3">
+		<body kind="om">
+			<![CDATA[// Очистим выделение для каждой недели
+Week_1.ClearSelection();
+Week_2.ClearSelection();
+Week_3.ClearSelection();
+Week_4.ClearSelection();
+Week_5.ClearSelection();
+Week_6.ClearSelection();]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="currentMonth" display-name="currentMonth" uuid="61bdd000-3501-4ef0-aea4-471e336a1118" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa"/>
+	<object access-modifier="private" name="PostReselect" display-name="PostReselect" uuid="0f9e55bc-72a2-41fa-a9bd-814d1d79acb8" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95">
+		<designed target="Enabled" value="true"/>
+		<designed target="InvokeTrigger" value="false"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="Invoked" ver="3">
+			<body kind="om">
+				<![CDATA[date: var = currentDate;
+
+if (Week_1.SelectDate(date))
+	return;
+
+if (Week_2.SelectDate(date))
+	return;
+
+if (Week_3.SelectDate(date))
+	return;
+
+if (Week_4.SelectDate(date))
+	return;
+
+if (Week_5.SelectDate(date))
+	return;
+
+if (Week_6.SelectDate(date))
+	return;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OnDateChanged" display-name="OnDateChanged" uuid="dcc780f0-20af-4bc3-99d3-ebc5f201ce7b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" base-ref="true"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="1ee48d86-21c6-4165-a3e2-9dfde6f0ebc2" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

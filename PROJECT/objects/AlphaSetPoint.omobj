@@ -1,0 +1,2774 @@
+<type access-modifier="private" name="AlphaSetPoint" display-name="AlphaSetPoint" uuid="ea19af27-c67a-4a19-9a34-4b1c6fa9356c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="986" ver="3"/>
+	<designed target="Height" value="550" ver="3"/>
+	<designed target="RoundingRadius" value="0" ver="3"/>
+	<designed target="PenColor" value="0xff000000" ver="3"/>
+	<designed target="PenStyle" value="1" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<object access-modifier="private" name="FileSystem" display-name="FileSystem" uuid="a8c530e8-b4f4-4212-9a82-9d7904561942" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="3"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="244ad071-b8bc-4b74-895f-e7fddcfa87ba" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<object access-modifier="private" name="ApSource" display-name="ApSource" uuid="bea62425-2834-4f3a-8489-36c053f684ed" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="3">
+		<designed target="Active" value="true" ver="3"/>
+		<init target="Timeout" ver="3" value="1000"/>
+		<init target="ConnectionEstablishTimeout" ver="3" value="1000"/>
+		<init target="MaxBufferPoolSize" ver="3" value="100000"/>
+		<init target="ParentSource" ver="3" ref="init_ApSource"/>
+		<designed target="ReAdvise" value="1000" ver="3"/>
+	</object>
+	<object access-modifier="private" name="APItemRead" display-name="APItemRead" uuid="1b40b364-e148-4a82-a97d-373dd3d7c937" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="3" cardinal="5000">
+		<init target="Source" ver="3" ref="ApSource"/>
+		<init target="Path" ver="3" value="**"/>
+	</object>
+	<object access-modifier="private" name="APItemWrite" display-name="APItemWrite" uuid="e3118c38-0aa6-48d9-bfa1-be0d1eb5c170" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="3" cardinal="5000">
+		<init target="Source" ver="3" ref="ApSource"/>
+		<init target="Path" ver="3" value="**"/>
+	</object>
+	<object access-modifier="private" name="SystemStart" display-name="SystemStart" uuid="f475dece-0b95-4516-8bbe-5a59ccd1196b" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Initialized">
+			<body kind="om">
+				<![CDATA[MainInterface.Private.SystemStarted=false;
+MainInterface.Private.canWriteValue=false;
+MainInterface.Private.canReadValue=false;
+MainInterface.Private.needtoChangeRow=false;
+MainInterface.Private.needtoChangeColumn=false;
+Timer_Start.Active=true;
+
+
+
+
+
+
+
+
+//Пример загружаемого файла устаок
+
+/*
+[Аналоговые параметры]
+Название;Tag;Идентификатор;Ед.измерения;DataType;Сигнал Нижняя аварийная;Сигнал Нижняя предупредительная;Сигнал Нижняя технологическая;Сигнал Верхняя технологическая;Сигнал Верхняя предупредительная;Сигнал Верхняя Аварийная;Нижний предел измерения;Верхний предел измерения;Значение гистерезиса;Время выхода из недостоверности, мсек;Верхний предел измерения датчика, мА;Нижний предел измерения датчика, мА;Достоверность верхней границы, мА;Достоверность нижней границы, мА;Постоянная времени фильтра, сек;
+00CXS73. Температура воздуха перед воздухонагревателем 00SAN09CT002;APTS_00CXS73.00SAN09CT002;OIP_00SAN09CT002;°C;SINGLE;read=.Preset.P1/write=.Preset.P1.wValue/lo_limit_tag=.Preset.P1.LoLimit/hi_limit_tag=.Preset.P1.HiLimit/data_type=FLOAT;read=.Preset.P2/write=.Preset.P2.wValue/lo_limit_value=100.2/hi_limit_value=1000;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=UINT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;
+00CXS73. Температура приточного воздуха 00SAN09CT003;APTS_00CXS73.00SAN09CT003;OIP_00SAN09CT003;°C;SINGLE;read=.Preset.P1/write=.Preset.P1.wValue;read=.Preset.P2/write=.Preset.P2.wValue;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=UINT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;
+00CXS73. Температура теплоносителя после калорифера 00SBP44CT001;APTS_00CXS73.00SBP44CT001;OIP_00SBP44CT001;°C;FLOAT;read=.Preset.P1/write=.Preset.P1.wValue;read=.Preset.P2/write=.Preset.P2.wValue;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=FLOAT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;*/]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="DecoratorStart" display-name="DecoratorStart" uuid="c20e80dc-55b1-4802-b351-5d6592670b10" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Initialized">
+			<body kind="javascript">
+				<![CDATA[// создаем JSON строку для декоратора 
+var conditions = `{"condition_name": "message_condition_4","condition": { "data:column_4": "*(*" }}`;
+var decorations = `{"decoration_rule_name": "rule_4", "decoration_rule": {"and": [{ "condition:message_condition_4" : true }]},"columnstyle" : {"column_4" : "user_style_message_yellow"}}`;
+for (var i=5; i<=30; i++)
+{
+	conditions =  conditions + ",";
+ 	conditions = 	 conditions + `{"condition_name": "message_condition_` + String(i) + `","condition": { "data:column_` + String(i) + `": "*(*" }}`;
+ 	decorations = decorations + ",";
+ 	decorations = decorations + `{"decoration_rule_name": "rule_` + String(i) + `", "decoration_rule": {"and": [{ "condition:message_condition_` + String(i) + `" : true }]},"columnstyle" : {"column_` + String(i) +`" : "user_style_message_yellow"}}`
+};
+
+MainInterface.Table_1.TableDecorator_1.JsonDecorator = `{
+  "Conditions":
+  [` + conditions + `],
+  "Decorating": 
+  [`+decorations+`],
+  "StyleDictionary": [
+        {
+            "style_name": "user_style_message_yellow",
+            "style": {
+              "background_color": "#ffeded18"
+            }
+        }
+  ]
+}`;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Путь до файла конфигурации" display-name="Путь до файла конфигурации" uuid="56dfb419-00ed-48aa-b94a-d38ea9657fa5" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="Название файла карты уставок" display-name="Название файла карты уставок" uuid="9a898299-3d87-4a26-8088-5242b810a12c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="Путь для сохранения фалов архива" display-name="Путь для сохранения фалов архива" uuid="279b5db8-6a67-478c-b860-4830d1f14214" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="Использовать безопасность" display-name="Использовать безопасность" uuid="875465c6-a193-4ab6-9fb5-19dbf5c2301c" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+	<do access-modifier="private" name="SetSize" display-name="SetSize" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[Height = _Height;
+Width =_Width;]]>
+		</body>
+		<param access-modifier="private" name="_Height" display-name="" uuid="c01dbf62-c482-4087-b067-56424329abe1" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="3"/>
+		<param access-modifier="private" name="_Width" display-name="" uuid="47135d4f-5782-44a0-a8b5-2481875d6cd7" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="3"/>
+	</do>
+	<param access-modifier="private" name="init_ApSource" display-name="init_ApSource" uuid="722b65f5-306f-48b2-b479-23d41641a7a6" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="MainInterface" display-name="MainInterface" uuid="4cf54621-1ec5-422f-9489-4627452c670e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="1.5" ver="3"/>
+		<designed target="Y" value="-0.5" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="986" ver="3"/>
+		<designed target="Height" value="550" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="4cdb3b6a-efd1-486d-8f60-0214737e1c9b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="8" ver="3"/>
+			<designed target="Y" value="510" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="972" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="4278190080" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="ca20559f-0f1b-461f-b3ad-ac4c966db4d8" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="3">
+			<designed target="X" value="8" ver="3"/>
+			<designed target="Y" value="86" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Width" value="972" ver="3"/>
+			<designed target="Height" value="418" ver="3"/>
+			<designed target="SelectionBehavior" value="0" ver="3"/>
+			<designed target="SelectionMode" value="3" ver="3"/>
+			<designed target="LatestRowTracking" value="false" ver="3"/>
+			<object access-modifier="private" name="Tablecolumn_1" display-name="Tablecolumn_1" uuid="69fd00f7-6996-498e-9d5b-ec01f616dc77" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_1" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g" ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="SortFilterMode" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_2" display-name="Tablecolumn_2" uuid="92ce3b05-c5e2-4668-8864-dadf6eef0aa0" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_2" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g" ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 1; // делаем со смещением -1 т.к. JSON строка начинается с 0
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="SortFilterMode" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_3" display-name="Tablecolumn_3" uuid="feb5b7c9-c5d7-4df5-93e3-74a840b3aa6a" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_3" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g" ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 2;// делаем со смещением -1 т.к. JSON строка начинается с 0
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_4" display-name="Tablecolumn_4" uuid="c5750739-80a8-4d7a-8816-23ac7ad0eead" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_4" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 3;// делаем со смещением -1 т.к. JSON строка начинается с 0
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_5" display-name="Tablecolumn_5" uuid="97c788d6-5c8d-4178-9be1-d44239e31425" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_5" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 4;// делаем со смещением -1 т.к. JSON строка начинается с 0
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="SortFilterMode" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_6" display-name="Tablecolumn_6" uuid="f6c35d9e-5701-40dd-97ce-2c0dccadc220" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_6" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 5;// делаем со смещением -1 т.к. JSON строка начинается с 0
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_7" display-name="Tablecolumn_7" uuid="45d8ce2b-dece-4898-9a58-5a7613d8f1b8" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_7" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 6;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_8" display-name="Tablecolumn_8" uuid="2cfe3835-f44b-420c-a36a-444b018f49d3" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_8" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 7;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_9" display-name="Tablecolumn_9" uuid="db44dd25-011f-4bee-96ac-5a323e3fb7d7" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_9" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 8;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_10" display-name="Tablecolumn_10" uuid="fc33c9af-f044-410d-84e9-bc35aacadd58" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_10" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 9;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_11" display-name="Tablecolumn_11" uuid="cf146410-58bb-4e94-bda2-afedc00a4454" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_11" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 10;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_12" display-name="Tablecolumn_12" uuid="6bad41e8-e357-4c74-a8bf-a638c59162c4" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_12" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 11;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_13" display-name="Tablecolumn_13" uuid="23d09e40-d4e4-426f-a261-fcee45517dcc" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_13" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 12;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_14" display-name="Tablecolumn_14" uuid="4b63f8c2-d2a7-4025-acc0-34098c8cbb6c" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_14" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 13;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_15" display-name="Tablecolumn_15" uuid="bc5a77a9-8205-40fb-8b06-2dceee0225e1" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_15" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 14;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_16" display-name="Tablecolumn_16" uuid="5c6e2e44-c2bf-46ee-b60d-c5b2468acf88" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_16" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 15;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_17" display-name="Tablecolumn_17" uuid="aed00dfb-5830-402a-a9c1-134dec72610a" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_17" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 16;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_18" display-name="Tablecolumn_18" uuid="fffaa325-21bd-4922-b448-aeaa0927150e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_18" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 17;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_19" display-name="Tablecolumn_19" uuid="70425d6d-d77c-49a7-91c0-fc6822f86e51" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_19" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 18;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_20" display-name="Tablecolumn_20" uuid="a06ad258-e7de-4b2a-8faf-88e7b22e9959" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_20" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 19;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_21" display-name="Tablecolumn_21" uuid="4f3b56b6-9873-41c5-8f69-400f1c23f2f5" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_21" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 20;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_22" display-name="Tablecolumn_22" uuid="004c3788-910a-4fba-a5a3-7da686be570e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_22" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 21;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_23" display-name="Tablecolumn_23" uuid="44858c06-866f-42f0-af02-7439e45f8ab6" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_23" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="39" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 22;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_24" display-name="Tablecolumn_24" uuid="ff888605-6001-4c34-ada1-b118426a5412" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_24" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 23;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_25" display-name="Tablecolumn_25" uuid="922815b7-954b-4276-b5d6-5228de258625" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_25" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 24;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_26" display-name="Tablecolumn_26" uuid="8562f364-1120-4438-ac57-cfd3c408c773" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_26" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 25;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_27" display-name="Tablecolumn_27" uuid="39604fb5-ac31-4c32-ad77-80572d8f2fec" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_27" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 26;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_28" display-name="Tablecolumn_28" uuid="cad957bd-392b-433d-ab73-0480915370dd" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_28" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 27;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_29" display-name="Tablecolumn_29" uuid="f866f024-416a-451a-a654-236c5b9360ba" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_29" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 28;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Tablecolumn_30" display-name="Tablecolumn_30" uuid="2f99b6a8-5a5c-4530-a118-c29f79bc2123" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+				<designed target="Title" value="" ver="3"/>
+				<designed target="Description" value="" ver="3"/>
+				<designed target="Id" value="column_30" ver="3"/>
+				<designed target="BackgroundColor" value="4293980400" ver="3"/>
+				<designed target="ForegroundColor" value="4278190080" ver="3"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="Width" value="37" ver="3"/>
+				<designed target="WidthResizeMode" value="3" ver="3"/>
+				<designed target="Emptiable" value="true" ver="3"/>
+				<designed target="Hidden" value="false" ver="3"/>
+				<designed target="NumberFormat" value="%g " ver="3"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="true" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseDoubleClick">
+					<body kind="om">
+						<![CDATA[_column :int4 = 29;
+UstFunction.OpnWndEntUst(Private.JSONString,Private.CurrentHeader,row,_column);]]>
+					</body>
+				</do-on>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="SortFilterMode" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableIterator_1" display-name="TableIterator_1" uuid="6a1c7140-d5a6-4fdf-af0b-d91bb7d32f15" base-type="TableIterator" base-type-id="b368f2dc-9de9-47fc-b7ae-1d9c28047eba" ver="3">
+				<designed target="CurrentRow" value="0" ver="3"/>
+			</object>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Private.AccessControl]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Private.AccessControl]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="HeaderHeight" value="21" ver="3"/>
+			<designed target="HeaderVisible" value="true" ver="3"/>
+			<designed target="RowHeight" value="30" ver="3"/>
+			<designed target="RowOrder" value="0" ver="3"/>
+			<object access-modifier="private" name="TableModel_1" display-name="TableModel_1" uuid="f6a0a959-3e4b-4886-a044-83480f2d5715" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+				<designed target="Frozen" value="false" ver="3"/>
+				<designed target="MaxRowCount" value="10000" ver="3"/>
+			</object>
+			<init target="TableModel" ver="3" ref="TableModel_1"/>
+			<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+			<object access-modifier="private" name="TableDecorator_1" display-name="TableDecorator_1" uuid="41b612b1-de62-43ce-8772-436b724956a4" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="3">
+				<designed target="JsonDecorator" value="" ver="3"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Private" display-name="Private" uuid="163f73ad-dc49-42b5-a314-44bae5ab6ca2" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="2" ver="3"/>
+			<designed target="Y" value="5.875" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="10" ver="3"/>
+			<designed target="Height" value="6.25" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xff000000" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<object access-modifier="private" name="textFromFile" display-name="textFromFile" uuid="0a15af29-b35d-415c-abe7-191f87a84ba8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<object access-modifier="private" name="JSONString" display-name="JSONString" uuid="76a05d06-2e75-4b3f-baf2-6b61e7386c7d" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<object access-modifier="private" name="JSONStringValues" display-name="JSONStringValues" uuid="c5dfbeec-5299-4126-bd67-6cbcc3c3cd48" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<object access-modifier="private" name="LastRow" display-name="LastRow" uuid="69329265-e411-4928-952d-c168e2c92bc6" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="LastColumn" display-name="LastColumn" uuid="6e65c59f-b31b-4caf-8faf-56723712b784" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="CurrentHeader" display-name="CurrentHeader" uuid="a4cf7d09-d3ed-49b4-a8fa-c90b0d3d7810" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<object access-modifier="private" name="ActionEnterUst" display-name="ActionEnterUst" uuid="26f2f4c2-1b1e-49b4-bad3-299c2fd90f79" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="InvokeTrigger" value="false" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked" form-action="open-dialog" form-by-id="false">
+					<object access-modifier="private" uuid="470a9124-c12c-475e-9901-6850f884f39c" base-type="ВводУставки" base-type-id="21dfd0b5-8860-47a7-a2cb-4deceb2a9645" ver="3">
+						<init target="LinkCardUst" ver="3" ref="here"/>
+						<init target="_currentType" ver="3" ref="CurrentSelectedValue"/>
+					</object>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="CurrentSelectedValue" display-name="CurrentSelectedValue" uuid="a0ea4f55-c238-404a-8903-58f9ab274949" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<object access-modifier="private" name="StartPosition" display-name="StartPosition" uuid="d32608f6-57bb-4921-83de-518eda1ea13d" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			<object access-modifier="private" name="currentType" display-name="currentType" uuid="07cc0fa6-40ec-4451-b3ef-4852b7bc1da8" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+			<object access-modifier="private" name="LastRowForWrite" display-name="LastRowForWrite" uuid="ffa15475-4ffe-493a-b126-8f66c6c3ac39" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="LastColumnForWrite" display-name="LastColumnForWrite" uuid="0e4ea387-7244-402a-9c14-05381c778b68" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="LastRowEnterUst" display-name="LastRowEnterUst" uuid="41c11ee4-5826-46c9-a396-19b3ee7ee4ef" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="LastClmEnterUst" display-name="LastClmEnterUst" uuid="1ff92f73-f25a-40bf-a105-2c879f52f0e6" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			<object access-modifier="private" name="SecurityContext_Ust" display-name="SecurityContext_Ust" uuid="9212a42e-3536-4c4e-9745-bea26b025084" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="3"/>
+			<object access-modifier="private" name="CanWriteUst" display-name="CanWriteUst" uuid="3c728f3a-ba64-404c-af01-47568a98f7e9" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="3">
+				<init target="Application" ver="3" value="Alpha.SetPoint"/>
+				<init target="Right" ver="3" value="CanWriteUst"/>
+				<init target="SecurityContext" ver="3" ref="SecurityContext_Ust"/>
+			</object>
+			<object access-modifier="private" name="AccessControl" display-name="AccessControl" uuid="d4be367d-aa26-4349-90a1-a0aab51b83b8" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+			<object access-modifier="private" name="countOfUncertain" display-name="countOfUncertain" uuid="96354467-685f-438d-a968-6b0254dc5237" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			<object access-modifier="private" name="systemLoaded" display-name="systemLoaded" uuid="182f36dc-980e-4d6e-8e2f-f9cae321b91d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<object access-modifier="private" name="canWriteValue" display-name="canWriteValue" uuid="3e4207f1-232a-4698-9af9-c7794416d0aa" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			<object access-modifier="private" name="canReadValue" display-name="canReadValue" uuid="626f2bb9-d9df-4c41-9c35-677c447aeb63" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			<object access-modifier="private" name="needtoChangeRow" display-name="needtoChangeRow" uuid="e8d0ced4-e982-4289-9c7d-1e43b4082652" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			<object access-modifier="private" name="needtoChangeColumn" display-name="needtoChangeColumn" uuid="284ec700-bd70-4247-87fd-44f7b0564ac0" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			<object access-modifier="private" name="SystemStarted" display-name="SystemStarted" uuid="b6cf039c-6b9f-41d4-b9eb-22001d1fddd2" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+			<object access-modifier="private" name="LoLimit" display-name="LoLimit" uuid="03c3f967-0921-4b0f-b754-f0a5128bf9e8" base-type="notifying_float4" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="3"/>
+			<object access-modifier="private" name="HiLimit" display-name="HiLimit" uuid="b3f93508-ab24-4104-ac22-c122b87e3da3" base-type="notifying_float4" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="3"/>
+			<do-trace access-modifier="private" target="LoLimit" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[APItemLoLimit.AdviseState==2&&APItemLoLimit.Quality>=192]]>
+					</condition>
+					<expr>
+						<![CDATA[UstFunction.ConvertToFloat2(APItemLoLimit.ValueAsString,-4294967296)]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="HiLimit" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[APItemHiLimit.AdviseState==2&&APItemHiLimit.Quality>=192]]>
+					</condition>
+					<expr>
+						<![CDATA[Variant.ToFloat(APItemHiLimit.Value,4294967296)]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<object access-modifier="private" name="columnsNotUse" display-name="columnsNotUse" uuid="c5046e28-242b-4088-9db2-b51dabaa566a" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			<object access-modifier="private" name="Timer_ReadData" display-name="Timer_ReadData" uuid="bef63348-32a8-4eec-b160-48a72be0ae5f" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+				<designed target="Period" value="800" ver="3"/>
+				<designed target="Active" value="false" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+					<body kind="om">
+						<![CDATA[Action_ReadData.Invoke();
+me.Active=false;]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Action_ReadData" display-name="Action_ReadData" uuid="60d52e6f-b477-4c30-8c80-5df0af2e3aa0" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="InvokeTrigger" value="false" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked">
+					<body kind="om">
+						<![CDATA[Private.countOfUncertain = 0; // сброс счетчика тегов которые не удалось прочитать
+Private.LastRow = 0; // сброс последнего ряда который был прочитан на стартовую позицию
+Private.LastColumn = Private.StartPosition; // начало столбца с данными
+Private.AccessControl=false;
+UstFunction.ReadAPData(Private.JSONString,Private.CurrentHeader); // функция чтения данных из сервера]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="ComboBox_1" display-name="ComboBox_1" uuid="8baeab39-3e5c-47d1-b6d3-b560e4f21ded" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="10" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="190" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="SelectedChanged">
+				<body kind="om">
+					<![CDATA[if ((Private.AccessControl)&&MainInterface.Private.SystemStarted)
+{
+	UstFunction.DataToTable(Private.JSONString,GetItem(selected));
+	Private.CurrentHeader = GetItem(selected);
+}
+else if (!MainInterface.Private.SystemStarted)
+{
+	MainInterface.Private.SystemStarted=true;
+}]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Private.AccessControl]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[!Private.AccessControl]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_3" display-name="Button_3" uuid="9b8c2025-ecd6-4d5e-bb6c-5ddc8a24ee1c" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="210" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="120" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Чтение уставок" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.CanWriteUst.Value)&&(Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.CanWriteUst.Value || !Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[MainInterface.Private.Action_ReadData.Invoke();]]>
+				</body>
+			</do-on>
+			<designed target="Checked" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="8e21301e-4bc2-492f-ad84-bae86f724e80" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="10.0888" ver="3"/>
+			<designed target="Y" value="512" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="966.608" ver="3"/>
+			<designed target="Height" value="31" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="UstFunction" display-name="UstFunction" uuid="50df065a-8837-4c5e-b8dc-30f6816850ca" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="8.95" ver="3"/>
+			<designed target="Y" value="6.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="20.1" ver="3"/>
+			<designed target="Height" value="15" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="4278190080" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<do access-modifier="private" name="DataToJSON" display-name="DataToJSON" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[// Вычитывание данные и генерация josn строки из файла настроек карты уставок .csv
+
+// Регулярное выражение для начала блока кнопки
+const BUTTON_SECTION_START_RE = /^\[(.*?)\](?:[\r\n]|$)/i;  // регулярное выражение для определения заголовка например - [Агрегаты вспомсистем]
+// Символ-разделитель колонок
+const column_SEPARATOR = ';';
+// Здесь будет накапливаться общая карта кнопок
+var sections = {}; // тип объект
+
+// Данные для хранения текущзего состояния
+var currentSectionName;
+var currentSectionDescriptor;
+var currentSectionHeader;
+var currentSectionData;
+
+// Разобъём исходные данные на строки
+var cvsLines = strFromFile.split('\n'); //разбиваем по Enter
+
+for (let i = 0; i < cvsLines.length; ++i)
+{
+
+
+	// Очередная строка файла
+	let currentLine = cvsLines[i];
+
+	// Проверяем соответствует ли строка шаблону начала новой секции (регулярному выражению)
+	let start = currentLine.match(BUTTON_SECTION_START_RE); // currentLine.match(BUTTON_SECTION_START_RE) возвращает (пример.) [0] - [Агрегаты вспомсистем],[1] - Агрегаты вспомсистем
+	// Если это начало секции описания новой кнопки
+	if (start)
+	{
+
+		// Вот наименование очередной кнопки
+		currentSectionName = start[1]; // currentLine.match(BUTTON_SECTION_START_RE) возвращает (пример.) [0] - [Агрегаты вспомсистем],[1] - Агрегаты вспомсистем
+
+		// Создаем новый дескриптор
+		currentSectionDescriptor = {}; 
+
+		// Заносим в общую карту
+		sections[currentSectionName] = currentSectionDescriptor; // получаем вид {Агрегаты вспомсистем:{}}
+
+		// Перейдём к следующей строке, это должен быть описатель наименований столбцов
+		currentLine = cvsLines[++i]; // 
+
+		// Получим этот заголовок
+		currentSectionHeader = currentLine.split(column_SEPARATOR); 
+
+		// Сразу занесем в общую карту
+		currentSectionDescriptor['schema'] = currentSectionHeader; // получаем вид {Агрегаты вспомсистем:{schema:["Название","Tag"]}}
+
+		// Создаем новый массив под данные
+		currentSectionData = [];
+
+		// Сразу занесем в общую карту
+		currentSectionDescriptor['data'] = currentSectionData; // получаем вид {Агрегаты вспомсистем:{schema:["Название","Tag"],data:[]}}
+		
+	}
+	// Иначе это продолжение описания текущей кнопки
+	else
+	{
+		// Здесь мы построчно вычитываем данные колонок
+		// Очередную строку данных разбиваем по разделителю ;
+		let currentData = currentLine.split(column_SEPARATOR); 
+		
+		// Количество позиций в объекте (т.е. проверятся количество запятых в каждой из строк) должно совпасть с заголовком, иначе считаем что данные невалидны 
+		if (currentSectionHeader.length != currentData.length)
+		{
+			//UstFunction.GenState('Невалидные данные: количество значений для строки "' + currentLine + '" не совпадает с количеством столбцов заголовка');
+			UstFunction.GenState('Невалидные данные: количество значений для строки не совпадает с количеством столбцов заголовка');
+			return;
+		}
+
+		// Заносим данные
+		currentSectionData.push(currentData); // получаем вид {Агрегаты вспомсистем:{schema:["Название","Tag"],data:[["00CXS73. Вентилятор приточный 00SAN09AN001","APTS_00CXS73.00SAN09AN001","UINT"]]}}
+	}	
+}
+
+for(let i in sections)// добавляем все элементы заголовков
+{
+	ComboBox_1.AddItem(i);
+}
+
+var temp = JSON.stringify(sections)
+return temp;
+
+
+
+
+
+//Пример файла .csv
+/*
+[Аналоговые параметры]
+Название;Tag;Идентификатор;Ед.измерения;DataType;Сигнал Нижняя аварийная;Сигнал Нижняя предупредительная;Сигнал Нижняя технологическая;Сигнал Верхняя технологическая;Сигнал Верхняя предупредительная;Сигнал Верхняя Аварийная;Нижний предел измерения;Верхний предел измерения;Значение гистерезиса;Время выхода из недостоверности, мсек;Верхний предел измерения датчика, мА;Нижний предел измерения датчика, мА;Достоверность верхней границы, мА;Достоверность нижней границы, мА;Постоянная времени фильтра, сек;
+00CXS73. Температура воздуха перед воздухонагревателем 00SAN09CT002;APTS_00CXS73.00SAN09CT002;OIP_00SAN09CT002;°C;SINGLE;read=.Preset.P1/write=.Preset.P1.wValue/lo_limit_tag=.Preset.P1.LoLimit/hi_limit_tag=.Preset.P1.HiLimit/data_type=FLOAT;read=.Preset.P2/write=.Preset.P2.wValue/lo_limit_value=100.2/hi_limit_value=1000;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=UINT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;
+00CXS73. Температура приточного воздуха 00SAN09CT003;APTS_00CXS73.00SAN09CT003;OIP_00SAN09CT003;°C;SINGLE;read=.Preset.P1/write=.Preset.P1.wValue;read=.Preset.P2/write=.Preset.P2.wValue;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=UINT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;
+00CXS73. Температура теплоносителя после калорифера 00SBP44CT001;APTS_00CXS73.00SBP44CT001;OIP_00SBP44CT001;°C;FLOAT;read=.Preset.P1/write=.Preset.P1.wValue;read=.Preset.P2/write=.Preset.P2.wValue;read=.Preset.P3/write=.Preset.P3.wValue;read=.Preset.P4/write=.Preset.P4.wValue;read=.Preset.P5/write=.Preset.P5.wValue;read=.Preset.P6/write=.Preset.P6.wValue;read=.Preset.LoLimit/write=.Preset.LoLimit.wValue;read=.Preset.HiLimit/write=.Preset.HiLimit.wValue;read=.Preset.Hyster/write=.Preset.Hyster.wValue;read=.Preset.Tnan/write=.Preset.Tnan.wValue/data_type=FLOAT/units=сек;read=.Preset.HiLimit_mA/write=.Preset.HiLimit_mA.wValue;read=.Preset.LoLimit_mA/write=.Preset.LoLimit_mA.wValue;read=.Preset.HiLimit_ObrKz/write=.Preset.HiLimit_ObrKz.wValue;read=.Preset.LoLimit_ObrKz/write=.Preset.LoLimit_ObrKz.wValue;read=.Preset.rKC_T/write=.Preset.rKC_T.wValue;
+*/]]>
+				</body>
+				<param access-modifier="private" name="strFromFile" display-name="" uuid="5eccb65e-13cb-402e-9569-583a7342e856" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="WorkWithFile" display-name="WorkWithFile" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="om">
+					<![CDATA[temp :string ="";
+if(SaveOrLoad == "Load")
+{
+	//функция чтения данных их файла, кодировка UTF-8
+	// Если файл не существует то тект в текстэдит подсвечивается красным 
+	if ( !FileSystem.Exists(pathString))
+	{
+		UstFunction.GenState("Не удалось загрузить файл (" + pathString + ")");
+		temp = "NotLoaded";
+		return temp;
+	}
+	else
+	{
+		temp = FileSystem.ReadTextFile(pathString);
+		UstFunction.GenState("Загрузка данных их файла завершена ("+ pathString + ")");
+		return temp; 
+	}
+}
+else if (SaveOrLoad == "Save")
+{
+	//функция записи данных в файла, кодировка UTF-8
+	// Если файл не существует то тект в текстэдит подсвечивается красным 
+	if ( !FileSystem.Exists(pathString))
+	{
+		//FileSystem.CreateRecursiveFolder( pathString );
+		UstFunction.GenState("Создан новый файл (" + pathString + ")");
+		FileSystem.WriteTextFile(pathString,saveString);
+		temp = "Saved";
+	}
+	else
+	{
+		FileSystem.WriteTextFile(pathString,saveString);
+		UstFunction.GenState("Данные файла обновлены (" + pathString + ")");
+		temp = "Saved";
+	}
+}
+return temp;]]>
+				</body>
+				<param access-modifier="private" name="SaveOrLoad" display-name="" uuid="027a3f26-1e30-4bdc-848c-ebe696b47efe" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="pathString" display-name="" uuid="69887e55-66d9-4823-8e10-8d9f28fce571" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="saveString" display-name="" uuid="815e80b1-3707-4ace-8808-cf58e25c5d37" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="DataToTable" display-name="DataToTable" ver="3" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[//Записи в заголовоки таблицы и строки с названием строк
+// переменные 
+if (JSONString!=""||header!="" )
+{
+var arrayData = JSON.parse(JSONString);
+var notShow = ["Tag","DataType"]; // названия столбцов кторые не должны показываться
+var show = ["Идентификатор","Ед.измерения"]; // названия столбцов кторые должны показываться и заполняться
+var StartPosition=0; //старовая позиция отображения данных из 
+Private.columnsNotUse=0; // сбрасываем на 0
+var Columns = [];
+
+//массив колонок
+Columns[0] = Table_1.Tablecolumn_1;
+Columns[1] = Table_1.Tablecolumn_2;
+Columns[2] = Table_1.Tablecolumn_3;
+Columns[3] = Table_1.Tablecolumn_4;
+Columns[4] = Table_1.Tablecolumn_5;
+Columns[5] = Table_1.Tablecolumn_6;
+Columns[6] = Table_1.Tablecolumn_7;
+Columns[7] = Table_1.Tablecolumn_8;
+Columns[8] = Table_1.Tablecolumn_9;
+Columns[9] = Table_1.Tablecolumn_10;
+Columns[10] = Table_1.Tablecolumn_11;
+Columns[11] = Table_1.Tablecolumn_12;
+Columns[12] = Table_1.Tablecolumn_13;
+Columns[13] = Table_1.Tablecolumn_14;
+Columns[14] = Table_1.Tablecolumn_15;
+Columns[15] = Table_1.Tablecolumn_16;
+Columns[16] = Table_1.Tablecolumn_17;
+Columns[17] = Table_1.Tablecolumn_18;
+Columns[18] = Table_1.Tablecolumn_19;
+Columns[19] = Table_1.Tablecolumn_20;
+Columns[20] = Table_1.Tablecolumn_21;
+Columns[21] = Table_1.Tablecolumn_22;
+Columns[22] = Table_1.Tablecolumn_23;
+Columns[23] = Table_1.Tablecolumn_24;
+Columns[24] = Table_1.Tablecolumn_25;
+Columns[25] = Table_1.Tablecolumn_26;
+Columns[26] = Table_1.Tablecolumn_27;
+Columns[27] = Table_1.Tablecolumn_28;
+Columns[28] = Table_1.Tablecolumn_29;
+Columns[29] = Table_1.Tablecolumn_30;
+//-----
+
+
+function ColumNotShow(x) // функция проверки на скрытия столбца (массив указан названия столбцов указан в массиве notShow )
+{
+	for (let i=0; i<notShow.length;i++)
+	{if(notShow[i]==x){return true;}}
+	return false;
+}
+
+function ColumShow(x) // функция проверки на отображения столбца (массив указан названия столбцов указан в массиве show )
+{
+	for (let i=0; i<show.length;i++)
+	{if(show[i]==x){return true;}}
+	return false;
+}
+
+function ColumNotUse() // ищем сколько колонок не используется
+{
+	for (var i=StartPosition; i<Columns.length; i++)
+	{
+		if (Columns[i].Hidden==true)
+		{
+			Private.columnsNotUse++;
+		}
+	}
+}
+
+function Allshow() // показываем все колонки
+{
+	for (var i=0; i<Columns.length; i++)
+	{
+	Columns[i].Hidden=false;
+	}
+}
+
+//header - название заголовка например [Агрегаты вспомсистем],[Запорная арматура]
+// заполнение таблицы
+
+Table_1.TableModel_1.Reset();
+for (let i in Columns) // заполнение названия столбца и установка видимости столбца
+{
+	if((arrayData[header].schema[i]!="")&&(i<arrayData[header].schema.length-1)) 
+	{
+		Columns[i].Hidden=false;
+		Columns[i].Title = arrayData[header].schema[i]
+		if(ColumNotShow(arrayData[header].schema[i])){Columns[i].Hidden=true; StartPosition++; } // пробегаем по массиву с тем что показывать не нужно 
+		if(ColumShow(arrayData[header].schema[i])){StartPosition++;};// пробегаем по массиву с тем что показывать нужно 
+	}
+	else
+	{
+		Columns[i].Hidden=true;
+	}
+}
+
+
+//Дбавляем колонки в модель
+Table_1.TableModel_1.AddColumn("column_1","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_2","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_3","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_4","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_5","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_6","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_7","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_8","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_9","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_10","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_11","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_12","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_13","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_14","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_15","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_16","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_17","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_18","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_19","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_20","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_21","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_22","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_23","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_24","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_25","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_26","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_27","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_28","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_29","","","","string",false,true);
+Table_1.TableModel_1.AddColumn("column_30","","","","string",false,true);
+
+
+Table_1.TableModel_1.InsertRows(0, arrayData[header].data.length);
+for (let i in arrayData[header].data) // заполнение значение информационной ячейки 
+{
+	Table_1.TableModel_1.SetCellData(i,0,arrayData[header].data[i][0]); 
+	if(ColumShow(Table_1.Tablecolumn_2.Title)){Table_1.TableModel_1.SetCellData(i,1,arrayData[header].data[i][1]);};// поиск Идентификатор или Ед.измерения и заполнение ячейки с данными
+	if(ColumShow(Table_1.Tablecolumn_3.Title)){Table_1.TableModel_1.SetCellData(i,2,arrayData[header].data[i][2]);};
+	if(ColumShow(Table_1.Tablecolumn_4.Title)){Table_1.TableModel_1.SetCellData(i,3,arrayData[header].data[i][3]);};
+	if(ColumShow(Table_1.Tablecolumn_5.Title)){Table_1.TableModel_1.SetCellData(i,4,arrayData[header].data[i][4]);};
+
+	if(ColumNotShow(Table_1.Tablecolumn_2.Title)){Table_1.TableModel_1.SetCellData(i,1,arrayData[header].data[i][1]);};// поиск Tag,DataType и заполнение ячейки с данными
+	if(ColumNotShow(Table_1.Tablecolumn_3.Title)){Table_1.TableModel_1.SetCellData(i,2,arrayData[header].data[i][2]);};
+	if(ColumNotShow(Table_1.Tablecolumn_4.Title)){Table_1.TableModel_1.SetCellData(i,3,arrayData[header].data[i][3]);};
+	if(ColumNotShow(Table_1.Tablecolumn_5.Title)){Table_1.TableModel_1.SetCellData(i,4,arrayData[header].data[i][4]);};	
+}
+StartPosition++ // добавляем т.к. в JSON все начинается с 0
+Private.StartPosition = StartPosition; //переменная старта начала записи позиции данных их сервера
+ColumNotUse(); // ищем сколько колонок не используется
+UstFunction.PathToAP(JSONString,header);//записываем путь в нужные  APItem
+MainInterface.UstFunction.GenState("Уставки в таблицу загружены");
+Private.AccessControl=true;
+//Allshow(); // показать все?
+}
+else
+{
+UstFunction.GenState("При загрузке файла конфигурации уставок произошла ошибка, проверьте его наличие или формат файла");
+Private.ustCardLoaded=false;
+}
+]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="9c72bdf9-6419-4ffe-86b7-17ccabdc29de" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="63127bd8-2602-4aca-aa21-699aa32103f8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ReadAPData" display-name="ReadAPData" ver="4" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" form-by-id="true">
+				<param access-modifier="private" name="JSONString" display-name="" uuid="dbffcb38-ad54-43e2-b36b-6e3e4806c933" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="f223477d-ffd4-4416-8e07-2159a4e53900" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<body kind="javascript">
+					<![CDATA[var startColumn = Private.StartPosition;
+var APItemIndex = 0; // индекс APItem
+var countOfUnreachable = 0; //количество непрочитанных тегов
+// проходим по всей таблице и записываем из нужных APItem в ячейки таблицыы
+
+for (var i= 0; i < Table_1.GetRowCount();i++) //ряды
+{
+	for (var j=startColumn; j < Table_1.GetColumnCount()-Private.columnsNotUse;j++)// колонки
+	{		
+		if ((APItemRead[APItemIndex].AdviseState==2)&&(APItemRead[APItemIndex].Quality>=192))
+		{
+		Table_1.TableModel_1.SetCellData(i,j,APItemRead[APItemIndex].ValueAsString);
+		}
+		else
+		{
+			countOfUnreachable++;		
+		}
+		APItemIndex++; // добавляем индекс для APItem
+	}
+}
+UstFunction.GenState("Чтение данных завершено, количество непрочитанных уставок:" + countOfUnreachable);
+Private.AccessControl=true;]]>
+				</body>
+			</do>
+			<do access-modifier="private" name="FindDataType" display-name="FindDataType" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[//функция для вычисления типа параметра который будет записан в сервер
+var temp = "";
+var arrayData = JSON.parse(JSONString);
+for (let i in arrayData[header].schema) // цикл для проверки каждого элемента названия 
+{
+	if(arrayData[header].schema[i]=="DataType") // ищем таблицу с названием DataType
+	{
+     if ((arrayData[Private.CurrentHeader].data[_row][_column]).includes("data_type")) // ищем в стороке есть ли data_type=
+		{
+			temp = arrayData[Private.CurrentHeader].data[_row][_column];
+			temp = temp.slice(temp.indexOf("data_type=",0)+10);
+			if(temp.includes("/")) //  если есть например (/units=сек) убираем 
+			{
+				temp = temp.substring(0,temp.indexOf("/",0));
+				return temp;
+			}
+			else 
+			{
+			return temp;
+			} // если нет то просто возвращаем то что указанно в data_type=
+		}
+		else // если не нашли data_type= то возвращаем FLOAT
+		{
+         switch (arrayData[Private.CurrentHeader].data[_row][i]) // смотрим тип указанный в столбце JSON формата DataType
+         {
+         case "UINT":
+         		return "UINT2";
+         		break;
+         case "UINT2":
+         		return "UINT2";
+         		break;
+         case "UINT4":
+         		return "UINT4";
+         		break;
+         case "FLOAT":
+         		return "FLOAT";
+         		break;
+         case "SINGLE":
+         		return "UINT4";
+         		break;
+         default:
+         		return "TypeUnknown";
+        }
+		}
+	}
+}
+return  "TypeUnknown"; // если не нашли столбец DataType то возвращаем TypeUnknown]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="f3a4d70c-8e89-42c2-b1ed-974e39e1010f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="3e1edafd-707f-4e80-aabc-7dc80e4f7e66" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_row" display-name="" uuid="74833000-bb56-4464-b05b-6d95adcf1601" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+				<param access-modifier="private" name="_column" display-name="" uuid="0cc498d5-88a2-4be2-bd04-d41c46e7bc71" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GenState" display-name="GenState" ver="3" type="" type-id="">
+				<param access-modifier="private" name="_State" display-name="" uuid="1a9eab37-755c-48dc-bbd3-478e25ead11f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<body kind="om">
+					<![CDATA[Text_2.Text = "Статус: " + _State;]]>
+				</body>
+			</do>
+			<do access-modifier="private" name="SaveValueFromTable" display-name="SaveValueFromTable" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[var arrayData = JSON.parse(JSONString);
+var sections = {}; // тип объект
+// Данные для хранения текущзего состояния
+var currentSectionName;
+var currentSectionDescriptor;
+var currentSectionHeader;
+var currentSectionData;
+var sections = {}; // тип объект
+
+//
+currentSectionHeader = {};
+currentSectionDescriptor = {};
+currentSectionData = [];
+sections[header] = currentSectionDescriptor;
+for (var i in  arrayData[header].data) // запись значения ячейки в тег
+{
+	var currentLine = [];
+	currentSectionDescriptor['data'] = currentSectionData;
+	currentLine.push(Table_1.GetCellData(i,UstFunction.FindApSourcePath(JSONString,header,i))); //добавляем путь который вписыается в ApSource он будет 0 элементом строки массива
+	for (var j in arrayData[header].data[i])
+	{
+		if(arrayData[header].data[i][j].includes("read=")) // если в ячейке есть read= 
+		{
+			var currentData = arrayData[header].data[i][j];
+			if (Table_1.GetCellData(i,j)!=null) // проверка если нет значения в ячейке таблицы
+			{var tableData = Table_1.GetCellData(i,j).trim();} // убираем пробелы в конце (они образовались из за "%g "  Тип значения в Table_1.Tablecolumn_4.NumberFormat)
+			else 
+			{var tableData = Table_1.GetCellData(i,j);}//если значения нет то просто пишется null
+			currentData = currentData.substring(0,currentData.indexOf("/",0)); // убираем все что позже / 
+			if(tableData.lastIndexOf("(")!=-1){return "CannotSave"}
+			currentData += "=" + tableData;// берем строку из джейсона и добавляем к значение из ячейки
+			currentLine.push(currentData); // записываем данные в текущую строку
+		}
+	}
+	currentSectionData.push(currentLine); // записываем текущую строку
+}
+sections[header] = currentSectionDescriptor; // запись значений к текущему заголовку
+return JSON.stringify(sections);]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="66bc67d4-1b3d-4b66-bffe-8333f883a45b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="921bea96-b51d-4833-a880-fa74be06f2c8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="WriteAPData" display-name="WriteAPData" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="javascript">
+					<![CDATA[//var arrayData = JSON.parse(JSONString);
+var startColumn = Private.StartPosition;
+var APItemIndex = 0; // индекс APItem
+var countOfUnreachable = 0;
+
+
+function GetIndexAP(_row,_column) //простенькая формула вычисления индекса элемента AP
+{
+	var a = (Table_1.GetColumnCount() - startColumn - Private.columnsNotUse - (Table_1.GetColumnCount() - startColumn - Private.columnsNotUse - _column + startColumn ));
+	var b = _row * (Table_1.GetColumnCount() -  startColumn - Private.columnsNotUse);
+	return a + b;
+}
+
+function GetValue (_valueIn)
+{
+	if (_valueIn.indexOf("(")!=-1)
+	{
+		var tmp = _valueIn.slice(_valueIn.indexOf("(")+1); //обрезаем строку до (
+		tmp = tmp.slice(0,tmp.indexOf("(")); // обрезаем строку до )
+		return tmp;
+	}
+	else
+	{
+		return _valueIn;
+	}
+}
+
+function WriteData(_type,_row,_column)
+{
+	var indexAP = GetIndexAP(_row,_column);
+	var result=false;
+	switch (_type) // ищем тип уставки
+	{
+	case "UINT":
+		WriteToUInt2(GetValue(Table_1.GetCellData(_row,_column)),indexAP); // записываем значение в нужный APItemWrite
+		APItemGenAlarm = UstFunction.GenAlarm(UstFunction.ToString(APItemRead[indexAP].ValueAsString),UstFunction.ToString(Table_1.GetCellData(_row,_column)),UstFunction.ToString(Table_1.GetCellData(_row,0)),UstFunction.GetCulumnTitle(_column)); // генерируем сообщение 
+		result=true; // возвращаемое значение 
+	break;	
+	case "UINT2":
+		WriteToUInt2(GetValue(Table_1.GetCellData(_row,_column)),indexAP); // записываем значение в нужный APItemWrite
+		APItemGenAlarm = UstFunction.GenAlarm(UstFunction.ToString(APItemRead[indexAP].ValueAsString),UstFunction.ToString(Table_1.GetCellData(_row,_column)),UstFunction.ToString(Table_1.GetCellData(_row,0)),UstFunction.GetCulumnTitle(_column)); // генерируем сообщение 
+		result=true; // возвращаемое значение 
+	break;
+	case "UINT4":
+		WriteToUInt4(UstFunction.ToUInt4(Table_1.GetCellData(_row,_column)),indexAP);
+		APItemGenAlarm = UstFunction.GenAlarm(UstFunction.ToString(APItemRead[indexAP].ValueAsString),UstFunction.ToString(Table_1.GetCellData(_row,_column)),UstFunction.ToString(Table_1.GetCellData(_row,0)),UstFunction.GetCulumnTitle(_column));
+		result=true;
+	break;
+	case "FLOAT":
+		WriteToFloat(GetValue(Table_1.GetCellData(_row,_column)),indexAP);
+		APItemGenAlarm = UstFunction.GenAlarm(UstFunction.ToString(APItemRead[indexAP].ValueAsString),UstFunction.ToString(Table_1.GetCellData(_row,_column)),UstFunction.ToString(Table_1.GetCellData(_row,0)),UstFunction.GetCulumnTitle(_column));
+		result=true;
+	break;
+	case "TypeUnknown": // еасли типе не определен
+		UstFunction.GenState("Ошибка определения типа, ячейка - ряд: "+_row+", колонка: "+ (_column - startColumn));
+	break;
+	default:	 // если вообще ничего не нашлось
+		UstFunction.GenState("Ошибка определения типа, ячейка - ряд: "+_row+", колонка: "+ (_column - startColumn));
+	break;	
+	}
+return result;
+}
+
+rows :for (var i= 0; i < Table_1.GetRowCount();i++) //идем по рядам
+{
+	for (var j=startColumn; j < Table_1.GetColumnCount()-Private.columnsNotUse;j++)// идем по колонкам
+	{		
+		if ((Table_1.GetCellData(i,j)!="")&&(ComboBox_2.SelectedIndex==0)) // записываем все значения 
+		{	
+			if(WriteData(UstFunction.FindDataType(JSONString,Private.CurrentHeader,i,j),i,j)==false)
+			{break rows;} // если функция вернула false то выходим из цикла и сообщаем что произошла ошибка записи в конкретной ячейке
+		}
+		else if ((Table_1.GetCellData(i,j)!="")&&(ComboBox_2.SelectedIndex==1)&&(UstFunction.ToString(Table_1.GetCellData(i,j))!= UstFunction.ToString(APItemRead[GetIndexAP(i,j)].ValueAsString))) // только отличающиеся 
+		{
+			if(WriteData(UstFunction.FindDataType(JSONString,Private.CurrentHeader,i,j),i,j)==false)
+			{break rows;}
+		}
+		else 
+		{countOfUnreachable++;}
+	}
+}
+UstFunction.GenState("Количество незаписанных значений уставок:"+ countOfUnreachable);
+Private.AccessControl=true;]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="dbffcb38-ad54-43e2-b36b-6e3e4806c933" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="f223477d-ffd4-4416-8e07-2159a4e53900" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="OpnWndEntUst" display-name="OpnWndEntUst" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[configString :string = UstFunction.GetConfigString(Private.JSONString,Private.CurrentHeader,_row,_column); // получаем строку с параметрами уставки например read=.Preset.P1/write=.Preset.P1.wValue/lo_limit_value=100/hi_limit_value=1000
+APSourcePath :string = UstFunction.GetApSourcePath(Private.JSONString,Private.CurrentHeader,_row); // получаем строку с парметром папки в сервере AS у параметра
+CurrentType :string = UstFunction.FindDataType(Private.JSONString,Private.CurrentHeader,_row,_column);
+if(!UstFunction.GetLimits(configString,APSourcePath))
+{
+	if	(CurrentType == "FLOAT")
+	{
+		MainInterface.Private.LoLimit = -4294967295;
+		MainInterface.Private.HiLimit = 4294967295;
+	}
+	else if (CurrentType == "UINT2")
+	{
+		MainInterface.Private.LoLimit = 0;
+		MainInterface.Private.HiLimit = 65535;
+	}
+	else if (CurrentType == "UINT4")
+	{
+		MainInterface.Private.LoLimit = 0;
+		MainInterface.Private.HiLimit = 4294967295;
+	}
+}
+if (Private.CanWriteUst.Value&&$"Использовать безопасность")
+{
+	if (Variant.ToString(Table_1.GetCellData(_row,_column),"")!=""&&_column>=Private.StartPosition)
+	{
+		Private.currentType = UstFunction.FindDataType(Private.JSONString,Private.CurrentHeader,_row,_column);
+		if(Private.currentType=="UINT2"||Private.currentType=="UINT4"||Private.currentType=="FLOAT"){
+		//Private.CurrentSelectedValue = Variant.ToString(Table_1.GetCellData(_row,_column),"0000");
+		Private.LastRowEnterUst =_row;
+		Private.LastClmEnterUst =_column;
+		Private.ActionEnterUst.Invoke();}
+		else {UstFunction.GenState("Ошибка ввода уставки, по причине: " + Private.currentType);}
+	}
+	else {UstFunction.GenState("Предыдущие данные уставки отсутсвуют");}
+}
+else if (!Private.CanWriteUst.Value&&$"Использовать безопасность")
+{
+	UstFunction.GenState("Для изменения уставок небоходима авторизация");
+}
+if (!$"Использовать безопасность")
+{
+	if (Variant.ToString(Table_1.GetCellData(_row,_column),"")!=""&&_column>=Private.StartPosition)
+	{
+		Private.currentType = UstFunction.FindDataType(Private.JSONString,Private.CurrentHeader,_row,_column);
+		if(Private.currentType=="UINT2"||Private.currentType=="UINT4"||Private.currentType=="FLOAT"){
+		Private.LastRowEnterUst =_row;
+		Private.LastClmEnterUst =_column;
+		Private.ActionEnterUst.Invoke();}
+		else {UstFunction.GenState("Ошибка ввода уставки, по причине: " + Private.currentType);}
+	}
+	else {UstFunction.GenState("Предыдущие данные уставки отсутсвуют");}
+}]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="c868ccca-deeb-4a72-a685-33ab61fb90ad" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="efa885ad-c854-46a5-b8dd-3ecff571e667" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_row" display-name="" uuid="18c701eb-2c25-440a-9c88-a63dc14c8331" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+				<param access-modifier="private" name="_column" display-name="" uuid="e4a9bca5-c502-4957-9a62-c86aeb67f8f3" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			</do>
+			<do access-modifier="private" name="LoadValueToTable" display-name="LoadValueToTable" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="javascript">
+					<![CDATA[var arrayData = JSON.parse(JSONStringData);
+var arrayDataValue = JSON.parse(JSONStringValues);
+var startColumn = Private.StartPosition;
+
+
+function GetIndexAP(_row,_column) //простенькая формула вычисления индекса элемента AP
+{
+	var a = (Table_1.GetColumnCount() - startColumn - Private.columnsNotUse - (Table_1.GetColumnCount() - startColumn - Private.columnsNotUse - _column + startColumn ));
+	var b = _row * (Table_1.GetColumnCount() -  startColumn - Private.columnsNotUse);
+	return a + b;
+}
+
+
+for (var i in arrayData[header].data) 
+{ 
+	var numberValueString;
+	var dataCurrentLine = UstFunction.FindApSourcePath(JSONStringData,header,i) //ищем колонку с Tag в которой указывается путь для ApSource в массиве JSONStringData
+	var DataApSourcePath = arrayData[header].data[i][dataCurrentLine];//записываем в переменную путь из колонки Tag
+	
+
+	for (let j in arrayDataValue[header].data) // поиск номера строки из для вычитывания данных (поиск идет в массиве с данными)
+	{
+		let ValueApSourcePath = arrayDataValue[header].data[j][0]; // значение из колонки Tah 
+		if (DataApSourcePath == ValueApSourcePath)
+		{
+			numberValueString = j;
+			break;
+		}
+	}
+
+	
+	for (var k=Private.StartPosition; k<=arrayData[header].data[i].length; k++) // 
+	{
+		let tempValue = arrayDataValue[header].data[i][k-Private.StartPosition+1];
+		let tempCellData = Table_1.TableModel_1.GetCellData(i,k);
+				if ((typeof(tempValue)!="undefined"))
+		{
+			tempValue = tempValue.slice(tempValue.lastIndexOf("=")+1);
+			if(tempValue!="null"&&tempValue!=""&&JSON.stringify(tempCellData)!="null") // если в ячейке что то есть выполняется
+			{
+				if(tempValue!=Table_1.TableModel_1.GetCellData(i,k))
+				{
+					
+					Table_1.TableModel_1.GetCellData(i,k).lastIndexOf("(")!=-1 ? Table_1.TableModel_1.SetCellData(i,k,Table_1.TableModel_1.GetCellData(i,k).slice(0,Table_1.TableModel_1.GetCellData(i,k).lastIndexOf("("))) : Table_1.TableModel_1.GetCellData(i,k); // обнуляем строку для того чтобы не было ()()()()()
+					Table_1.TableModel_1.SetCellData(i,k,Table_1.TableModel_1.GetCellData(i,k) + "(" + tempValue + ")");
+					var temp = Table_1.TableModel_1.GetCellData(i,k).slice(0,Table_1.TableModel_1.GetCellData(i,k).lastIndexOf("("));
+					
+				}
+			}
+			else if(tempValue!="null"&&tempValue!=""&&JSON.stringify(tempCellData)=="null") // если в ячейке ничего нет то то выполняется 
+			{
+				Table_1.TableModel_1.SetCellData(i,k,tempValue);
+			}
+		}
+	}
+}]]>
+				</body>
+				<param access-modifier="private" name="JSONStringData" display-name="" uuid="66bc67d4-1b3d-4b66-bffe-8333f883a45b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="JSONStringValues" display-name="" uuid="50be866d-8fcd-4983-ad28-00d5bcefbfd7" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="26fa7362-7f88-4d2e-9726-eb97c227d3e5" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="FindApSourcePath" display-name="FindApSourcePath" ver="3" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+				<body kind="javascript">
+					<![CDATA[var arrayData = JSON.parse(JSONString);
+var _column=0;
+for (let i in arrayData[header].schema) // цикл для проверки каждого элемента названия 
+{
+	if(arrayData[header].schema[i]=="Tag") // ищем таблицу с названием DataType
+	{
+		_column++;
+		return _column;
+	}
+}
+]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="22df6d50-9599-45ca-98b6-23ffc543c4d6" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="706e7576-f85b-4efa-a8dc-29a27a8cfa54" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_row" display-name="" uuid="58d9efaa-5eca-4b86-8520-a84faffe963f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			</do>
+			<designed target="ZValue" value="0" ver="3"/>
+			<do access-modifier="private" name="GenAlarm" display-name="GenAlarm" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="om">
+					<![CDATA[return "<Subcondition Type='Dynamic' Message='" + name +"." + nameColumn  +".Отправлена команда на изменение значения уставки с " + lastValue + " на " + newValue + "'  Sound='snd' Severity='1' Enabled='1' SoundEnabled='1' />";]]>
+				</body>
+				<param access-modifier="private" name="lastValue" display-name="" uuid="05ab34a2-9ab0-41c4-9b7c-bfbad9ee04ce" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="newValue" display-name="" uuid="870a57c7-a8fe-43ba-9619-8176add1485f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="name" display-name="" uuid="9ce8cc9a-ee5d-4169-af2d-eada4ef94548" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="nameColumn" display-name="" uuid="85c68272-850a-476f-9b8e-d603e93ff987" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetCulumnTitle" display-name="GetCulumnTitle" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[var Columns = [];
+Columns[0] = Table_1.Tablecolumn_1;
+Columns[1] = Table_1.Tablecolumn_2;
+Columns[2] = Table_1.Tablecolumn_3;
+Columns[3] = Table_1.Tablecolumn_4;
+Columns[4] = Table_1.Tablecolumn_5;
+Columns[5] = Table_1.Tablecolumn_6;
+Columns[6] = Table_1.Tablecolumn_7;
+Columns[7] = Table_1.Tablecolumn_8;
+Columns[8] = Table_1.Tablecolumn_9;
+Columns[9] = Table_1.Tablecolumn_10;
+Columns[10] = Table_1.Tablecolumn_11;
+Columns[11] = Table_1.Tablecolumn_12;
+Columns[12] = Table_1.Tablecolumn_13;
+Columns[13] = Table_1.Tablecolumn_14;
+Columns[14] = Table_1.Tablecolumn_15;
+Columns[15] = Table_1.Tablecolumn_16;
+Columns[16] = Table_1.Tablecolumn_17;
+Columns[17] = Table_1.Tablecolumn_18;
+Columns[18] = Table_1.Tablecolumn_19;
+Columns[19] = Table_1.Tablecolumn_20;
+Columns[20] = Table_1.Tablecolumn_21;
+Columns[21] = Table_1.Tablecolumn_22;
+Columns[22] = Table_1.Tablecolumn_23;
+Columns[23] = Table_1.Tablecolumn_24;
+Columns[24] = Table_1.Tablecolumn_25;
+
+return Columns[currentColumn].Title;]]>
+				</body>
+				<param access-modifier="private" name="currentColumn" display-name="" uuid="04938b49-a8f6-4cad-8269-4dc6f624455f" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetStringDecorator" display-name="GetStringDecorator" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[return `{
+  "Conditions":
+  [
+    {
+        "condition_name": "HaveBracket",
+        "condition": { "data:[(]": true }
+    }
+  ],
+  "Decorating": 
+  [
+      {
+        "decoration_rule_name": "rule_1",
+        "decoration_rule": {
+            "and": [
+              { "condition:HaveBracket" : true }
+            ]
+        },
+        "rowstyle": "user_style_1" 
+      }
+  ],
+  "StyleDictionary": [
+        {
+            "style_name": "user_style_1",
+            "style": {
+              "border": 
+            [
+                {
+                    "all": 
+                    {
+                      "color": "#ff2a3836",
+                      "style": "solid",
+                      "width": "6" 
+                    }
+                }
+            ]
+            }
+        }
+  ]
+}`]]>
+				</body>
+			</do>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do access-modifier="private" name="ConvertToFloat" display-name="ConvertToFloat" ver="3" type="float4" type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToFloat(String.Replace(String.Replace(_StingToFloat," ",""),",","."),0);]]>
+				</body>
+				<param access-modifier="private" name="_StingToFloat" display-name="" uuid="285e3f1b-3944-4e29-899c-f67bcc01bff8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="RemoveSpace" display-name="RemoveSpace" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.Replace(String.Replace(_StingToFloat," ",""),",",".");]]>
+				</body>
+				<param access-modifier="private" name="_StingToFloat" display-name="" uuid="285e3f1b-3944-4e29-899c-f67bcc01bff8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetLimits" display-name="GetLimits" ver="3" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8">
+				<body kind="javascript">
+					<![CDATA[if ((FindLimits.indexOf("lo_limit")!=-1)||(FindLimits.indexOf("hi_limit")!=-1))
+{
+	var tmp = FindLimits.slice(FindLimits.indexOf("lo_limit")); //обрезаем строку до lo_limit
+	var loLimit = tmp.slice(0,tmp.indexOf("/")); // нашли строку с loLimit
+	var hiLimit = tmp.slice(tmp.indexOf("/")+1); // нашли строку с hiLimit
+	if (loLimit.indexOf("value")!=-1) // если мнимальное значение  задано вручную 
+		{Private.LoLimit = parseFloat(loLimit.slice(loLimit.indexOf("=")+1).replace(",", "."));	}
+	else if ((loLimit.indexOf("tag")!=-1)) // если мнимальное значение получаем из тега в AS
+		{APItemLoLimit.Path = APPath+loLimit.slice(loLimit.indexOf("=")+1);}
+	if (hiLimit.indexOf("value")!=-1) // если максимальное значение  задано вручную 
+		{Private.HiLimit = parseFloat(hiLimit.slice(hiLimit.indexOf("=")+1).replace(",", "."));	}
+	else if ((hiLimit.indexOf("tag")!=-1)) // если максимальное значение получаем из тега в AS
+		{APItemHiLimit.Path = APPath+hiLimit.slice(hiLimit.indexOf("=")+1);}
+	return true;
+}
+else {return false;}]]>
+				</body>
+				<param access-modifier="private" name="FindLimits" display-name="" uuid="049c9803-11af-4512-99d7-a3e9f8061b4e" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="APPath" display-name="" uuid="cf4418f3-6de6-40df-8160-9bf8f7409bde" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetConfigString" display-name="GetConfigString" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[//функция вовзращает конкретную ячейку из файла карты уставок например - read=.Preset.P1/write=.Preset.P1.wValue/lo_limit_value=100/hi_limit_value=1000
+var arrayData = JSON.parse(JSONString);
+return arrayData[header].data[_row][_column];]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="f3a4d70c-8e89-42c2-b1ed-974e39e1010f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="3e1edafd-707f-4e80-aabc-7dc80e4f7e66" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_row" display-name="" uuid="74833000-bb56-4464-b05b-6d95adcf1601" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+				<param access-modifier="private" name="_column" display-name="" uuid="0cc498d5-88a2-4be2-bd04-d41c46e7bc71" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetApSourcePath" display-name="GetApSourcePath" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="javascript">
+					<![CDATA[//функция вовзращает конкретную ячейку из файла карты уставок например - read=.Preset.P1/write=.Preset.P1.wValue/lo_limit_value=100/hi_limit_value=1000
+var arrayData = JSON.parse(JSONString);
+return arrayData[header].data[_row][UstFunction.FindApSourcePath(JSONString,header,_row)];]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="f3a4d70c-8e89-42c2-b1ed-974e39e1010f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="3e1edafd-707f-4e80-aabc-7dc80e4f7e66" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_row" display-name="" uuid="74833000-bb56-4464-b05b-6d95adcf1601" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ConvertToFloat2" display-name="ConvertToFloat2" ver="3" type="float4" type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToFloat(String.Replace(String.Replace(_StingToFloat," ",""),",","."),_defaultValue);]]>
+				</body>
+				<param access-modifier="private" name="_StingToFloat" display-name="" uuid="285e3f1b-3944-4e29-899c-f67bcc01bff8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="_defaultValue" display-name="" uuid="30560d4c-2af9-4546-ae95-8e4a94c8f8e0" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="DebugTime" display-name="DebugTime" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="om">
+					<![CDATA[return "Line:"+String.ToString(Line)+", DateTime:"+DateTime.ToString(DateTime.Now(), "%Y%m%d %H:%M:%S.%f");]]>
+				</body>
+				<param access-modifier="private" name="Line" display-name="" uuid="b7e6bc58-9f91-4209-9717-aff0c69cfd3f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			</do>
+			<do access-modifier="private" name="PathToAP" display-name="PathToAP" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="javascript">
+					<![CDATA[var arrayData = JSON.parse(JSONString);
+var ApItemIndexRead = 0; // переменная для APItemRead 
+var ApItemIndexWrite = 0; // переменная для APItemWrite 
+var startColumn = Private.StartPosition;
+
+// функции добавлены для ускорения загрузки данных из файла, т.к. JSON.parse(JSONString) занимает очень много времени
+function GetApSourcePath(_JSONString,_header,_row)
+{
+	return arrayData[_header].data[_row][FindApSourcePath(_header)];
+}
+
+function FindApSourcePath(_header)
+{
+	var _column=0;
+	for (let i in arrayData[_header].schema) // цикл для проверки каждого элемента названия 
+	{
+		if(arrayData[_header].schema[i]=="Tag") // ищем таблицу с названием DataType
+		{
+			_column++;
+			return _column;
+		}
+	}
+}
+//------------------
+
+
+function ReadData(valueIn,APpath) // функция записи в Path пути до тега в APItem 
+{
+	if(valueIn.indexOf("read=")!=-1) //ищем read
+	{
+		APItemRead[ApItemIndexRead].Path = APpath + valueIn.substring(valueIn.indexOf("read=")+5,valueIn.indexOf("/"));
+		ApItemIndexRead++;
+	}
+	if(valueIn.indexOf("write=")!=-1) //ищем write
+	{		
+		var valueInWrite = valueIn.substring(valueIn.indexOf("/")+1); // обрезаем часть строки с read
+		var temp1 = valueInWrite.indexOf("/")!=-1?valueInWrite.indexOf("/"):valueInWrite.length; //вычисляем есть ли после write знак 
+		valueInWrite = valueInWrite.substring(valueInWrite.indexOf("write=")+6,temp1); // вырезаем нужную часть
+		APItemWrite[ApItemIndexWrite].Path = APpath + valueInWrite; // записываем в путь тега нужно знаечение
+		ApItemIndexWrite++;
+	}
+}
+
+for (var i = 0; i < arrayData[header].data.length; i++)
+{
+	var APSourcePath = GetApSourcePath(Private.JSONString,header,i); // получаем строку с парметром папки в сервере AS у параметра
+	for (var j = startColumn; j < arrayData[header].data[i].length;j++)
+	{
+	  ReadData(arrayData[header].data[i][j],APSourcePath);	
+	}
+}
+
+MainInterface.Private.Timer_ReadData.Active=true;// запуск чтения уставок]]>
+				</body>
+				<param access-modifier="private" name="JSONString" display-name="" uuid="dbffcb38-ad54-43e2-b36b-6e3e4806c933" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<param access-modifier="private" name="header" display-name="" uuid="f223477d-ffd4-4416-8e07-2159a4e53900" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ToFloat" display-name="ToFloat" ver="3" type="float4" type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToFloat(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0);]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ToUInt2" display-name="ToUInt2" ver="3" type="uint2" type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToUint2(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0);]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ToUInt4" display-name="ToUInt4" ver="3" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToUint4(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0);]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ToString" display-name="ToString" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",",".");]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+			</do>
+			<do access-modifier="private" name="ToVariant" display-name="ToVariant" ver="3" type="float4" type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+return String.ToFloat(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0);]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+			</do>
+			<do access-modifier="private" name="WriteToUInt2" display-name="WriteToUInt2" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+APItemWrite[_indexAP].TrySetValue(String.ToUint2(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0));]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+				<param access-modifier="private" name="_indexAP" display-name="" uuid="b5c721c0-b32a-4336-95e9-935049a509c9" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			</do>
+			<do access-modifier="private" name="WriteToFloat" display-name="WriteToFloat" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+//DebugTool_1.Log(String.ToFloat(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0));
+APItemWrite[_indexAP].TrySetValue(String.ToFloat(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0));]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+				<param access-modifier="private" name="_indexAP" display-name="" uuid="fd73c274-ef8a-4c68-b504-d45c7603dbe9" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			</do>
+			<do access-modifier="private" name="WriteToUInt4" display-name="WriteToUInt4" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[//Функцию не сохранять! происходит замена пробела _StingToFloat," ","" который не является пробелом!
+APItemWrite[_indexAP].TrySetValue(String.ToUint4(String.Replace(String.Replace(Str.Trim(Variant.ToString(_valueIn,""))," ",""),",","."),0));]]>
+				</body>
+				<param access-modifier="private" name="_valueIn" display-name="" uuid="15fb86f0-19ef-45a4-a9d8-e252018f5f7b" base-type="variant" base-type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a" ver="3"/>
+				<param access-modifier="private" name="_indexAP" display-name="" uuid="ac1d6749-cfc9-47e8-a19d-41e82702df2a" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="3"/>
+			</do>
+		</object>
+		<object access-modifier="private" name="Button_8" display-name="Button_8" uuid="b2c5fde6-9fcb-4baf-b6d2-5b5197f866a3" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="338" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="120" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Запись уставок" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Private.LastRowForWrite = 0;
+Private.countOfUncertain = 0;
+Private.LastColumnForWrite = Private.StartPosition;
+Private.AccessControl=false;
+UstFunction.WriteAPData(Private.JSONString,Private.CurrentHeader);]]>
+				</body>
+			</do-on>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.CanWriteUst.Value)&&(Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.CanWriteUst.Value || !Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Checked" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="58175d4f-8f12-4c11-a174-00ce8a5cee5f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="814.833" ver="3"/>
+			<designed target="Y" value="5.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="false" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="200.333" ver="3"/>
+			<designed target="Height" value="73" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="4278190080" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<object access-modifier="private" name="Text_5" display-name="Text_5" uuid="8182855b-64c7-4375-81e4-0b1c830e261b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="818.833" ver="3"/>
+				<designed target="Y" value="6.86665" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="72.3333" ver="3"/>
+				<designed target="Height" value="18.2667" ver="3"/>
+				<designed target="Text" value="Архив" ver="3"/>
+				<designed target="Font" value="Tahoma,10,-1,5,63,0,0,0,0,0,Regular" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+			</object>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="8ba9a551-b6d4-4850-8d4a-a6f5675817aa" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="12" ver="3"/>
+			<designed target="Y" value="14" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="185" ver="3"/>
+			<designed target="Height" value="24" ver="3"/>
+			<designed target="Text" value="Выбор карты уставок" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Bold" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Text_4" display-name="Text_4" uuid="4dd40e7e-9ada-41c6-92f7-18c3a605fe40" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="210" ver="3"/>
+			<designed target="Y" value="14" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="185" ver="3"/>
+			<designed target="Height" value="24" ver="3"/>
+			<designed target="Text" value="ПЛК" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Bold" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_9" display-name="Button_9" uuid="93fc3434-4da7-46d2-a3fe-1d64918fbb7c" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="614" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="120" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Запись уставок" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[PathName :string  = ""; // папка для сохранения
+if( $"Путь для сохранения фалов архива" == "")
+{
+	PathName = FileSystem.ProjectFolder; // папка  Export должна быть создана "\\Export"
+}
+else
+{
+	PathName = $"Путь для сохранения фалов архива";
+}
+
+temp :string = String.Remove($"Название файла карты уставок",String.LastIndexOf($"Название файла карты уставок","."),String.Length($"Название файла карты уставок")); //убираем .csv
+if(UstFunction.SaveValueFromTable(Private.JSONString,Private.CurrentHeader)!="CannotSave")
+{
+	Private.JSONStringValues = UstFunction.SaveValueFromTable(Private.JSONString,Private.CurrentHeader);
+	FileName :string = Private.CurrentHeader;
+	UstFunction.WorkWithFile("Save",FileSystem.CombinePath(PathName,temp + "_" + FileName + ".csv"),Private.JSONStringValues);
+	unit.Global.MessagesOper.Value = "<Subcondition Message='"+"ИБ. Пользователь: " + unit.Security.SecurityContext.CurrentUser + " успешно сохранил значения уставок по объектам "+ FileName + ", в файл " + FileSystem.CombinePath(PathName,temp + "_" + FileName + ".csv") +" на - АРМ [" + unit.Global.Network.ComputerName + "] ' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />";
+
+}
+else
+{
+ MainInterface.UstFunction.GenState("Необходимо проверить значения уставок, значения уставок из архива и контроллера отличаются");
+}]]>
+				</body>
+			</do-on>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.CanWriteUst.Value)&&(Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.CanWriteUst.Value || !Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Checked" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Button_10" display-name="Button_10" uuid="5ec63aff-0be1-4292-b318-fba596a33937" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="486" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="120" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Чтение уставок" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[PathName :string  = ""; // папка для сохранения
+if( $"Путь для сохранения фалов архива" == "")
+{
+	PathName = FileSystem.ProjectFolder; // "\\Export"
+}
+else
+{
+	PathName = $"Путь для сохранения фалов архива";
+}
+
+temp :string = String.Remove($"Название файла карты уставок",String.LastIndexOf($"Название файла карты уставок","."),String.Length($"Название файла карты уставок")); //убираем .csv
+FileName :string = Private.CurrentHeader;
+FileSystem.CombinePath(PathName,FileName + ".csv");
+Private.JSONStringValues = UstFunction.WorkWithFile("Load",FileSystem.CombinePath(PathName,temp + "_" + FileName + ".csv"),""); //Загружем файл с уставками
+UstFunction.LoadValueToTable(Private.JSONString,Private.JSONStringValues,Private.CurrentHeader);
+unit.Global.MessagesOper.Value = "<Subcondition Message='"+"ИБ. Пользователь: " + unit.Security.SecurityContext.CurrentUser + " успешно загрузил значения уставок по объектам "+ FileName + ", из файла " + FileSystem.CombinePath(PathName,temp + "_" + FileName + ".csv") +" на - АРМ [" + unit.Global.Network.ComputerName + "] ' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />";]]>
+				</body>
+			</do-on>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.CanWriteUst.Value)&&(Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.CanWriteUst.Value || !Private.AccessControl) && ($"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[(!Private.AccessControl) && (!$"Использовать безопасность")]]>
+					</condition>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</conditional-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Checked" value="false" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_6" display-name="Text_6" uuid="72694323-423b-4b8d-981a-7e13f614bf32" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="486" ver="3"/>
+			<designed target="Y" value="14" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="185" ver="3"/>
+			<designed target="Height" value="24" ver="3"/>
+			<designed target="Text" value="Архив" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Bold" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f9aafc6c-cb77-4351-97ff-b1b9b4c0d34e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="791" ver="3"/>
+			<designed target="Y" value="14" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="180" ver="3"/>
+			<designed target="Height" value="24" ver="3"/>
+			<designed target="Text" value="Режим записи уставок" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Bold" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="ComboBox_2" display-name="ComboBox_2" uuid="bd095142-5a89-4664-a3a9-e595517049cf" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="791" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="180" ver="3"/>
+			<designed target="Height" value="34" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="Tahoma,10,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="APItemGenAlarm" display-name="APItemGenAlarm" uuid="39e08945-3106-425b-b5cb-34d2aaddf4f7" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="3">
+		<init target="Source" ver="3" ref="ApSource_MSG"/>
+		<init target="Path" ver="3" ref="Тег для генерации сообщений"/>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[Тег для генерации сообщений(Дианмический)]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="ApSource_MSG" display-name="ApSource_MSG" uuid="9a59eee1-4432-439e-8c60-af9a8358fd53" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="3">
+		<designed target="Active" value="true" ver="3"/>
+		<init target="Timeout" ver="3" value="1000"/>
+		<init target="ConnectionEstablishTimeout" ver="3" value="1000"/>
+		<init target="MaxBufferPoolSize" ver="3" value="100000"/>
+		<init target="ParentSource" ver="3" ref="init_ApSource"/>
+		<designed target="ReAdvise" value="0" ver="3"/>
+		<designed target="Path" value="" ver="4"/>
+	</object>
+	<param access-modifier="private" name="Тег для генерации сообщений" display-name="Тег для генерации сообщений" uuid="5cf1f882-5687-41fc-a584-56ca1d637795" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="Timer_Start" display-name="Timer_Start" uuid="e981c2c0-5321-4ed2-b657-2a7d1a13c2b0" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="1000" ver="3"/>
+		<designed target="Active" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+			<body kind="om">
+				<![CDATA[MainInterface.ComboBox_2.AddItem("Все уставки");
+MainInterface.ComboBox_2.AddItem("Только отличающиеся");
+MainInterface.ComboBox_1.Clear();
+if(($"Путь до файла конфигурации"!="")&&($"Название файла карты уставок"!=""))
+{
+	MainInterface.Private.textFromFile = MainInterface.UstFunction.WorkWithFile("Load",FileSystem.CombinePath($"Путь до файла конфигурации",$"Название файла карты уставок"),""); //Загружем файл с уставками (пример файл лежит в корен C:  - C:\\002.csv)
+	if (MainInterface.Private.textFromFile!="NotLoaded")
+	{
+		MainInterface.Private.JSONString = MainInterface.UstFunction.DataToJSON(MainInterface.Private.textFromFile); //разбираем получаенный файл с уставками
+		if(MainInterface.Private.JSONString!="")
+		{
+			MainInterface.UstFunction.GenState("Загрузка данных из файла завершена (" + FileSystem.CombinePath($"Путь до файла конфигурации",$"Название файла карты уставок") + ")");
+			MainInterface.UstFunction.DataToTable(MainInterface.Private.JSONString,MainInterface.ComboBox_1.GetItem(0)); // загружаем данные в таблицу
+			MainInterface.Private.CurrentHeader = MainInterface.ComboBox_1.GetItem(0); // выбираем заголовок у чекбокса
+			MainInterface.Private.AccessControl =true; // отмечаем что карта уставок загруженна		
+		}
+	}
+	else if (MainInterface.Private.textFromFile=="NotLoaded") // отмечаем что карта уставок не загруженна
+	{
+		MainInterface.Private.AccessControl =false;
+	}
+}
+else
+{
+	MainInterface.UstFunction.GenState("Не указан файл для загрузки конфигурации уставок");
+}
+me.Active=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="APItemLoLimit" display-name="APItemLoLimit" uuid="8d38d389-b6ef-4040-9e56-c9ed5d00aa3f" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="3">
+		<init target="Source" ver="3" ref="ApSource_Limits"/>
+	</object>
+	<object access-modifier="private" name="APItemHiLimit" display-name="APItemHiLimit" uuid="dd926aa6-5cfd-44a9-8c6a-101024d5b510" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="3">
+		<init target="Source" ver="3" ref="ApSource_Limits"/>
+	</object>
+	<object access-modifier="private" name="ApSource_Limits" display-name="ApSource_Limits" uuid="49dbfef7-015a-4660-9240-a27bece52741" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="3">
+		<designed target="Active" value="true" ver="3"/>
+		<init target="Timeout" ver="3" value="1000"/>
+		<init target="ConnectionEstablishTimeout" ver="3" value="1000"/>
+		<init target="MaxBufferPoolSize" ver="3" value="100000"/>
+		<init target="ParentSource" ver="3" ref="init_ApSource"/>
+		<designed target="ReAdvise" value="0" ver="3"/>
+		<designed target="Path" value="" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Тег для генерации сообщений(Дианмический)" display-name="Тег для генерации сообщений(Дианмический)" uuid="bfb336e5-3215-4ce0-bab9-4a972a436245" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<init target="Тег для генерации сообщений(Дианмический)" ver="4" ref="Тег для генерации сообщений"/>
+</type>
+

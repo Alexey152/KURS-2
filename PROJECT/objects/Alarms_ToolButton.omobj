@@ -1,0 +1,154 @@
+<type access-modifier="private" name="Alarms_ToolButton" display-name="ToolButton_1" uuid="76f54e9d-00fa-4fc7-81ad-fd37c305cbb1" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="484d3399-4bf4-43bd-b207-58c25f44f1e2" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="2">
+		<designed target="X" value="1" ver="2"/>
+		<designed target="Y" value="1" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="26" ver="2"/>
+		<designed target="Height" value="26" ver="2"/>
+		<designed target="PenColor" value="0xff323232" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="ImageFile" value="" ver="2"/>
+		<designed target="Active" value="true" ver="2"/>
+		<designed target="CurrentFrameNumber" value="0" ver="2"/>
+		<designed target="Speed" value="1" ver="2"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="2">
+			<body>
+				<![CDATA[Image]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Hide" display-name="Hide" uuid="23913ae2-2033-4a10-a0fb-3e3cd8ad1f65" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="26" ver="2"/>
+		<designed target="Height" value="26" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff00aaff" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="2" ver="2"/>
+		<designed target="BrushColor" value="0xaaf4f4f4" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<do-trace access-modifier="private" target="PenWidth" ver="2">
+			<body>
+				<![CDATA[(Checked)?(2):(1)]]>
+			</body>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[Hide.PenStyle = 1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[if (!Checked) Hide.PenStyle=0;]]>
+			</body>
+		</do-on>
+		<init target="PenStyle" ver="2" value="0"/>
+		<do-trace access-modifier="private" target="BrushStyle" ver="2">
+			<body>
+				<![CDATA[(Active)?(0):(1)]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Checked" display-name="Checked" uuid="6a5315a6-c01d-461c-bd4b-7712f1f7b876" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (Checked) Hide.PenStyle =1;
+else Hide.PenStyle=0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Active" display-name="Active" uuid="e2786ab6-0434-420f-a1a7-660a94e1c912" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MousePress">
+		<body kind="om">
+			<![CDATA[Image_1.X=2;
+Image_1.Y=2;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseRelease">
+		<body kind="om">
+			<![CDATA[Image_1.X=1;
+Image_1.Y=1;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Image" display-name="Image" uuid="0a11f794-3123-42e8-a244-c40d0a5b4a8a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<do access-modifier="private" name="Set_Size" display-name="Set_Size" ver="2" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" form-by-id="true">
+		<param access-modifier="private" name="Mode" display-name="" uuid="76ee9dc6-5e57-44b8-965c-0a753a9571dc" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="2"/>
+		<body kind="javascript">
+			<![CDATA[//Функция задания размеров иконки. Если 0 или -1 - скрываем иконку, если больше 0 и есть разрешение на отображение - задаем параметры по исходным данным
+var newHeight = 0;
+var newWidth = 0;
+
+if (Mode <= 0) //Скрываем кнопку
+{
+	if (Mode == 0) Visible = false; //Режим ручного скрытия (например, кнопки управления звуком в историческом режиме). Выйти из режима можно только кодом Set_Size(1)
+	newHeight = 0;
+	newWidth = 0;
+}
+
+if (Mode > 0) //Отображать кнопку при наличии разрешения
+{
+	Visible = true;
+	if (Permission.Value)
+	{
+		newHeight = defHeight;
+		newWidth = defWidth;
+	}
+	else
+	{
+		newHeight = 0;
+		newWidth = 0;
+	}
+}
+
+Hide.Width = newWidth;
+Hide.Height = newHeight;
+
+Image_1.Width = (newWidth>2)?(newWidth-2):0;
+Image_1.Height = (newHeight>2)?(newHeight-2):0;
+
+Alarms_1.Main_panel.ToolBar.Height = Alarms_1.Main_panel.ToolBar.Height; //Необходимо для обновления разметки]]>
+		</body>
+	</do>
+	<do-trace access-modifier="private" target="Enabled" ver="2">
+		<body>
+			<![CDATA[Active]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Permission" display-name="Permission" uuid="6e7fb299-b1f5-40f6-ba4a-a2cef2c3c927" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[//Проверка наличия разрешения на отображение
+if (!value) Set_Size(-1); //Скрываем кнопку
+else if (Hide.Height == 0 && Visible) Set_Size(1);//Отображаем кнопку]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="75847b7e-625c-471a-bff6-e11680a7945c" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="defWidth" display-name="defWidth" uuid="8ee0a651-9753-4fcd-bf4d-7253c2d2c9eb" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="3"/>
+	<object access-modifier="private" name="defHeight" display-name="defHeight" uuid="08839c19-9236-491b-9caf-f5ea206e6e3f" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="3"/>
+	<object access-modifier="private" name="HideFlag" display-name="HideFlag" uuid="01742914-0dbd-4a26-bad4-a4ede2182a6c" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

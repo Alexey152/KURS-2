@@ -1,0 +1,135 @@
+<type access-modifier="private" name="Trends_popup_Calendar" display-name="Trends_popup_Calendar" uuid="291218b0-a189-4279-912a-27ad1a8df2ad" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="201" ver="3"/>
+	<designed target="Height" value="201" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="1920" ver="3"/>
+	<designed target="WindowHeight" value="1080" ver="3"/>
+	<designed target="WindowCaption" value="" ver="3"/>
+	<designed target="ShowWindowCaption" value="true" ver="3"/>
+	<designed target="ShowWindowMinimize" value="true" ver="3"/>
+	<designed target="ShowWindowMaximize" value="true" ver="3"/>
+	<designed target="ShowWindowClose" value="true" ver="3"/>
+	<designed target="AlwaysOnTop" value="false" ver="3"/>
+	<designed target="WindowSizeMode" value="2" ver="3"/>
+	<designed target="WindowBorderStyle" value="0" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="0" ver="3"/>
+	<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="1ef51498-db45-4e84-9bd6-5ec3d3ac20bd" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+		<designed target="X" value="181" ver="3"/>
+		<designed target="Y" value="8" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="10" ver="3"/>
+		<designed target="Height" value="10" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="2" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="cb8d0005-3e2f-4392-847c-821f7baef39c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="539863e8-b1df-442c-b262-04e6bc1d9796" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="10" ver="3"/>
+			<designed target="Y" value="10" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="5a32d564-a252-4c1e-9cac-c557a32bddcb" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+		<designed target="X" value="181" ver="3"/>
+		<designed target="Y" value="8" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="10" ver="3"/>
+		<designed target="Height" value="10" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="2" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="ad362b63-e2c4-4360-9aec-472ce053a64c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="10" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="86e25143-d0ca-4cef-afec-674e781ca3dd" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="10" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="pTrends" display-name="pTrends" uuid="9f1a98cf-7601-4136-a7bf-9fa4242332dd" base-type="Trends" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="OnDateChangedDo" display-name="OnDateChangedDo" uuid="a0490616-23a6-4267-a527-a502aadf9024" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="InvokeTrigger" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[if (Sender==1){
+	pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_1.Text = pTrends.Main_Panel.private.DateToString(Calendar_1.currentDate);
+}
+if (Sender==2){
+	pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_2.Text = pTrends.Main_Panel.private.DateToString(Calendar_1.currentDate);
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Sender" display-name="Sender" uuid="6b51f42c-875b-41d7-a22c-7d9f4e4e73d4" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<param access-modifier="private" name="init_Sender" display-name="init_Sender" uuid="8a527f36-b1b5-411e-81d0-93b2bc98d454" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<init target="Sender" ver="3" ref="init_Sender"/>
+	<object access-modifier="private" name="Timer_SetDate" display-name="Timer_SetDate" uuid="68369134-cbfd-4614-8c15-6cdd13eee679" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="200" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+			<body kind="om">
+				<![CDATA[Active = false;
+t:uint8;
+if (Sender==1){
+	t = DateTime.Parse(pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_1.Text);
+}
+if (Sender==2){
+	t = DateTime.Parse(pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_2.Text);
+}
+Calendar_1.ChangeSelection(t);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Calendar_1" display-name="Calendar_1" uuid="14eb4f5b-7876-40c1-a6e7-39953ff55c37" base-type="Calendar" base-type-id="f3aff9fb-440f-4048-85f4-2d2d454dfb37" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Width" value="200" ver="3"/>
+		<designed target="Height" value="200" ver="3"/>
+		<init target="OnDateChanged" ver="3" ref="OnDateChangedDo"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[	if (!WindowActive ) Close();
+]]>
+		</body>
+	</do-on>
+</type>
+

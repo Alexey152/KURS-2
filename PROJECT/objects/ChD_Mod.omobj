@@ -1,0 +1,100 @@
+<type access-modifier="private" name="ChD_Mod" display-name="ChD_Mod" uuid="c86c6ae2-0838-4f97-859c-4f203b879775" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="6eec6f8a-923a-4be4-8256-76daf7957a1c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="20" ver="2"/>
+		<designed target="Y" value="10" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="10" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff545454" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="0xffb6b6b6" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<do-trace access-modifier="private" target="BrushColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[AP_Ch_On.Quality < 192]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffebebeb]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[AP_Ch_On.Value]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00ff00]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!AP_Ch_On.Value]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffb6b6b6]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffb6b6b6]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="39f2d7f7-8f25-49c9-a6c5-0bb0074adca8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="20" ver="2"/>
+		<designed target="Y" value="10" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="10" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="01" ver="2"/>
+		<designed target="Font" value="Arial,6,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+		<designed target="FontColor" value="0xff000000" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="Text" ver="4">
+			<body>
+				<![CDATA["0" + Str.Replace(Ch_Num.Value,"C","")]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Ch_Num" display-name="Ch_Num" uuid="c09cb5d5-25d5-46e7-bfa5-48af51aca712" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<param access-modifier="private" name="in_Tag" display-name="in_Tag" uuid="9bfeb783-8720-4996-a261-49e212696d04" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<object access-modifier="private" name="AP_Ch_On" display-name="AP_Ch_On" uuid="747e8a50-a76d-4795-9d4f-6e7be56010f7" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Tag + "." + here.in_Ch_Num]]>
+			</expr>
+		</init>
+	</object>
+	<param access-modifier="private" name="in_Ch_Num" display-name="in_Ch_Num" uuid="84ac101c-4403-4fc7-acc5-f918e2572f5b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<init target="Ch_Num" ver="4">
+		<expr>
+			<![CDATA[here.in_Ch_Num]]>
+		</expr>
+	</init>
+</type>
+

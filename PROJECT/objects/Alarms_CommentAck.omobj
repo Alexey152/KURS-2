@@ -1,0 +1,425 @@
+<type access-modifier="private" name="Alarms_CommentAck" display-name="Ввод комментария при квитировании" uuid="849094ab-4a33-4e58-ad4d-5a8e53262f5c" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="600" ver="2"/>
+	<designed target="Height" value="260" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="600" ver="2"/>
+	<designed target="WindowHeight" value="200" ver="2"/>
+	<designed target="WindowCaption" value="Ввод комментария квитирования" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="2" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="e5e4a6de-8f30-4fb7-a60e-8818a9cb2dc4" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="25" ver="2"/>
+		<designed target="Y" value="155" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="547" ver="2"/>
+		<designed target="Height" value="26" ver="2"/>
+		<designed target="Text" value="" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="FocusChanged">
+			<body kind="om">
+				<![CDATA[RecWarning.Visible = false;
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="pAlarms" display-name="pAlarms" uuid="0bb46822-e1e9-4d25-a204-a8c267ad40b9" base-type="Alarms_1" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="RecWarning" display-name="RecWarning" uuid="7e2b1c98-d16d-429b-a903-d9e44d84ff99" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="25" ver="2"/>
+		<designed target="Y" value="155" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="547" ver="2"/>
+		<designed target="Height" value="25.2" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffff0000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="2" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="07d68d7c-9b1b-4943-ac17-4700cb3befa9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="3.77561" ver="2"/>
+			<designed target="Y" value="3.26154" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="200.433" ver="2"/>
+			<designed target="Height" value="16.6154" ver="2"/>
+			<designed target="Text" value="Комментарий не должен быть пустым!" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="0xffff0000" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+		</object>
+		<init target="Visible" ver="2" value="false"/>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+//Text_1.Text = Str.ToString(event.KeyCode);  // код для определения кодов клавиш
+
+if (vi==82) Button_OK.Click();
+if (vi==75) Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Button_OK" display-name="Button_OK" uuid="b6a47816-4f00-4873-a37e-64ee78c4c0f0" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+		<designed target="X" value="293" ver="2"/>
+		<designed target="Y" value="217" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="133" ver="2"/>
+		<designed target="Height" value="32" ver="2"/>
+		<designed target="Text" value="OK" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ButtonPressed">
+			<body kind="om">
+				<![CDATA[if (Str.Length(TextEdit_1.Text)==0){
+	RecWarning.Visible = true; return ;
+} 
+if (pAlarms.WriteComputerNameToComment.Value) pAlarms.Main_panel.private.AckComment += ": " + TextEdit_1.Text;
+else pAlarms.Main_panel.private.AckComment = TextEdit_1.Text;
+
+if (mode == 0) pAlarms.Main_panel.private.AckContinue.Invoke();
+if (mode == 1) pAlarms.Main_panel.private.AddComment();
+Close();
+]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_Cancel" display-name="Button_Cancel" uuid="5de38c90-0f90-4729-a03a-8303798adcc3" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+		<designed target="X" value="439" ver="2"/>
+		<designed target="Y" value="217" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="133" ver="2"/>
+		<designed target="Height" value="32" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ButtonPressed">
+			<body kind="om">
+				<![CDATA[
+Close();
+]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+	</object>
+	<object access-modifier="private" name="CloseForm" display-name="CloseForm" uuid="cfaf769d-f543-4705-817e-0f5e5ad4c4f3" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="2">
+		<designed target="Period" value="1000" ver="2"/>
+		<designed target="Active" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[if (endTime <= 1) Close();
+endTime -= 1;
+Button_Cancel.Text = "Отмена (" + endTime + ")";
+here.WindowCaption = "Ввод комментария квитирования ("+ endTime + ")";]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="Opened">
+		<body kind="javascript">
+			<![CDATA[CloseForm.Active = true;
+endTime = 30;
+me.Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+var ackFlag = true;//Флаг квитирования
+var end = false;//Конец иттератора
+var message = "";//Сообщение
+var sourceArray = [];//Массив источников выделенных сообщений
+var source;//Источник сообщения
+var severity;//Важность
+
+Table.TableModel.AddColumn("Message","Список сообщений","Description","","string",false,true);
+
+if (pAlarms.ActiveMode == 0)
+{
+	if (pAlarms.Main_panel.private.nAckMode == 1 || pAlarms.Main_panel.private.nAckMode == 2 && mode == 0)
+	{
+		if (pAlarms.Main_panel.private.nAckMode == 1) pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.FirstSelectedRow();//Заполняем таблицу выделенными сообщениями
+		else pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.FirstRow();//Заполняем таблицу всеми сообщениями
+		
+		while (!end)
+		{
+			if (pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetStatus() == 0)
+			{
+		 		ackFlag = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_7.GetIndex()); 
+				severity = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_6.GetIndex());
+				
+				if (ackFlag != null && ackFlag == false && !pAlarms.Main_panel.private.isInformativeEvent(severity))
+				{
+					message = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_4.GetIndex()); 
+					Table.TableModel.AddRow();
+					Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+				}
+			}
+			end = !pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Close();
+	}
+	if (pAlarms.Main_panel.private.nAckMode == 3 && mode == 0)
+	{
+		//Получаем последовательность источников сообщений
+		sourceArray = pAlarms.Main_panel.private.GetAlarmsSequence().split('\t');
+		//Поиск сообщений по источникам
+		pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.FirstRow();
+		while (!end)
+		{
+	 		ackFlag = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_7.GetIndex()); 
+	 		source = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_5.GetIndex());
+	 		severity = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_6.GetIndex());
+	 		
+			if (pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetStatus() == 0 
+				&& ackFlag != null 
+				&& ackFlag == false 
+				&& sourceArray.includes(source)
+				&& !pAlarms.Main_panel.private.isInformativeEvent(severity))
+			{
+				message = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_4.GetIndex()); 
+				Table.TableModel.AddRow();
+				Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+			}
+			end = !pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Close();
+	}
+	if (mode == 1) //Режим добавления комментария
+	{
+		pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.FirstSelectedRow();//Заполняем таблицу выделенными сообщениями
+		while (!end)
+		{
+			if (pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetStatus() == 0)
+			{
+				message = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_4.GetIndex()); 
+				Table.TableModel.AddRow();
+				Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+			}
+			end = !pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.Close();
+	}
+}
+else
+{
+	if ((pAlarms.Main_panel.private.nAckMode == 1 || pAlarms.Main_panel.private.nAckMode == 2) && mode == 0)
+	{
+		if (pAlarms.Main_panel.private.nAckMode == 1) pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.FirstSelectedRow();//Заполняем таблицу выделенными сообщениями
+		else pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.FirstRow();//Заполняем таблицу всеми сообщениями
+		
+		while (!end)
+		{
+			if (pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetStatus() == 0)
+			{
+		 		ackFlag = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Historical.Table_History_mode.Colum_7.GetIndex()); 
+				severity = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_6.GetIndex());
+				
+				if (ackFlag != null && ackFlag == false && !pAlarms.Main_panel.private.isInformativeEvent(severity))
+				{
+					message = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Historical.Table_History_mode.Colum_4.GetIndex()); 
+					Table.TableModel.AddRow();
+					Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+				}
+			}
+			end = !pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Close();
+	}
+	if (pAlarms.Main_panel.private.nAckMode == 3 && mode == 0)
+	{
+		//Получаем последовательность источников сообщений
+		sourceArray = pAlarms.Main_panel.private.GetAlarmsSequence().split('\t');
+		//Поиск сообщений по источникам
+		pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.FirstRow();
+		while (!end)
+		{
+	 		ackFlag = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Historical.Table_History_mode.Colum_7.GetIndex()); 
+	 		source = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Historical.Table_History_mode.Colum_5.GetIndex());
+	 		severity = pAlarms.Main_tables_Operative.Table_Operative_mode.TablePersistentIterator_1.GetData(pAlarms.Main_tables_Operative.Table_Operative_mode.Colum_6.GetIndex());
+	 		
+			if (pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetStatus() == 0 
+				&& ackFlag != null 
+				&& ackFlag == false 
+				&& sourceArray.includes(source)
+				&& !pAlarms.Main_panel.private.isInformativeEvent(severity))
+			{
+				message = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Historical.Table_History_mode.Colum_4.GetIndex()); 
+				Table.TableModel.AddRow();
+				Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+			}
+			end = !pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Close();
+	}
+	if (mode == 1) //Режим добавления комментария
+	{
+		pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.FirstSelectedRow();//Заполняем таблицу выделенными сообщениями
+		while (!end)
+		{
+			if (pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetStatus() == 0)
+			{
+				message = pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.GetText(pAlarms.Main_tables_Historical.Table_History_mode.Colum_4.GetIndex()); 
+				Table.TableModel.AddRow();
+				Table.TableModel.SetCellData(Table.TableModel.GetRowCount()-1,0, message);
+			}
+			end = !pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.HasNext();
+			pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Next();
+		}
+		pAlarms.Main_tables_Historical.Table_History_mode.TablePersistentIterator_1.Close();
+	}
+}
+//Заполняем шаблоны комментирования
+CommentPattern.AddItem("Выберите шаблон комментария");
+for (let i = 0; i < pAlarms.Main_panel.private.CommentPattern.PatternsTable.GetRowCount(); i++)
+{
+	CommentPattern.AddItem(pAlarms.Main_panel.private.CommentPattern.PatternsTable.GetCellData(i,0));
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="endTime" display-name="endTime" uuid="6e16dc61-b0e3-46d4-89c6-f08250964b77" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="d5e9a495-38c0-4091-b08a-918d9256d3b7" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<init target="Focus" ver="3" value="true"/>
+	<object access-modifier="private" name="Table" display-name="Table" uuid="9170d094-e6f2-4327-9c38-8d40f8dc91e0" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="3">
+		<designed target="X" value="23" ver="3"/>
+		<designed target="Y" value="11" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Width" value="549" ver="3"/>
+		<designed target="Height" value="122" ver="3"/>
+		<designed target="SelectionBehavior" value="0" ver="3"/>
+		<designed target="SelectionMode" value="0" ver="3"/>
+		<designed target="LatestRowTracking" value="false" ver="3"/>
+		<object access-modifier="private" name="Message" display-name="Message" uuid="d90c5707-063e-4602-8245-52325c4f76c4" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="3">
+			<designed target="Title" value="Список сообщений" ver="3"/>
+			<designed target="Description" value="" ver="3"/>
+			<designed target="Id" value="Message" ver="3"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="3"/>
+			<designed target="ForegroundColor" value="4278190080" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="3"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="3"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="Width" value="547" ver="3"/>
+			<designed target="WidthResizeMode" value="1" ver="3"/>
+			<designed target="Emptiable" value="true" ver="3"/>
+			<designed target="Hidden" value="false" ver="3"/>
+			<designed target="NumberFormat" value="%d" ver="3"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="3"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+		</object>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="30" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<object access-modifier="private" name="TableModel_1" display-name="TableModel_1" uuid="e40a0617-78e5-47ac-ae7c-6d503a7d1713" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+			<designed target="Frozen" value="false" ver="3"/>
+			<designed target="MaxRowCount" value="10000" ver="3"/>
+		</object>
+		<init target="TableModel" ver="3" ref="TableModel_1"/>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="94bbe451-a73d-4b98-a0da-0a405ca2c448" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="24.9915" ver="2"/>
+		<designed target="Y" value="133" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="170.017" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Комментарий квитирования:" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+	</object>
+	<object access-modifier="private" name="CommentPattern" display-name="CommentPattern" uuid="af4cc7ac-a259-492e-a268-3fdbd0ce5a20" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+		<designed target="X" value="25" ver="3"/>
+		<designed target="Y" value="187" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="547" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="Editable" value="false" ver="3"/>
+		<designed target="Text" value="" ver="3"/>
+		<designed target="SelectedIndex" value="-1" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="MaxVisibleItems" value="10" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="SelectedChanged">
+			<body kind="om">
+				<![CDATA[if (SelectedIndex != 0 && GetItem(SelectedIndex) != "") 
+{
+	TextEdit_1.Text = GetItem(SelectedIndex);
+	RecWarning.Visible = false;
+}]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="mode" display-name="mode" uuid="769ff5c6-fbd6-4895-a2ef-42cb63912679" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

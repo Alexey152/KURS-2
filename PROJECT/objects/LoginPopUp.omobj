@@ -1,0 +1,438 @@
+<!--01.06.2018 16:59:34-->
+<type access-modifier="private" name="LoginPopUp" display-name="LoginPopUp" uuid="2cdea936-4ca6-4e18-974b-755bf89358b8" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="1">
+	<designed target="X" value="0" ver="1"/>
+	<designed target="Y" value="0" ver="1"/>
+	<designed target="Rotation" value="0" ver="1"/>
+	<designed target="Scale" value="1" ver="1"/>
+	<designed target="Visible" value="true" ver="1"/>
+	<designed target="Enabled" value="true" ver="1"/>
+	<designed target="Tooltip" value="" ver="1"/>
+	<designed target="Width" value="340" ver="1"/>
+	<designed target="Height" value="180" ver="1"/>
+	<designed target="PenColor" value="0xff000000" ver="1"/>
+	<designed target="PenStyle" value="0" ver="1"/>
+	<designed target="PenWidth" value="1" ver="1"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="1"/>
+	<designed target="BrushStyle" value="1" ver="1"/>
+	<designed target="WindowX" value="0" ver="1"/>
+	<designed target="WindowY" value="0" ver="1"/>
+	<designed target="WindowWidth" value="340" ver="1"/>
+	<designed target="WindowHeight" value="180" ver="1"/>
+	<designed target="WindowCaption" value="Регистрация" ver="1"/>
+	<designed target="WindowBorderStyle" value="2" ver="1"/>
+	<designed target="ShowWindowCaption" value="true" ver="1"/>
+	<designed target="ShowWindowMinimize" value="false" ver="1"/>
+	<designed target="ShowWindowMaximize" value="false" ver="1"/>
+	<designed target="ShowWindowClose" value="true" ver="1"/>
+	<designed target="AlwaysOnTop" value="true" ver="1"/>
+	<designed target="WindowSizeMode" value="0" ver="1"/>
+	<designed target="WindowScalingMode" value="0" ver="1"/>
+	<designed target="WindowCloseMode" value="0" ver="1"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="7b027b5a-2aa2-4fc9-986f-5ea81f0d6e50" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="1">
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" event="LoginFailed" ver="1">
+			<body kind="om">
+				<![CDATA[tInfo.Text = LoginError;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" event="LoginRejected" ver="1">
+			<body kind="om">
+				<![CDATA[tInfo.Text = LoginRejectReason;
+StrTemp = LoginRejectReason;
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" event="LoginStarted" ver="1">
+			<body kind="om">
+				<![CDATA[tInfo.Text = "";
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" event="ConnectedChanged" ver="1">
+			<body kind="om">
+				<![CDATA[if (!Connected) {
+	tInfo.Text = Str.Concat("Нет связи: ", ConnectionError);
+}
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_6" display-name="Handler_6" event="CurrentUserChanged" ver="1">
+			<body kind="om">
+				<![CDATA[if( !SecurityContext.GuestMode && AutoCloseOnLogin)
+	ActionClose.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="tUser" display-name="tUser" uuid="a6292ad4-a734-4b06-96d5-3cb702192772" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+		<designed target="X" value="41" ver="1"/>
+		<designed target="Y" value="34" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="80" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="Пользователь" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="33" ver="1"/>
+	</object>
+	<object access-modifier="private" name="tPassword" display-name="tPassword" uuid="4b86ae93-9a7c-4143-9a13-21dc5eb836d8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+		<designed target="X" value="41" ver="1"/>
+		<designed target="Y" value="57" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="80" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="Пароль" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="33" ver="1"/>
+	</object>
+	<object access-modifier="private" name="tePassword" display-name="tePassword" uuid="20a789c5-c17f-49e7-9665-28880afb9886" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="1">
+		<designed target="X" value="122" ver="1"/>
+		<designed target="Y" value="58" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="171" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="129" ver="1"/>
+		<designed target="HideInput" value="true" ver="1"/>
+		<designed target="PlaceholderText" value="" ver="1"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+	</object>
+	<object access-modifier="private" name="bLogin" display-name="bLogin" uuid="ae0ca243-9499-4b07-8a48-24cd3a0a41e5" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="122" ver="1"/>
+		<designed target="Y" value="83" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="75" ver="1"/>
+		<designed target="Height" value="23" ver="1"/>
+		<designed target="Text" value="ОК" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed" ver="1">
+			<body kind="javascript">
+				<![CDATA[//Авторизация пользователя по имени или логину
+var userName =  cbUserList.teUser.Text;
+var login;
+for (let i = 0; i < cbUserList.UserList.Count; i++)
+{
+	if (cbUserList.UserList.GetLoginName(i) == userName || cbUserList.UserList.GetDisplayName(i) == userName) 
+	{
+		login = cbUserList.UserList.GetLoginName(i);
+		break;
+	}
+}
+SecurityContext.AsyncLogin(login, tePassword.Text);
+loginTemp = login;
+AutoCloseOnLogin=true;
+PassExpiration.Active=true;]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+	</object>
+	<object access-modifier="private" name="tInfo" display-name="tInfo" uuid="3819be0d-b1dd-4672-af56-440d7c8c45f7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+		<designed target="X" value="0" ver="1"/>
+		<designed target="Y" value="135" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="340" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xffff0000" ver="1"/>
+		<designed target="TextAlignment" value="132" ver="1"/>
+	</object>
+	<object access-modifier="private" name="rLocale" display-name="rLocale" uuid="a7871ebb-5e66-44b8-808f-a9c6e8d617d8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+		<designed target="X" value="111" ver="1"/>
+		<designed target="Y" value="114" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="40" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="RoundingRadius" value="0" ver="1"/>
+		<designed target="PenColor" value="0xff000000" ver="1"/>
+		<designed target="PenStyle" value="1" ver="1"/>
+		<designed target="PenWidth" value="1" ver="1"/>
+		<designed target="BrushColor" value="0xff000000" ver="1"/>
+		<designed target="BrushStyle" value="0" ver="1"/>
+		<object access-modifier="private" name="TreeMapLayout" display-name="TreeMapLayout" uuid="77affa18-8646-45ad-b61c-02e024afb673" base-type="TreeMapLayout" base-type-id="abf2598f-0779-4d54-94e9-597b15cdb8e9" ver="1"/>
+		<object access-modifier="private" name="tLocale" display-name="tLocale" uuid="74e78de6-6292-41ba-bd80-9ed9d9afc43e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+			<designed target="X" value="0" ver="1"/>
+			<designed target="Y" value="0" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="40" ver="1"/>
+			<designed target="Height" value="20" ver="1"/>
+			<designed target="Text" value="Lang" ver="1"/>
+			<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+			<designed target="FontColor" value="0xff000000" ver="1"/>
+			<designed target="TextAlignment" value="132" ver="1"/>
+			<do-trace access-modifier="private" target="Text" ver="1">
+				<body>
+					<![CDATA[Keyboard.Locale]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="MouseClick" ver="1">
+				<body kind="javascript">
+					<![CDATA[Keyboard.Locale = Keyboard.Locale == "ru-RU" ? "en-US" : "ru-RU";]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Keyboard" display-name="Keyboard" uuid="bdca2843-d4aa-44c5-bce0-1ce07a1a043e" base-type="Keyboard" base-type-id="9430301f-2693-4c5c-9013-867d8d8f73f4" ver="1">
+			<designed target="Locale" value="en-US" ver="1"/>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="Opened" ver="1">
+		<body kind="om">
+			<![CDATA[cbUserList.UserList.BeginUpdate();
+cbUserList.teUser.Focus = true;
+//UpdateView(false);
+]]>
+		</body>
+	</do-on>
+	<designed target="WindowState" value="0" ver="1"/>
+	<designed target="MonitorNumber" value="0" ver="1"/>
+	<designed target="WindowPosition" value="3" ver="1"/>
+	<object access-modifier="private" name="AutoCloseOnLogin" display-name="AutoCloseOnLogin" uuid="bf6fce68-a1fc-4d93-a8dc-e58845532ea9" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="1"/>
+	<object access-modifier="private" name="ActionClose" display-name="ActionClose" uuid="e37c9da9-a382-41ed-9410-70e93dfdf042" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="Invoked" form-action="close" ver="1"/>
+	</object>
+	<object access-modifier="private" name="tUser_1" display-name="tUser_1" uuid="aaeed393-d96c-45e8-9e4d-d400fd5a8334" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+		<designed target="X" value="3" ver="1"/>
+		<designed target="Y" value="3.8" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="93" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="Регистрация" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="33" ver="1"/>
+	</object>
+	<object access-modifier="private" name="bLogin_1" display-name="bLogin_1" uuid="4767f099-845d-4151-b012-e631e4db9718" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="201" ver="1"/>
+		<designed target="Y" value="83" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="75" ver="1"/>
+		<designed target="Height" value="23" ver="1"/>
+		<designed target="Text" value="Отмена" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed" form-action="close" ver="1"/>
+	</object>
+	<object access-modifier="private" name="tUser_2" display-name="tUser_2" uuid="140567f5-35b6-45e0-baf2-5bb576ca770f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+		<designed target="X" value="43" ver="1"/>
+		<designed target="Y" value="117" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="62" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="Раскладка" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="TextAlignment" value="33" ver="1"/>
+	</object>
+	<object access-modifier="private" name="bLogin_2" display-name="bLogin_2" uuid="69e64671-735c-4b5d-a3f8-fc320d656136" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="155" ver="1"/>
+		<designed target="Y" value="112" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="75" ver="1"/>
+		<designed target="Height" value="23" ver="1"/>
+		<designed target="Text" value="РУС" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed" ver="1">
+			<body kind="om">
+				<![CDATA[rLocale.Keyboard.Locale = "ru-RU";]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+	</object>
+	<object access-modifier="private" name="bLogin_3" display-name="bLogin_3" uuid="58c531c6-ac57-48c8-98a7-fd80f42f68ea" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="231" ver="1"/>
+		<designed target="Y" value="112" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="75" ver="1"/>
+		<designed target="Height" value="23" ver="1"/>
+		<designed target="Text" value="ENG" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="ButtonPressed" ver="1">
+			<body kind="javascript">
+				<![CDATA[rLocale.Keyboard.Locale = "en-US";]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+	</object>
+	<object access-modifier="private" name="cbUserList" display-name="cbUserList" uuid="49491bbc-4e58-4048-86a4-08a9e765a55d" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="1">
+		<designed target="X" value="122" ver="1"/>
+		<designed target="Y" value="31" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Editable" value="false" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="171" ver="1"/>
+		<designed target="Height" value="20" ver="1"/>
+		<designed target="Text" value="" ver="1"/>
+		<designed target="SelectedIndex" value="-1" ver="1"/>
+		<designed target="Font" value="Arial,8.25,-1,5,50,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="MaxVisibleItems" value="10" ver="1"/>
+		<object access-modifier="private" name="UserList" display-name="UserList" uuid="49647adf-7147-4f99-acc5-929aa5881d19" base-type="UserList" base-type-id="7d9c142e-8718-4caa-82be-60ea2ec65981" ver="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" event="UpdateFinished" ver="1">
+				<body kind="javascript">
+					<![CDATA[Clear();
+
+var currIndex = -1;
+
+for (var i = 0; i < Count; i++) {
+	var item = GetDisplayName(i);
+
+	AddItem(item);}
+	//bInit = true;
+/*
+	if (item == SecurityContext.CurrentUserDisplayName) {
+		currIndex = i;
+	}
+}
+
+if (currIndex > -1) {
+	cbUserList.SelectedIndex = currIndex;
+}*/]]>
+				</body>
+			</do-on>
+			<init target="SecurityContext" ref="here.SecurityContext" ver="1"/>
+		</object>
+		<object access-modifier="private" name="teUser" display-name="teUser" uuid="3ff8b617-51f8-4e23-808e-496646d37d3d" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="153" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="HideInput" value="false" ver="3"/>
+			<designed target="PlaceholderText" value="" ver="3"/>
+			<designed target="ReadOnly" value="false" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="SelectedChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit) teUser.Text = GetItem(SelectedIndex); //Рабочий режим
+if (SelectedIndex == -1) return; //Пропускаем в случае инициализации
+if (SelectedIndex == 0 && !bInit) //Пропускаем в случае первого заполнения
+{
+	bInit = true;
+	SelectedIndex = -1;
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="1" event="Closed">
+		<body kind="om">
+			<![CDATA[/*SecTmp: var = unit.OPCROOT.Tag_CurrentUser.Value;
+TagTmp: var = unit.OPCROOT.SecurityContext.CurrentUser;
+
+if (SecTmp != TagTmp)
+{
+unit.OPCROOT.Tag_CurrentUser = unit.OPCROOT.SecurityContext.CurrentUser;
+}*/]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="LogofUserMsg" display-name="LogofUserMsg" uuid="e0831146-b2af-41c0-a54a-e0ef778caeba" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="1">
+		<designed target="Period" value="10" ver="1"/>
+		<designed target="Active" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="OnTimer">
+			<body kind="om">
+				<![CDATA[/*SecTmp: var = unit.OPCROOT.Tag_CurrentUser.Value;
+TagTmp: var = unit.OPCROOT.SecurityContext.CurrentUser;
+
+if (SecTmp != TagTmp)
+{
+unit.OPCROOT.Tag_CurrentUser = unit.OPCROOT.SecurityContext.CurrentUser;
+}
+LogofUserMsg.Active=false;*/]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="ActionPassExp" display-name="ActionPassExp" uuid="970e182b-bcd3-48c8-b395-e78aced050e1" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog">
+			<object access-modifier="private" uuid="f90cdb64-d46f-4890-a1f5-1774043b73a5" base-type="Смена пароля_срок" base-type-id="27741d6d-aba4-406e-8d76-623c3990c2a0" ver="1">
+				<init target="ActionClose" ver="1" ref="here.ActionClose"/>
+				<init target="login" ver="3" ref="loginTemp"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="StrTemp" display-name="StrTemp" uuid="f2bca196-713f-44f1-90a9-826621c9b151" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<object access-modifier="private" name="PassExpiration" display-name="PassExpiration" uuid="535ec0b4-2199-4a9e-947b-f458a95811b2" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="1">
+		<designed target="Period" value="500" ver="1"/>
+		<designed target="Active" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (StrTemp == "Срок действия пароля истек.")
+{
+ActionPassExp.Invoke();
+}
+PassExpiration.Active=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="ce2f57be-1032-484f-8b50-7426ce35a962" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+	<object access-modifier="private" name="loginTemp" display-name="loginTemp" uuid="2ac5480f-2b1d-43cc-b8c2-5c9599af1505" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

@@ -1,0 +1,1742 @@
+<type access-modifier="private" name="PopupKran" display-name="PopupKran" uuid="adf732e0-2ae9-4334-94d6-19b4be67cf3e" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="830" ver="4"/>
+	<designed target="Height" value="350" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="0" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="0xffdedede" ver="4"/>
+	<designed target="BrushStyle" value="1" ver="4"/>
+	<designed target="WindowX" value="0" ver="4"/>
+	<designed target="WindowY" value="0" ver="4"/>
+	<designed target="WindowWidth" value="826" ver="4"/>
+	<designed target="WindowHeight" value="352" ver="4"/>
+	<designed target="WindowCaption" value="Окно управления краном" ver="4"/>
+	<designed target="ShowWindowCaption" value="true" ver="4"/>
+	<designed target="ShowWindowMinimize" value="false" ver="4"/>
+	<designed target="ShowWindowMaximize" value="false" ver="4"/>
+	<designed target="ShowWindowClose" value="false" ver="4"/>
+	<designed target="AlwaysOnTop" value="false" ver="4"/>
+	<designed target="WindowSizeMode" value="0" ver="4"/>
+	<designed target="WindowBorderStyle" value="1" ver="4"/>
+	<designed target="WindowState" value="0" ver="4"/>
+	<designed target="WindowScalingMode" value="0" ver="4"/>
+	<designed target="MonitorNumber" value="0" ver="4"/>
+	<designed target="WindowPosition" value="2" ver="4"/>
+	<designed target="WindowCloseMode" value="0" ver="4"/>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="0059a99b-d97f-4d5b-a1e6-bf9f3524846c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<object access-modifier="private" name="AP_ObjName" display-name="AP_ObjName" uuid="c715dc97-d642-4ffd-a6a5-d1937ea15c20" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".ObjName"]]>
+			</body>
+		</do-trace>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".ObjName"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="AP_State1" display-name="AP_State1" uuid="da228010-9496-447c-b41c-ec2099e10854" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnVqtChanged">
+			<body kind="om">
+				<![CDATA[if (Podr) {Timer_1.Active=true;}]]>
+			</body>
+		</do-on>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".State1"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".State1"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="WinLim" display-name="WinLim" uuid="8d925d49-f06d-4a5c-aaac-1bc11529960c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="0.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="829" ver="4"/>
+		<designed target="Height" value="348" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xff000000" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Presets" display-name="Presets" uuid="b494ebbc-082d-4247-ab37-ca2806a90693" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="232" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="520" ver="4"/>
+		<designed target="Height" value="114" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="5c04ecae-7d4f-4e96-b3fb-7333f19546e0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="1.43939" ver="4"/>
+			<designed target="Y" value="1.39394" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="517.364" ver="4"/>
+			<designed target="Height" value="16" ver="4"/>
+			<designed target="Text" value="Уставки" ver="4"/>
+			<designed target="Font" value="Arimo,14,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="PresetText_1" display-name="PresetText_1" uuid="220df1e9-9bc7-42c3-85a7-d82523036cf4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="8" ver="4"/>
+			<designed target="Y" value="35.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="144" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Таймаут управления" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="PresetText_2" display-name="PresetText_2" uuid="8625476a-7e6c-4695-bca5-628bc9cc9b7d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="8" ver="4"/>
+			<designed target="Y" value="67.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="150.333" ver="4"/>
+			<designed target="Height" value="27.6667" ver="4"/>
+			<designed target="Text" value="Время движения в режиме имитации" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="PresetText_4" display-name="PresetText_4" uuid="c7bc94f7-95e1-46d9-8b2b-9813a00395c6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="269.762" ver="4"/>
+			<designed target="Y" value="34.9048" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="40" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="сек." ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="PresetText_5" display-name="PresetText_5" uuid="5010ab68-ed8b-42a8-ad5d-04010e2d2992" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="270.048" ver="4"/>
+			<designed target="Y" value="74.9048" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="40" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="сек." ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TR_Clean_for _All_2" display-name="TR_Clean_for _All_2" uuid="1212324c-75cc-440a-bd5c-8f1e62aad0c5" base-type="TR_desc_For_All_1" base-type-id="4c5298b0-b592-4c28-bdf6-a118bc743971" ver="4" cardinal="1">
+			<designed target="X" value="163.333" ver="4"/>
+			<designed target="Y" value="31.8333" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_UstTag" ver="4" value=".Preset.T2"/>
+			<init target="in_Round" ver="4" value="0"/>
+			<init target="in_TagType" ver="4" value="uint2"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body kind="om">
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="TR_Clean_for _All_3" display-name="TR_Clean_for _All_3" uuid="929a71fb-b96e-4cb3-9b30-ca0e42e5ce2a" base-type="TR_desc_For_All_1" base-type-id="4c5298b0-b592-4c28-bdf6-a118bc743971" ver="4" cardinal="1">
+			<designed target="X" value="163.333" ver="4"/>
+			<designed target="Y" value="70.8333" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_UstTag" ver="4" value=".Preset.T3"/>
+			<init target="in_Round" ver="4" value="0"/>
+			<init target="in_TagType" ver="4" value="uint2"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body kind="om">
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="State" display-name="State" uuid="5625dee9-9a36-4fbc-ab5c-2be96fd3ff61" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="161" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="520" ver="4"/>
+		<designed target="Height" value="69" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="State1" display-name="State1" uuid="64c7d211-af00-4cc6-8a74-4b2549ac9caf" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="15">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="23" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="218" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Обрыв соленоида закрытия" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="117c9eae-edad-4538-b2a6-fd694b3d87a8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+			</object>
+			<init target="Visible" ver="4" value="false"/>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="85b1ee97-e7b6-48fb-a489-673a5e0c16d4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="1.31652" ver="4"/>
+			<designed target="Y" value="1.19048" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="517.733" ver="4"/>
+			<designed target="Height" value="19.3333" ver="4"/>
+			<designed target="Text" value="Состояние" ver="4"/>
+			<designed target="Font" value="Arimo,14,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="State2" display-name="State2" uuid="26c55f96-14d5-4c6e-85da-0c79212afaf1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="4">
+			<designed target="X" value="300" ver="4"/>
+			<designed target="Y" value="23.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="218" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Обрыв соленоида закрытия" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="1b566b27-4055-45e0-89be-3107cbb01a6b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+			</object>
+			<init target="Visible" ver="4" value="false"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<body>
+				<![CDATA[Podr]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Control" display-name="Control" uuid="42766951-a60d-4384-a36d-9c41bc830a8d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="35" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="520" ver="4"/>
+		<designed target="Height" value="125" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="4a922ba5-42c8-4ce8-b754-b0879b0d3c23" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="1.49276" ver="4"/>
+			<designed target="Y" value="1.66667" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="516.758" ver="4"/>
+			<designed target="Height" value="24" ver="4"/>
+			<designed target="Text" value="Управление" ver="4"/>
+			<designed target="Font" value="Arimo,14,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TU_Key_1" display-name="TU_Key_1" uuid="b496363c-472f-43e3-9fec-0d4bb792afa8" base-type="TU_Key" base-type-id="f6f9da0e-ca1f-474f-939c-c4d2fe6f3589" ver="4">
+			<designed target="X" value="91.6667" ver="4"/>
+			<designed target="Y" value="43" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<init target="in_Description" ver="4" value="Открыть"/>
+			<init target="in_CmdTag" ver="4" value=".Cmd"/>
+			<init target="in_Cmd" ver="4" value="2"/>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body>
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="TU_Key_2" display-name="TU_Key_2" uuid="5d629426-167e-4f52-9872-75a8ec5d27e1" base-type="TU_Key" base-type-id="f6f9da0e-ca1f-474f-939c-c4d2fe6f3589" ver="4">
+			<designed target="X" value="271.667" ver="4"/>
+			<designed target="Y" value="43" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<init target="in_Description" ver="4" value="Закрыть"/>
+			<init target="in_CmdTag" ver="4" value=".Cmd"/>
+			<init target="in_Cmd" ver="4" value="4"/>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body>
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="bImit_On" display-name="bImit_On" uuid="76f1d19a-edcd-4b22-98a4-fd773709ef2f" base-type="TU_Key" base-type-id="f6f9da0e-ca1f-474f-939c-c4d2fe6f3589" ver="4">
+			<designed target="X" value="5" ver="4"/>
+			<designed target="Y" value="85" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<init target="in_Description" ver="4" value="Установить имитацию"/>
+			<init target="in_CmdTag" ver="4" value=".Cmd"/>
+			<init target="in_Cmd" ver="4" value="8"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[!(Math.TestBit(here.AP_State2,0))]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body>
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="bImit_Off" display-name="bImit_Off" uuid="c7aaeed9-957a-45b3-adac-0edae4e8c40c" base-type="TU_Key" base-type-id="f6f9da0e-ca1f-474f-939c-c4d2fe6f3589" ver="4">
+			<designed target="X" value="5" ver="4"/>
+			<designed target="Y" value="85" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<init target="in_Description" ver="4" value="Снять имитацию"/>
+			<init target="in_CmdTag" ver="4" value=".Cmd"/>
+			<init target="in_Cmd" ver="4" value="8"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[Math.TestBit(here.AP_State2,0)]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body>
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="MsgButton_1" display-name="MsgButton_1" uuid="7d424cdd-ac4e-4481-bba8-99a514659598" base-type="MsgButton" base-type-id="db3556d4-a078-4c63-a280-7349fce01a62" ver="4">
+			<designed target="X" value="479.295" ver="4"/>
+			<designed target="Y" value="83.0126" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<do-trace access-modifier="private" target="TextFilter" ver="4">
+				<body>
+					<![CDATA[here.AP_ObjName.ValueAsString]]>
+				</body>
+			</do-trace>
+			<init target="TextFilter" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias + ".ObjName"]]>
+				</expr>
+			</init>
+		</object>
+		<object access-modifier="private" name="PresetText_8" display-name="PresetText_8" uuid="18fdae38-24a0-4da1-a741-81fc87f890eb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="92.6667" ver="4"/>
+			<designed target="Y" value="24.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="149" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Готов к открытию" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[(Math.TestBit(AP_State1,14))&&(!Math.TestBit(AP_State1,1))]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="PresetText_9" display-name="PresetText_9" uuid="1a68ecca-8395-455a-ad17-81ce5b7b9dc2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="273.167" ver="4"/>
+			<designed target="Y" value="24.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="149" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Готов к закрытию" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[(Math.TestBit(AP_State1,15))&&(!Math.TestBit(AP_State1,2))]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="TU_Key_3" display-name="TU_Key_3" uuid="b2f68b7b-d4b8-4ef2-babe-ad5e1fc12601" base-type="TU_Key" base-type-id="f6f9da0e-ca1f-474f-939c-c4d2fe6f3589" ver="4">
+			<designed target="X" value="164.364" ver="4"/>
+			<designed target="Y" value="84.8788" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4">
+				<expr>
+					<![CDATA[here.in_Alias]]>
+				</expr>
+			</init>
+			<init target="in_Description" ver="4" value="Сброс неисправности"/>
+			<init target="in_CmdTag" ver="4" value=".Cmd"/>
+			<init target="in_Cmd" ver="4" value="16"/>
+			<do-trace access-modifier="private" target="Alias" ver="4">
+				<body>
+					<![CDATA[unit.OpenWindows.Kran_Alias]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="TU_1" display-name="TU_1" uuid="a7d36524-24f0-4933-80b2-78d60fb15938" base-type="TU" base-type-id="ab37fd6c-7609-45c6-8ab1-e5dbdced47f2" ver="4">
+		<designed target="X" value="-208" ver="4"/>
+		<designed target="Y" value="208" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_CmdTag" ver="4" value=".Cmd"/>
+		<init target="in_Alias" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="Header" display-name="Header" uuid="a1eeaa5d-4f0e-4a6c-ade9-6eac898c3115" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="3" ver="4"/>
+		<designed target="Y" value="3" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="790" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xff000000" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xff000066" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="89c831e7-1c8a-4866-b7b3-0b605966ed3d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="1" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="488" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Text" ver="4"/>
+			<designed target="Font" value="Arimo,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xffffffff" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<body>
+					<![CDATA[here.AP_ObjName.ValueAsString]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Rectangle_6" display-name="Rectangle_6" uuid="a0b1c7b7-e455-49fe-8618-a46cfbe29fff" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="483.5" ver="3"/>
+			<designed target="Y" value="12.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="1" ver="3"/>
+			<designed target="Height" value="1" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="4278190080" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<object access-modifier="private" name="ClosseButton" display-name="ClosseButton" uuid="da02a308-40c4-475c-b890-f265b7449d66" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+				<designed target="X" value="8" ver="3"/>
+				<designed target="Y" value="-8" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="20" ver="3"/>
+				<designed target="Height" value="20" ver="3"/>
+				<designed target="RoundingRadius" value="0" ver="3"/>
+				<designed target="PenColor" value="4278190080" ver="3"/>
+				<designed target="PenStyle" value="0" ver="3"/>
+				<designed target="PenWidth" value="1" ver="3"/>
+				<designed target="BrushColor" value="0xffcdcdcd" ver="3"/>
+				<designed target="BrushStyle" value="1" ver="3"/>
+				<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="94670509-ba3c-49ca-b9df-36736488edc5" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="20" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="20.5" ver="3"/>
+					<designed target="Height" value="20.5" ver="3"/>
+					<designed target="PenColor" value="0xfff5f5f5" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="1.5" ver="3"/>
+					<designed target="BrushColor" value="0xffffffff" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="b55cbdfa-fd6b-4fbd-ae4e-3e134b47b05a" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1d507180-0e1c-48e1-9ce2-3e902ac24969" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="6d44496d-d46e-4e84-bd9b-23cbfb337da2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="2af4b975-714e-486e-b2ea-d40c4f414c90" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3" cardinal="1">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="20" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="20.5" ver="3"/>
+					<designed target="Height" value="20.5" ver="3"/>
+					<designed target="PenColor" value="0xff626262" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="1.5" ver="3"/>
+					<designed target="BrushColor" value="0xffffffff" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="6fc1d7f2-f28e-4a6c-aecd-c4d6c4138b13" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="dd9ed217-2b2b-4154-b5f2-cab44aaf3df4" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="183f17ba-e25f-4678-a9e4-a6d6af92c6a5" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<object access-modifier="private" name="BitNum" display-name="BitNum" uuid="eeb85074-6c88-4f74-92cc-bd70e363bae8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+					<designed target="X" value="2" ver="3"/>
+					<designed target="Y" value="-0.666667" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="15" ver="3"/>
+					<designed target="Height" value="20" ver="3"/>
+					<designed target="Text" value="20" ver="3"/>
+					<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="3"/>
+					<designed target="FontColor" value="4278190080" ver="3"/>
+					<designed target="TextAlignment" value="33" ver="3"/>
+					<init target="Visible" ver="3" value="false"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseRelease" form-action="close"/>
+				<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="2f979412-6675-495b-bfc8-b6d897f98dc0" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+					<designed target="X" value="4" ver="3"/>
+					<designed target="Y" value="3" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="13" ver="3"/>
+					<designed target="Height" value="13" ver="3"/>
+					<designed target="PenColor" value="0xffffffff" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="2" ver="3"/>
+					<designed target="BrushColor" value="4278190080" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="9ce0cbab-a74d-45c9-a370-8b5d00c4d902" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="d1d12af6-f238-467f-9f4f-52de993c6a40" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="13" ver="3"/>
+						<designed target="Y" value="13" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="538681b6-2f14-4789-804f-bf4bab2050cc" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+						<designed target="Rotation" value="0" ver="3"/>
+						<designed target="Scale" value="1" ver="3"/>
+						<designed target="Visible" value="true" ver="3"/>
+						<designed target="Enabled" value="true" ver="3"/>
+						<designed target="Tooltip" value="" ver="3"/>
+						<designed target="Width" value="13" ver="3"/>
+						<designed target="Height" value="13" ver="3"/>
+						<designed target="PenColor" value="0xffffffff" ver="3"/>
+						<designed target="PenStyle" value="1" ver="3"/>
+						<designed target="PenWidth" value="2" ver="3"/>
+						<designed target="BrushColor" value="4278190080" ver="3"/>
+						<designed target="BrushStyle" value="0" ver="3"/>
+						<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="cb7c2a88-7c80-4ab9-a34c-bf44206c25da" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+							<designed target="X" value="0" ver="3"/>
+							<designed target="Y" value="13" ver="3"/>
+						</object>
+						<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="d8f62286-296d-4559-8633-b04c078ec833" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+							<designed target="X" value="13" ver="3"/>
+							<designed target="Y" value="0" ver="3"/>
+						</object>
+						<designed target="ZValue" value="0" ver="3"/>
+						<designed target="Opacity" value="1" ver="3"/>
+					</object>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseLeave">
+					<body kind="om">
+						<![CDATA[me.Line_5.PenWidth=1;
+me.Line_6.PenWidth=1;]]>
+					</body>
+				</do-on>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseEnter">
+					<body kind="om">
+						<![CDATA[me.Line_5.PenWidth=2;
+me.Line_6.PenWidth=2;]]>
+					</body>
+				</do-on>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="9f34c1c7-0d2e-4198-a776-d5c6f8efcf5b" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1e-08" ver="3"/>
+			</object>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="AP_State2" display-name="AP_State2" uuid="681534ba-6656-4d13-b509-b487f5f12532" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnVqtChanged">
+			<body kind="om">
+				<![CDATA[if (Podr) {Timer_1.Active=true;}]]>
+			</body>
+		</do-on>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".State2"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".State2"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="OpeningReady" display-name="OpeningReady" uuid="f234482b-a711-4e60-ab57-3f0c8cb0cd16" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="524" ver="4"/>
+		<designed target="Y" value="35" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="303" ver="4"/>
+		<designed target="Height" value="155" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Opening1" display-name="Opening1" uuid="4591e87f-4076-4294-b679-2119880980ed" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="23" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Pежим работы ПАУК - ДИСТАНЦ" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="3927319a-fdac-4da5-befc-c472e60315b5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisOpen,0) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisOpen,0)) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3dfc11ac-7da1-4675-8fdb-a421ebe4034f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="11.5" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="279" ver="4"/>
+			<designed target="Height" value="18" ver="4"/>
+			<designed target="Text" value="Готовность к открытию:" ver="4"/>
+			<designed target="Font" value="Roboto,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Opening1_1" display-name="Opening1_1" uuid="ef733da1-daa5-420d-b4cb-96b985a07866" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="50" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Режим работы ПАУК - УПРАВЛ" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="2624820c-a3b0-408c-b775-9a4b6f9121e9" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisOpen,1) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisOpen,1)) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_2" display-name="Opening1_2" uuid="7d11e8f7-cb23-4397-8dbc-17096b4037e6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="76.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Открыт" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="d716d9fa-4e31-440a-acd4-5b915b4c043b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisOpen,2) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisOpen,2)) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_3" display-name="Opening1_3" uuid="4bdb5f92-c959-41bb-9ced-a116252a30a0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="103.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Обрыв соленоида открытия" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="9768db6f-7f44-44cc-983b-3f20b070cd04" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisOpen,3) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisOpen,3)) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_4" display-name="Opening1_4" uuid="033ac096-167d-412d-85ef-ea3cec85c96a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="130.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Блокировка открытия крана" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="9a5c04fc-bc78-4df8-a3c2-4a17afec7dc7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisOpen,4) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisOpen,4)) && (here.AP_DisOpen.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<body>
+				<![CDATA[Podr]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AP_DisOpen" display-name="AP_DisOpen" uuid="19831480-8ffd-4a02-8de3-7cfd6741ecc0" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".Dis_Open"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".Dis_Open"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="ClosingReady" display-name="ClosingReady" uuid="631e365d-6f64-4896-94dc-d44a99704ba7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="524" ver="4"/>
+		<designed target="Y" value="191" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="303" ver="4"/>
+		<designed target="Height" value="155" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Opening1" display-name="Opening1" uuid="4a224d36-a193-4943-86a8-d240f23c82c4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="23" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Pежим работы ПАУК - ДИСТАНЦ" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="4b2a2635-0cc0-435d-bac0-124048a48f18" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisClose,0) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisClose,0)) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="aea66704-9d8d-4f92-8c21-ff0d93fc6833" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="11.5" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="279" ver="4"/>
+			<designed target="Height" value="18" ver="4"/>
+			<designed target="Text" value="Готовность к закрытию:" ver="4"/>
+			<designed target="Font" value="Roboto,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Opening1_1" display-name="Opening1_1" uuid="2492813b-3d36-4805-8339-ec1d3aa7cac0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="50" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Режим работы ПАУК - УПРАВЛ" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="f3e03cda-ce4c-4e82-ab35-3b158fed6094" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisClose,1) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisClose,1)) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_2" display-name="Opening1_2" uuid="2141bad7-14f1-42b5-83ca-151ee5475a1d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="76.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Закрыт" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="05af8c7e-772c-4592-8a57-42b1297c266d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisClose,2) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisClose,2)) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_3" display-name="Opening1_3" uuid="73669318-e906-4564-91f2-46b18b24abb3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="103.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Обрыв соленоида закрытия" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="15c2e6cc-25ef-4969-bd4a-ac9566e14435" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisClose,3) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisClose,3)) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Opening1_4" display-name="Opening1_4" uuid="e266d3b8-c20b-40e9-97fe-759847ac326f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4" cardinal="1">
+			<designed target="X" value="39.5" ver="4"/>
+			<designed target="Y" value="130.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="264" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Блокировка закрытия крана" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xff000000" ver="4"/>
+			<designed target="TextAlignment" value="33" ver="4"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="d8582306-49c1-450d-9267-6abc4687b52a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+				<designed target="X" value="-33" ver="4"/>
+				<designed target="Y" value="1" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="30" ver="4"/>
+				<designed target="Height" value="13" ver="4"/>
+				<designed target="RoundingRadius" value="0" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="BrushColor" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Math.TestBit(here.AP_DisClose,4) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffff0000]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(Math.TestBit(here.AP_DisClose,4)) && (here.AP_DisClose.Quality>191)]]>
+						</condition>
+						<expr>
+							<![CDATA[0xff00ff00]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xfff0f0f0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="AP_DisClose" display-name="AP_DisClose" uuid="7f51008d-775c-4563-be8f-876fd0551a4b" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".Dis_Close"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".Dis_Close"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="7f3ca3b5-0019-420c-a6d3-dfc78a53f709" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<init target="Alias" ver="4">
+		<expr>
+			<![CDATA[here.in_Alias]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="ef6e5014-72aa-4684-bb8a-6de482363283" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="4">
+		<designed target="Period" value="200" ver="4"/>
+		<designed target="Active" value="false" ver="4"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnTimer">
+			<body kind="om">
+				<![CDATA[i: uint1;
+i = 0;
+c:int4;
+c = 0;
+d:int4;
+d = 0;
+DebugTool_1.Log(i);
+while (i <= 9)
+{
+	State.State1[i].Visible = false;
+	i+=1;
+}
+i = 0;
+while (i <= 9)
+{	
+	if (Math.TestBit(here.AP_State1,i) && (here.AP_State1.Quality>191)) 
+	{	
+		State.State1[c].Visible = true;
+		if (i==0) {State.State1[c].Text = "Завис";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Yellow;}			
+		if (i==1) {State.State1[c].Text = "Открыт";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Green;}
+		if (i==2) {State.State1[c].Text = "Закрыт";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Red;}
+		if (i==3) {State.State1[c].Text = "Сбой";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Blue;}
+		if (i==4) {State.State1[c].Text = "Неисправность";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Red;}
+		if (i==5) {State.State1[c].Text = "Обрыв соленоида открытия";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Red;}
+		if (i==6) {State.State1[c].Text = "Обрыв соленоида закрытия";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Red;}
+		if (i==7) {State.State1[c].Text = "Открывается";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Green;}
+		if (i==8) {State.State1[c].Text = "Закрывается";
+					State.State1[c].Rectangle_1.BrushColor = unit.Color.Yellow;}
+		if (c!=0)
+		{
+			State.State1[c].Y = State.State1[c-1].Y + 18;
+		}
+		c+=1;
+	
+	}
+	i+=1;
+}
+if (c>2) 
+{
+	d=c-2;
+	State.Height = 69 + d*18;
+	here.WinLim.Width = 829;
+	here.WinLim.Height = 348 + d*18;
+	here.Height = 350 + d*18;
+	here.Width = 830;
+	here.WindowWidth = 830;
+	here.WindowHeight = 350 + d*18;
+	Header.Width = 790;
+	Header.Rectangle_6.X = 790;
+	Header.Text_1.Width = 788;
+	Presets.Y = 232 + d*18;
+}
+else
+{
+	State.Height = 69;
+	here.Height = 350;
+	here.WinLim.Width = 829;
+	here.WinLim.Height = 348;
+	here.Width = 830;
+	here.WindowWidth = 830;
+	here.WindowHeight = 350;
+	Header.Width = 790;
+	Header.Rectangle_6.X = 790;
+	Header.Text_1.Width = 788;
+	Presets.Y = 232;
+}
+d=0;
+i=0;
+if (c>0) {c=c-1;}
+while (i <= 3)
+{
+	State.State2[i].Visible = false;
+	i+=1;
+}
+i=0;
+while (i <= 3)
+{DebugTool_1.Log(i);
+	if (Math.TestBit(here.AP_State2,i) && (here.AP_State2.Quality>191)) 
+	{DebugTool_1.Log(i);
+		State.State2[c].Visible = true;
+		if (i==0) {State.State2[d].Text = "Имитация установлена";
+					State.State2[d].Rectangle_1.BrushColor = unit.Color.Magenta;}		
+		if (i==1) {State.State2[d].Text = "Открыт в имитации";
+					State.State2[d].Rectangle_1.BrushColor = unit.Color.Magenta;}
+		if (i==2) {State.State2[d].Text = "Закрыт в имитации";
+					State.State2[d].Rectangle_1.BrushColor = unit.Color.Magenta;}
+		if (d!=0)
+		{
+			State.State2[d].Y = State.State2[d-1].Y + 18;
+			//State.State2[d].X = State.State1.X + 250;
+		}
+//		else
+//		{	
+//			State.State2[d].Y = State.State2[0].Y;
+//			//State.State2[c].X = State.State1.X + 250;
+//		}	
+		if (i!=3){d+=1;}
+		c+=1;
+	}
+	i+=1;	
+}
+Timer_1.Active=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="58ec0f03-c7d5-4863-a119-c3f2f09e37ec" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="4"/>
+	<object access-modifier="private" name="bPodr" display-name="bPodr" uuid="2b94d133-a8e8-434b-94ad-21e165f9a010" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="324.818" ver="4"/>
+		<designed target="Y" value="120" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="150" ver="4"/>
+		<designed target="Height" value="32" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xffaaffff" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="4357063a-3a64-4a57-a0ad-e8d2d3256ad2" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="149.25" ver="4"/>
+			<designed target="Height" value="31" ver="4"/>
+			<designed target="PenColor" value="0xffffffff" ver="4"/>
+			<designed target="PenStyle" value="1" ver="4"/>
+			<designed target="PenWidth" value="2" ver="4"/>
+			<designed target="BrushColor" value="4278190080" ver="4"/>
+			<designed target="BrushStyle" value="0" ver="4"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="c61baf54-6feb-441a-be3e-a6b5f62b15d9" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+				<designed target="X" value="0" ver="4"/>
+				<designed target="Y" value="31" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="bcff4d04-2123-4b2e-9d6e-97cd5b1ce036" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+				<designed target="X" value="0" ver="4"/>
+				<designed target="Y" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="179c34f7-fe08-4bf4-894e-cacc6eb599f7" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+				<designed target="X" value="149.25" ver="4"/>
+				<designed target="Y" value="0" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="e24ac8dc-5703-4845-81b8-84c38f0d0dcf" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="-0.5" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="149.083" ver="4"/>
+			<designed target="Height" value="29.5" ver="4"/>
+			<designed target="Text" value="Показать подробно" ver="4"/>
+			<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Podr]]>
+					</condition>
+					<expr>
+						<![CDATA["Скрыть подробности"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Показать подробно"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (Podr) {Podr = false;}
+else {Podr = true;}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Podr" display-name="Podr" uuid="f2778cb0-b1fe-44eb-97ed-6a600696feee" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (Podr)
+	{Timer_1.Active = true;}
+else
+{
+	here.WinLim.Width = 524;
+	here.WinLim.Height = 161;
+	here.Header.Width = 488;
+	here.Width = 526;
+	here.Height = 162;
+	here.WindowWidth = 526;
+	here.WindowHeight = 162;
+	here.Header.Rectangle_6.X = 483;
+	here.Header.Text_1.Width = 486;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<init target="Podr" ver="4" value="false"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[	here.WinLim.Width = 524;
+	here.WinLim.Height = 161;
+	here.Header.Width = 488;
+	here.Width = 526;
+	here.Height = 162;
+	here.WindowWidth = 526;
+	here.WindowHeight = 162;
+here.Header.Rectangle_6.X = 483;
+unit.OpenWindows.Popup_Kran=true;
+]]>
+		</body>
+	</do-on>
+	<do-trace access-modifier="private" target="Alias" ver="4">
+		<body>
+			<![CDATA[unit.OpenWindows.Kran_Alias]]>
+		</body>
+	</do-trace>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="Closed">
+		<body kind="om">
+			<![CDATA[unit.OpenWindows.Popup_Kran=false;]]>
+		</body>
+	</do-on>
+</type>
+

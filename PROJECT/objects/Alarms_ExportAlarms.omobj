@@ -1,0 +1,905 @@
+<type access-modifier="private" name="Alarms_ExportAlarms" display-name="Form_2_1" uuid="4eaa655b-e7df-43ce-a704-693e19fb182e" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="320" ver="2"/>
+	<designed target="Height" value="170" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="320" ver="2"/>
+	<designed target="WindowHeight" value="170" ver="2"/>
+	<designed target="WindowCaption" value="Экспорт данных" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="3b86ac6d-9cd4-4ace-ab0b-fe377a5e3cb9" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Files" display-name="Files" uuid="435f7ccb-b83a-4c3c-8962-b124cf639d85" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="2"/>
+	<do access-modifier="private" name="ConvertToDate" display-name="ConvertToDate" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<param access-modifier="private" name="NewDate" display-name="" uuid="7418a056-d9be-45f0-86dd-c4bc9ea42493" base-type="uint8" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561" ver="2"/>
+		<body kind="om">
+			<![CDATA[// преобразуем в локальное время и преобразуем в строку
+NewDate = DateTime.ToLocal(NewDate);
+StringDate: string = DateTime.ToString(NewDate);
+return StringDate;]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="374709d1-0c37-411b-933f-f28db5487667" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+		<designed target="X" value="-191" ver="2"/>
+		<designed target="Y" value="265" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Width" value="89" ver="2"/>
+		<designed target="Height" value="44" ver="2"/>
+		<designed target="RowHeight" value="25" ver="2"/>
+		<designed target="SelectionBehavior" value="1" ver="2"/>
+		<designed target="SelectionMode" value="3" ver="2"/>
+		<designed target="RowOrder" value="1" ver="2"/>
+		<object access-modifier="private" name="Colum_1" display-name="Colum_1" uuid="358226e0-47a1-439f-a1e2-160350d3769a" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Время генерации" ver="2"/>
+			<designed target="Description" value="Время генерации" ver="2"/>
+			<designed target="Id" value="time" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_2" display-name="Colum_2" uuid="4993f061-57b0-4099-8081-4ab3e0d7c606" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Время срабатывания" ver="2"/>
+			<designed target="Description" value="Время срабатывания" ver="2"/>
+			<designed target="Id" value="active_time" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Colum_3" display-name="Colum_3" uuid="e50331fb-cf70-423c-a46c-81edaf2786b5" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Время деактивации" ver="2"/>
+			<designed target="Description" value="Время деактивации" ver="2"/>
+			<designed target="Id" value="deactive_time" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Colum_4" display-name="Colum_4" uuid="7286145d-3fc9-4d19-a69c-f2357a7ba2c3" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Сообщение" ver="2"/>
+			<designed target="Description" value="Сообщение" ver="2"/>
+			<designed target="Id" value="message" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Colum_5" display-name="Colum_5" uuid="f8982457-1ee8-41d7-9223-e4314881cd78" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Источник события" ver="2"/>
+			<designed target="Description" value="Источник события" ver="2"/>
+			<designed target="Id" value="source" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Colum_6" display-name="Colum_6" uuid="f3cfa96e-3de9-4e66-bf56-ef3aebefb0a9" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Важность" ver="2"/>
+			<designed target="Description" value="Важность" ver="2"/>
+			<designed target="Id" value="severity" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="TitleTextAlignment" value="132" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_7" display-name="Colum_7" uuid="c4ae416c-324b-4dba-8596-7abdcdb1d7d2" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Квитировано" ver="2"/>
+			<designed target="Description" value="Квитировано" ver="2"/>
+			<designed target="Id" value="ack" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="TitleTextAlignment" value="132" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_8" display-name="Colum_8" uuid="f454dece-3cc3-4d82-af42-ee85b35b7367" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Время квитирования" ver="2"/>
+			<designed target="Description" value="Время квитирования" ver="2"/>
+			<designed target="Id" value="ack_time" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_9" display-name="Colum_9" uuid="6ca90250-6397-498f-a401-def6c4006e9d" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Пользователь" ver="2"/>
+			<designed target="Description" value="Пользователь" ver="2"/>
+			<designed target="Id" value="actor_id" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_10" display-name="Colum_10" uuid="abbf0e6a-2080-44e6-b1bc-8ccc0a211c7e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Комментарий квитирования" ver="2"/>
+			<designed target="Description" value="Комментарий квитирования" ver="2"/>
+			<designed target="Id" value="ack_comment" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_11" display-name="Colum_11" uuid="11867d94-dc1c-451b-a182-615c28bbcdc8" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Активность" ver="2"/>
+			<designed target="Description" value="Активность" ver="2"/>
+			<designed target="Id" value="active" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_12" display-name="Colum_12" uuid="1b04f679-440b-4187-8322-f5be5e94bde9" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Квитировать" ver="2"/>
+			<designed target="Description" value="Квитировать" ver="2"/>
+			<designed target="Id" value="ack_required" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_13" display-name="Colum_13" uuid="e346a56d-5063-4eee-a81e-aab6da91104b" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Качество сигнала" ver="2"/>
+			<designed target="Description" value="Качество сигнала" ver="2"/>
+			<designed target="Id" value="quality" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Colum_14" display-name="Colum_14" uuid="2a18ad16-0354-4e2c-bf40-1803414c7ec1" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Значение сигнала" ver="2"/>
+			<designed target="Description" value="Значение сигнала" ver="2"/>
+			<designed target="Id" value="value" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="SortMode" value="0" ver="4"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+		</object>
+		<designed target="LatestRowTracking" value="true" ver="2"/>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="30" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+		<object access-modifier="private" name="Colum_15" display-name="Colum_15" uuid="f92d2c18-4d7a-40b5-8f95-686163b7d351" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Группа важности" ver="2"/>
+			<designed target="Description" value="Группа важности" ver="2"/>
+			<designed target="Id" value="group" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="130" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="true" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="TitleTextAlignment" value="132" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableDecorator_1" display-name="TableDecorator_1" uuid="ec49285f-3b1b-4b5d-8529-4183090bf06a" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="3">
+			<designed target="JsonDecorator" value="" ver="3"/>
+		</object>
+		<init target="TableModel" ver="4" ref="Init_TableModel"/>
+	</object>
+	<object access-modifier="private" name="Path" display-name="Path" uuid="e70638fa-438a-447a-963c-5f65962d7b8f" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="107" ver="2"/>
+		<designed target="Y" value="12" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="195" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="C:\\Alpha.Tables\\" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="12e74cde-c122-4fa8-a7f7-ead963857bf6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-87.2857" ver="2"/>
+			<designed target="Y" value="-1" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="67.7143" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Директория:" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="TextChanged">
+			<body kind="javascript">
+				<![CDATA[var regex;
+RecBorder_Alarm.Visible = false;
+Button_Export.Enabled = true;
+if (!Link_Alarms.Main_panel.private.Linux) regex = /^([A-Za-z]:)(\\[A-ZА-Яa-zа-я_\-\s0-9\.]+)+$/;
+else regex = /^\/.+[^\/]$/;
+
+if (!regex.test(text)) 
+{
+	RecBorder_Alarm.Visible = true;
+	Button_Export.Enabled = false;
+}
+]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="91a8af9e-22d4-4ef7-8201-4e3154af87d0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="Ошибка ввода. Неверный формат пути директории" ver="2"/>
+			<designed target="Width" value="195" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="de5a4757-da3b-4c4c-92ef-25cd694928ef" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+		</object>
+		<designed target="Opacity" value="1" ver="3"/>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[Link_Alarms.IsFullAccessAllowed || Link_Alarms.FileSystemAccess]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="FileName" display-name="FileName" uuid="ba6a9146-ac00-40b1-ac4e-e469e9e11ba1" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="107" ver="2"/>
+		<designed target="Y" value="35" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="195" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Alarms" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="d0e71b6a-153e-427f-87eb-309572981447" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-87.2857" ver="2"/>
+			<designed target="Y" value="-1.14286" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="67.7143" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Имя файла:" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do access-modifier="private" name="TimeZone" display-name="TimeZone" ver="2" type="uint8" type-id="c8ff7701-da6e-4d53-888a-81fa680ff561">
+		<body kind="om">
+			<![CDATA[time_zone: uint8 = DateTime.Now()-DateTime.UtcNow();
+return (time_zone);]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Link_Alarms" display-name="Link_Alarms" uuid="a2b700d2-94a3-4528-b1a1-273525755f7f" base-type="Alarms_1" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[Path.Text = (Link_Alarms.Main_panel.private.ExportPath == "")?(Link_Alarms.Main_panel.private.ExportPathDefault):(Link_Alarms.Main_panel.private.ExportPath);
+fileNameFormat : string = Link_Alarms.ExportFileNameFormat == "" ? "Alarms_%d-%m-%Y_%H-%M-%S" : Link_Alarms.ExportFileNameFormat;
+FileName.Text = DateTime.ToString(DateTime.Now(), fileNameFormat);
+TypeFile.AddItem("Текстовый файл (*.csv)");
+TypeFile.AddItem("Книга Excel (*.xlsx)");
+TypeFile.SelectedIndex=0;
+InitTable();
+
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Button_Export" display-name="Button_Export" uuid="4e9d5f14-423e-47f6-879e-561be013f058" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="147.5" ver="2"/>
+		<designed target="Y" value="85.6667" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Экспорт" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Native" display-name="Native" ver="3" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[Journal.Text_1 = "Начало экспорта...";
+DoExport.Active = true;]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="TypeFile" display-name="TypeFile" uuid="cbe7b95e-c7fa-4756-881d-5909aa6ab76d" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+		<designed target="X" value="107" ver="3"/>
+		<designed target="Y" value="58" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="195" ver="3"/>
+		<designed target="Height" value="25" ver="3"/>
+		<designed target="Editable" value="false" ver="3"/>
+		<designed target="Text" value="" ver="3"/>
+		<designed target="SelectedIndex" value="-1" ver="3"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="MaxVisibleItems" value="10" ver="3"/>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="c40c1bce-484c-41f3-aeb7-044d87506215" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-87.2857" ver="2"/>
+			<designed target="Y" value="0.190433" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="67.7143" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Тип файла:" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="0xff000000" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+		</object>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_Cancel" display-name="Button_Cancel" uuid="b6e9f458-7f78-4661-9d68-d85aa531907f" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="227" ver="2"/>
+		<designed target="Y" value="85.6667" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Настройка" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="cfcc9770-cf1d-4e68-aced-efb4739da082" base-type="ExportAlarmsSettings" base-type-id="3b4031c4-d45e-4596-9232-5120026222ce" ver="3">
+				<init target="ExportAlarms_1" ver="3" ref="here"/>
+			</object>
+		</do-on>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[Link_Alarms.Main_panel.private.ViewColumnSettings]]>
+			</body>
+		</do-trace>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do access-modifier="private" name="InitTable" display-name="InitTable" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[var ActiveTableColumn = [];
+var ExportTableColumn = [];
+var ActiveTable;
+var ExportTable;
+var end;
+var index;
+
+ExportTable = Table_1;
+ExportTableColumn[0] = Table_1.Colum_1;
+ExportTableColumn[1] = Table_1.Colum_2;
+ExportTableColumn[2] = Table_1.Colum_3;
+ExportTableColumn[3] = Table_1.Colum_4;
+ExportTableColumn[4] = Table_1.Colum_5;
+ExportTableColumn[5] = Table_1.Colum_6;
+ExportTableColumn[6] = Table_1.Colum_7;
+ExportTableColumn[7] = Table_1.Colum_8;
+ExportTableColumn[8] = Table_1.Colum_9;
+ExportTableColumn[9] = Table_1.Colum_10;
+ExportTableColumn[10] = Table_1.Colum_11;
+ExportTableColumn[11] = Table_1.Colum_12;
+ExportTableColumn[12] = Table_1.Colum_13;
+ExportTableColumn[13] = Table_1.Colum_14;
+ExportTableColumn[14] = Table_1.Colum_15;
+	
+if (Link_Alarms.ActiveMode == 0)
+{
+	ActiveTable = Link_Alarms.Main_tables_Operative.Table_Operative_mode;
+	ActiveTableColumn[0] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_1;
+	ActiveTableColumn[1] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_2;
+	ActiveTableColumn[2] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_3;
+	ActiveTableColumn[3] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_4;
+	ActiveTableColumn[4] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_5;
+	ActiveTableColumn[5] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_6;
+	ActiveTableColumn[6] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_7;
+	ActiveTableColumn[7] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_8;
+	ActiveTableColumn[8] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_9;
+	ActiveTableColumn[9] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_10;
+	ActiveTableColumn[10] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_14;
+	ActiveTableColumn[11] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_17;
+	ActiveTableColumn[12] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_19;
+	ActiveTableColumn[13] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_20;
+	ActiveTableColumn[14] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_21;
+}
+else
+{
+	ActiveTable = Link_Alarms.Main_tables_Historical.Table_History_mode;
+	ActiveTableColumn[0] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_1;
+	ActiveTableColumn[1] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_2;
+	ActiveTableColumn[2] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_3;
+	ActiveTableColumn[3] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_4;
+	ActiveTableColumn[4] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_5;
+	ActiveTableColumn[5] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_6;
+	ActiveTableColumn[6] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_7;
+	ActiveTableColumn[7] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_8;
+	ActiveTableColumn[8] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_9;
+	ActiveTableColumn[9] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_10;
+	ActiveTableColumn[10] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_14;
+	ActiveTableColumn[11] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_17;
+	ActiveTableColumn[12] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_19;
+	ActiveTableColumn[13] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_20;
+	ActiveTableColumn[14] = Link_Alarms.Main_tables_Historical.Table_History_mode.Colum_21;
+}
+
+//Импорт параметров таблицы
+for (let i = 0; i < ActiveTableColumn.length; i++)
+{
+	ExportTableColumn[i].Title = ActiveTableColumn[i].Title;
+	ExportTableColumn[i].Hidden = ActiveTableColumn[i].Hidden;
+	ExportTable.MoveColumn(ExportTableColumn[i].GetIndex(), ActiveTableColumn[i].GetIndex());
+}
+
+//Импорт ширины столбцов
+ExportTableColumn[0].Width = Link_Alarms.Main_panel.private.widthColumn.Column_1;
+ExportTableColumn[1].Width = Link_Alarms.Main_panel.private.widthColumn.Column_2;
+ExportTableColumn[2].Width = Link_Alarms.Main_panel.private.widthColumn.Column_3;
+ExportTableColumn[3].Width = Link_Alarms.Main_panel.private.widthColumn.Column_4;
+ExportTableColumn[4].Width = Link_Alarms.Main_panel.private.widthColumn.Column_5;
+ExportTableColumn[5].Width = Link_Alarms.Main_panel.private.widthColumn.Column_6;
+ExportTableColumn[6].Width = Link_Alarms.Main_panel.private.widthColumn.Column_7;
+ExportTableColumn[7].Width = Link_Alarms.Main_panel.private.widthColumn.Column_8;
+ExportTableColumn[8].Width = Link_Alarms.Main_panel.private.widthColumn.Column_9;
+ExportTableColumn[9].Width = Link_Alarms.Main_panel.private.widthColumn.Column_10;
+ExportTableColumn[10].Width = Link_Alarms.Main_panel.private.widthColumn.Column_14;
+ExportTableColumn[11].Width = Link_Alarms.Main_panel.private.widthColumn.Column_17;
+ExportTableColumn[12].Width = Link_Alarms.Main_panel.private.widthColumn.Column_19;
+ExportTableColumn[13].Width = Link_Alarms.Main_panel.private.widthColumn.Column_20;
+ExportTableColumn[14].Width = Link_Alarms.Main_panel.private.widthColumn.Column_21;
+
+Table_1.TableDecorator_1.JsonDecorator = Link_Alarms.Main_tables_Historical.Table_History_mode.TableDecorator_1.JsonDecorator; //Импортируем настройки декоратора]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Journal" display-name="Journal" uuid="657cbc2d-6a93-4212-b381-58667f6de531" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="17.8" ver="2"/>
+		<designed target="Y" value="127" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="285.4" ver="2"/>
+		<designed target="Height" value="36" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffb3b3b3" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="e5a7a150-68b0-4026-bf76-226c3475aaa4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="2.73333" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="282" ver="2"/>
+			<designed target="Height" value="31" ver="2"/>
+			<designed target="Text" value="Журнал ошибок" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<init target="Text" ver="3" value=""/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do access-modifier="private" name="Export" display-name="Export" ver="4" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var FolderPath = Path.Text;
+var type = (TypeFile.SelectedIndex == 0)?("csv"):("xlsx");
+var error = false;
+var errorDescription = "";
+
+// Если папка для примера ещё не создана - создаём
+try
+{
+	if ( !Files.Exists( FolderPath ) ) Files.CreateRecursiveFolder( FolderPath );
+	//	Вот файл, в который будем писать. Используем CombinePath.
+	var filePath = Files.CombinePath(FolderPath, FileName.Text);
+	filePath += "." + type;
+	Table_1.Save(filePath,type);
+}
+catch (err)
+{
+	errorDescription = err.message;
+	error = true;
+}
+
+Journal.Text_1.Text += (errorDescription == "") ? ("\nЭкспорт завершён") : ("\nОшибка эспорта: " + errorDescription.toLowerCase());
+//if (!error) Close();
+]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="DoExport" display-name="DoExport" uuid="ef7504f9-0a47-4bae-b07f-84a1b285052d" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="4">
+		<designed target="Period" value="100" ver="4"/>
+		<designed target="Active" value="false" ver="4"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnTimer">
+			<body kind="om">
+				<![CDATA[Export();
+Active = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="Init_TableModel" display-name="Init_TableModel" uuid="c1bcd958-55d0-4b4b-83d9-ddfa86f61312" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" base-const="true" base-ref="true" ver="4"/>
+</type>
+

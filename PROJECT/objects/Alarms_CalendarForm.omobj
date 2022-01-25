@@ -1,0 +1,91 @@
+<type access-modifier="private" name="Alarms_CalendarForm" display-name="Alarms_CalendarForm" uuid="778bc14f-b24c-4098-a67d-e10d17056cbb" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="202" ver="3"/>
+	<designed target="Height" value="202" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="4293980400" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="202" ver="3"/>
+	<designed target="WindowHeight" value="202" ver="3"/>
+	<designed target="WindowCaption" value="MainForm" ver="3"/>
+	<designed target="ShowWindowCaption" value="true" ver="3"/>
+	<designed target="ShowWindowMinimize" value="true" ver="3"/>
+	<designed target="ShowWindowMaximize" value="true" ver="3"/>
+	<designed target="ShowWindowClose" value="true" ver="3"/>
+	<designed target="AlwaysOnTop" value="false" ver="3"/>
+	<designed target="WindowSizeMode" value="1" ver="3"/>
+	<designed target="WindowBorderStyle" value="0" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="0" ver="3"/>
+	<object access-modifier="private" name="Calendar" display-name="Calendar" uuid="588a7c80-6c9d-44b3-b80f-eeb63142364a" base-type="Calendar" base-type-id="f3aff9fb-440f-4048-85f4-2d2d454dfb36" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Width" value="200" ver="3"/>
+		<designed target="Height" value="200" ver="3"/>
+		<init target="OnDateChanged" ver="3" ref="SetDate"/>
+		<init target="choiseCount" ver="3" value="0"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[if (!WindowActive) Close();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="0258c206-00fb-427e-83d7-ecc8ecc13a77" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="SetDate" display-name="SetDate" uuid="d6b0b812-e591-41eb-804b-763b0fea7acf" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="InvokeTrigger" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[// Применение выбранной даты
+date: uint8 = Calendar.currentDate;
+
+if (Alarms_1.Main_panel.private.StartDate)
+{
+	// Начало диапазона
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.day = DateTime.Day(date);
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.month = DateTime.Month(date);
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.year = DateTime.Year(date);
+}
+else
+{
+	// Конец диапазона
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.day = DateTime.Day(date);
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.month = DateTime.Month(date);
+	Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.year = DateTime.Year(date);
+}
+
+if (Calendar.choiseCount > 0) Close();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="init" display-name="init" uuid="da0b4f50-77b6-4404-a2ba-b325edb59da9" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="Opened">
+		<body kind="om">
+			<![CDATA[date: string = "";
+
+dateStart: uint8 = DateTime.Create(Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.year, Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.month, Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_start.day, 0, 0, 0, 0);
+dateFinal: uint8 = DateTime.Create(Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.year, Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.month, Alarms_1.Main_panel.ToolBar.RecHistory.DayMonthYear_final.day, 0, 0, 0, 0);
+
+Calendar.currentDate = (Alarms_1.Main_panel.private.StartDate)?(dateStart):(dateFinal);
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="d79409ec-2b78-4202-86f6-9f968773eccc" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

@@ -1,0 +1,142 @@
+<type access-modifier="private" name="Trends_popup_Clock" display-name="Trends_popup_Clock" uuid="4d3bd547-3a3d-463d-8442-a33c9297b6de" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="221" ver="3"/>
+	<designed target="Height" value="251" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="4293980400" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="220" ver="3"/>
+	<designed target="WindowHeight" value="250" ver="3"/>
+	<designed target="WindowCaption" value="MainForm" ver="3"/>
+	<designed target="ShowWindowCaption" value="true" ver="3"/>
+	<designed target="ShowWindowMinimize" value="true" ver="3"/>
+	<designed target="ShowWindowMaximize" value="true" ver="3"/>
+	<designed target="ShowWindowClose" value="true" ver="3"/>
+	<designed target="AlwaysOnTop" value="false" ver="3"/>
+	<designed target="WindowSizeMode" value="2" ver="3"/>
+	<designed target="WindowBorderStyle" value="0" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="0" ver="3"/>
+	<object access-modifier="private" name="Clock_1" display-name="Clock_1" uuid="8f01814e-1873-4b8a-a985-f1857ca19d3e" base-type="Clock" base-type-id="ca97fc5d-2a63-4545-af9b-65b9bbb4b68c" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Width" value="220" ver="3"/>
+		<designed target="Height" value="250" ver="3"/>
+		<init target="OnTimeChanged" ver="3" ref="OnTimeChangedDo"/>
+	</object>
+	<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="41af3829-0cdf-49ed-a843-d5dad84c4742" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+		<designed target="X" value="195.8" ver="3"/>
+		<designed target="Y" value="64.2" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="10" ver="3"/>
+		<designed target="Height" value="10" ver="3"/>
+		<designed target="PenColor" value="0xff808080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="2" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="7157dc22-7119-461d-8fff-ab5ad0c96373" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="c42f6fbf-32f1-4bd9-8017-73032c9d4297" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="10" ver="3"/>
+			<designed target="Y" value="10" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress" form-action="close"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="3657eca2-ec3c-49ec-a0ef-f6a9a695efd5" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+		<designed target="X" value="195.8" ver="3"/>
+		<designed target="Y" value="64.2" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="10" ver="3"/>
+		<designed target="Height" value="10" ver="3"/>
+		<designed target="PenColor" value="0xff808080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="2" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="7cfbfb41-e068-447e-9608-3f32c7fab208" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="10" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="a3df8460-95fc-4df2-8cc6-a46a87e62b03" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="10" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress" form-action="close"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="pTrends" display-name="pTrends" uuid="a6ff3625-9a4f-4ee0-b4ce-c621582d64b4" base-type="Trends" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="OnTimeChangedDo" display-name="OnTimeChangedDo" uuid="1902559c-059e-4794-8013-46794ce76a45" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="InvokeTrigger" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[if (Sender==1){
+	pTrends.Main_Panel.ToolBar.RecHistory.TimeEdit_1.Text = pTrends.Main_Panel.private.TimeToString(Clock_1.CurrentTime);
+}
+if (Sender==2){
+	pTrends.Main_Panel.ToolBar.RecHistory.TimeEdit_2.Text = pTrends.Main_Panel.private.TimeToString(Clock_1.CurrentTime);
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Sender" display-name="Sender" uuid="305f566f-4bf5-4962-8c65-d74aa84a3206" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<param access-modifier="private" name="init_Sender" display-name="init_Sender" uuid="5d9a99b3-3c96-49fa-b6c4-32b7e5b1ec5c" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<init target="Sender" ver="3" ref="init_Sender"/>
+	<object access-modifier="private" name="Timer_SetDate" display-name="Timer_SetDate" uuid="8e035cf7-20f5-4824-9231-7f1931b985fd" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="200" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+			<body kind="om">
+				<![CDATA[Active = false;
+t:uint8;
+if (Sender==1){
+	t = DateTime.Parse(pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_1.Text+" "+pTrends.Main_Panel.ToolBar.RecHistory.TimeEdit_1.Text);
+}
+if (Sender==2){
+	t = DateTime.Parse(pTrends.Main_Panel.ToolBar.RecHistory.DateEdit_2.Text+" "+pTrends.Main_Panel.ToolBar.RecHistory.TimeEdit_2.Text);
+}
+Clock_1.SetTime(t);
+]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[if (!WindowActive ){
+	Close();
+	pTrends.DebugTool_1.Log("WindowClock.WinActive="+Str.ToString(WindowActive));
+}]]>
+		</body>
+	</do-on>
+</type>
+

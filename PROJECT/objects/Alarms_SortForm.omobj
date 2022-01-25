@@ -1,0 +1,874 @@
+<type access-modifier="private" name="Alarms_SortForm" display-name="Form_1" uuid="95d52964-3d3f-43d2-ad6f-f3cb68a1c51b" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="550" ver="2"/>
+	<designed target="Height" value="431" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="550" ver="2"/>
+	<designed target="WindowHeight" value="431" ver="2"/>
+	<designed target="WindowCaption" value="Сортировка" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="1" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="a39b10d1-40c1-4ee5-8d1e-f5fccc94aa9f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0.6" ver="2"/>
+		<designed target="Y" value="0.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="543.834" ver="2"/>
+		<designed target="Height" value="401" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="b13223bb-b814-46a2-9443-93dbb64aeccd" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="1" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Width" value="462" ver="2"/>
+			<designed target="Height" value="415" ver="2"/>
+			<designed target="SelectionBehavior" value="1" ver="2"/>
+			<designed target="SelectionMode" value="1" ver="2"/>
+			<designed target="LatestRowTracking" value="false" ver="2"/>
+			<object access-modifier="private" name="Priority" display-name="Priority" uuid="2e0eb5ce-c1b7-4e35-b3eb-0fe924af4a9c" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="Priority" ver="2"/>
+				<designed target="BackgroundColor" value="4293980400" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="Width" value="100" ver="2"/>
+				<designed target="WidthResizeMode" value="2" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="JsonFilter" value="" ver="2"/>
+				<designed target="SortingEnabled" value="false" ver="2"/>
+				<designed target="SortOrder" value="0" ver="2"/>
+				<designed target="SortPriority" value="0" ver="2"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Field" display-name="Field" uuid="9afbb87a-fd29-43ee-a30f-0753eac4ae36" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Поле" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="Field" ver="2"/>
+				<designed target="BackgroundColor" value="4293980400" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="Width" value="190" ver="2"/>
+				<designed target="WidthResizeMode" value="2" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="JsonFilter" value="" ver="2"/>
+				<designed target="SortingEnabled" value="false" ver="2"/>
+				<designed target="SortOrder" value="0" ver="2"/>
+				<designed target="SortPriority" value="0" ver="2"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Direction" display-name="Direction" uuid="7d45adfe-61c9-47f2-9158-c9091fdc9fb5" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Порядок" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="Direction" ver="2"/>
+				<designed target="BackgroundColor" value="4293980400" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+				<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+				<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="Width" value="170" ver="2"/>
+				<designed target="WidthResizeMode" value="2" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="JsonFilter" value="" ver="2"/>
+				<designed target="SortingEnabled" value="false" ver="2"/>
+				<designed target="SortOrder" value="0" ver="2"/>
+				<designed target="SortPriority" value="0" ver="2"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="SelectionChanged">
+				<body kind="javascript">
+					<![CDATA[Table_1.FieldEdit.Visible = false;
+Table_1.DirectionEdit.Visible = false;
+rowNumber = -1;
+
+//Ищем выбранное поле в таблице
+for (let i=0; i < Table_1.GetRowCount(); i++) {	
+	if (Table_1.IsRowSelected(i)) {
+		
+		rowNumber = i;
+		
+		//Задаем координаты для вызова элементов редактирования строки
+		Table_1.FieldEdit.X = Table_1.X + Table_1.Priority.Width;
+		Table_1.FieldEdit.Y = Table_1.Y + Table_1.HeaderHeight + Table_1.RowHeight*i;
+		Table_1.DirectionEdit.X = Table_1.X + Table_1.Priority.Width + Table_1.Field.Width;
+		Table_1.DirectionEdit.Y = Table_1.Y + Table_1.HeaderHeight + Table_1.RowHeight*i;
+		Table_1.FieldEdit.Visible = true;
+		Table_1.DirectionEdit.Visible = true;
+		
+		//Заполнение выпадающего списка имени столбца
+		FieldEditFilling(Table_1.TableModel.GetCellData(i,1));
+
+		//Заполнение выпадающего списка направления
+		DirectionEditFilling(Table_1.TableModel.GetCellData(i,2));
+	}		
+}
+
+]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="FieldEdit" display-name="FieldEdit" uuid="649d00f5-93d5-4ae0-983d-6af98ba41791" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="2">
+				<designed target="X" value="349" ver="2"/>
+				<designed target="Y" value="350" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="190" ver="2"/>
+				<designed target="Height" value="28" ver="2"/>
+				<designed target="Editable" value="false" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="SelectedIndex" value="-1" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="MaxVisibleItems" value="10" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="SelectedChanged">
+					<body kind="javascript">
+						<![CDATA[var matchCount = 0;
+if (SelectedIndex < 0) return;
+//Запись выбранного значения из списка в таблицу и обновление статуса в глобальной таблице
+Table_1.TableModel.SetCellData(rowNumber,1,Table_1.FieldEdit.GetItem(SelectedIndex));
+for (let i = 0; i < TempTable_1.GetRowCount(); i++) {
+	if (TempTable_1.GetCellData(i,1) == Table_1.FieldEdit.GetItem(SelectedIndex)) TempTable_1.SetCellData(i,0,true);
+}
+
+//статус использования всех полей, незадействованные в таблице, обнуляется
+for (let i = 0; i < TempTable_1.GetRowCount();i++) {
+	for (let j = 0; j < Table_1.TableModel.GetRowCount(); j++) {
+		if (TempTable_1.GetCellData(i,1) == Table_1.TableModel.GetCellData(j,1)) matchCount++;
+	}
+	if (matchCount == 0) TempTable_1.SetCellData(i,0,false);
+	matchCount = 0;
+}
+
+]]>
+					</body>
+				</do-on>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<object access-modifier="private" name="DirectionEdit" display-name="DirectionEdit" uuid="e6a01387-1293-4f12-ab6f-89c77fda3ece" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="2">
+				<designed target="X" value="349" ver="2"/>
+				<designed target="Y" value="377" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="170" ver="2"/>
+				<designed target="Height" value="28" ver="2"/>
+				<designed target="Editable" value="false" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="SelectedIndex" value="-1" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="MaxVisibleItems" value="10" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="SelectedChanged">
+					<body kind="javascript">
+						<![CDATA[var matchCount = 0;
+if (SelectedIndex < 0) return;
+//Запись выбранного значения из списка в таблицу и обновление статуса в глобальной таблице
+Table_1.TableModel.SetCellData(rowNumber,2,Table_1.DirectionEdit.GetItem(SelectedIndex));
+for (let i = 0; i < TempTable_1.GetRowCount(); i++) {
+	if (TempTable_1.GetCellData(i,1) == Table_1.DirectionEdit.GetItem(SelectedIndex)) TempTable_1.SetCellData(i,2,Table_1.DirectionEdit.GetItem(SelectedIndex));
+}
+
+//статус использования всех полей, незадействованные в таблице, обнуляется
+for (let i = 0; i < TempTable_1.GetRowCount();i++) {
+	for (let j = 0; j < Table_1.TableModel.GetRowCount(); j++) {
+		if (TempTable_1.GetCellData(i,1) == Table_1.TableModel.GetCellData(j,1)) matchCount++;
+	}
+	if (matchCount == 0) TempTable_1.SetCellData(i,0,false);
+	matchCount = 0;
+}
+
+]]>
+					</body>
+				</do-on>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<designed target="HeaderHeight" value="21" ver="3"/>
+			<designed target="HeaderVisible" value="true" ver="3"/>
+			<designed target="RowHeight" value="30" ver="3"/>
+			<designed target="RowOrder" value="0" ver="3"/>
+			<object access-modifier="private" name="TableModel_1" display-name="TableModel_1" uuid="a8808a11-adf9-4b0e-9c93-5ee7d3191f71" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+				<designed target="Frozen" value="false" ver="3"/>
+				<designed target="MaxRowCount" value="10000" ver="3"/>
+			</object>
+			<init target="TableModel" ver="3" ref="TableModel_1"/>
+			<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+			<do access-modifier="private" name="FieldEditFilling" display-name="FieldEditFilling" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="javascript">
+					<![CDATA[// Заполнение выпадающего списка заголовков и выбор элемента
+var selectedIndex = 0;
+var rowCount = -1;
+
+FieldEdit.Clear();
+
+for (let i = 0; i < TempTable_1.GetRowCount(); i++) {
+	var notUse = !TempTable_1.GetCellData(i, 0);
+	var title = TempTable_1.GetCellData(i, 1);
+	if ( notUse || selectedTitle == title) {
+		FieldEdit.AddItem(title);
+		rowCount  += 1
+	}
+	if (selectedTitle == title) selectedIndex = rowCount;
+}
+
+FieldEdit.SelectedIndex = selectedIndex;]]>
+				</body>
+				<param access-modifier="private" name="selectedTitle" display-name="" uuid="d779ce58-ae84-412a-8465-07736fd3d67c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+			<do access-modifier="private" name="DirectionEditFilling" display-name="DirectionEditFilling" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="javascript">
+					<![CDATA[// Заполнение выпадающего списка порядка и выбор элемента
+var selectedIndex = 0;
+var rowCount = -1;
+
+DirectionEdit.Clear();
+
+Table_1.DirectionEdit.AddItem("По возрастанию (от А до Я)");
+Table_1.DirectionEdit.AddItem("По убыванию (от Я до А)");
+
+if (selectedItem == "По возрастанию (от А до Я)") selectedIndex = 0;
+else selectedIndex = 1;
+
+DirectionEdit.SelectedIndex = selectedIndex;
+]]>
+				</body>
+				<param access-modifier="private" name="selectedItem" display-name="" uuid="d779ce58-ae84-412a-8465-07736fd3d67c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</do>
+		</object>
+		<object access-modifier="private" name="TempTable_1" display-name="TempTable_1" uuid="ee5c6fcd-fd41-42b0-a1dc-62894ced3548" base-type="InMemoryTable" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+			<designed target="MaxRowCount" value="1" ver="3"/>
+			<designed target="Frozen" value="false" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_Add" display-name="Button_Add" uuid="0d2a0c5c-0236-43ba-b2e9-f73d457745fe" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="468.667" ver="3"/>
+			<designed target="Y" value="2.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="75" ver="3"/>
+			<designed target="Height" value="23" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Добавить" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[Table_1.SetSelectedRows("[]"); //Обнуляем выделение
+var matchCount = 0;
+//Заполняем временную таблицу возможными значениями
+
+//статус использования всех полей, незадействованные в таблице, обнуляется
+for (let i = 0; i < TempTable_1.GetRowCount();i++)
+{
+	for (let j = 0; j < Table_1.TableModel.GetRowCount(); j++)
+	{
+		if (TempTable_1.GetCellData(i,1) == Table_1.TableModel.GetCellData(j,1)) matchCount++;
+	}
+	if (matchCount == 0) TempTable_1.SetCellData(i,0,false);
+	matchCount = 0;
+}
+
+//Если поле временной таблицы имеет статус Use "false", то добавяем в таблицу сортировки. Первый элемент таблицы идет с описанием "Сортировать по" для определения приоритета сортировки
+for (let i = 0; i < TempTable_1.GetRowCount(); i++)
+{
+	if (TempTable_1.GetCellData(i,0) == false)
+	{
+		Table_1.TableModel.AddRow();
+		if (Table_1.TableModel.GetRowCount()>1) Table_1.TableModel.SetCellData(Table_1.TableModel.GetRowCount()-1,0,"Затем по");
+		else Table_1.TableModel.SetCellData(Table_1.TableModel.GetRowCount()-1,0,"Сортировать по");
+		Table_1.TableModel.SetCellData(Table_1.TableModel.GetRowCount()-1,1,TempTable_1.GetCellData(i,1));
+		Table_1.TableModel.SetCellData(Table_1.TableModel.GetRowCount()-1,2,TempTable_1.GetCellData(i,2));
+		TempTable_1.SetCellData(i,0,true);
+		break;
+	}
+}
+
+if (Table_1.TableModel.GetRowCount() == 13) tableFull = true; //Если таблица заполнена, то блокируем кнопку "Добавить"
+else tableFull = false;
+]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body>
+					<![CDATA[!tableFull]]>
+				</body>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_Remove" display-name="Button_Remove" uuid="dbf4c55a-4ffd-4811-b2cd-158137a5dfd0" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="468.667" ver="3"/>
+			<designed target="Y" value="30.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="75" ver="3"/>
+			<designed target="Height" value="23" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Удалить" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[var field;
+//Удаление выбранной строки из таблицы сортировки
+for (let i = 0; i < Table_1.GetRowCount(); i++)
+{
+	if (Table_1.IsRowSelected(i))
+	{
+		field = Table_1.TableModel.GetCellData(i,1);
+		Table_1.TableModel.RemoveRow(i);
+	}
+}
+//Ищем удаленной поле в временной таблице и помечаем как неиспользуемое
+for (let i = 0; i < TempTable_1.GetRowCount(); i++)
+{
+	if (TempTable_1.GetCellData(i,1) == field) TempTable_1.SetCellData(i,0,false);
+}
+if (Table_1.TableModel.GetRowCount() > 0) Table_1.TableModel.SetCellData(0,0,"Сортировать по");
+
+tableFull = false;]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body>
+					<![CDATA[(rowNumber != -1)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_Up" display-name="Button_Up" uuid="4603eaca-de0d-42b4-bf59-3ceaff66d9e3" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="468.667" ver="3"/>
+			<designed target="Y" value="58.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="75" ver="3"/>
+			<designed target="Height" value="23" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Вверх" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[//Двигаем строку вверх
+var tempRow = [], currentRow = [];
+if (rowNumber == 0) return;
+
+//Запоминаем верхнюю строку. Если выделенная строка - 2я, то делаем так, чтобы первый столбец новой строки был "Сортировать по"
+if (rowNumber == 1)
+{
+	tempRow = [Table_1.TableModel.GetCellData(rowNumber,0),Table_1.TableModel.GetCellData(rowNumber-1,1),Table_1.TableModel.GetCellData(rowNumber-1,2)];
+	currentRow = [Table_1.TableModel.GetCellData(rowNumber-1,0),Table_1.TableModel.GetCellData(rowNumber,1),Table_1.TableModel.GetCellData(rowNumber,2)];
+}
+else 
+{
+	tempRow = [Table_1.TableModel.GetCellData(rowNumber-1,0),Table_1.TableModel.GetCellData(rowNumber-1,1),Table_1.TableModel.GetCellData(rowNumber-1,2)];
+	currentRow = [Table_1.TableModel.GetCellData(rowNumber,0),Table_1.TableModel.GetCellData(rowNumber,1),Table_1.TableModel.GetCellData(rowNumber,2)];
+}
+
+//Перемещаем строку вверх
+Table_1.TableModel.SetCellData(rowNumber-1,0,currentRow[0]);
+Table_1.TableModel.SetCellData(rowNumber-1,1,currentRow[1]);
+Table_1.TableModel.SetCellData(rowNumber-1,2,currentRow[2]);
+
+Table_1.TableModel.SetCellData(rowNumber,0,tempRow[0]);
+Table_1.TableModel.SetCellData(rowNumber,1,tempRow[1]);
+Table_1.TableModel.SetCellData(rowNumber,2,tempRow[2]);
+
+//Выделяем перенесенную строку
+var number = [rowNumber-1];
+Table_1.SetSelectedRows(JSON.stringify(number));
+]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body>
+					<![CDATA[(rowNumber > 0)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_Down" display-name="Button_Down" uuid="54f37461-241c-4563-842a-a9355e511321" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="468.667" ver="3"/>
+			<designed target="Y" value="85.5" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="75" ver="3"/>
+			<designed target="Height" value="23" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Вниз" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[//Двигаем строку вниз
+var tempRow = [], currentRow = [];
+if (rowNumber == Table_1.TableModel.GetRowCount()-1) return;
+
+//Запоминаем нижнюю строку. Если выделенная строка - 1я, то делаем так, чтобы первый столбец новой строки был "Затем по"
+if (rowNumber == 0)
+{
+	tempRow = [Table_1.TableModel.GetCellData(rowNumber,0),Table_1.TableModel.GetCellData(rowNumber+1,1),Table_1.TableModel.GetCellData(rowNumber+1,2)];
+	currentRow = [Table_1.TableModel.GetCellData(rowNumber+1,0),Table_1.TableModel.GetCellData(rowNumber,1),Table_1.TableModel.GetCellData(rowNumber,2)];
+}
+else 
+{
+	tempRow = [Table_1.TableModel.GetCellData(rowNumber+1,0),Table_1.TableModel.GetCellData(rowNumber+1,1),Table_1.TableModel.GetCellData(rowNumber+1,2)];
+	currentRow = [Table_1.TableModel.GetCellData(rowNumber,0),Table_1.TableModel.GetCellData(rowNumber,1),Table_1.TableModel.GetCellData(rowNumber,2)];
+}
+
+//Перемещаем строку вниз
+Table_1.TableModel.SetCellData(rowNumber+1,0,currentRow[0]);
+Table_1.TableModel.SetCellData(rowNumber+1,1,currentRow[1]);
+Table_1.TableModel.SetCellData(rowNumber+1,2,currentRow[2]);
+
+Table_1.TableModel.SetCellData(rowNumber,0,tempRow[0]);
+Table_1.TableModel.SetCellData(rowNumber,1,tempRow[1]);
+Table_1.TableModel.SetCellData(rowNumber,2,tempRow[2]);
+
+//Выделяем перенесенную строку
+var number = [rowNumber+1];
+Table_1.SetSelectedRows(JSON.stringify(number));
+]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body>
+					<![CDATA[(rowNumber != -1 && rowNumber < Table_1.TableModel.GetRowCount()-1)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Button_Apply" display-name="Button_Apply" uuid="4211b789-ff45-4642-b815-384b2d8450ed" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="468.667" ver="3"/>
+			<designed target="Y" value="128.167" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="75" ver="3"/>
+			<designed target="Height" value="23" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="Применить" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+				<body kind="javascript">
+					<![CDATA[ApplySort();
+Close();]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[Rectangle_1.Table_1.FieldEdit.Visible = false;
+Rectangle_1.Table_1.DirectionEdit.Visible = false;
+rowNumber = -1;
+TableFilling(); //Считываем параметры сортировки и заполняем таблицы формы
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+
+
+
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="0e74bc7d-34c2-453c-9342-1730c4df2a2e" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="2"/>
+	<do access-modifier="private" name="TableFilling" display-name="TableFilling" ver="2" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[//Функция заполнения таблицы сортировки
+var matchCount = 0;
+var Column=[];
+tableFull = false; //Проверка заполненности таблицы
+
+//Если таблица в оперативном режиме, то берем ее параметры, если нет - берем параметры исторической таблицы
+if (Alarms_1.ActiveMode == 0)
+{
+	Column[0] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_1;
+	Column[1] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_2;
+	Column[2] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_3;
+	Column[3] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_4;
+	Column[4] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_5;
+	Column[5] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_6;
+	Column[6] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_7;
+	Column[7] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_8;
+	Column[8] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_9;
+	Column[9] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_10;
+	Column[10] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_14;
+	Column[11] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_17;
+	Column[12] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_19;
+	Column[13] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_20;
+	Column[14] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_21;
+}
+else
+{
+	Column[0] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_1;
+	Column[1] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_2;
+	Column[2] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_3;
+	Column[3] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_4;
+	Column[4] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_5;
+	Column[5] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_6;
+	Column[6] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_7;
+	Column[7] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_8;
+	Column[8] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_9;
+	Column[9] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_10;
+	Column[10] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_14;
+	Column[11] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_17;
+	Column[12] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_19;
+	Column[13] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_20;
+	Column[14] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_21;
+}
+
+Rectangle_1.TempTable_1.MaxRowCount = 20;
+Rectangle_1.TempTable_1.AddColumn("Use", "", "", "", "bool", false, true);
+Rectangle_1.TempTable_1.AddColumn("Field", "", "", "", "string", false, true);
+Rectangle_1.TempTable_1.AddColumn("Direction", "", "", "", "string", false, true);
+Rectangle_1.Table_1.TableModel.AddColumn("Priority", "", "", "", "string", false, true);
+Rectangle_1.Table_1.TableModel.AddColumn("Field", "", "", "", "string", false, true);
+Rectangle_1.Table_1.TableModel.AddColumn("Direction", "", "", "", "string", false, true);
+for (let i = 0; i < Column.length; i++)
+{
+	//Заполняем промежуточную таблицу
+	Rectangle_1.TempTable_1.AddRow();
+	Rectangle_1.TempTable_1.SetCellData(i,0,Column[i].SortingEnabled);
+	Rectangle_1.TempTable_1.SetCellData(i,1,Column[i].Title);
+	if (Column[i].SortOrder == 0 || !Column[i].SortingEnabled) Rectangle_1.TempTable_1.SetCellData(i,2,"По возрастанию (от А до Я)");
+	else Rectangle_1.TempTable_1.SetCellData(i,2,"По убыванию (от Я до А)");
+
+	//Выводим параметры сортировки в видимую таблицу, если они есть
+	if (Column[i].SortingEnabled)
+	{
+		Rectangle_1.Table_1.TableModel.AddRow();
+		Rectangle_1.Table_1.TableModel.SetCellData(Rectangle_1.Table_1.TableModel.GetRowCount()-1, 0, Column[i].SortPriority);
+		Rectangle_1.Table_1.TableModel.SetCellData(Rectangle_1.Table_1.TableModel.GetRowCount()-1, 1, Column[i].Title);
+		if (Column[i].SortOrder == 0) Rectangle_1.Table_1.TableModel.SetCellData(Rectangle_1.Table_1.TableModel.GetRowCount()-1, 2,"По возрастанию (от А до Я)");
+		else Rectangle_1.Table_1.TableModel.SetCellData(Rectangle_1.Table_1.TableModel.GetRowCount()-1, 2,"По убыванию (от Я до А)");
+	}
+}
+if (Rectangle_1.TempTable_1.GetRowCount() == Column.length - 1) tableFull = true;
+
+//Если элементов больше одного, то применяем сортировку по приоритету
+if (Rectangle_1.Table_1.TableModel.GetRowCount() > 0) {
+	for (let i = 0; i < Rectangle_1.Table_1.TableModel.GetRowCount(); i++)
+	{
+		for (let j = 0; j < Rectangle_1.Table_1.TableModel.GetRowCount(); j++)
+		{
+			if (parseInt(Rectangle_1.Table_1.TableModel.GetCellData(i,0)) > parseInt(Rectangle_1.Table_1.TableModel.GetCellData(j,0)))
+			{
+				let tempCol0 = Rectangle_1.Table_1.TableModel.GetCellData(j,0);
+				let tempCol1 = Rectangle_1.Table_1.TableModel.GetCellData(j,1);
+				let tempCol2 = Rectangle_1.Table_1.TableModel.GetCellData(j,2);
+				Rectangle_1.Table_1.TableModel.SetCellData(j,0,Rectangle_1.Table_1.TableModel.GetCellData(i,0));
+				Rectangle_1.Table_1.TableModel.SetCellData(j,1,Rectangle_1.Table_1.TableModel.GetCellData(i,1));
+				Rectangle_1.Table_1.TableModel.SetCellData(j,2,Rectangle_1.Table_1.TableModel.GetCellData(i,2));
+				Rectangle_1.Table_1.TableModel.SetCellData(i,0,tempCol0);
+				Rectangle_1.Table_1.TableModel.SetCellData(i,1,tempCol1);
+				Rectangle_1.Table_1.TableModel.SetCellData(i,2,tempCol2);
+			}
+		}
+	}
+	
+	//Меняем все значения сортировки на текст "Сортировать по" и "Затем по"
+	for (let i = 0; i < Rectangle_1.Table_1.TableModel.GetRowCount(); i++)
+	{
+		if (i == 0) Rectangle_1.Table_1.TableModel.SetCellData(i,0,"Сортировать по");
+		else Rectangle_1.Table_1.TableModel.SetCellData(i,0,"Затем по");
+	}
+}
+
+// Сортировка временной таблицы по алфавиту (для вывода в выпадающем списке)
+for (let i = 0; i < Rectangle_1.TempTable_1.GetRowCount(); i++)
+{
+	for (let j = 0; j < Rectangle_1.TempTable_1.GetRowCount(); j++)
+	{
+		if (Rectangle_1.TempTable_1.GetCellData(i,1) < Rectangle_1.TempTable_1.GetCellData(j,1))
+		{
+			let tempCol0 = Rectangle_1.TempTable_1.GetCellData(j,0);
+			let tempCol1 = Rectangle_1.TempTable_1.GetCellData(j,1);
+			let tempCol2 = Rectangle_1.TempTable_1.GetCellData(j,2);
+			Rectangle_1.TempTable_1.SetCellData(j,0,Rectangle_1.TempTable_1.GetCellData(i,0));
+			Rectangle_1.TempTable_1.SetCellData(j,1,Rectangle_1.TempTable_1.GetCellData(i,1));
+			Rectangle_1.TempTable_1.SetCellData(j,2,Rectangle_1.TempTable_1.GetCellData(i,2));
+			Rectangle_1.TempTable_1.SetCellData(i,0,tempCol0);
+			Rectangle_1.TempTable_1.SetCellData(i,1,tempCol1);
+			Rectangle_1.TempTable_1.SetCellData(i,2,tempCol2);
+		}
+	}
+}
+
+
+]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="tableFull" display-name="tableFull" uuid="4610154b-671a-49db-a54c-bbc47686132d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="rowNumber" display-name="rowNumber" uuid="f53e8230-f838-4cca-b303-70e9cb8ff76e" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do access-modifier="private" name="ApplySort" display-name="ApplySort" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var Column=[];
+var table;
+var sortArray = [];
+
+//Если таблица в оперативном режиме, то берем ее параметры, если нет - берем параметры исторической таблицы
+if (Alarms_1.ActiveMode == 0)
+{
+	Column[0] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_1;
+	Column[1] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_2;
+	Column[2] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_3;
+	Column[3] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_4;
+	Column[4] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_5;
+	Column[5] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_6;
+	Column[6] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_7;
+	Column[7] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_8;
+	Column[8] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_9;
+	Column[9] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_10;
+	Column[10] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_14;
+	Column[11] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_17;
+	Column[12] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_19;
+	Column[13] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_20;
+	Column[14] = Alarms_1.Main_tables_Operative.Table_Operative_mode.Colum_21;
+	table = Alarms_1.Main_tables_Operative.Table_Operative_mode;
+}
+else
+{
+	Column[0] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_1;
+	Column[1] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_2;
+	Column[2] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_3;
+	Column[3] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_4;
+	Column[4] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_5;
+	Column[5] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_6;
+	Column[6] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_7;
+	Column[7] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_8;
+	Column[8] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_9;
+	Column[9] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_10;
+	Column[10] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_14;
+	Column[11] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_17;
+	Column[12] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_19;
+	Column[13] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_20;
+	Column[14] = Alarms_1.Main_tables_Historical.Table_History_mode.Colum_21;
+	table = Alarms_1.Main_tables_Historical.Table_History_mode;
+}
+
+//Формирование массива с параметрами сортировки
+for (let i = 0; i < Rectangle_1.Table_1.TableModel.GetRowCount(); i++)
+{
+	for (let j = 0; j < Column.length; j++) {
+		if (Column[j].Title == Rectangle_1.Table_1.TableModel.GetCellData(i,1)) var id = Column[j].Id;
+	}
+	
+	var sortPriority = Rectangle_1.Table_1.TableModel.GetRowCount() - i;
+	var sortOrder = (Rectangle_1.Table_1.TableModel.GetCellData(i,2) == "По возрастанию (от А до Я)")?(0):(1)
+	sortArray.push({'Id':id, 'SortOrder': sortOrder, 'SortPriority':sortPriority});
+}
+Alarms_1.Main_panel.private.SetSorting(JSON.stringify(sortArray));
+]]>
+		</body>
+	</do>
+</type>
+

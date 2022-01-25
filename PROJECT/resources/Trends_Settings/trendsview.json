@@ -1,0 +1,32 @@
+{
+  "TreeWidth": 294,
+  "LegendHeight": 0,
+  "ColumnsWidth": [
+    20,
+    50,
+    50,
+    139,
+    221,
+    75,
+    70,
+    130,
+    60,
+    100,
+    100,
+    100
+  ],
+  "ColumnsHide": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}

@@ -1,0 +1,78 @@
+<object access-modifier="private" name="Security" display-name="Security" uuid="e4f01781-7047-4c50-ab97-040cbace22c7" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="3">
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="1d9ecae3-94ac-4888-9f72-6a28a44954fd" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="CurrentUserChanged">
+			<body kind="om">
+				<![CDATA[unit.OpenWindows.WindowGroup.SendToAll("close","Закрыть окно");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Msg_AccessDenied" display-name="Msg_AccessDenied" uuid="8b2d508e-9d63-412b-bdca-efea4e7972a6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3">
+		<object access-modifier="private" name="Send" display-name="Send" uuid="7a866361-ef98-450d-b4af-bf2ad507a1ae" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="InvokeTrigger" value="false" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked">
+				<body kind="om">
+					<![CDATA[unit.Global.MessagesOper.Value = Msg_AccessDenied.Value;]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Msg_ControlDenied" display-name="Msg_ControlDenied" uuid="f6d58a08-633f-4940-922a-790ab797d2ce" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<do-trace access-modifier="private" target="Msg_ControlDenied" ver="4">
+		<body>
+			<![CDATA["<Subcondition Message='Управление невозможно, недостаточно прав! " + "[" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]] ' Value='' Sound='' Severity='4' Enabled='1' SoundEnabled='0' />"]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="Msg_AccessDenied" ver="4">
+		<body>
+			<![CDATA["<Subcondition Message='"+ ObjName.Value+"Отказано в доступе. Недостаточно прав! " + "[" + unit.Security.SecurityContext.CurrentUser + " - АРМ [" + unit.Global.Network.ComputerName+ "]] ' Value='' Sound='' Severity='3' Enabled='1' SoundEnabled='0' />"]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="EnableOpenPopup" display-name="EnableOpenPopup" uuid="36bad44e-4c98-49db-a196-0a9e5749c42f" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableOpenPopup"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableTR" display-name="EnableTR" uuid="14f3d1c9-e333-4321-a974-3ab74b01e0f7" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableOpenPopupSU"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableIMIT" display-name="EnableIMIT" uuid="90f7e071-9d4e-45a2-8ef0-c934a8c8b9a9" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableIMIT"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableRem" display-name="EnableRem" uuid="f44a42a4-4164-4ee8-b057-f85cf7c113a6" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableRem"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableControl" display-name="EnableControl" uuid="0b98baf9-b59f-4fba-afd4-21915c7d96fa" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="Administrator" display-name="Administrator" uuid="1ae16a95-251e-45e9-9e94-a899336e7d85" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="Administrator"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="SuperUser" display-name="SuperUser" uuid="aa9e73a6-6cc4-465e-961b-34a22e835eb6" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="SuperUser"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="ObjName" display-name="ObjName" uuid="a6709b20-db0f-4c02-af06-36ca5bd7dfef" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="EnableIC" display-name="EnableIC" uuid="1c0e4cf0-2d0c-472b-8b6a-7e7774d8ed6a" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="EnableUST" display-name="EnableUST" uuid="c1e7fa92-fb25-4a25-a6ce-d248c7546286" base-type="BoolToken" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="1">
+		<init target="Application" ver="1" value="Alpha.HMI"/>
+		<init target="Right" ver="1" value="EnableControl"/>
+		<init target="SecurityContext" ver="3" ref="unit.Security.SecurityContext"/>
+	</object>
+</object>
+

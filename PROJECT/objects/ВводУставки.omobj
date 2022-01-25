@@ -1,0 +1,901 @@
+<type access-modifier="private" name="ВводУставки" display-name="Создать группу" uuid="21dfd0b5-8860-47a7-a2cb-4deceb2a9645" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="240" ver="2"/>
+	<designed target="Height" value="310" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="240" ver="2"/>
+	<designed target="WindowHeight" value="310" ver="2"/>
+	<designed target="WindowCaption" value="Данные группы" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="3" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="9e0d4a78-0218-40ad-98c7-9c44526670d5" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+		<designed target="X" value="9" ver="2"/>
+		<designed target="Y" value="22" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="220" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="Text" value="" ver="2"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="HideInput" value="false" ver="2"/>
+		<designed target="PlaceholderText" value="" ver="2"/>
+		<designed target="ReadOnly" value="false" ver="2"/>
+		<init target="Text" ver="3" ref="_currentType"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="EditFinished">
+			<body kind="om">
+				<![CDATA[// проверка на введенные данные
+if (Private.currentType=="UINT2"||Private.currentType=="UINT"||Private.currentType=="UINT4")
+{	
+	//ValidationInteger.Bottom = 0; //минимальное значени
+	//ValidationInteger.Top = 65535;//максимальное значени
+	if(InputValidatorInteger.Result==2) // если полностью верно то делаем доступной кнопку для нажатия
+	{
+		Button_1.Enabled = true;
+		TextEdit_1.FontColor=0xff000000; //черный текст
+	}
+	else
+	{
+		Button_1.Enabled = false;
+		TextEdit_1.FontColor = 0xffff0000;
+	}
+}
+
+
+if (Private.currentType=="FLOAT")
+{
+	if(InputValidatorFloat.Result==2)
+	{
+		Button_1.Enabled = true;
+		TextEdit_1.FontColor=0xff000000;
+	}
+		else
+	{
+		LinkCardUst.MainInterface.UstFunction.GenState("Ограничение по вводу значения уставки - Нижняя граница:"+ String.ToString("%2d",(Math.Round(ValidationFloat.Bottom, 2)))+",Верхная граница:"+String.ToString("%2d",(Math.Round(ValidationFloat.Top, 2))));
+		Button_1.Enabled = false;
+		TextEdit_1.FontColor = 0xffff0000;
+	}
+}]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="TextChanged">
+			<body kind="om">
+				<![CDATA[Button_1.Enabled = false;
+TextEdit_1.FontColor=0xff000000;
+// проверка на введенные данные
+if (Private.currentType=="UINT2"||Private.currentType=="UINT"||Private.currentType=="UINT4")
+{	
+	//ValidationInteger.Bottom = 0; //минимальное значени
+	//ValidationInteger.Top = 65535;//максимальное значени
+	if(InputValidatorInteger.Result==2) // если полностью верно то делаем доступной кнопку для нажатия
+	{
+		Button_1.Enabled = true;
+		TextEdit_1.FontColor=0xff000000; //черный текст
+	}
+	else
+	{
+		Button_1.Enabled = false;
+		TextEdit_1.FontColor = 0xffff0000;
+	}
+}
+
+
+if (Private.currentType=="FLOAT")
+{
+	if(InputValidatorFloat.Result==2)
+	{
+		Button_1.Enabled = true;
+		TextEdit_1.FontColor=0xff000000;
+	}
+		else
+	{
+		LinkCardUst.MainInterface.UstFunction.GenState("Ограничение по вводу значения уставки - Нижняя граница:"+ String.ToString("%2d",(Math.Round(ValidationFloat.Bottom, 2)))+",Верхная граница:"+String.ToString("%2d",(Math.Round(ValidationFloat.Top, 2))));
+		Button_1.Enabled = false;
+		TextEdit_1.FontColor = 0xffff0000;
+	}
+}]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<do-trace access-modifier="private" target="Tooltip" ver="3">
+			<body>
+				<![CDATA["Минимум:"+Str.ToString("%.2f",LinkCardUst.MainInterface.Private.LoLimit)+";"+ "Максимум:"+Str.ToString("%.2f",LinkCardUst.MainInterface.Private.HiLimit)]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f485da67-5c3f-4e44-9f5c-f224b2bc752b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="9.66667" ver="2"/>
+		<designed target="Y" value="3.30556" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="137.611" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Ввод значения уставки:" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="d53975cf-b1bd-42ee-8bbe-da962d9be9eb" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="9" ver="2"/>
+		<designed target="Y" value="262" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="110" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="Text" value="Сохранить" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0,Bold" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (TextEdit_1.Text!="")
+{
+	temp :string = Str.Replace(TextEdit_1.Text,",",".");
+	LinkCardUst.MainInterface.Table_1.TableModel_1.SetCellData(LinkCardUst.MainInterface.Private.LastRowEnterUst,LinkCardUst.MainInterface.Private.LastClmEnterUst,temp);
+	LinkCardUst.MainInterface.UstFunction.GenState("Введено новое значение уставки:"+temp);
+	Action_Close.Invoke();
+}]]>
+			</body>
+		</do-on>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="7578ed01-844f-4e28-95ac-2fcd54d09fc3" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="129.35" ver="2"/>
+		<designed target="Y" value="262" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="100" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0,Bold" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick" form-action="close"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Action_Close" display-name="Action_Close" uuid="f7a55ac2-2140-4dfd-97eb-44b222796769" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="close"/>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[LinkCardUst.APItemLoLimit.Path="";
+LinkCardUst.APItemHiLimit.Path="";]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="_currentType" display-name="_currentType" uuid="337ea6a7-7330-479e-b520-38a98126b8e9" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="UstFunction" display-name="UstFunction" uuid="3acd04e3-0e52-4935-981b-a2fa3cbd1527" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="139" ver="3"/>
+		<designed target="Y" value="6" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="19" ver="3"/>
+		<designed target="Height" value="14" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<do access-modifier="private" name="EnterUst" display-name="EnterUst" ver="4" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8">
+			<body kind="om">
+				<![CDATA[MinFloat :double = -1 * 3.4 * Math.Pow(10,38);
+MaxFloat :double = 3.4 * Math.Pow(10,38);
+
+if (getType=="UINT")
+{	
+	if(Str.IndexOf(getValue,".")==-1)
+	{
+		if((Str.ToUint8(getValue,0)>=0)&&(Str.ToUint8(getValue,0)<=65535))
+		{return true;} // проверка входит ли значение в диапзаон UINT2
+	}
+}
+
+if (getType=="UINT2")
+{	
+	if(Str.IndexOf(getValue,".")==-1)
+	{
+		if((Str.ToUint8(getValue,0)>=0)&&(Str.ToUint8(getValue,0)<=65535))
+		{return true;} // проверка входит ли значение в диапзаон UINT2
+	}
+}
+
+
+if (getType=="UINT4")
+{	
+	if(Str.IndexOf(getValue,".")==-1){
+		if((Str.ToUint8(getValue,0)>=0)&&(Str.ToUint8(getValue,0)<=4294967295)){return true;} // проверка входит ли значение в диапзаон UINT4
+	}
+}
+
+if((getType=="FLOAT"))
+{
+	if((Str.ToDouble(getValue,0)>=MinFloat)&&(Str.ToDouble(getValue,0)<=MaxFloat)){return true;} // проверка входит ли значение в диапзаон FLOAT
+}
+return false;]]>
+			</body>
+			<param access-modifier="private" name="getType" display-name="" uuid="a40794a0-d6d4-46bb-b20d-6bb194806057" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			<param access-modifier="private" name="getValue" display-name="" uuid="c141f4d0-4411-4bd6-b368-8fd1f60022e0" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		</do>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="b6279804-b464-43b2-84d9-44110f7cea21" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<object access-modifier="private" name="Private" display-name="Private" uuid="245b6e29-885d-4a47-afff-325a0ed31e5c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="138.8" ver="3"/>
+		<designed target="Y" value="5" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="19.2" ver="3"/>
+		<designed target="Height" value="15.6" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="currentType" display-name="currentType" uuid="10576b87-d51a-4941-bff7-f22de5e4ffbd" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+		<do-trace access-modifier="private" target="currentType" ver="3">
+			<body>
+				<![CDATA[LinkCardUst.MainInterface.Private.currentType]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="ValidationInteger" display-name="ValidationInteger" uuid="10e300ce-35a4-4711-96a7-80c566b2f809" base-type="NativeValidationInteger" base-type-id="6c50751c-201c-4c5d-bb3c-51a85cd0990f" ver="3">
+		<designed target="Bottom" value="0" ver="3"/>
+		<designed target="Top" value="9223372036854775807" ver="3"/>
+		<do-trace access-modifier="private" target="Bottom" ver="3">
+			<body>
+				<![CDATA[LinkCardUst.MainInterface.Private.LoLimit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Top" ver="3">
+			<body>
+				<![CDATA[LinkCardUst.MainInterface.Private.HiLimit]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="InputValidatorInteger" display-name="InputValidatorInteger" uuid="047268f6-5e59-4c4d-a7f1-edb047523a2f" base-type="InputValidator" base-type-id="d3926631-8c96-4ca0-b80c-d1953fff515c" ver="3">
+		<designed target="Input" value="" ver="3"/>
+		<do-trace access-modifier="private" target="Input" ver="3">
+			<body>
+				<![CDATA[TextEdit_1.Text]]>
+			</body>
+		</do-trace>
+		<init target="ValidationType" ver="3" ref="ValidationInteger"/>
+	</object>
+	<object access-modifier="private" name="NativeValidationRegex" display-name="NativeValidationRegex" uuid="03f84c73-0512-4081-8d78-1e5c8b4240b3" base-type="NativeValidationRegex" base-type-id="aa199343-4d4b-4a86-ba57-076fd145fe99" ver="3">
+		<designed target="PartialValidPattern" value="" ver="3"/>
+		<designed target="ValidPattern" value="" ver="3"/>
+		<init target="ValidPattern" ver="3" value="^([0-9.,]{0,20})$"/>
+		<do-trace access-modifier="private" target="ValidPattern" ver="3">
+			<body>
+				<![CDATA["^([0-9.,]{"+String.ToString(LinkCardUst.MainInterface.Private.LoLimit)+","+String.ToString(LinkCardUst.MainInterface.Private.HiLimit)+"})$"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LinkCardUst" display-name="LinkCardUst" uuid="35978849-cefd-4aaf-b002-85771be3d8fc" base-type="КартаУставок" base-type-id="ea19af27-c67a-4a19-9a34-4b1c6fa9356c" base-const="true" base-ref="true" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="ValidationFloat" display-name="ValidationFloat" uuid="8116ab9f-a8d8-45db-8192-c8f462a47d00" base-type="ValidationFloat" base-type-id="667a11f7-d486-467f-92a4-12de7d5290f4" ver="3">
+		<designed target="DigitsCount" value="2" ver="3"/>
+		<designed target="Bottom" value="-1.79769e+308" ver="3"/>
+		<designed target="Top" value="1.79769e+308" ver="3"/>
+		<do-trace access-modifier="private" target="Bottom" ver="3">
+			<body>
+				<![CDATA[LinkCardUst.MainInterface.Private.LoLimit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Top" ver="3">
+			<body>
+				<![CDATA[LinkCardUst.MainInterface.Private.HiLimit]]>
+			</body>
+		</do-trace>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="InputValidatorFloat" display-name="InputValidatorFloat" uuid="454f3e3d-9a48-4f0c-8ae4-439614ddf74e" base-type="InputValidator" base-type-id="d3926631-8c96-4ca0-b80c-d1953fff515c" ver="3">
+		<designed target="Input" value="" ver="3"/>
+		<do-trace access-modifier="private" target="Input" ver="3">
+			<body>
+				<![CDATA[Str.Replace(TextEdit_1.Text,".",",")]]>
+			</body>
+		</do-trace>
+		<init target="ValidationType" ver="3" ref="ValidationFloat"/>
+	</object>
+	<object access-modifier="private" name="Button_3" display-name="Button_3" uuid="0a99a4b8-8337-40a9-9661-5991e962aedd" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="1" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_4" display-name="Button_4" uuid="10c58cab-cc41-4071-b48f-24104ed66acd" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="2" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_5" display-name="Button_5" uuid="954475f2-2e0a-4f6a-9b7c-8da6d1d84191" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="3" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_6" display-name="Button_6" uuid="f8929bc1-10b3-45ae-96e0-02de99d932c9" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="4" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit.Text_1.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_7" display-name="Button_7" uuid="44f26e6f-231c-4488-942d-e1fcf8455e23" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="5" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_8" display-name="Button_8" uuid="726d4feb-a1d0-45b9-a88c-a9e00e6fddff" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="6" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_9" display-name="Button_9" uuid="f0bbe91b-9527-41cb-8c5c-789d870eb202" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="7" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_10" display-name="Button_10" uuid="9753daf8-acb9-4536-bcb5-5b99b54198dc" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="8" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_11" display-name="Button_11" uuid="47983fc5-a7f6-4e61-9df0-b1349d5df343" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="161" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="9" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_0" display-name="Button_0" uuid="e9ff907e-2612-43f3-a9df-bc6a03b946f0" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="65" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="0" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_minus" display-name="Button_minus" uuid="23a067f4-c165-4ea1-9099-c5b75e06794f" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="5" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="−" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="om">
+				<![CDATA[val: string = TextEdit_1.Text;
+if(Pressed)
+{
+	if(Str.StartsWith(val,"-"))
+	{
+		val = Str.Remove(val, 0, 1);
+	}
+	else
+	{
+		val = Str.Concat("-", val);
+	}
+}
+else
+{
+	val = "-";
+	Pressed = true;
+}
+
+TextEdit_1.Text = val;]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_dot" display-name="Button_dot" uuid="1207a610-ef6f-4bba-99ac-65f1d23b270f" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="125" ver="1"/>
+		<designed target="Y" value="211" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="," ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="javascript">
+				<![CDATA[if(Pressed)
+{
+	if (TextEdit_1.Text.length < 21){	
+	TextEdit_1.Text += me.Text;
+	}else {
+	TextEdit_1.Text= TextEdit_1.Text.substring(0, TextEdit_1.Text.length-1) + me.Text;
+	//DebugTool_1.Log(TextEdit.Text.length);
+	}
+}
+else
+{
+	TextEdit_1.Text = "0,";//+ me.Text;
+	Pressed = true;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_back" display-name="Button_back" uuid="71392e1e-b738-41c3-870e-6476daf213c1" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="185" ver="1"/>
+		<designed target="Y" value="61" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" ver="1" value=""/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="←" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="om">
+				<![CDATA[val: string = TextEdit_1.Text;
+if(Str.Length(val) > 0)
+{
+	val = Str.Remove(val, Str.Length(val) - 1, 1);
+}
+Pressed = true;
+TextEdit_1.Text = val;
+if (Str.Length(val)==0){
+Pressed = false;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_clear" display-name="Button_clear" uuid="bda2455e-308c-4e95-aeee-9b2b4eca28fd" base-type="Button" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="1">
+		<designed target="X" value="185" ver="1"/>
+		<designed target="Y" value="111" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="50" ver="1"/>
+		<designed target="Height" value="40" ver="1"/>
+		<designed target="Text" value="C" ver="1"/>
+		<designed target="Font" value="PT Astra Sans,14,-1,5,75,0,0,0,0,0" ver="1"/>
+		<designed target="FontColor" value="0xff000000" ver="1"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="ButtonPressed" ver="4">
+			<body kind="om">
+				<![CDATA[TextEdit_1.Text = "";
+Pressed = true;
+if (Str.Length(TextEdit_1.Text) == 0){
+Pressed = false;
+}]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Pressed" display-name="Pressed" uuid="7eff508d-86c6-4e9b-a0e5-a3669c3168e4" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="1"/>
+</type>
+

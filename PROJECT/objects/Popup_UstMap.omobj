@@ -1,0 +1,456 @@
+<type access-modifier="private" name="Popup_UstMap" display-name="Popup_UstMap" uuid="cf1e3b64-c5b3-4886-a9c4-336de84a955f" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="1000" ver="3"/>
+	<designed target="Height" value="590" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="1" ver="3"/>
+	<designed target="BrushColor" value="0xffcdcda5" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="1000" ver="3"/>
+	<designed target="WindowHeight" value="590" ver="3"/>
+	<designed target="WindowCaption" value="Карта уставок" ver="3"/>
+	<designed target="ShowWindowCaption" value="false" ver="3"/>
+	<designed target="ShowWindowMinimize" value="false" ver="3"/>
+	<designed target="ShowWindowMaximize" value="false" ver="3"/>
+	<designed target="ShowWindowClose" value="false" ver="3"/>
+	<designed target="AlwaysOnTop" value="false" ver="3"/>
+	<designed target="WindowSizeMode" value="0" ver="3"/>
+	<designed target="WindowBorderStyle" value="1" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="1" ver="3"/>
+	<param access-modifier="private" name="in_ConfPath" display-name="in_ConfPath" uuid="466281f2-815e-49ab-89f2-9b517f1fa3f3" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<param access-modifier="private" name="in_FileName" display-name="in_FileName" uuid="bf8b2c2d-187c-406e-a7aa-d40807b04b6b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<param access-modifier="private" name="in_ArchivePath" display-name="in_ArchivePath" uuid="e5c7c695-b343-4d7a-a19f-574ee7ee24b7" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="Window" display-name="Window" uuid="fb11648d-62a1-4743-9e44-1817005e5cc3" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="3">
+		<init target="Group" ver="3" ref="unit.OpenWindows.WindowGroup"/>
+		<do-on access-modifier="private" name="close" display-name="close" ver="3" event="MessageReceived" form-action="close"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="CloseRequested">
+		<body kind="om">
+			<![CDATA[unit.OpenWindows.Popup_UstMap = false;
+here.Close();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Opened">
+		<body kind="om">
+			<![CDATA[unit.OpenWindows.Popup_UstMap = true;
+unit.Global.Close_Menu = true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="WindowFrame" display-name="WindowFrame" uuid="76f7acc9-35bb-41ac-a336-c0bda73c08d3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="1" ver="3"/>
+		<designed target="Y" value="2" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="998" ver="3"/>
+		<designed target="Height" value="588" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="0xff000000" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="2" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Header" display-name="Header" uuid="127ead23-4bd8-4ed5-b823-fa9291c52609" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="5" ver="3"/>
+		<designed target="Y" value="5" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="961" ver="3"/>
+		<designed target="Height" value="20" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xff2370b3" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseRelease">
+			<body kind="om">
+				<![CDATA[MoveMaker.Active = false;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+			<body kind="om">
+				<![CDATA[unit.WindowsLimit.MouseClick_X.Value = ScreenX(MouseX,0);
+unit.WindowsLimit.MouseClick_Y.Value = ScreenY(0,MouseY);
+MoveMaker.Active=true;]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="MoveMaker" display-name="MoveMaker" uuid="6d589152-632a-4bfb-9633-5a9d875b8b53" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+			<designed target="Period" value="100" ver="3"/>
+			<designed target="Active" value="false" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+				<body kind="om">
+					<![CDATA[deltaX: int4 = ScreenX(MouseX,0) - unit.WindowsLimit.MouseClick_X.Value;
+deltaY: int4 = ScreenY(0,MouseY) - unit.WindowsLimit.MouseClick_Y.Value;
+here.WindowX+=deltaX;
+here.WindowY+=deltaY;
+unit.WindowsLimit.MouseClick_X.Value = ScreenX(MouseX,0);
+unit.WindowsLimit.MouseClick_Y.Value = ScreenY(0,MouseY);]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Description" display-name="Description" uuid="dce33091-00e9-4667-93d5-740381260801" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+			<designed target="X" value="0" ver="1"/>
+			<designed target="Y" value="0" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="362" ver="1"/>
+			<designed target="Height" value="21" ver="1"/>
+			<designed target="Text" value="Карта уставок" ver="1"/>
+			<designed target="Font" value="PT Astra Sans,12,-1,5,75,0,0,0,0,0,Bold" ver="1"/>
+			<designed target="FontColor" value="0xffffffff" ver="1"/>
+			<designed target="TextAlignment" value="132" ver="1"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<do-trace access-modifier="private" target="Text" ver="3">
+				<body>
+					<![CDATA[UstMapName]]>
+				</body>
+			</do-trace>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="99cda39b-67f2-423a-942a-1984cf1e8974" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+			<designed target="Orientation" value="1" ver="3"/>
+			<designed target="Gap" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="8ee20529-88f9-4df2-8e4d-9c32f508efd3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="53" ver="3"/>
+			<designed target="Y" value="142" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="1" ver="3"/>
+			<designed target="Height" value="1" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="4278190080" ver="3"/>
+			<designed target="BrushStyle" value="0" ver="3"/>
+			<object access-modifier="private" name="ClosseButton" display-name="ClosseButton" uuid="126d9b12-d107-462c-aa57-048062fc0f5d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+				<designed target="X" value="8" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="20" ver="3"/>
+				<designed target="Height" value="20" ver="3"/>
+				<designed target="RoundingRadius" value="0" ver="3"/>
+				<designed target="PenColor" value="4278190080" ver="3"/>
+				<designed target="PenStyle" value="0" ver="3"/>
+				<designed target="PenWidth" value="1" ver="3"/>
+				<designed target="BrushColor" value="0xffcdcdcd" ver="3"/>
+				<designed target="BrushStyle" value="1" ver="3"/>
+				<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="bdf98907-c72e-46b5-b382-dd202d878cde" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="20" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="20.5" ver="3"/>
+					<designed target="Height" value="20.5" ver="3"/>
+					<designed target="PenColor" value="0xfff5f5f5" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="1.5" ver="3"/>
+					<designed target="BrushColor" value="0xffffffff" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="c7466950-fc5e-44b7-8baa-7b64f95c735f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="ade85cb5-52b9-4a72-84c3-71f1b601cd16" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="c0f00ad4-1bc4-4a22-9c8b-2fb5315f342f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<do-trace access-modifier="private" target="PenColor" ver="3">
+						<conditional-expr>
+							<condition>
+								<![CDATA[Math.TestBit(Buttons,String.ToUint1(parent.BitNum.Text,0))]]>
+							</condition>
+							<expr>
+								<![CDATA[0xff626262]]>
+							</expr>
+						</conditional-expr>
+						<default-expr>
+							<expr>
+								<![CDATA[0xfff5f5f5]]>
+							</expr>
+						</default-expr>
+					</do-trace>
+				</object>
+				<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="3f6ad509-6a01-4654-b6e3-8087b150d5e9" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3" cardinal="1">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="20" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="20.5" ver="3"/>
+					<designed target="Height" value="20.5" ver="3"/>
+					<designed target="PenColor" value="0xff626262" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="1.5" ver="3"/>
+					<designed target="BrushColor" value="0xffffffff" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="e2d5389e-ea4d-461a-95f6-214dc0fa8291" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="367d36ab-7d4d-48ff-85ae-ed76a851b1f1" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="81bb2684-95f2-4a07-89db-ba46a98f5f09" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="20.5" ver="3"/>
+						<designed target="Y" value="-20.5" ver="3"/>
+					</object>
+					<do-trace access-modifier="private" target="PenColor" ver="3">
+						<conditional-expr>
+							<condition>
+								<![CDATA[Math.TestBit(Buttons,String.ToUint1(parent.BitNum.Text,0))]]>
+							</condition>
+							<expr>
+								<![CDATA[0xfff5f5f5]]>
+							</expr>
+						</conditional-expr>
+						<default-expr>
+							<expr>
+								<![CDATA[0xff626262]]>
+							</expr>
+						</default-expr>
+					</do-trace>
+				</object>
+				<object access-modifier="private" name="BitNum" display-name="BitNum" uuid="59b924f2-ff09-4621-9788-1c9dda662d38" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+					<designed target="X" value="2" ver="3"/>
+					<designed target="Y" value="-0.666667" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="15" ver="3"/>
+					<designed target="Height" value="20" ver="3"/>
+					<designed target="Text" value="20" ver="3"/>
+					<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="3"/>
+					<designed target="FontColor" value="4278190080" ver="3"/>
+					<designed target="TextAlignment" value="33" ver="3"/>
+					<init target="Visible" ver="3" value="false"/>
+				</object>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+					<body kind="om">
+						<![CDATA[if (!Math.TestBit(Buttons,String.ToUint1(BitNum.Text,0))){
+Buttons=TypeConvert.ToUint4(Math.Pow(2,String.ToUint4(BitNum.Text,0)));
+}]]>
+					</body>
+				</do-on>
+				<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseRelease">
+					<body kind="om">
+						<![CDATA[Buttons=0;]]>
+					</body>
+				</do-on>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseRelease" form-action="close"/>
+				<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="1aa23239-c0de-44cf-99a1-c72172623ea3" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+					<designed target="X" value="4" ver="3"/>
+					<designed target="Y" value="3" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="13" ver="3"/>
+					<designed target="Height" value="13" ver="3"/>
+					<designed target="PenColor" value="0xffffffff" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="2" ver="3"/>
+					<designed target="BrushColor" value="4278190080" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="f4b5184d-01d5-464f-8f4c-f0d9a3c8bbe1" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="6de293a6-03f9-40b4-a429-18f83ec6ce66" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="13" ver="3"/>
+						<designed target="Y" value="13" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="4249f093-1498-45ec-803e-6dd0cdfa12ca" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+						<designed target="Rotation" value="0" ver="3"/>
+						<designed target="Scale" value="1" ver="3"/>
+						<designed target="Visible" value="true" ver="3"/>
+						<designed target="Enabled" value="true" ver="3"/>
+						<designed target="Tooltip" value="" ver="3"/>
+						<designed target="Width" value="13" ver="3"/>
+						<designed target="Height" value="13" ver="3"/>
+						<designed target="PenColor" value="0xffffffff" ver="3"/>
+						<designed target="PenStyle" value="1" ver="3"/>
+						<designed target="PenWidth" value="2" ver="3"/>
+						<designed target="BrushColor" value="4278190080" ver="3"/>
+						<designed target="BrushStyle" value="0" ver="3"/>
+						<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="c6614656-f2d1-4f22-829f-0451d25722dc" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+							<designed target="X" value="0" ver="3"/>
+							<designed target="Y" value="13" ver="3"/>
+						</object>
+						<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="02320a1b-a793-4365-af24-c43ea54448af" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+							<designed target="X" value="13" ver="3"/>
+							<designed target="Y" value="0" ver="3"/>
+						</object>
+						<designed target="ZValue" value="0" ver="4"/>
+						<designed target="Opacity" value="1" ver="4"/>
+					</object>
+					<designed target="ZValue" value="0" ver="4"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseEnter">
+					<body kind="om">
+						<![CDATA[me.Line_5.PenWidth=2;
+me.Line_6.PenWidth=2;]]>
+					</body>
+				</do-on>
+				<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseLeave">
+					<body kind="om">
+						<![CDATA[me.Line_5.PenWidth=1;
+me.Line_6.PenWidth=1;]]>
+					</body>
+				</do-on>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="7eb85042-458a-405b-bd77-0c53a42aec06" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+				<designed target="Weight" value="1e-08" ver="3"/>
+			</object>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="SetPoint" display-name="SetPoint" uuid="51813d73-52a0-4bea-94e0-a9c6c9149a70" base-type="КартаУставок" base-type-id="ea19af27-c67a-4a19-9a34-4b1c6fa9356c" ver="3">
+		<designed target="X" value="6" ver="3"/>
+		<designed target="Y" value="32" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Width" value="986" ver="3"/>
+		<designed target="Height" value="550" ver="3"/>
+		<init target="Использовать безопасность" ver="3" value="true"/>
+		<do-trace access-modifier="private" target="Путь до файла конфигурации" ver="3">
+			<body>
+				<![CDATA[here.ConfPath]]>
+			</body>
+		</do-trace>
+		<init target="Путь до файла конфигурации" ver="3">
+			<expr>
+				<![CDATA[here.in_ConfPath]]>
+			</expr>
+		</init>
+		<init target="Название файла карты уставок" ver="3">
+			<expr>
+				<![CDATA[here.in_FileName]]>
+			</expr>
+		</init>
+		<init target="Путь для сохранения фалов архива" ver="3">
+			<expr>
+				<![CDATA[here.in_ArchivePath]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Название файла карты уставок" ver="3">
+			<body>
+				<![CDATA[here.FileName]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Путь для сохранения фалов архива" ver="3">
+			<body>
+				<![CDATA[here.ArchivePath]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Тег для генерации сообщений(Дианмический)" ver="4">
+			<body>
+				<![CDATA[MessagesOperTag.Value]]>
+			</body>
+		</do-trace>
+		<init target="Тег для генерации сообщений" ver="4" value="MessagesOperTag.Value"/>
+		<init target="init_ApSource" ver="4" ref="unit.Global.OPCServer"/>
+	</object>
+	<object access-modifier="private" name="Buttons" display-name="Buttons" uuid="dadb128b-b2cd-4d56-bc16-459acd6e012c" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="3"/>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="ab4be0d0-6559-4adc-b0dc-c96003dc2be6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+		<designed target="X" value="397" ver="3"/>
+		<designed target="Y" value="-71" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="52" ver="3"/>
+		<designed target="Height" value="42" ver="3"/>
+		<designed target="Text" value="V_1" ver="3"/>
+		<designed target="Font" value="Sans Serif,20,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="0xffff00ff" ver="3"/>
+		<designed target="TextAlignment" value="33" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<param access-modifier="private" name="in_UstMapName" display-name="in_UstMapName" uuid="ea184df2-bab5-413f-805d-7fed643cf02a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="UstMapName" display-name="UstMapName" uuid="104201e3-087f-40b3-86e8-b35f980eb86d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<init target="UstMapName" ver="3">
+		<expr>
+			<![CDATA[here.in_UstMapName]]>
+		</expr>
+	</init>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="WindowPosChanged">
+		<body kind="om">
+			<![CDATA[SetBoundingRegion(unit.WindowsLimit.Frame_X,unit.WindowsLimit.Frame_Y,unit.WindowsLimit.Frame_Width,unit.WindowsLimit.Frame_Height);]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="ConfPath" display-name="ConfPath" uuid="e54f5f6f-d83c-4524-b075-35e12df900b5" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="FileName" display-name="FileName" uuid="8048d683-35b5-4dd3-b260-24f0c7136cd1" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="ArchivePath" display-name="ArchivePath" uuid="9080512a-db1f-4fec-a48f-b2060b19ee2f" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<init target="ConfPath" ver="3">
+		<expr>
+			<![CDATA[here.in_ConfPath]]>
+		</expr>
+	</init>
+	<init target="FileName" ver="3">
+		<expr>
+			<![CDATA[here.in_FileName]]>
+		</expr>
+	</init>
+	<init target="ArchivePath" ver="3">
+		<expr>
+			<![CDATA[here.in_ArchivePath]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="MessagesOperTag" display-name="MessagesOperTag" uuid="a47959d8-172f-4e75-93fe-0e34e824290d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<init target="MessagesOperTag" ver="4" value="MessagesOper.GenSource"/>
+</type>
+

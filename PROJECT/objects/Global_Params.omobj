@@ -1,0 +1,46 @@
+<object access-modifier="private" name="Global_Params" display-name="Global_Params" uuid="b5921cb7-38b8-4a05-ab51-f928a14c38c7" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="2">
+	<object access-modifier="private" name="ViewConfiguration" display-name="ViewConfiguration" uuid="e9657b60-e9d1-41dc-bcb0-2febe8587724" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="Application" ver="2" value="system:Alpha.Security"/>
+		<init target="Right" ver="2" value="ViewConfiguration"/>
+		<init target="SecurityContext" ver="2" ref="unit.SecurityParams.Global_SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="ConfigurationAccess" display-name="ConfigurationAccess" uuid="33e3fa69-343d-4da8-b095-1ca04eef786c" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="Application" ver="2" value="system:Alpha.Security"/>
+		<init target="Right" ver="2" value="ConfigurationAccess"/>
+		<init target="SecurityContext" ver="2" ref="unit.SecurityParams.Global_SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="currentUserLogin" display-name="currentUserLogin" uuid="69b4f786-67d0-4810-bdba-3e46c5bca405" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="param_AppID" display-name="param_AppID" uuid="68db7a62-37fb-4efc-84f9-e62515eefb40" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="param_tokenID" display-name="param_tokenID" uuid="0fdafda9-201c-4f14-8a90-6afcd760ff94" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="param_CurValue" display-name="param_CurValue" uuid="0edd3a0b-b9f0-41dc-bbb2-2765a35e0c6f" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="guestMode" display-name="guestMode" uuid="6664f900-0d68-4d5c-923f-62f8bab3a965" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="noUsrConnected" display-name="noUsrConnected" uuid="14204f0c-36ce-4429-8dd9-b2ffe6a2a7a3" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="Mode" display-name="Mode" uuid="669258b4-959e-454d-9e4a-9cc084cb5eb6" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[unit.SecurityParams.CanSave = true;
+unit.SecurityParams.needSave = false;
+
+if (value != 5) 
+{
+	unit.SecurityParams.CurrentUser_Rights = "";
+	unit.SecurityParams.CurrentUser_EffectiveRights = "";
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="4412e46a-28dd-47ee-9185-3c73c195c138" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="CloseApplication" display-name="CloseApplication" uuid="6306c91e-4dff-4ee9-ae45-8f05a3d54a27" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="Application" ver="2" value="Alpha.Hmi"/>
+		<init target="Right" ver="2" value="CloseApplication"/>
+		<init target="SecurityContext" ver="2" ref="unit.SecurityParams.Global_SecurityContext"/>
+	</object>
+	<object access-modifier="private" name="valuePasswordComplexity" display-name="valuePasswordComplexity" uuid="f2986d75-c792-4012-9740-87243516ebee" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="2"/>
+	<object access-modifier="private" name="appRowSelected" display-name="appRowSelected" uuid="384c62a1-964f-40a5-9726-e973dab8ea8f" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="appRightRowSelected" display-name="appRightRowSelected" uuid="1fb0a661-e564-4f29-8adc-50c3017ec0ce" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<init target="appRightRowSelected" ver="3" value="false"/>
+	<object access-modifier="private" name="userRowSelected" display-name="userRowSelected" uuid="23a73812-e1c3-483c-b777-2df82a5302ef" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="groupRowSelected" display-name="groupRowSelected" uuid="89ef5ba5-6ee9-46aa-9df0-e6bb936ddd08" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="newUserCreation" display-name="newUserCreation" uuid="c94817f6-77c2-4315-b4d8-e4cf46961acc" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+</object>
+

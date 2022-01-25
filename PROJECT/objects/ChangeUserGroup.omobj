@@ -1,0 +1,335 @@
+<type access-modifier="private" name="ChangeUserGroup" display-name="GroupList_1" uuid="af7a739b-e65e-4aa0-a684-9d43e247e7b4" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="205" ver="2"/>
+	<designed target="Height" value="340" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="205" ver="2"/>
+	<designed target="WindowHeight" value="340" ver="2"/>
+	<designed target="WindowCaption" value="Выбор группы" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="3" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="08da90f5-5021-406a-9c6e-ffde0dd68466" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Width" value="204" ver="2"/>
+		<designed target="Height" value="306" ver="2"/>
+		<designed target="SelectionBehavior" value="1" ver="2"/>
+		<designed target="SelectionMode" value="1" ver="2"/>
+		<object access-modifier="private" name="TableColumn_description" display-name="TableColumn_description" uuid="23bc0c22-fd36-4c2a-8f7e-62569569adaa" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="description" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="description" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="20" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="true" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_DispName" display-name="TableColumn_DispName" uuid="3a978364-e498-4d5e-b5b5-6997e22b9abd" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Группа" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="displayName" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="202" ver="2"/>
+			<designed target="WidthResizeMode" value="1" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseClick">
+				<body kind="om">
+					<![CDATA[// запись выбранной группы в темповую переменную формы
+temp_userGroup = Variant.ToString(Table_1.GetCellData(row,1),"Non");
+temp_userGroupUid = Variant.ToString(Table_1.GetCellData(row,2),"Non");
+]]>
+				</body>
+			</do-on>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<do-trace access-modifier="private" target="Id" ver="3">
+				<body>
+					<![CDATA[(NeedDeleteGroup)?("groupName"):("displayName")]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="TableColumn_Uid" display-name="TableColumn_Uid" uuid="2bc0c96a-cbda-4a5a-9571-dafd3941d98e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="uid" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="uid" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="0" ver="2"/>
+			<designed target="WidthResizeMode" value="0" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="true" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<do-trace access-modifier="private" target="Id" ver="3">
+				<body>
+					<![CDATA[(NeedDeleteGroup)?("groupID"):("uid")]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="InMemoryTable" display-name="InMemoryTable" uuid="775363fe-2935-4ffe-8cea-985dd8c640af" base-type="InMemoryTable" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="2">
+			<designed target="MaxRowCount" value="2" ver="2"/>
+			<designed target="Frozen" value="false" ver="3"/>
+		</object>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="30" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<designed target="LatestRowTracking" value="false" ver="3"/>
+		<init target="TableModel" ver="3" ref="InMemoryTable"/>
+		<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="SelectionChanged">
+			<body kind="om">
+				<![CDATA[if (GetSelectedRows() != "[]") ActionButton.Enabled = true;
+else ActionButton.Enabled = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="allGroups" display-name="allGroups" uuid="67ad0fc5-b522-489f-be4e-df34127a4cff" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (NeedDeleteGroup || !bInit) return;
+DebugTool_1.Log(value);
+Table_1.TableModel.Clear();
+//Загрузка данных
+if (value != "")
+{
+	Table_1.InMemoryTable.SetDataAsJson(value);
+	Table_1.InMemoryTable.BeginReadAsync();
+}
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<do-trace access-modifier="private" target="allGroups" ver="2">
+		<body>
+			<![CDATA[unit.SecurityParams.CurrentGroupList]]>
+		</body>
+	</do-trace>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="om">
+			<![CDATA[Table_1.TableModel.Clear();
+
+unit.SecurityParams.SecurityManagerCurrentUser.GetGroupsList();
+unit.SecurityParams.SecurityManager.RequestGroupList();
+bInit = true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="ActionButton" display-name="ActionButton" uuid="b101fb31-2a26-4937-a3b7-45b74763c885" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+		<designed target="X" value="15" ver="2"/>
+		<designed target="Y" value="312" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="Text" value="Действие" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (NeedDeleteGroup==false)
+{
+	unit.SecurityParams.CurrentUser_Group = temp_userGroup;
+	unit.SecurityParams.CurrentUser_GroupUid = temp_userGroupUid;
+}
+else
+{
+	unit.SecurityParams.SecurityManagerCurrentUser.DeleteGroup(temp_userGroupUid);
+	unit.SecurityParams.CurrentUser_Group = unit.SecurityParams.UserGroup(unit.SecurityParams.SecurityManagerCurrentUser.GetGroupsList());
+	unit.SecurityParams.UserRightUpdate=true;
+}
+unit.SecurityParams.needSave = true;
+Action_Close.Invoke();
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Text" ver="2">
+			<conditional-expr>
+				<condition>
+					<![CDATA[NeedDeleteGroup==false]]>
+				</condition>
+				<expr>
+					<![CDATA["Добавить"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[NeedDeleteGroup==true]]>
+				</condition>
+				<expr>
+					<![CDATA["Удалить"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ButtonPressed">
+			<body kind="javascript">
+				<![CDATA[if (NeedDeleteGroup==false)
+{
+	//unit.SecurityParams.CurrentUser_Group = temp_userGroup;
+	//unit.SecurityParams.CurrentUser_GroupUid = temp_userGroupUid;
+	AddGroupToUser();
+}
+else
+{
+	unit.SecurityParams.SecurityManagerCurrentUser.DeleteGroup(temp_userGroupUid);
+	unit.SecurityParams.CurrentUser_Group = unit.SecurityParams.UserGroup(unit.SecurityParams.SecurityManagerCurrentUser.GetGroupsList());
+	//unit.SecurityParams.UserRightUpdate=true;
+}
+unit.SecurityParams.needSave = true;
+Action_Close.Invoke();
+]]>
+			</body>
+		</do-on>
+		<init target="Enabled" ver="3" value="false"/>
+	</object>
+	<object access-modifier="private" name="CancelButton" display-name="CancelButton" uuid="6b145e63-455b-45b3-8054-6f3259a8027b" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+		<designed target="X" value="113" ver="2"/>
+		<designed target="Y" value="312" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="25" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick" form-action="close"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ButtonPressed" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="currentUserGroup" display-name="currentUserGroup" uuid="459cf792-2f51-4d31-931b-9d49b46c8cbf" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (!NeedDeleteGroup || !bInit) return;
+DebugTool_1.Log(value);
+Table_1.TableModel.Clear();
+//Загрузка данных
+if (value!="")
+{
+	Table_1.InMemoryTable.SetDataAsJson(value);
+	Table_1.InMemoryTable.BeginReadAsync();
+}
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="temp_userGroup" display-name="temp_userGroup" uuid="c62a008d-3bd8-499a-a6ad-e4bf9dca38e4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<object access-modifier="private" name="temp_userGroupUid" display-name="temp_userGroupUid" uuid="ae984b47-224e-4db9-b2c3-732b843097e7" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="9198ed98-1329-4c12-80d3-189a3901a069" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Action_Close" display-name="Action_Close" uuid="319f9833-a888-4d41-a751-b8316f1ac10b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="NeedDeleteGroup" display-name="NeedDeleteGroup" uuid="24156e6c-c1d5-4702-8f05-bc3a9465db19" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-trace access-modifier="private" target="NeedDeleteGroup" ver="3">
+		<body>
+			<![CDATA[unit.SecurityParams.CurrentUser_Group != ""]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="currentUserGroup" ver="3">
+		<body>
+			<![CDATA[unit.SecurityParams.CurrentUser_Group_RawValue]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="424cddfd-b424-4daa-b965-60ee6f354ffc" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[allGroups = allGroups;
+currentUserGroup = currentUserGroup;]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="AddGroupToUser" display-name="AddGroupToUser" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var object = {};
+object.data = [];
+
+unit.SecurityParams.CurrentUser_Group.Value = temp_userGroup;
+unit.SecurityParams.CurrentUser_GroupUid.Value = temp_userGroupUid;
+
+object.data = [{'groupID':`${temp_userGroupUid}`, 'groupName':`${temp_userGroup}`}];
+unit.SecurityParams.CurrentUser_Group_RawValue.Value = JSON.stringify(object); // запись в единую структуру групп пользователя (для дальнейшей загрузки)
+]]>
+		</body>
+	</do>
+</type>
+

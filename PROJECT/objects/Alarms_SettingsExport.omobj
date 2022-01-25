@@ -1,0 +1,204 @@
+<type ver="2" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" base-type="Form" uuid="d70e4b6b-9fd8-4ea9-91d1-e367555ed827" display-name="Alarms_SettingsExport" name="Alarms_SettingsExport" access-modifier="private">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="615" ver="2"/>
+	<designed target="Height" value="380" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="pSettingsForm" display-name="pSettingsForm" uuid="17cb5a03-e04f-4826-96f5-6fda34fdf764" base-type="SettingsForm" base-type-id="82dc7618-130c-486c-840d-5d302f40306b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="01b27932-b734-4b65-a7f1-5a4b16a2514c" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="925eca99-27a1-480e-835a-3bf805a9d75f" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="bDefSet" display-name="bDefSet" uuid="f1663841-35d7-435e-bace-84b17fb90599" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) pSettingsForm.Close();
+]]>
+		</body>
+	</do-on>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="ViewColumnSettings" display-name="ViewColumnSettings" uuid="6cd46916-c745-4bbe-aeec-957a82025483" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="39" ver="2"/>
+		<designed target="Y" value="41" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="243" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="Отображать диалог выбора столбцов" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (me.Focus)
+{
+	pSettingsForm.Settings.Export.ViewColumnSettings = state;
+	pSettingsForm.CheckModify();
+}
+
+
+
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="Opened">
+		<body kind="javascript">
+			<![CDATA[PathBox.Path.Text = pSettingsForm.Settings.Export.Path;
+ViewColumnSettings.State = pSettingsForm.Settings.Export.ViewColumnSettings;
+
+bInit = true;
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш]]>
+		</body>
+	</do-on>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="PathBox" display-name="PathBox" uuid="17037ab6-3d07-4c8f-b389-f0820a68496d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="222" ver="4"/>
+		<designed target="Y" value="9" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="335" ver="4"/>
+		<designed target="Height" value="20" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="d3200b7f-132c-49e0-8e0d-e88ad5d228e2" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="Ошибка ввода. Неверный формат пути директории" ver="2"/>
+			<designed target="Width" value="335" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="b3d1eef1-e6ec-4307-adef-31da32c548f5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Path" display-name="Path" uuid="f60d8c29-bcd0-49fa-a84c-16fb46b4c51b" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+			<designed target="X" value="0" ver="2"/>
+			<designed target="Y" value="0" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="335" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Путь до файла" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="HideInput" value="false" ver="2"/>
+			<designed target="PlaceholderText" value="" ver="2"/>
+			<designed target="ReadOnly" value="false" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="030dcd70-76b5-4a3f-9a92-75237adc6bf6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-183.167" ver="2"/>
+				<designed target="Y" value="1" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="171" ver="2"/>
+				<designed target="Height" value="20" ver="2"/>
+				<designed target="Text" value="Папка для экспорта файлов:" ver="2"/>
+				<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="TextChanged">
+				<body kind="javascript">
+					<![CDATA[var regex;
+if (bInit)
+{
+	pSettingsForm.errorForm4 = false;
+	RecBorder_Alarm.Visible = false;
+if (!pSettingsForm.pAlarms.Main_panel.private.Linux) regex = /^([A-Za-z]:)(\\[A-ZА-Яa-zа-я_\-\s0-9\.]+)+$/;
+else regex = /^\/.+[^\/]$/;
+	
+	if (!regex.test(text)) 
+	{
+		RecBorder_Alarm.Visible = true;
+		pSettingsForm.errorForm4 = true;
+	}
+	pSettingsForm.Settings.Export.Path = text;
+	pSettingsForm.CheckModify();
+	pSettingsForm.CheckError();
+}
+]]>
+				</body>
+			</do-on>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="4">
+				<body>
+					<![CDATA[pSettingsForm.pAlarms.FileSystemAccess]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+</type>
+

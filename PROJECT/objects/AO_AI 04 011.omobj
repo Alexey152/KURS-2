@@ -1,0 +1,226 @@
+<type access-modifier="private" name="AO_AI 04 011" display-name="AO_AI 04 011" uuid="9029ef46-6048-4171-b530-1c8bd6b58134" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="e5927d1b-4c4b-4e66-af55-e28a11ab9595" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="180" ver="2"/>
+		<designed target="RoundingRadius" value="2" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="2" ver="2"/>
+		<designed target="BrushColor" value="0xff000000" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<object access-modifier="private" name="RadialGradient_1" display-name="RadialGradient_1" uuid="e54fbd03-8824-46f2-bfa5-e09055d56e62" base-type="RadialGradient" base-type-id="ec8b2b95-2c92-44b2-a9aa-3ce4fc0f08b9" ver="2">
+			<designed target="XCenter" value="0.2" ver="2"/>
+			<designed target="YCenter" value="0.5" ver="2"/>
+			<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="0a075d70-ccba-4061-94d8-63bcfaa6f015" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="2">
+				<designed target="Position" value="0" ver="2"/>
+				<designed target="Color" value="0xff0b0b0b" ver="2"/>
+			</object>
+			<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="f326c154-9d81-4cf4-a10c-3e23d775f1ed" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="2">
+				<designed target="Position" value="0.9" ver="2"/>
+				<designed target="Color" value="0xff3b3b3b" ver="2"/>
+			</object>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<object access-modifier="private" name="ChA_Mod_1" display-name="ChA_Mod_1" uuid="68299ced-15f0-4140-8c93-ae52309aa688" base-type="ChA_Mod" base-type-id="0b885d26-0f40-42cd-bb91-08cc211b1edf" ver="4">
+			<designed target="X" value="-1" ver="4"/>
+			<designed target="Y" value="12" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1.5" ver="4"/>
+			<init target="in_Tag" ver="4" ref="here.in_Alias"/>
+			<init target="in_Ch_Num" ver="4" value="C1"/>
+		</object>
+		<object access-modifier="private" name="ChA_Mod_2" display-name="ChA_Mod_2" uuid="375a2986-957d-4b17-822e-ddf3240faa0f" base-type="ChA_Mod" base-type-id="0b885d26-0f40-42cd-bb91-08cc211b1edf" ver="4">
+			<designed target="X" value="-1" ver="4"/>
+			<designed target="Y" value="32" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1.5" ver="4"/>
+			<init target="in_Tag" ver="4" ref="here.in_Alias"/>
+			<init target="in_Ch_Num" ver="4" value="C2"/>
+		</object>
+		<object access-modifier="private" name="ChA_Mod_3" display-name="ChA_Mod_3" uuid="702b8aaa-6a13-4175-bf61-88501869fc0c" base-type="ChA_Mod" base-type-id="0b885d26-0f40-42cd-bb91-08cc211b1edf" ver="4">
+			<designed target="X" value="-1" ver="4"/>
+			<designed target="Y" value="52" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1.5" ver="4"/>
+			<init target="in_Tag" ver="4" ref="here.in_Alias"/>
+			<init target="in_Ch_Num" ver="4" value="C3"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[ModAI.Value]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="ChA_Mod_4" display-name="ChA_Mod_4" uuid="2ba59274-d3d6-48ab-995d-25c4f63b0448" base-type="ChA_Mod" base-type-id="0b885d26-0f40-42cd-bb91-08cc211b1edf" ver="4">
+			<designed target="X" value="-1" ver="4"/>
+			<designed target="Y" value="72" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1.5" ver="4"/>
+			<init target="in_Tag" ver="4" ref="here.in_Alias"/>
+			<init target="in_Ch_Num" ver="4" value="C4"/>
+			<do-trace access-modifier="private" target="Visible" ver="4">
+				<body>
+					<![CDATA[ModAI.Value]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="inNum" display-name="inNum" uuid="e4899faa-808a-4e87-9741-97ecac54188f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="170" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="A3.2" ver="2"/>
+		<designed target="Font" value="Arial,8,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+		<designed target="FontColor" value="0xffffffff" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<do-trace access-modifier="private" target="Text" ver="4">
+			<body>
+				<![CDATA[ModNum.Value]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="ModName" display-name="ModName" uuid="f871d358-3654-4fbd-ad2b-06f127c0c033" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="AI 08 031" ver="2"/>
+		<designed target="Font" value="Arial,7,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+		<designed target="FontColor" value="0xffffffff" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="Text" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[ModAI]]>
+				</condition>
+				<expr>
+					<![CDATA["AI 04 011"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["AO 02 011"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="a5a28142-0b7b-4828-8ec0-9dcb83182b29" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (unit.Security.EnableOpenPopup.Value)
+{
+OpenPopup.Invoke();
+}
+else
+{OpenAccessDenied.Invoke();}]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseEnter">
+		<body kind="om">
+			<![CDATA[Select.Visible = true;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="2" event="MouseLeave">
+		<body kind="om">
+			<![CDATA[Select.Visible = false;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Select" display-name="Select" uuid="4d020d7a-37f9-4aec-9307-9e2ad3dadab4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="false" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="180" ver="2"/>
+		<designed target="RoundingRadius" value="2" ver="2"/>
+		<designed target="PenColor" value="0xffffffff" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="2" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="30a83ef5-78ff-4f35-ad63-c6df42ae90d2" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<init target="Alias" ver="3">
+		<expr>
+			<![CDATA[here.in_Alias]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="ModNum" display-name="ModNum" uuid="1e3f5b80-6f37-4634-ba28-1a16337e6e20" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="ModAI" display-name="ModAI" uuid="f11cd268-5ce5-412e-9c13-59d4740b65c4" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<object access-modifier="private" name="OpenPopup" display-name="OpenPopup" uuid="e2539d13-424f-438f-a2d5-50b3b414a1ad" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="4">
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="InvokeTrigger" value="false" ver="4"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked" form-action="open-new" form-by-id="false">
+			<object access-modifier="private" uuid="1c34caae-c29f-45fc-8a54-ca681866ed5b" base-type="Popup_DiagA" base-type-id="6bbd7326-3d65-4b13-bd9b-ff978cd05f5d" ver="4">
+				<init target="in_Alias" ver="4">
+					<expr>
+						<![CDATA[here.Alias]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OpenAccessDenied" display-name="OpenAccessDenied" uuid="c14466cf-e3b1-4dc0-95d9-3445e240ad1e" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="ee8a4eed-94a6-4773-8fd5-d164344d1866" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="IsOKOnly" ver="1" value="true"/>
+				<init target="in_Title" ver="1" value="Внимание"/>
+				<init target="in_Message" ver="1" value="Отказано в доступе. Недостаточно прав! "/>
+				<init target="MessageType" ver="1" value="error.png"/>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="AccessDeniedMsg" display-name="AccessDeniedMsg" ver="4" event="Invoked">
+			<body kind="om">
+				<![CDATA[unit.Security.ObjName.Value = here.AP_ObjName.Value + ". ";
+unit.Security.Msg_AccessDenied.Send.Invoke();
+unit.Security.ObjName.Value = "";]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="AP_ObjName" display-name="AP_ObjName" uuid="44155ca3-69b0-43d0-b84d-a6b900b08392" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".ObjName"]]>
+			</expr>
+		</init>
+	</object>
+</type>
+

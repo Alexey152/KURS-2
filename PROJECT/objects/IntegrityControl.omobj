@@ -1,0 +1,580 @@
+<type access-modifier="private" name="IntegrityControl" display-name="Form_1" uuid="5cd2185c-c37d-490b-a701-bacd78c532a9" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="1270" ver="2"/>
+	<designed target="Height" value="500" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="0xffdedede" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1270" ver="2"/>
+	<designed target="WindowHeight" value="500" ver="2"/>
+	<designed target="WindowCaption" value="Контроль целостности" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="SecurityIntegrityControl_1" display-name="SecurityIntegrityControl_1" uuid="ed700a92-fe7e-4776-a088-071f128be732" base-type="SecurityIntegrityControl" base-type-id="d161eb3f-c62b-4259-9413-1104c342a77a" ver="2">
+		<init target="SecurityContext" ver="2" ref="SecurityContext_1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="CreateFinished">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Эталон успешно обновлен";
+me.Get_IC_List();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="UpdateFinished">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Обновленние/контроль целостности успешно произведен";
+me.Get_IC_List();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="UpdateFailed">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Ошибка при обновленнии/контроле целостности";]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="CreateFailed">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Ошибка при обновлении эталона";]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="4" event="ListIsReady">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Локальный лист успешно получен";
+ICToTree(IC_List_JSON);]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_6" display-name="Handler_6" ver="4" event="GetListFailed">
+			<body kind="om">
+				<![CDATA[Tree_1.StatusIC = "Ошибка при получении локального листа";]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityContext_1" display-name="SecurityContext_1" uuid="0d3231b9-5ee2-49c0-a32c-0a8947f3fea8" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="2"/>
+	<object access-modifier="private" name="BoolToken_IntegrityControl" display-name="BoolToken_IntegrityControl" uuid="240fcda4-c1a0-4f1d-86c1-bf5b712af822" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="SecurityContext" ver="2" ref="SecurityContext_1"/>
+		<init target="Application" ver="2" value="Alpha.HMI"/>
+		<init target="Right" ver="2" value="IntegrityControl"/>
+	</object>
+	<object access-modifier="private" name="Tree_1" display-name="Tree_1" uuid="94edde2e-5127-4e1f-a811-af98c602247f" base-type="Tree" base-type-id="bebad81f-83c4-4dc1-8ac4-e7fe7b6ee966" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="100" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="1266" ver="2"/>
+		<designed target="Height" value="394" ver="2"/>
+		<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="BackgroundColor" value="4294967295" ver="2"/>
+		<designed target="FrameVisible" value="true" ver="2"/>
+		<designed target="ColumnCount" value="5" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<object access-modifier="private" name="StatusIC" display-name="StatusIC" uuid="acbe27a7-e0a0-4b71-8d45-d61f5703aea6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="2f2a4d92-69d0-4aee-a042-eb1369513345" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="788" ver="2"/>
+		<designed target="Y" value="7" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="200" ver="2"/>
+		<designed target="Height" value="40" ver="2"/>
+		<designed target="Text" value="Проверка целостности" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Sans Serif,11,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="0xffaaffff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288650650" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SecurityIntegrityControl_1.Update_IC();]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checkable" value="false" ver="4"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+		<designed target="DisabledBrushColor" value="4290295992" ver="4"/>
+		<designed target="DisabledBrushStyle" value="1" ver="4"/>
+		<designed target="DisabledPenColor" value="0xff7d7d7d" ver="4"/>
+		<designed target="DisabledPenStyle" value="1" ver="4"/>
+		<designed target="DisabledPenWidth" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="Enabled" ver="4">
+			<body>
+				<![CDATA[BoolToken_IntegrityControl.Value]]>
+			</body>
+		</do-trace>
+		<designed target="Checked" value="false" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="fb367e18-a4a1-4be8-8080-6a2697ed3d3d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="1002" ver="2"/>
+		<designed target="Y" value="7" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="200" ver="2"/>
+		<designed target="Height" value="40" ver="2"/>
+		<designed target="Text" value="Создать эталон" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Sans Serif,11,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="0xffaaffff" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288650650" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+			<body kind="om">
+				<![CDATA[SecurityIntegrityControl_1.Create_IC_Etalon();]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Checkable" value="false" ver="4"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+		<designed target="DisabledBrushColor" value="4290295992" ver="4"/>
+		<designed target="DisabledBrushStyle" value="1" ver="4"/>
+		<designed target="DisabledPenColor" value="0xff7d7d7d" ver="4"/>
+		<designed target="DisabledPenStyle" value="1" ver="4"/>
+		<designed target="DisabledPenWidth" value="1" ver="4"/>
+		<designed target="Checked" value="false" ver="4"/>
+		<do-trace access-modifier="private" target="Enabled" ver="4">
+			<body>
+				<![CDATA[BoolToken_IntegrityControl.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="e350c043-feb1-4d20-9de3-9a4dc53ae0dc" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="10" ver="2"/>
+		<designed target="Y" value="30" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Дата создания эталона" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="ddea26a0-0d05-43e4-8a79-e80cbcf8ab1c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="10" ver="2"/>
+		<designed target="Y" value="60" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Создатель эталона" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_CreateDate" display-name="Text_CreateDate" uuid="35e47459-3f8a-4d4c-9a02-f31654adde81" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="175.333" ver="2"/>
+		<designed target="Y" value="29.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Дата/Время" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="0xff000000" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<object access-modifier="private" name="OutputFormatter_1" display-name="OutputFormatter_1" uuid="a4e3b05f-ee18-41c5-8e26-4b4a8a6bbcfc" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="2">
+			<designed target="InValue" value="" ver="2"/>
+			<init target="Format" ver="2">
+				<object access-modifier="private" uuid="281f059a-ce06-4959-92ec-0333a9fb311e" base-type="FormatDateTime" base-type-id="353d14bd-bf52-4abb-8d4c-3b2541bb0de2" ver="2">
+					<designed target="DateTimeFormat" value="dd.MM.yy H:mm:ss t" ver="2"/>
+					<designed target="LocalTime" value="true" ver="2"/>
+				</object>
+			</init>
+		</object>
+		<do-trace access-modifier="private" target="Text" ver="2">
+			<body>
+				<![CDATA[OutputFormatter_1]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_Creator" display-name="Text_Creator" uuid="275b237d-f036-43f1-9446-173c85d5699b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="176" ver="2"/>
+		<designed target="Y" value="60.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="ФиоПользовтаеля" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_6" display-name="Text_6" uuid="9c489738-8a16-4be1-97bd-5a455e979ad2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="371" ver="2"/>
+		<designed target="Y" value="30" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="180" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Дата последней проверки" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_LastCheck" display-name="Text_LastCheck" uuid="0a3a184d-3179-4bf0-8673-17b73c4671e4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="558" ver="2"/>
+		<designed target="Y" value="30" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="Дата/Время" ver="2"/>
+		<designed target="Font" value="Sans Serif,10,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="33" ver="2"/>
+		<object access-modifier="private" name="OutputFormatter_1" display-name="OutputFormatter_1" uuid="8eadae7e-c430-4c92-927f-82f70c562052" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="2">
+			<designed target="InValue" value="" ver="2"/>
+			<init target="Format" ver="2">
+				<object access-modifier="private" uuid="281f059a-ce06-4959-92ec-0333a9fb311e" base-type="FormatDateTime" base-type-id="353d14bd-bf52-4abb-8d4c-3b2541bb0de2" ver="2">
+					<designed target="DateTimeFormat" value="dd.MM.yy H:mm:ss t" ver="2"/>
+					<designed target="LocalTime" value="true" ver="2"/>
+				</object>
+			</init>
+		</object>
+		<do-trace access-modifier="private" target="Text" ver="2">
+			<body>
+				<![CDATA[OutputFormatter_1]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[SecurityIntegrityControl_1.Get_IC_List();
+
+Tree_1.SetColumnName("Файл",0);
+Tree_1.SetColumnName("Эталонное значение",1);
+Tree_1.SetColumnName("Дата изменения",2);
+Tree_1.SetColumnName("Фактическое значение",3);
+Tree_1.SetColumnName("Дата изменения",4);
+
+Tree_1.SetColumnWidth(0, 350);
+Tree_1.SetColumnWidth(1, 260);
+Tree_1.SetColumnWidth(2, 150);
+Tree_1.SetColumnWidth(3, 260);
+Tree_1.SetColumnWidth(4, 150);
+unit.Global.Close_Menu = true;
+]]>
+		</body>
+	</do-on>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<do access-modifier="private" name="ICToTree" display-name="ICToTree" ver="4" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[var redColor = 0xffff0000; //красный цвет
+var greenColor = 0xff00ff00;// зеленый цвет
+var blackColor = 0xffffffff;// черный цвет
+var dirs = {"data":[]};
+var alarmfileids = {"data":[]};
+var List = JSON.parse(_IC_List_JSON);
+
+function SetColorToString(_id,_color) //заливка нужным цветом строки 
+{
+	Tree_1.SetItemBackgroundColor( dirs.data[_id].treeid, _color, 0);
+	Tree_1.SetItemBackgroundColor( dirs.data[_id].treeid, _color, 1);
+	Tree_1.SetItemBackgroundColor( dirs.data[_id].treeid, _color, 2);
+	Tree_1.SetItemBackgroundColor( dirs.data[_id].treeid, _color, 3);
+	Tree_1.SetItemBackgroundColor( dirs.data[_id].treeid, _color, 4);
+}
+
+function SetColorToText(_id,_color) // изменение цвета шрифта
+{
+	Tree_1.SetItemTextColor( dirs.data[_id].treeid, _color, 0 );
+	Tree_1.SetItemTextColor( dirs.data[_id].treeid, _color, 1 );
+	Tree_1.SetItemTextColor( dirs.data[_id].treeid, _color, 2 );
+	Tree_1.SetItemTextColor( dirs.data[_id].treeid, _color, 3 );
+	Tree_1.SetItemTextColor( dirs.data[_id].treeid, _color, 4 );
+}
+
+function SetDataToString(_id) //запись данных в строку дерева
+{
+	if (List.data[_id].status==0) // нет ошибок
+	{
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].MD5_etalon, 1 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].date_etalon, 2 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].MD5_current, 3 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].date_current, 4 );
+		SetColorToString(_id,greenColor);
+	}
+	else if (List.data[_id].status==4)// файл не существует
+	{
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].MD5_etalon, 1 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].date_etalon, 2 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, "Файл отсутствует", 3 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, "-", 4 );
+		SetColorToString(_id,redColor);
+		alarmfileids.data.push(_id);
+	}
+	else if (List.data[_id].status==8) // нарушена целостность файла (не совпадают значения MD5)
+	{
+	
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].MD5_etalon, 1 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].date_etalon, 2 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].MD5_current, 3 );
+		Tree_1.SetItemText(dirs.data[_id].treeid, List.data[_id].date_current, 4 );
+		SetColorToString(_id,redColor);
+		alarmfileids.data.push(_id);
+	}
+}
+
+function ToTree()
+{
+	/*чистим дерево*/
+	Tree_1.RemoveChildren("");
+	/*получаем список файлов и заполняем заголовочные поля*/
+	Text_CreateDate = List.date_etalon_created;
+	Text_Creator = List.creator;
+	Text_LastCheck = List.date_last_check;
+	
+	
+	/*прогоняем весь масси файлов и заполняем дерево*/
+	for (var i = 0; i < List.data.length; ++i)
+	{
+		dirs.data.push({ "id":"", "parentid":"","treeid":""} );
+		dirs.data[i].id = List.data[i].ID;
+		dirs.data[i].parentid = List.data[i].ParentID;
+		if ( List.data[i].Dir == 1 ) // директория
+		{
+			if ( List.data[i].ParentID == -1 ) // название папки или отдельно стоящий файл 
+			{
+				dirs.data[i].treeid = Tree_1.AddItem( "", List.data[i].name );
+				SetColorToString(i,greenColor);
+			}
+			if ( List.data[i].ParentID != -1 ) // если есть папка в папке
+			{
+				for ( var j = 0; j < dirs.data.length; ++j )
+				{
+					if ( dirs.data[j].id == List.data[i].ParentID )//папка
+					{
+						dirs.data[i].treeid = Tree_1.AddItem( dirs.data[j].treeid, List.data[i].name );							
+					}
+				}
+				SetColorToString(i,greenColor);	
+			}
+		}
+		else // файл
+		{
+			if ( List.data[i].ParentID == -1) //папка или отдельный файл
+			{
+				dirs.data[i].treeid = Tree_1.AddItem( "", List.data[i].name );
+				SetDataToString(i); //запись данных в строку дерева
+			}
+			if ( List.data[i].ParentID != -1) // файл в папке
+			{
+				for ( var j = 0; j < dirs.data.length; ++j )
+				{
+					if ( dirs.data[j].id == List.data[i].ParentID ) 
+					{		
+						dirs.data[i].treeid = Tree_1.AddItem( dirs.data[j].treeid, List.data[i].name );
+					}
+				}
+				SetDataToString(i); //запись данных в строку дерева
+			}
+		}
+	}
+	
+	
+	/*проходим по выбранным id, красим дерево папок в красный цвет, где лежит файл с плохой хеш суммой.*/
+	for ( var i = 0; i < alarmfileids.data.length; ++i)
+	{
+		var parid = dirs.data[alarmfileids.data[i]].parentid;
+		while(parid != -1)
+		{
+			SetColorToString(parid,redColor);
+			SetColorToText(parid,blackColor);
+			for ( var j = 0; j < dirs.data.length; ++j )
+			{		
+				if (dirs.data[j].id == parid)
+				{
+					parid = dirs.data[j].parentid;
+					break;
+				}
+			}
+		}
+	}
+}
+
+if (_IC_List_JSON!="")
+{
+	ToTree();
+}
+
+/* Описание 
+"date_last_check": "09.07.2021 09:06:45",
+"creator": "",
+"date_etalon_created": "",
+
+{
+  "ID": "160",
+  "ParentID": "159",
+  "Dir": "0",
+  "hasRefValue": "1",
+  "name": "alpha.net.agent--2.xml",
+  "MD5_onStart": "411b7219f21ab0a3c286dd38b881745d",
+  "date_onStart": "08.06.2021 09:06:06",
+  "status": "0",
+  "MD5_current": "411b7219f21ab0a3c286dd38b881745d",
+  "date_current": "08.06.2021 09:06:06",
+  "MD5_etalon": "411b7219f21ab0a3c286dd38b881745d",
+  "date_etalon": "08.06.2021 09:06:06"
+},
+
+********************************************
+
+date_last_check - дата и время генерации JSON-списка контролируемых файлов
+creator - пользователь, создавший эталонный файл контроля.
+	<пусто>, если эталонный файл контроля не существует.
+date_etalon_created - дата и время генерации эталонного файла.
+
+
+ID - идентификатор текущего файла/директории
+
+ParentID - ID родительской директории.
+	= -1 для файлов/директорий из alpha.security.ic.xml.
+
+Dir -  = 1 - текущий элемент - диретория
+       = 0 - текущий элемент - файл
+       = -1 - файл не существует - устанавливается при генерации эталона. Логирование ошибки блокируется до перезагрузки Агента.
+       = -2 - файл не существует - устанавливается при контроле, выдаётся ошибка "Файл не существует".
+
+!!! Значения Dir=-1 и Dir=-2 являются внутренними и будут удалены из JSON-файла в ближайших версиях Security.
+
+hasRefValue - в эталоне есть запись для данного файла
+!!! этот элемент не нужен и будет удалён из JSON-файла в ближайших версиях Security.
+
+status -  состояние текущего файла
+	= 0 - нет ошибок
+	= 4 - файл не существует
+	= 8 - нарушена целостность файла (не совпадают значения MD5)
+
+MD5 текущего файла:
+MD5_onStart - на момент старта Агента
+MD5_current - после последнего контроля
+MD5_etalon  - в эталоне
+
+Даты последней модификации текущего файла:
+date_onStart - на момент старта Агента
+date_current - после последнего контроля
+date_etalon  - в эталоне
+*/]]>
+		</body>
+		<param access-modifier="private" name="_IC_List_JSON" display-name="" uuid="16d3b262-34a4-4e44-9e85-576345f1d4ea" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	</do>
+	<object access-modifier="private" name="Text_7" display-name="Text_7" uuid="5d4525dd-c212-4a9e-81e2-fe3ecf569f2b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="436" ver="2"/>
+		<designed target="Y" value="75" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="831" ver="2"/>
+		<designed target="Height" value="20" ver="2"/>
+		<designed target="Text" value="" ver="2"/>
+		<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="TextAlignment" value="130" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="Text" ver="4">
+			<body>
+				<![CDATA["Статус загрузки данных контроля целостности: " + Tree_1.StatusIC]]>
+			</body>
+		</do-trace>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="Closed">
+		<body kind="om">
+			<![CDATA[if (unit.Global.Alm_IC_on_Start){
+unit.Global.Alm_IC_on_Start=false;
+}]]>
+		</body>
+	</do-on>
+</type>
+

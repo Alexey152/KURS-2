@@ -1,0 +1,703 @@
+<type access-modifier="private" name="Alarms_TimeField" display-name="Alarms_TimeField" uuid="4fab6d06-6bb8-4178-815c-0027fe581789" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<object access-modifier="private" name="Field" display-name="Field" uuid="1ca64aad-97ea-4dd8-b5e6-2339bfc53c7e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="71" ver="3"/>
+		<designed target="Height" value="21" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xffffffff" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="ValueEdit" display-name="ValueEdit" uuid="dc81d0b7-a086-494a-a451-4402f3c9da80" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+			<designed target="X" value="3" ver="3"/>
+			<designed target="Y" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="0.01" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="1" ver="3"/>
+			<designed target="Height" value="19" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="HideInput" value="false" ver="3"/>
+			<designed target="PlaceholderText" value="" ver="3"/>
+			<designed target="ReadOnly" value="false" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="FocusChanged">
+				<body kind="om">
+					<![CDATA[if (!hasFocus && !fixSelection) selectedUnit = 0;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+				<body kind="om">
+					<![CDATA[if (me.Focus)
+{
+	SetValue(text);
+	Text = "";
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="KeyPress">
+				<body kind="om">
+					<![CDATA[key: uint4 = event.KeyCode;
+if (key == 107) ChangeValue(0);
+if (key == 105) ChangeValue(1);
+if (key == 106)
+{
+	if (selectedUnit < 3) selectedUnit += 1;
+	else selectedUnit = 1;
+}
+if (key == 108)
+{
+	if (selectedUnit > 1) selectedUnit -= 1;
+	else selectedUnit = 3;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_Down" display-name="Button_Down" uuid="6a09a81c-d63a-4609-9a32-e9fa490af155" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="52" ver="3"/>
+			<designed target="Y" value="10" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="18" ver="3"/>
+			<designed target="Height" value="10" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="▼" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+			<designed target="Font" value="Tahoma,6,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="0xff000000" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="0" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseRelease">
+				<body kind="om">
+					<![CDATA[timerON = false;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = temp;
+ChangeValue(0);
+timerON = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[fixSelection = true;
+temp = selectedUnit;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="3" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[fixSelection = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button_Up" display-name="Button_Up" uuid="3ec0a3fe-d2ea-442f-bba7-0a984dca8087" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+			<designed target="X" value="52" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="18" ver="3"/>
+			<designed target="Height" value="10" ver="3"/>
+			<designed target="Checkable" value="false" ver="3"/>
+			<designed target="Text" value="▲" ver="3"/>
+			<designed target="TextAlignment" value="68" ver="3"/>
+			<designed target="Font" value="Tahoma,6,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="BrushColor" value="4293980400" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+			<designed target="OnClickBrushStyle" value="1" ver="3"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+			<designed target="OnClickPenStyle" value="1" ver="3"/>
+			<designed target="OnClickPenWidth" value="1" ver="3"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+			<designed target="OnHoverPenStyle" value="1" ver="3"/>
+			<designed target="OnHoverPenWidth" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[fixSelection = true;
+temp = selectedUnit;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = temp;
+ChangeValue(1);
+timerON = true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseRelease">
+				<body kind="om">
+					<![CDATA[timerON = false;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="3" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[fixSelection = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Hours" display-name="Hours" uuid="7342fbd0-c1bc-488d-91e9-fd772973db0e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="3.375" ver="3"/>
+			<designed target="Y" value="2.36667" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="13" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="ab663bf2-8dbd-4704-8194-302ce68494a6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="00" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<body>
+						<![CDATA[(hours < 10)?("0" + String.ToString(hours)):(String.ToString(hours))]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="1fc66a37-7d5a-40c5-99ef-2090ad3ca8c2" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 1;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="c50785c8-64e6-4bb6-94fe-7619e1707d4d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="Minutes" display-name="Minutes" uuid="f8f03247-ab3f-4f2b-930a-b2e490ff0505" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="19.375" ver="3"/>
+			<designed target="Y" value="2.36667" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="13" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="0xff000000" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="ac1c38ac-6fa7-443f-a46f-e9e08fe01b6b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="00" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<body>
+						<![CDATA[(minutes < 10)?("0" + String.ToString(minutes)):(String.ToString(minutes))]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="2918d346-4905-43e2-a2d4-7c31040cfbab" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 2;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="c8d57c93-1a5c-42bc-8ba2-aa3e359dfd1d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="temp" display-name="temp" uuid="08c7a213-1659-4016-a4d2-55b63fb65f5d" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+		<object access-modifier="private" name="Seconds" display-name="Seconds" uuid="bb0d82f7-0be0-4ece-be0e-cb9fd857c7f5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="35.375" ver="3"/>
+			<designed target="Y" value="2.36667" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="13" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="cfabedd4-ebf5-4e2d-aaa6-fdbae3c660ad" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="00" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<body>
+						<![CDATA[(seconds < 10)?("0" + String.ToString(seconds)):(String.ToString(seconds))]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="1948f0b5-ee5c-4080-87e3-024d7b17897b" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 3;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="c604d208-3b2f-4f25-b56c-c4e56dd97c13" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="Separator" display-name="Separator" uuid="57ff879f-4bd0-45dc-a8dc-290c393dcce8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="16.375" ver="3"/>
+			<designed target="Y" value="2.16667" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="3" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Sign" display-name="Sign" uuid="b311f3a9-5221-4cd8-bd4f-b311c54d11ac" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="3" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value=":" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 1;]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="ebab192c-b3b1-458c-b37d-4da2e2d8309d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="Separator_1" display-name="Separator_1" uuid="3a172c22-5869-434f-a985-ade032260eb2" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="32.375" ver="3"/>
+			<designed target="Y" value="2.36667" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="3" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Sign" display-name="Sign" uuid="8fa16a76-fb51-4b09-8957-e8b915acb4bb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="3" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value=":" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 1;]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="db65e48d-68b0-46f2-addd-83d102a8547e" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="timerON" display-name="timerON" uuid="ca79ca90-4882-4722-8db1-b8bfeaf13baa" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+				<body kind="om">
+					<![CDATA[if (value) TimerDelay.Active = true;
+else 
+{
+	TimerDelay.Active = false;
+	TimerDelay.Period = 1000;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="TimerDelay" display-name="TimerDelay" uuid="df1656f1-d102-4ce0-a3f3-687d67fc3255" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+			<designed target="Period" value="1000" ver="3"/>
+			<designed target="Active" value="false" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+				<body kind="om">
+					<![CDATA[if (Active)
+{
+	Period = 100;
+	mode: int4 = -1;
+	if (Field.Button_Down.Checked) mode = 0;
+	else if (Field.Button_Up.Checked) mode = 1;
+	
+	if (mode != -1) ChangeValue(mode);
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="fixSelection" display-name="fixSelection" uuid="7e043c77-804a-4755-803a-591a151462ac" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+				<body kind="om">
+					<![CDATA[selectedUnit = selectedUnit;]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="hours" display-name="hours" uuid="f39544fc-8ae9-4121-add9-b01a725568ee" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value > 23) Value = 0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="minutes" display-name="minutes" uuid="801ac69a-0999-4947-b24a-d66d81e57833" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value < 0) Value = 59;
+if (value > 59) Value = 0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="seconds" display-name="seconds" uuid="7922ca9d-75cc-43bc-9035-bfb5e2d75bcd" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value < 0) Value = 59;
+if (value > 59) Value = 0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="selectedUnit" display-name="selectedUnit" uuid="9d44b6df-57af-4590-9249-f0251e6e063b" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[// Выделение соответствующего поля
+Field.Hours.selected = (value == 1)?(true):(false);
+Field.Minutes.selected = (value == 2)?(true):(false);
+Field.Seconds.selected = (value == 3)?(true):(false);]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="ChangeValue" display-name="ChangeValue" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[// Изменение значения времени (-1 или +1)
+if (selectedUnit == 0) selectedUnit = 3;
+
+newValue: int4 = (mode == 0)?(-1):(1);
+index: int1 = selectedUnit;
+result: int4;
+
+if (index == 1) 
+{
+	result = TypeConvert.ToInt4(hours) + newValue; 
+	hours = (result >= 0)?(TypeConvert.ToUint1(result)):(23);
+}
+if (index == 2) 
+{
+	result = TypeConvert.ToInt4(minutes) + newValue; 
+	minutes = (result >= 0)?(TypeConvert.ToUint1(result)):(59);
+}
+if (index == 3) 
+{
+	result = TypeConvert.ToInt4(seconds) + newValue; 
+	seconds = (result >= 0)?(TypeConvert.ToUint1(result)):(59);
+}]]>
+		</body>
+		<param access-modifier="private" name="mode" display-name="" uuid="dc274cd1-ffab-4d11-84a6-70d3c2a3764a" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	</do>
+	<init target="hours" ver="3" value="12"/>
+	<do access-modifier="private" name="SetValue" display-name="SetValue" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[// Проверка на корректность значений
+var mask =  /\D+/;
+var str = inputValue;
+var currentValue = GetSelectedValue().toString();
+
+var maxValue = (selectedUnit == 1)?(24):(60); // Максимально возможное значение
+
+// Если введено не число, выходим
+if (mask.test(str) || str == "" || isNaN(Number.parseInt(str))) return;
+
+if (currentValue.length > 1) currentValue = "";
+var resultInt = Number.parseInt(currentValue + str);
+if (resultInt > 0 && resultInt < maxValue) str = resultInt.toString();
+
+// Установка значения в соответствующее свойство
+if (selectedUnit.Value == 1) hours.Value = Number.parseInt(str);
+if (selectedUnit.Value == 2) minutes.Value = Number.parseInt(str);
+if (selectedUnit.Value == 3) seconds.Value = Number.parseInt(str);]]>
+		</body>
+		<param access-modifier="private" name="inputValue" display-name="" uuid="fcc3714e-4677-4885-befa-4c55508f76e2" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+	<do access-modifier="private" name="GetSelectedValue" display-name="GetSelectedValue" ver="3" type="int4" type-id="74222947-f188-4195-8e0e-e33bd9827255">
+		<body kind="om">
+			<![CDATA[if (selectedUnit == 1) return hours;
+if (selectedUnit == 2) return minutes;
+if (selectedUnit == 3) return seconds;
+return 0;]]>
+		</body>
+	</do>
+	<init target="minutes" ver="3" value="56"/>
+	<init target="seconds" ver="3" value="08"/>
+	<init target="selectedUnit" ver="3" value="0"/>
+	<do access-modifier="private" name="Set_Size" display-name="Set_Size" ver="2" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" form-by-id="true">
+		<param access-modifier="private" name="Mode" display-name="" uuid="76ee9dc6-5e57-44b8-965c-0a753a9571dc" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="2"/>
+		<body kind="javascript">
+			<![CDATA[// Функция задания размеров иконки. Если 0 или -1 - скрываем иконку, если больше 0 и есть разрешение на отображение - задаем параметры по исходным данным
+var typeHeight = 0;
+var typeWidth = 0;
+var fieldHeight = 0;
+var fieldWidth = 0;
+var separatorHeight = 0;
+var separatorWidth = 0;
+var buttonHeight = 0;
+var buttonWidth = 0;
+var buttonX = 0;
+
+// Режим ручного скрытия. Выйти из режима можно только кодом Set_Size(1)
+if (Mode <= 0) if (Mode == 0) Visible = false; 
+
+// Отображать кнопку при наличии разрешения
+if (Mode > 0){
+	Visible = true;
+	typeHeight = 21;
+	typeWidth = 71;
+	fieldHeight = 16;
+	fieldWidth = 13;
+	separatorHeight = 16;
+	separatorWidth = 3;
+	buttonHeight = 10;
+	buttonWidth = 18;
+	buttonX = 52;
+}
+
+Field.Width = typeWidth;
+Field.Height = typeHeight;
+
+Field.Hours.Width = fieldWidth;
+Field.Hours.Height = fieldHeight;
+
+Field.Minutes.Width = fieldWidth;
+Field.Minutes.Height = fieldHeight;
+
+Field.Seconds.Width = fieldWidth;
+Field.Seconds.Height = fieldHeight;
+
+Field.Separator.Width = separatorWidth;
+Field.Separator.Height = separatorHeight;
+
+Field.Separator_1.Width = separatorWidth;
+Field.Separator_1.Height = separatorHeight;
+
+Field.Button_Down.Width = buttonWidth;
+Field.Button_Down.Height = buttonHeight;
+Field.Button_Down.X = buttonX;
+
+Field.Button_Up.Width = buttonWidth;
+Field.Button_Up.Height = buttonHeight;
+Field.Button_Up.X = buttonX;
+
+Alarms_1.Main_panel.ToolBar.Height = Alarms_1.Main_panel.ToolBar.Height; //Необходимо для обновления разметки]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="c850a95f-1803-4097-a2f1-2f0e83120ec6" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="aaf636f5-438c-4488-9fb8-0614b295ac38" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+</type>
+

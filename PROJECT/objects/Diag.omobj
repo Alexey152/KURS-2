@@ -1,0 +1,721 @@
+<type access-modifier="private" name="Diag" display-name="Diag" uuid="06cad739-8475-428d-9388-1e0711beec57" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="1000" ver="4"/>
+	<designed target="Height" value="650" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="0" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="4293913575" ver="4"/>
+	<designed target="BrushStyle" value="1" ver="4"/>
+	<designed target="WindowX" value="0" ver="4"/>
+	<designed target="WindowY" value="0" ver="4"/>
+	<designed target="WindowWidth" value="1920" ver="4"/>
+	<designed target="WindowHeight" value="1080" ver="4"/>
+	<designed target="WindowCaption" value="MainForm" ver="4"/>
+	<designed target="ShowWindowCaption" value="true" ver="4"/>
+	<designed target="ShowWindowMinimize" value="true" ver="4"/>
+	<designed target="ShowWindowMaximize" value="true" ver="4"/>
+	<designed target="ShowWindowClose" value="true" ver="4"/>
+	<designed target="AlwaysOnTop" value="false" ver="4"/>
+	<designed target="WindowSizeMode" value="0" ver="4"/>
+	<designed target="WindowBorderStyle" value="1" ver="4"/>
+	<designed target="WindowState" value="0" ver="4"/>
+	<designed target="WindowScalingMode" value="0" ver="4"/>
+	<designed target="MonitorNumber" value="0" ver="4"/>
+	<designed target="WindowPosition" value="0" ver="4"/>
+	<designed target="WindowCloseMode" value="0" ver="4"/>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="cd74441a-57f3-4e0b-94dc-1ed1f592482e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="193" ver="4"/>
+		<designed target="Y" value="334" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="194" ver="4"/>
+		<designed target="Height" value="257" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="aad71528-a790-4806-ba30-d773b75794a2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="6" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="183" ver="4"/>
+			<designed target="Height" value="36" ver="4"/>
+			<designed target="Text" value="ИБП САУ" ver="4"/>
+			<designed target="Font" value="PT Root UI,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Analog_13" display-name="Analog_13" uuid="28dbfacd-2a1c-4f49-bc04-aa4d5055bb46" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="37" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU001_out"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_14" display-name="Analog_14" uuid="2ad44440-2a87-4244-a1d2-b0907718c1a2" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="67" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU002_out"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_15" display-name="Analog_15" uuid="c030cf97-be34-44b4-b298-4d875b74d0f4" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="97" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU003_out"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_16" display-name="Analog_16" uuid="c05b2b94-1a4a-42e5-b8cc-bab8d296f824" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="127" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU004_out"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_17" display-name="Analog_17" uuid="99cb75ec-a1b3-4046-8d80-9e5661c679db" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="157" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU005_out"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_1" display-name="Discret_S_Small_1" uuid="5bcc820f-2a45-40e7-8608-f91370eb4b74" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="185.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU001_OUT"/>
+		</object>
+		<object access-modifier="private" name="Descr" display-name="Descr" uuid="fa39da6b-9e7f-4aa3-ba01-18aeb7a907cf" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="185" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Питание от сети" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Питание от АКБ"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Питание от сети"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="13738566-a78a-4502-b087-51e322b21ab6" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU001_OUT.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_2" display-name="Discret_S_Small_2" uuid="7661970b-1c3e-4377-9a50-13c4e428f1a1" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="219.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU002_OUT"/>
+		</object>
+		<object access-modifier="private" name="Descr_1" display-name="Descr_1" uuid="c39de742-d46e-479c-9507-c0c17abee763" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="219.001" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="29.9988" ver="4"/>
+			<designed target="Text" value="Заряд АКБ - норма" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Заряд АКБ - низкий"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Заряд АКБ - норма"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="7db6b68a-57f9-47c6-a463-b906a21994c3" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU002_OUT.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="29029e0e-f764-4e0c-870b-5e424dfc3aed" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="1" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="998.6" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xff000000" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xff000066" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="7cecd31f-702b-4c1a-aaa3-f86e72c8f9fc" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="0.8" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="997.333" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Диагностика" ver="4"/>
+			<designed target="Font" value="Arimo,14,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xffffffff" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="DO 08 011_1" display-name="DO 08 011_1" uuid="5bf7d0fa-8ce0-4b9e-a5d7-d13aea3d0111" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="101.78" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A3"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A3"/>
+	</object>
+	<object access-modifier="private" name="CU_00_1" display-name="CU_00_1" uuid="0e91a58a-e338-4c04-a2d2-4e470be435ee" base-type="CU_00_21" base-type-id="05231da0-d515-4048-bf7e-4fc35dccda57" ver="4">
+		<designed target="X" value="8.26845" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+	</object>
+	<object access-modifier="private" name="PP 00 011_1" display-name="PP 00 011_1" uuid="afcbe584-a497-444c-a78d-3766f04c5f5a" base-type="PP 00 011" base-type-id="48febc44-e843-48b7-9de4-de89b7228125" ver="4">
+		<designed target="X" value="55.0242" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_2" display-name="DO 08 011_2" uuid="9e0ce5eb-a6a8-4028-8e35-a184d374ac95" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="148.536" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A4"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A4"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_3" display-name="DO 08 011_3" uuid="e786b92b-6982-40e6-aeea-d18b3c513a76" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="195.291" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A5"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A5"/>
+		<init target="ModDI" ver="4" value="true"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_4" display-name="DO 08 011_4" uuid="cff9d770-07b1-4c1a-9fd5-4d4dda52d27f" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="242.047" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A6"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A6"/>
+		<init target="ModDI" ver="4" value="true"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_5" display-name="DO 08 011_5" uuid="7bc8594a-3d75-4bfa-ba65-a32cb9265468" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="288.803" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A7"/>
+		<init target="ModDI" ver="4" value="true"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A7"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_6" display-name="DO 08 011_6" uuid="64c91d14-9151-46e0-b887-6ee1b1c394b6" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="335.559" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A8"/>
+		<init target="ModDI" ver="4" value="true"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A8"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_7" display-name="DO 08 011_7" uuid="6ac6b99c-ba0b-4de7-aef3-1531e27b7307" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="382.314" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A9"/>
+		<init target="ModDI" ver="4" value="true"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A9"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_8" display-name="DO 08 011_8" uuid="0ed04cb0-677c-46a6-9093-ff92a55d2357" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="429.07" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A10"/>
+		<init target="ModDI" ver="4" value="true"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A10"/>
+	</object>
+	<object access-modifier="private" name="DO 08 011_9" display-name="DO 08 011_9" uuid="09a8785c-6cf6-4129-8a54-949a2ee922ae" base-type="DO 08 011" base-type-id="570b652e-693e-43dc-946a-83270178de0e" ver="4">
+		<designed target="X" value="475.826" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_ModNum" ver="4" value="A11"/>
+		<init target="ModDI" ver="4" value="true"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A11"/>
+	</object>
+	<object access-modifier="private" name="PP 00 011_2" display-name="PP 00 011_2" uuid="e12953c0-8741-460f-9e16-c8ef9837294b" base-type="PP 00 011" base-type-id="48febc44-e843-48b7-9de4-de89b7228125" ver="4">
+		<designed target="X" value="521.646" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Number" ver="4" value="A12"/>
+		<init target="in_Position" ver="4" value="12"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_1" display-name="AO_AI 08 031_1" uuid="2b81406a-0441-423a-a3ce-61330cd653d4" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="568.402" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A13"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A13"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_2" display-name="AO_AI 08 031_2" uuid="d78897f8-20d5-4174-87f6-7b4eda37f4b8" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="615.158" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A14"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A14"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_3" display-name="AO_AI 08 031_3" uuid="4e027bcd-a97f-45a9-b87e-4e929c9561d3" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="661.913" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A15"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A15"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_4" display-name="AO_AI 08 031_4" uuid="d42d8f62-cd51-4f5a-921a-ed5ef85e3298" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="708.669" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A16"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A16"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_5" display-name="AO_AI 08 031_5" uuid="4401e7b8-2d1c-40f7-85dd-856d4d18a388" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="755.425" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A17"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A17"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_6" display-name="AO_AI 08 031_6" uuid="4c29c396-3f1d-4b67-a1e5-9c7ac2ab4060" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="802.181" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A18"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A18"/>
+	</object>
+	<object access-modifier="private" name="AO_AI 08 031_7" display-name="AO_AI 08 031_7" uuid="8dd908f2-2844-4205-a13a-2319504e0389" base-type="AO_AI 08 031" base-type-id="9029ef46-6048-4171-b530-1c8bd6b58134" ver="4">
+		<designed target="X" value="848.936" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModAI" ver="4" value="true"/>
+		<init target="ModNum" ver="4" value="A19"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A19"/>
+	</object>
+	<object access-modifier="private" name="DA 01 011_1" display-name="DA 01 011_1" uuid="0240f7eb-f176-4183-bfaa-8089c5849c93" base-type="DA 01 011" base-type-id="874b57b6-b461-4e3c-aa2f-6b592e5917d8" ver="4">
+		<designed target="X" value="894.757" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModNum" ver="4" value="A20"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A20"/>
+	</object>
+	<object access-modifier="private" name="DA 01 011_2" display-name="DA 01 011_2" uuid="a4d5124e-2f11-4877-a37d-e6d2500b4da7" base-type="DA 01 011" base-type-id="874b57b6-b461-4e3c-aa2f-6b592e5917d8" ver="4">
+		<designed target="X" value="941.513" ver="4"/>
+		<designed target="Y" value="104.612" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="ModNum" ver="4" value="A21"/>
+		<init target="in_Alias" ver="4" value="STATION.Diag.A1.A21"/>
+	</object>
+	<object access-modifier="private" name="MainForm_1" display-name="MainForm_1" uuid="a86b737c-1467-4b09-afac-012b8aaa20bb" base-type="MainForm" base-type-id="36b01345-30c5-4722-a8fa-3042cb457da6" base-const="true" base-ref="true" ver="4"/>
+	<object access-modifier="private" name="Action_1" display-name="Action_1" uuid="f86e4fdc-fdf4-4997-aa41-7fc34eb5da51" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="4">
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="InvokeTrigger" value="false" ver="4"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked">
+			<body kind="om">
+				<![CDATA[MainForm_1.CloseProject.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="87b867e8-56c2-424f-92c1-2f94514a51f3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="403" ver="4"/>
+		<designed target="Y" value="334.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="194" ver="4"/>
+		<designed target="Height" value="257" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="df813a90-aea3-4c10-a05c-bac463b2d0b5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="6" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="183" ver="4"/>
+			<designed target="Height" value="36" ver="4"/>
+			<designed target="Text" value="ИБП встроенный" ver="4"/>
+			<designed target="Font" value="PT Root UI,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Analog_13" display-name="Analog_13" uuid="dd577e9c-ff19-4cd0-8386-ee3f5d8d6464" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="37" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU001_in"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_14" display-name="Analog_14" uuid="9bcfdb22-71a3-4ee8-b9d6-f35fdec11614" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="67" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU002_in"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_15" display-name="Analog_15" uuid="6a62ee57-14ad-40d7-acb6-b58b3cc9beed" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="97" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU003_in"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_16" display-name="Analog_16" uuid="bc166bba-52dc-4dbd-b652-6e617bc3726c" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="127" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU004_in"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_17" display-name="Analog_17" uuid="8771bd47-d4c6-4bad-b26d-c079e455c5d2" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="157" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU005_in"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_1" display-name="Discret_S_Small_1" uuid="9d9f869b-94c6-4f02-ad69-e6966885290d" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="185.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU001_IN"/>
+		</object>
+		<object access-modifier="private" name="Descr" display-name="Descr" uuid="cabc6525-51a0-4ff2-84d3-f9f447cbec23" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="185" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Питание от сети" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Питание от АКБ"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Питание от сети"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="2e069b56-5a63-42c3-9c98-cffc37db78f1" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU001_IN.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_2" display-name="Discret_S_Small_2" uuid="bfc95746-327c-4a7a-8812-92e454e9a78f" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="219.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU002_IN"/>
+		</object>
+		<object access-modifier="private" name="Descr_1" display-name="Descr_1" uuid="23b3688e-668d-4fb5-a539-9ee8ec46d5d3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="219.001" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="29.9988" ver="4"/>
+			<designed target="Text" value="Заряд АКБ - норма" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Заряд АКБ - низкий"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Заряд АКБ - норма"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="f5a79f4a-d2bf-43d0-ab5a-5f2fc51fc5bc" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU002_IN.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="a685aa75-c208-4dff-bb3a-757737a21eee" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="613" ver="4"/>
+		<designed target="Y" value="334.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="194" ver="4"/>
+		<designed target="Height" value="257" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="5e650a05-edd8-4d99-9d7d-8809f50a4880" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="6" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="183" ver="4"/>
+			<designed target="Height" value="36" ver="4"/>
+			<designed target="Text" value="ИБП КИПиА" ver="4"/>
+			<designed target="Font" value="PT Root UI,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Analog_13" display-name="Analog_13" uuid="dd0e71e3-fc25-435b-a659-365912cd3ba9" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="37" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU001_u1"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_14" display-name="Analog_14" uuid="9b6160c0-6dc0-444a-ab12-794d2adaa68c" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="67" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU002_u1"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_15" display-name="Analog_15" uuid="e257e20d-ff43-4fa4-b0b0-961c4b17e64a" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="97" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU003_u1"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Analog_16" display-name="Analog_16" uuid="4a157922-9339-41af-ac1b-684d0739f451" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+			<designed target="X" value="7.25" ver="4"/>
+			<designed target="Y" value="127" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.AU004_u1"/>
+			<init target="in_Round" ver="4" value="2"/>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_1" display-name="Discret_S_Small_1" uuid="642f3aeb-1a3d-4b77-b3cf-d7848b49e16a" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="185.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU001_U1"/>
+		</object>
+		<object access-modifier="private" name="Descr" display-name="Descr" uuid="d778d186-50b5-47b5-bb27-397446fcd10e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="185" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Питание от сети" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Питание от АКБ"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Питание от сети"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="e3b9061c-1a83-4c1a-8a1c-2db75d189a12" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU001_U1.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+		<object access-modifier="private" name="Discret_S_Small_2" display-name="Discret_S_Small_2" uuid="0eddf437-00ea-455a-b35a-b852d64fa334" base-type="Discret_S_Small" base-type-id="8a4db666-e387-4845-a144-87d6351d821f" ver="4">
+			<designed target="X" value="7.5" ver="4"/>
+			<designed target="Y" value="219.75" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<init target="in_Alias" ver="4" value="STATION.DU002_U1"/>
+		</object>
+		<object access-modifier="private" name="Descr_1" display-name="Descr_1" uuid="e7ecee2b-2437-44a0-b47c-e665de82da77" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="48.9495" ver="4"/>
+			<designed target="Y" value="219.001" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="178.101" ver="4"/>
+			<designed target="Height" value="29.9988" ver="4"/>
+			<designed target="Text" value="Заряд АКБ - норма" ver="4"/>
+			<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<do-trace access-modifier="private" target="Text" ver="4">
+				<conditional-expr>
+					<condition>
+						<![CDATA[(me.AP_State.Value & 128) ==128]]>
+					</condition>
+					<expr>
+						<![CDATA["Заряд АКБ - низкий"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Заряд АКБ - норма"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="AP_State" display-name="AP_State" uuid="12ba059f-ec67-4cc2-bc85-5179ba5fb57e" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="4">
+				<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+				<init target="Path" ver="4">
+					<expr>
+						<![CDATA["STATION.DU002_U1.State"]]>
+					</expr>
+				</init>
+			</object>
+		</object>
+	</object>
+</type>
+

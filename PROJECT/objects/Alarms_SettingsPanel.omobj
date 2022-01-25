@@ -1,0 +1,932 @@
+<type ver="2" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" base-type="Form" uuid="2c204548-68af-4a68-bc0f-bcdba77c2510" display-name="SettingsSeverity_1" name="Alarms_SettingsPanel" access-modifier="private">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="615" ver="2"/>
+	<designed target="Height" value="380" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="pSettingsForm" display-name="pSettingsForm" uuid="e78e5a66-6f92-4ca3-a040-418c28b4f6f4" base-type="SettingsForm" base-type-id="82dc7618-130c-486c-840d-5d302f40306b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="32b8ebde-b7df-4c9a-b7e2-c8c785e30c8e" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<object access-modifier="private" name="bDefSet" display-name="bDefSet" uuid="d3b732fa-2609-46f5-8307-06cb6d1b8ed6" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) pSettingsForm.Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="ModeSwitch" display-name="ModeSwitch" uuid="58853bac-e850-4c19-82a8-376225d9bd6c" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="6" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Переключение режимов" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSwitchModeHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Settings" display-name="Settings" uuid="bb68db59-3cfb-4e0b-834d-266f369191cd" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="34" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Параметры" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSettingsHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Filtr" display-name="Filtr" uuid="e9840a8b-6990-4990-a274-37a6add93551" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="62" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Фильтр отображения" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnFiltrHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Save" display-name="Save" uuid="fd4fe03a-8d3a-4261-ab80-1f0b3938f9a8" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="90" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Сохранить" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnExportHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Print" display-name="Print" uuid="15ab302d-2108-4d67-bc39-383fb45acc82" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="118" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Печать" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnPrintHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Ack" display-name="Ack" uuid="ab779ee7-aa22-4a60-b7dc-0514017546f9" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="9" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Квитировать" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnAckSelHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="AckAll" display-name="AckAll" uuid="f67010f3-d4a0-456b-9d44-d18f3845ec02" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="37" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Квитировать все" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnAckAllHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="ClearList" display-name="ClearList" uuid="282e70c0-2566-41e6-98f2-2905274253f7" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="146" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Очистить список" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnClearAllHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Snapshot" display-name="Snapshot" uuid="bef78a33-1449-446a-b853-14e19483491e" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="115" ver="2"/>
+		<designed target="Y" value="174" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="171" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Снимок" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSnapshotHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="ClearListSound" display-name="ClearListSound" uuid="1ca71e0b-8fbc-45f7-a545-d5438aad2227" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="65" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Очистить очередь звуков" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSndClearHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SkipSound" display-name="SkipSound" uuid="4f94baba-e7fe-4b8b-b95d-999a46a30bf9" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="93" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Пропустить звук" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSndNextHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Mute" display-name="Mute" uuid="c5f1595f-9224-4e81-a6a6-bb4c362e47b4" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="121" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Отключить проигрывание звуков" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSndMuteHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="Text" ver="3">
+			<body>
+				<![CDATA[(pSettingsForm.pAlarms.Mute)?("Включить проигрывание звуков"):("Отключить проигрывание звуков")]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Request" display-name="Request" uuid="2f295b83-4897-493b-9f1d-4a4a423ce215" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="149" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Элементы управления запросом истории" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.RecHistoryHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Sort" display-name="Sort" uuid="3923ab71-fa72-4b89-82d3-727d0fe827bb" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="177" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Сортировка" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnSortHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="c2cc7cb3-fe67-48d4-8195-3e8ba85eef41" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="145.762" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.RecHistory.btnHistRequest.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_2" display-name="Image_2" uuid="8ef3fd5a-0a72-4007-a789-559119157ca8" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="5.76194" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnAckSel.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_3" display-name="Image_3" uuid="2247ed7a-a522-428e-a07c-c7b89dcb4b36" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="33.7619" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnAckAll.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_4" display-name="Image_4" uuid="6600a04d-474c-463d-9918-9e1805f30e34" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="171.095" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSnapshot.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_5" display-name="Image_5" uuid="883f8a1f-398f-4c4b-8037-1a7a67f80407" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="61.7619" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSndClear.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_6" display-name="Image_6" uuid="2e414bfc-c0f4-4f8e-ba77-0df97c73b903" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="143.095" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnClearAll.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_7" display-name="Image_7" uuid="26c628bf-2670-4c8a-8fe0-40ce2b0ddf1f" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="117.762" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSndMute.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_8" display-name="Image_8" uuid="7cfbd614-6174-4e1b-9630-3adba46f732e" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="89.7619" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSndNext.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_9" display-name="Image_9" uuid="f65efcb1-bd1a-46e3-bb5a-d3c8bdd14c01" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="56" ver="3"/>
+		<designed target="Y" value="3.09528" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnOperMode.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_10" display-name="Image_10" uuid="f1a06908-23c1-425a-8182-e71e3375c596" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="82.6666" ver="3"/>
+		<designed target="Y" value="3.09528" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnHistMode.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_11" display-name="Image_11" uuid="57566f8e-2e6b-4efe-9e0a-104081434cdd" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="31.0953" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSettings.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_12" display-name="Image_12" uuid="e216142d-0ed4-4461-a052-a6a5ead65f7e" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="87.0953" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnExport.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_13" display-name="Image_13" uuid="b378ad24-cab6-41e2-a068-8d9f17543e4f" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="115.095" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnPrint.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_14" display-name="Image_14" uuid="d8a8d204-74c0-4ecd-946d-ffc0e4a3c178" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="70" ver="3"/>
+		<designed target="Y" value="59.0953" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnFiltr.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Image_15" display-name="Image_15" uuid="1acfd321-c24a-43d7-adde-85418567778b" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="172.895" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnSort.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="Opened">
+		<body kind="javascript">
+			<![CDATA[countFlags = 0;//Общий счетчик изменений состояния checkBox
+countFlagsInternal = 0; //Внутренний счетчик изменений состояния checkBox
+
+ModeSwitch.State = !pSettingsForm.Settings.Panel.btnSwitchModeHide;
+Settings.State = !pSettingsForm.Settings.Panel.btnSettingsHide;
+Filtr.State = !pSettingsForm.Settings.Panel.btnFiltrHide;
+Save.State = !pSettingsForm.Settings.Panel.btnExportHide;
+Print.State = !pSettingsForm.Settings.Panel.btnPrintHide;
+Ack.State = !pSettingsForm.Settings.Panel.btnAckSelHide;
+AckAll.State = !pSettingsForm.Settings.Panel.btnAckAllHide;
+ClearList.State = !pSettingsForm.Settings.Panel.btnClearAllHide;
+Snapshot.State = !pSettingsForm.Settings.Panel.btnSnapshotHide;
+ClearListSound.State = !pSettingsForm.Settings.Panel.btnSndClearHide;
+SkipSound.State = !pSettingsForm.Settings.Panel.btnSndNextHide;
+Mute.State = !pSettingsForm.Settings.Panel.btnSndMuteHide;
+Sort.State = !pSettingsForm.Settings.Panel.btnSortHide;
+Login.State = !pSettingsForm.Settings.Panel.btnLoginHide;
+Request.State = !pSettingsForm.Settings.Panel.RecHistoryHide;
+
+//Заполняем countFlags для того, чтобы учитывать изменения состояний только по действиям пользователя
+if (!pSettingsForm.Settings.Panel.btnSwitchModeHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSettingsHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnFiltrHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnExportHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnPrintHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnAckSelHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnAckAllHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnClearAllHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSnapshotHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSndClearHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSndNextHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSndMuteHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnSortHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.btnLoginHide) countFlags += 1;
+if (!pSettingsForm.Settings.Panel.RecHistoryHide) countFlags += 1;
+
+bInit = true;//Разрешение на обработку формами своих значений
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+pSettingsForm.CheckModify();
+
+
+
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Image_16" display-name="Image_16" uuid="0a023875-54e0-458c-a25f-c5de6e2f4fff" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="3">
+		<designed target="X" value="294" ver="3"/>
+		<designed target="Y" value="201" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="24" ver="3"/>
+		<designed target="Height" value="24" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="ImageFile" value="" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<designed target="CurrentFrameNumber" value="0" ver="3"/>
+		<designed target="Speed" value="1" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-trace access-modifier="private" target="ImageFile" ver="3">
+			<body>
+				<![CDATA[pSettingsForm.pAlarms.Main_panel.ToolBar.btnLogin.Image]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Login" display-name="Login" uuid="e65fce12-0915-4a93-81fa-b2ace400e3df" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+		<designed target="X" value="339" ver="2"/>
+		<designed target="Y" value="204" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="261" ver="2"/>
+		<designed target="Height" value="17" ver="2"/>
+		<designed target="Text" value="Сменить пользователя" ver="2"/>
+		<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="State" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="StateChanged">
+			<body kind="javascript">
+				<![CDATA[if (bInit)
+{
+	if (countFlagsInternal < countFlags) countFlagsInternal++;
+	else 
+	{
+		pSettingsForm.Settings.Panel.btnLoginHide = !State;
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<object access-modifier="private" name="countFlags" display-name="countFlags" uuid="f7f9bcba-8d79-4efe-9fa6-2ffed9b2e40e" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	<object access-modifier="private" name="countFlagsInternal" display-name="countFlagsInternal" uuid="abb8f7ab-222d-48cb-9f79-0056aefdca99" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

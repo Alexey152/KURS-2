@@ -1,0 +1,77 @@
+<object access-modifier="private" name="Color" display-name="Color" uuid="bee7d64a-e953-43f3-901c-533ebcc31c24" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="1">
+	<object access-modifier="private" name="White" display-name="White" uuid="b864c511-8dbf-480d-9239-4c2132d4f30f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="LightBlue" display-name="LightBlue" uuid="d1e6ccec-a72f-42e3-9617-4519a968c1d8" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Blue" display-name="Blue" uuid="0d760b70-50df-4883-9682-71db48787b0b" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Purple" display-name="Purple" uuid="5d8cafe9-c3a6-422d-b023-ac48d3388739" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Yellow" display-name="Yellow" uuid="65a29092-6b8b-4b5f-bbff-93d7b3dee546" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Green" display-name="Green" uuid="a3aaa65a-b86f-4dd0-b827-88a2a53a2a00" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Red" display-name="Red" uuid="3d1e77ea-eb20-44cd-a988-55a2ba5b96ed" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Orange" display-name="Orange" uuid="adfbc9e5-fd9f-46e3-aa4a-925cb0a82c7a" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Magenta" display-name="Magenta" uuid="a0f3562f-e3b0-4216-a04a-9a9a0326e009" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Brown" display-name="Brown" uuid="9bd0570e-d171-45d3-873e-3ebff5c2a3e4" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="LightBrown" display-name="LightBrown" uuid="2a8a53d7-b783-4fcf-97aa-e1f6c6b87558" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Gray" display-name="Gray" uuid="2d2974f0-141f-47c8-be66-9b2aef922d3c" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="Black" display-name="Black" uuid="600d4f4f-7d82-4f52-8b98-06c576b05e72" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="White" value="0xffffffff" ver="1"/>
+	<init target="LightBlue" value="0xff00ffff" ver="1"/>
+	<init target="Blue" value="0xff0000ff" ver="1"/>
+	<init target="Purple" value="0xff800080" ver="1"/>
+	<init target="Yellow" value="0xffffff00" ver="1"/>
+	<init target="Green" value="0xff00ff00" ver="1"/>
+	<init target="Red" value="0xffff0000" ver="1"/>
+	<init target="Orange" value="0xffff8000" ver="1"/>
+	<init target="Magenta" value="0xffff00ff" ver="1"/>
+	<init target="Brown" value="0xff800000" ver="1"/>
+	<init target="LightBrown" value="0xffcc6600" ver="1"/>
+	<init target="Gray" value="0xffc0c0c0" ver="1"/>
+	<init target="Black" value="0xff000000" ver="1"/>
+	<object access-modifier="private" name="Transparent" display-name="Transparent" uuid="e4fcdf63-665b-4fcc-8ee2-d2aeae19dec9" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="Transparent" value="0x00000000" ver="1"/>
+	<do access-modifier="private" name="GetColorByNum" display-name="GetColorByNum" ver="4" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+		<param access-modifier="private" name="ColorNum" display-name="" uuid="49da2eed-8bfb-4fda-8f08-6f72caa4eb4e" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+		<body kind="om">
+			<![CDATA[res: uint4 = me.Gray;
+if (ColorNum == 0) {res = me.Gray;}
+if (ColorNum == 1) {res = me.Green;}
+if (ColorNum == 2) {res = me.Yellow;}
+if (ColorNum == 3) {res = me.Red;}
+if (ColorNum == 4) {res = me.Brown;}
+if (ColorNum == 5) {res = me.White;}
+if (ColorNum == 6) {res = me.Blue;}
+if (ColorNum == 7) {res = me.LightBlue;}
+if (ColorNum == 8) {res = me.Orange;}
+if (ColorNum == 9) {res = me.DarkRed;}
+if (ColorNum == 10) {res = me.Yellow;}
+if (ColorNum == 11) {res = me.DarkGreen;}
+if (ColorNum == 12) {res = me.DarkYellow;}
+if (ColorNum == 13) {res = me.DarkRed;}
+if (ColorNum == 15) {res = me.Black;}
+if (ColorNum == 20) {res = me.Gray;}
+if (ColorNum == 21) {res = me.Green;}
+if (ColorNum == 22) {res = me.Yellow;}
+if (ColorNum == 23) {res = me.Red;}
+if (ColorNum == 24) {res = me.Brown;}
+if (ColorNum == 25) {res = me.Gray;}
+if (ColorNum == 26) {res = me.Blue;}
+if (ColorNum == 27) {res = me.LightBlue;}
+if (ColorNum == 28) {res = me.Orange;}
+if (ColorNum == 29) {res = me.Brown;}
+if (ColorNum == 30) {res = me.Magenta;}
+if (ColorNum == 4096) {res = me.Green;}
+return res;]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="DarkGreen" display-name="DarkGreen" uuid="73d75576-6c51-406a-b8b7-8200af4c243b" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="DarkRed" display-name="DarkRed" uuid="52954bd7-9463-47e4-9581-67b235f01ca4" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="DarkYellow" display-name="DarkYellow" uuid="6dda474b-d462-49de-b821-cf2101c62308" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="DarkGreen" ver="3" value="0xff008000"/>
+	<init target="DarkRed" ver="3" value="0xff800000"/>
+	<init target="DarkYellow" ver="3" value="0xff808000"/>
+	<object access-modifier="private" name="DarkGray" display-name="DarkGray" uuid="f44b88d4-45d6-4f07-9d8b-a4f4abf58d45" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="DarkGray" ver="3" value="0xff808080"/>
+	<object access-modifier="private" name="ButtonFace" display-name="ButtonFace" uuid="2620137c-115d-4592-9204-43095eed5015" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<object access-modifier="private" name="NaviButton" display-name="NaviButton" uuid="50e6eeb5-c8d4-40cf-8095-867961db715e" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="1"/>
+	<init target="ButtonFace" ver="3" value="0xffd4d0c8"/>
+	<init target="NaviButton" ver="3" value="0xffe1e1e1"/>
+</object>
+

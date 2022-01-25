@@ -1,0 +1,286 @@
+<type access-modifier="private" name="MenuMainMenu" display-name="MenuMain_1" uuid="c643a8b6-1941-4ec4-82d4-224ce510b64c" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="151" ver="2"/>
+	<designed target="Height" value="151" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="151" ver="2"/>
+	<designed target="WindowHeight" value="151" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="false" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="false" ver="2"/>
+	<designed target="AlwaysOnTop" value="true" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="0" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="8d4ea0d5-fed1-4298-b034-49360597a633" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="2" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="37" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffaaaaaa" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="dde06e51-e8fd-49db-a5b6-72d1e11f3931" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="2">
+			<designed target="X" value="3.6" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="32" ver="2"/>
+			<designed target="Height" value="32" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="ImageFile" value="Connect.png" ver="2"/>
+			<designed target="Active" value="true" ver="2"/>
+			<designed target="CurrentFrameNumber" value="0" ver="2"/>
+			<designed target="Speed" value="1" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="5f012aaf-6741-419c-a0e6-0458c1763608" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="42.9" ver="2"/>
+			<designed target="Y" value="8.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="90.5" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Подключиться" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.PenStyle=0;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="2" event="MouseClick" form-by-id="false" form-action="open-new">
+			<object access-modifier="private" uuid="0f97bd88-ea35-480a-aff2-d9c73753ace2" base-type="LoginPopUp" base-type-id="2cdea936-4ca6-4e18-974b-755bf89358b8" ver="2"/>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="cd03ad5e-6a39-475c-bbc5-7dcf18eeffcc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="39" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="37" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffaaaaaa" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="30ef96ba-0587-4af0-816d-d4493288a1a9" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="2">
+			<designed target="X" value="2" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="32" ver="2"/>
+			<designed target="Height" value="32" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="ImageFile" value="Disconnect.png" ver="2"/>
+			<designed target="Active" value="true" ver="2"/>
+			<designed target="CurrentFrameNumber" value="0" ver="2"/>
+			<designed target="Speed" value="1" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="5cbd3fb2-8cbb-4fa7-91a7-e06479359e8e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="42.5" ver="2"/>
+			<designed target="Y" value="8.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="90.5" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Отключиться" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.PenStyle=0;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[unit.SecurityParams.Global_SecurityContext.Logout();
+unit.Global_Params.noUsrConnected=true;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="020e104f-e469-4cd8-81e5-86a3250e1c4a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="76" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="37" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffaaaaaa" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="d5323725-d6b1-4659-a9b9-e5cb17f41e9f" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="2">
+			<designed target="X" value="2" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="32" ver="2"/>
+			<designed target="Height" value="32" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="ImageFile" value="SaveBackup.png" ver="2"/>
+			<designed target="Active" value="true" ver="2"/>
+			<designed target="CurrentFrameNumber" value="0" ver="2"/>
+			<designed target="Speed" value="1" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="8a19d3cc-687b-401e-b714-5b1b76ce0a68" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="46" ver="2"/>
+			<designed target="Y" value="0.75" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="102" ver="2"/>
+			<designed target="Height" value="35" ver="2"/>
+			<designed target="Text" value="Сохранить резервную копию" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.PenStyle=0;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="5b3e4e09-b42e-4483-8d11-c5fa471a6b95" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="113" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="150" ver="2"/>
+		<designed target="Height" value="37" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffaaaaaa" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="fbcf5a8d-2e8e-4b68-9112-16e3739280fb" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="2">
+			<designed target="X" value="2" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="32" ver="2"/>
+			<designed target="Height" value="32" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="ImageFile" value="RestoreBackup.png" ver="2"/>
+			<designed target="Active" value="true" ver="2"/>
+			<designed target="CurrentFrameNumber" value="0" ver="2"/>
+			<designed target="Speed" value="1" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="fc091a99-bed6-4afa-9fab-10a151e1049b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="46" ver="2"/>
+			<designed target="Y" value="0.75" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="102" ver="2"/>
+			<designed target="Height" value="35" ver="2"/>
+			<designed target="Text" value="Восстановить из резервной копии" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.PenStyle=1;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.PenStyle=0;]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseLeave" form-action="close"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

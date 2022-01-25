@@ -1,0 +1,367 @@
+<type access-modifier="private" name="TR_desc_For_All" display-name="TR_desc_For_All" uuid="d5c9734c-1b9d-4808-9b89-6770086daa9e" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="1">
+	<designed target="X" value="0" ver="1"/>
+	<designed target="Y" value="0" ver="1"/>
+	<designed target="Rotation" value="0" ver="1"/>
+	<designed target="Scale" value="1" ver="1"/>
+	<designed target="Visible" value="true" ver="1"/>
+	<designed target="Enabled" value="true" ver="1"/>
+	<designed target="Tooltip" value="" ver="1"/>
+	<object access-modifier="private" name="Select_Rectangle" display-name="Select_Rectangle" uuid="fc052639-c3cc-47ad-8c6c-bd68d29d52a3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca">
+		<designed target="X" value="0"/>
+		<designed target="Y" value="0"/>
+		<designed target="Rotation" value="0"/>
+		<designed target="Scale" value="1"/>
+		<designed target="Visible" value="false"/>
+		<designed target="Enabled" value="true"/>
+		<designed target="Tooltip" value=""/>
+		<designed target="Width" value="100"/>
+		<designed target="Height" value="25"/>
+		<designed target="RoundingRadius" value="0"/>
+		<designed target="PenColor" value="0xff000000"/>
+		<designed target="PenStyle" value="1"/>
+		<designed target="PenWidth" value="1"/>
+		<designed target="BrushColor" value="4278190080"/>
+		<designed target="BrushStyle" value="0"/>
+		<do-on access-modifier="private" name="New_handler" display-name="New_handler" event="MouseClick" ver="4">
+			<body kind="om">
+				<![CDATA[if (unit.Security_1.EnableTU_1.Value)
+{
+unit.WindowsLimit.MouseClick_X.Value=ScreenX(MouseX,0);
+unit.WindowsLimit.MouseClick_Y.Value=ScreenY(0,MouseY);
+OpenKeyPad.Invoke();
+}
+else
+{OpenAccessDenied.Invoke();}]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_main" display-name="Rectangle_main" uuid="21f33594-1abd-4584-af2e-826fd62e0f41" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+		<designed target="X" value="0" ver="1"/>
+		<designed target="Y" value="-1" ver="1"/>
+		<designed target="Rotation" value="0" ver="1"/>
+		<designed target="Scale" value="1" ver="1"/>
+		<designed target="Visible" value="true" ver="1"/>
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="Tooltip" value="" ver="1"/>
+		<designed target="Width" value="100" ver="1"/>
+		<designed target="Height" value="25" ver="1"/>
+		<designed target="RoundingRadius" value="0" ver="1"/>
+		<designed target="PenColor" value="0xff626262" ver="1"/>
+		<designed target="PenStyle" value="1" ver="1"/>
+		<designed target="PenWidth" value="1" ver="1"/>
+		<designed target="BrushColor" value="0xffffffff" ver="1"/>
+		<designed target="BrushStyle" value="1" ver="1"/>
+		<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="119d5785-6d4d-4c28-a5df-0a45307c140b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+			<designed target="X" value="0" ver="1"/>
+			<designed target="Y" value="1" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="Text" value="******" ver="1"/>
+			<designed target="Font" value="PT Astra Sans,11,-1,5,75,0,0,0,0,0,Bold" ver="1"/>
+			<designed target="FontColor" value="4278190080" ver="1"/>
+			<designed target="TextAlignment" value="132" ver="1"/>
+			<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="ab1e5219-e37a-47f6-acae-0029bdf579d0" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+				<designed target="InValue" value="" ver="1"/>
+				<init target="Format" ver="1">
+					<object access-modifier="private" uuid="1902acf7-de37-42d9-b8b4-68c9493c2e42" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+						<init target="DigitsCount" ver="1" ref="here.in_Round"/>
+					</object>
+				</init>
+				<do-trace access-modifier="private" target="InValue" ver="1">
+					<body>
+						<![CDATA[here.opcValue]]>
+					</body>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="Text" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[opcValue.Quality < 192]]>
+					</condition>
+					<expr>
+						<![CDATA["******"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[here.opcValue == -32000 || here.opcValue == 32000]]>
+					</condition>
+					<expr>
+						<![CDATA[""]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[me.ValueFormat.OutValue]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="de38ff0c-6668-4c32-89bb-9b835255f34b" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+			<designed target="X" value="0" ver="1"/>
+			<designed target="Y" value="25" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="24" ver="1"/>
+			<designed target="PenColor" value="0xffffffff" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="2" ver="1"/>
+			<designed target="BrushColor" value="4278190080" ver="1"/>
+			<designed target="BrushStyle" value="0" ver="1"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="0a7fcbde-2fea-44ea-abec-30f10ccaa4af" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="0" ver="1"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="06b29418-020e-4029-9885-6aaf2394258d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+				<designed target="X" value="100" ver="1"/>
+				<designed target="Y" value="0" ver="1"/>
+			</object>
+			<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="f556c2ac-f9ac-47ac-968b-8523cea166b4" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+				<designed target="X" value="100" ver="1"/>
+				<designed target="Y" value="-24" ver="1"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[me.Line_2.PenColor = 0xff626262;
+me.Line_2.PenWidth = 2;
+me.PenWidth = 2;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="1" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[me.Line_2.PenColor=0xffffffff;
+me.Line_2.PenWidth = 1;
+me.PenWidth = 1;]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (unit.Security.EnableControl.Value)
+{
+unit.WindowsLimit.MouseClick_X.Value=ScreenX(MouseX,0);
+unit.WindowsLimit.MouseClick_Y.Value=ScreenY(0,MouseY);
+OpenKeyPad.Invoke();
+}
+else
+{OpenAccessDenied.Invoke();}]]>
+			</body>
+		</do-on>
+		<designed target="Opacity" value="1" ver="4"/>
+		<do-trace access-modifier="private" target="BrushColor" ver="4">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!imitOn]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffcdcdcd]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffffffff]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="3e9b41cd-24f9-4611-9fda-66e3e2cf269f" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<param access-modifier="private" name="in_Round" display-name="in_Round" uuid="e96362eb-578b-4a8a-a40a-570ba2b556f9" base-type="uint1" base-type-id="f73099bc-ee13-42cf-82bb-87368b826707" ver="1"/>
+	<object access-modifier="private" name="opcValue" display-name="opcValue" uuid="5b09b8d6-66a4-48b4-a8f2-0d731d9b00c8" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + here.in_UstTag]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + here.UstTag]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="opcEUnits" display-name="opcEUnits" uuid="a352e87e-d785-4f5b-bd84-2b5d8db3aaa2" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".EUnits"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".EUnits"]]>
+			</body>
+		</do-trace>
+	</object>
+	<param access-modifier="private" name="in_UstTag" display-name="in_UstTag" uuid="9e7b0b96-bfdb-414a-a50d-29bbfeeeff15" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<object access-modifier="private" name="opcObjName" display-name="opcObjName" uuid="b165b1a0-9059-44d9-b806-bfc5a72d4204" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + ".ObjName"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + ".ObjName"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="opcwValue" display-name="opcwValue" uuid="da26cdf5-5fa2-480d-af70-311501d821b6" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + here.in_UstTag+ ".wValue"]]>
+			</expr>
+		</init>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + here.UstTag+ ".wValue"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="OpenKeyPad" display-name="OpenKeyPad" uuid="ecfc5245-aa7a-44e7-b6b5-82cea6283b9a" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog">
+			<object access-modifier="private" uuid="dfae7d5f-f988-47b9-8843-2a5be4cf8161" base-type="KeyPad" base-type-id="29968eb8-bc14-44b3-aea5-5ee1d2016dbf" ver="1">
+				<init target="opcwValue" ver="1" ref="here.opcwValue"/>
+				<init target="opcValue" ver="1" ref="here.opcValue"/>
+				<init target="opcEUnits" ver="1" ref="here.opcEUnits"/>
+				<init target="WindowX" ver="1">
+					<expr>
+						<![CDATA[unit.WindowsLimit.MouseClick_X.Value]]>
+					</expr>
+				</init>
+				<init target="WindowY" ver="1">
+					<expr>
+						<![CDATA[unit.WindowsLimit.MouseClick_Y.Value]]>
+					</expr>
+				</init>
+				<init target="alarm" ver="1" value='"&lt;Subcondition Message=&apos;~&apos; Value=&apos;&apos; Sound=&apos;&apos; Severity=&apos;3&apos; Enabled=&apos;1&apos; SoundEnabled=&apos;0&apos; /&gt;"'/>
+				<init target="in_TagType" ver="2">
+					<expr>
+						<![CDATA[here.in_TagType]]>
+					</expr>
+				</init>
+				<init target="opcObjName" ver="3" ref="here.opcObjName"/>
+				<init target="HiLimit" ver="4" ref="here.opcHiLimit"/>
+				<init target="LoLimit" ver="4" ref="here.opcLoLimit"/>
+				<init target="Round" ver="4">
+					<expr>
+						<![CDATA[here.Round]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="opcObjFullName_NotUsed" display-name="opcObjFullName_NotUsed" uuid="40116f58-9ee6-46d6-84f1-09515defc589" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+	</object>
+	<object access-modifier="private" name="in_TagType" display-name="in_TagType" uuid="90a1a056-4fb9-4f9f-971a-831879a6b97c" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<init target="in_TagType" ver="2" value="float"/>
+	<object access-modifier="private" name="EnableForOper" display-name="EnableForOper" uuid="aa2cf675-d395-4807-aba4-dc39cc695cfb" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+	<init target="EnableForOper" ver="3" value="false"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="OpenAccessDenied" display-name="OpenAccessDenied" uuid="4eefc2e4-c8b6-4248-b07f-96dadf70fa30" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="eaa2c1d1-79da-44a7-8bbe-8faf5f6478b6" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="IsOKOnly" ver="1" value="true"/>
+				<init target="in_Title" ver="1" value="Внимание"/>
+				<init target="in_Message" ver="1" value="Отказано в доступе. Недостаточно прав! "/>
+				<init target="MessageType" ver="1" value="error.png"/>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="AccessDeniedMsg" display-name="AccessDeniedMsg" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[unit.Security.ObjName.Value = here.opcObjName.Value + ". ";
+unit.Security.Msg_AccessDenied.Send.Invoke();
+unit.Security.ObjName.Value = "";]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="407161b2-c446-45f2-945e-fb6a0d5cfec6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<init target="Alias" ver="4">
+		<expr>
+			<![CDATA[here.in_Alias]]>
+		</expr>
+	</init>
+	<do-trace access-modifier="private" target="Alias" ver="4">
+		<body>
+			<![CDATA[unit.OpenWindows.AP_Alias]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="UstTag" display-name="UstTag" uuid="829065e4-6d25-4f7d-a02d-57cee2ddca82" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<init target="UstTag" ver="4">
+		<expr>
+			<![CDATA[here.in_UstTag]]>
+		</expr>
+	</init>
+	<object access-modifier="private" name="opcHiLimit" display-name="opcHiLimit" uuid="6b9414f0-e6ca-4a87-a779-ff7cdd6fd88c" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + HiLimit]]>
+			</body>
+		</do-trace>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + in_HiLimit]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="opcLoLimit" display-name="opcLoLimit" uuid="84bedce2-d30a-426e-bc7b-856f928765e8" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="4">
+			<body>
+				<![CDATA[here.Alias + LoLimit]]>
+			</body>
+		</do-trace>
+		<init target="Path" ver="4">
+			<expr>
+				<![CDATA[here.in_Alias + in_LoLimit]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="imitOn" display-name="imitOn" uuid="c6ed2c2c-8406-481b-9021-204e7bb1c1eb" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<init target="imitOn" ver="4" value="true"/>
+	<object access-modifier="private" name="Round" display-name="Round" uuid="c518f047-7764-4f95-bc10-f7ed3f375557" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="4"/>
+	<init target="Round" ver="4">
+		<expr>
+			<![CDATA[here.in_Round]]>
+		</expr>
+	</init>
+	<param access-modifier="private" name="in_HiLimit" display-name="in_HiLimit" uuid="8fae2e8e-a6d6-40a7-8581-f4a4fd13e4dd" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<param access-modifier="private" name="in_LoLimit" display-name="in_LoLimit" uuid="0e0c4a5e-1ddf-4c2e-a79f-f016079ea72a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="1"/>
+	<object access-modifier="private" name="HiLimit" display-name="HiLimit" uuid="24f371b1-3cf8-462f-9ea6-3e433974b042" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="LoLimit" display-name="LoLimit" uuid="8fb4c9a8-4beb-4c3d-9971-c445ee26abc0" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<init target="HiLimit" ver="4">
+		<expr>
+			<![CDATA[here.in_HiLimit]]>
+		</expr>
+	</init>
+	<init target="LoLimit" ver="4">
+		<expr>
+			<![CDATA[here.in_LoLimit]]>
+		</expr>
+	</init>
+</type>
+

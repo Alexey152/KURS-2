@@ -1,0 +1,998 @@
+<type access-modifier="private" name="Trends_ItemsTree" display-name="Trends_ItemsTree" uuid="2d934a44-5181-41f0-94db-e0e63af54d68" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="200" ver="4"/>
+	<designed target="Height" value="300" ver="4"/>
+	<designed target="RoundingRadius" value="0" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="1" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="4278190080" ver="4"/>
+	<designed target="BrushStyle" value="0" ver="4"/>
+	<object access-modifier="private" name="SearchBar" display-name="SearchBar" uuid="826ae86f-7678-4a99-826a-0d42378c5e08" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="0" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="200" ver="4"/>
+		<designed target="Height" value="24" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="PatternEdit" display-name="PatternEdit" uuid="6977cf4d-8757-4cd1-9c22-f21f6d9cc021" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="4">
+			<designed target="X" value="1" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="176" ver="4"/>
+			<designed target="Height" value="23" ver="4"/>
+			<designed target="Text" value="" ver="4"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+			<designed target="HideInput" value="false" ver="4"/>
+			<designed target="PlaceholderText" value="" ver="4"/>
+			<designed target="ReadOnly" value="false" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="KeyPress">
+				<body kind="om">
+					<![CDATA[if (event.KeyCode == 82) // Enter
+{
+	SearchBtn.Click();
+}
+else if (event.KeyCode == 75) // Escape
+{
+	CancelFind();
+	Text = "";
+	isSearchMode = false;
+}]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Font" ver="4">
+				<body>
+					<![CDATA[here.Font]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="LayoutWeight" display-name="LayoutWeight" uuid="85c0a2ee-ba3d-4a07-a4dd-fc5483052521" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+				<designed target="Weight" value="178" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="SearchBtn" display-name="SearchBtn" uuid="9fe47696-8ffa-4c0d-87a5-6a087ad2020a" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="4">
+			<designed target="X" value="177" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="Поиск" ver="4"/>
+			<designed target="Width" value="22" ver="4"/>
+			<designed target="Height" value="22" ver="4"/>
+			<designed target="Checkable" value="false" ver="4"/>
+			<designed target="Text" value="" ver="4"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<object access-modifier="private" name="Img" display-name="Img" uuid="6abdcb77-8663-42c3-b8e1-6c80c7ebf9b0" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="4">
+				<designed target="X" value="3" ver="4"/>
+				<designed target="Y" value="3" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="16" ver="4"/>
+				<designed target="Height" value="16" ver="4"/>
+				<designed target="PenColor" value="4278190080" ver="4"/>
+				<designed target="PenStyle" value="0" ver="4"/>
+				<designed target="PenWidth" value="1" ver="4"/>
+				<designed target="ImageFile" value="Trends_TreeIcons/Search.png" ver="4"/>
+				<designed target="Active" value="true" ver="4"/>
+				<designed target="CurrentFrameNumber" value="0" ver="4"/>
+				<designed target="Speed" value="1" ver="4"/>
+				<do-trace access-modifier="private" target="ImageFile" ver="4">
+					<body>
+						<![CDATA[isSearchMode
+? "Trends_TreeIcons/ClearSearch.png"
+: "Trends_TreeIcons/Search.png"]]>
+					</body>
+				</do-trace>
+			</object>
+			<designed target="TextAlignment" value="132" ver="4"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="4"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="4"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+			<designed target="BrushColor" value="4293980400" ver="4"/>
+			<designed target="BrushStyle" value="1" ver="4"/>
+			<designed target="OnClickBrushColor" value="4288716960" ver="4"/>
+			<designed target="OnClickBrushStyle" value="1" ver="4"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="4"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="4"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="4"/>
+			<designed target="DisabledBrushStyle" value="1" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="0" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="4"/>
+			<designed target="OnClickPenStyle" value="0" ver="4"/>
+			<designed target="OnClickPenWidth" value="1" ver="4"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="4"/>
+			<designed target="OnHoverPenStyle" value="0" ver="4"/>
+			<designed target="OnHoverPenWidth" value="1" ver="4"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="4"/>
+			<designed target="DisabledPenStyle" value="0" ver="4"/>
+			<designed target="DisabledPenWidth" value="1" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ButtonPressed">
+				<body kind="om">
+					<![CDATA[if (PatternEdit.Text != "" && !isSearchMode)
+{
+	Find("*" + PatternEdit.Text + "*");
+	isSearchMode = true;
+}
+else
+{
+	CancelFind();
+	PatternEdit.Text = "";
+	isSearchMode = false;
+}]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="LayoutWeight" display-name="LayoutWeight" uuid="416de709-3c0c-4b0d-952f-8feacfe5d8e6" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+				<designed target="Weight" value="22" ver="4"/>
+			</object>
+			<do-trace access-modifier="private" target="Tooltip" ver="4">
+				<body>
+					<![CDATA[isSearchMode
+? "Очистить результаты поиска"
+: "Поиск"]]>
+				</body>
+			</do-trace>
+		</object>
+		<do access-modifier="private" name="UpdateLayout" display-name="UpdateLayout" ver="4" type="" type-id="">
+			<body kind="om">
+				<![CDATA[PatternEdit.LayoutWeight = Width - SearchBtn.LayoutWeight;]]>
+			</body>
+		</do>
+		<object access-modifier="private" name="LayoutWeight" display-name="LayoutWeight" uuid="7cd64f28-b15c-4b7f-aca2-39ab864a2289" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="24" ver="4"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="4">
+			<body>
+				<![CDATA[SearchBarVisible]]>
+			</body>
+		</do-trace>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="7fda7f59-9800-4c81-9dc4-b45bddc41dd9" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+			<designed target="Orientation" value="1" ver="4"/>
+			<designed target="Gap" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="isSearchMode" display-name="isSearchMode" uuid="34838813-4a82-48bc-beb4-fa4a2334eaf3" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Font" display-name="Шрифт" uuid="66c37592-d684-4219-84ed-cf5a4fde08a4" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="SearchBarVisible" display-name="Показывать панель поиска" uuid="21c29efa-65d2-40ad-82e5-46dff44a3353" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<param access-modifier="private" name="ApSource" display-name="ApSource" uuid="38da6bb1-ef21-461c-b394-5cb86c22cecd" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" base-const="true" base-ref="true" ver="4"/>
+	<object access-modifier="private" name="DescriptionPreferred" display-name="DescriptionPreferred" uuid="5b6b316b-2422-4c94-b007-4205d44b8ab0" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[TreePanel.CustomTree.UpdateNames(value);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SelectedItem" display-name="SelectedItem" uuid="f4151bcd-6999-413c-83bf-2a1ab4af3479" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="SelectedItem_EUnit" display-name="SelectedItem_EUnit" uuid="3800480b-3592-4d46-937f-4b2234ec62bc" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<object access-modifier="private" name="SelectedItem_Description" display-name="SelectedItem_Description" uuid="a34fa76e-7d7d-4561-8ad8-4c2f3ae9c292" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	<object access-modifier="private" name="Debug" display-name="Debug" uuid="d9fec41d-6c06-48b6-821d-d7df820f6be1" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="4"/>
+	<do access-modifier="private" name="Browse" display-name="Browse" ver="4" type="" type-id="">
+		<body kind="om">
+			<![CDATA[// если до этого выполнялся поиск, то очищаем его результаты
+if (TreePanel.SearchResultsTree.Visible)
+{
+	SearchBar.PatternEdit.Text = "";
+	TreePanel.SearchResultsTree.RemoveChildren("");
+}
+
+//Debug.Log("Просмотр адресного пространства источника");
+TreePanel.ApItemTree.Browse();
+TreePanel.ShowTree(0); // ApItemTree]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="Find" display-name="Find" ver="4" type="" type-id="">
+		<body kind="om">
+			<![CDATA[//Debug.Log("Поиск сигналов по маске: " + pattern);
+TreePanel.SearchResultsTree.RemoveChildren("");
+//TreePanel.SearchResultsTree.DataSource.Browser.GetSourceNodes(pattern);
+TreePanel.ShowTree(1); // SearchResultsTree]]>
+		</body>
+		<param access-modifier="private" name="pattern" display-name="" uuid="b20dfd35-bc9f-4093-a71c-5141ef106904" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	</do>
+	<do access-modifier="private" name="CancelFind" display-name="CancelFind" ver="4" type="" type-id="">
+		<body kind="om">
+			<![CDATA[if (TreePanel.SearchResultsTree.Visible)
+{
+	//Debug.Log("Отмена поиска");
+	TreePanel.SearchResultsTree.RemoveChildren("");	
+	TreePanel.ShowTree(0); // ApItemTree
+}]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="LoadFromFile" display-name="LoadFromFile" ver="4" type="" type-id="">
+		<body kind="om">
+			<![CDATA[//Debug.Log("Загрузка дерева сигналов из файла " + filePath);
+TreePanel.CustomTree.LoadFromFile(filePath);
+TreePanel.ShowTree(2); // CustomTree]]>
+		</body>
+		<param access-modifier="private" name="filePath" display-name="" uuid="3332f21a-798c-4c95-8b68-a80f5cd01461" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+	</do>
+	<object access-modifier="private" name="Files" display-name="Files" uuid="59de2e7c-5a61-42ed-b21e-69497ecb3862" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="4"/>
+	<do access-modifier="private" name="UpdateLayout" display-name="UpdateLayout" ver="4" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="om">
+			<![CDATA[SearchBar.LayoutWeight = SearchBar.Visible ? 24 : 0;
+TreePanel.LayoutWeight = Height - SearchBar.LayoutWeight;
+
+SearchBar.UpdateLayout();]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="TreePanel" display-name="TreePanel" uuid="7a2945d1-bdc7-45d2-8e2e-3d6e8e4db0bf" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="25" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="200" ver="4"/>
+		<designed target="Height" value="275" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="LayoutWeight" display-name="LayoutWeight" uuid="53c8d460-c479-4a28-8450-e20d065fce21" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="275" ver="4"/>
+		</object>
+		<object access-modifier="private" name="ApItemTree" display-name="ApItemTree" uuid="ee68b579-fc17-407f-a5c1-66e676e38be3" base-type="Tree" base-type-id="bebad81f-83c4-4dc1-8ac4-e7fe7b6ee966" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="200" ver="4"/>
+			<designed target="Height" value="275" ver="4"/>
+			<designed target="Font" value="Segoe UI,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="4"/>
+			<designed target="FrameVisible" value="true" ver="4"/>
+			<designed target="ColumnCount" value="1" ver="4"/>
+			<object access-modifier="private" name="DataSource" display-name="DataSource" uuid="e3982150-18b7-4a13-a352-e2efd73a8154" base-type="TreeDataSource" base-type-id="be3b13bc-c755-41ae-bc8c-867e6c690575" ver="2">
+				<object access-modifier="private" name="NameColumn" display-name="NameColumn" uuid="f35ecde7-bcec-407c-9c6a-0e6a6e198600" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Имя" ver="2"/>
+					<designed target="Id" value="name" ver="2"/>
+					<designed target="Type" value="1" ver="2"/>
+				</object>
+				<object access-modifier="private" name="IdColumn" display-name="IdColumn" uuid="6d6f9c13-82fa-40a7-badc-d2406ba56215" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Идентификатор" ver="2"/>
+					<designed target="Id" value="id" ver="2"/>
+					<designed target="Type" value="2" ver="2"/>
+				</object>
+				<object access-modifier="private" name="ParentIdColumn" display-name="ParentIdColumn" uuid="e0ffd065-d9ab-4304-af81-5c7a97145d4b" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Родитель" ver="2"/>
+					<designed target="Id" value="parent_id" ver="2"/>
+					<designed target="Type" value="3" ver="2"/>
+				</object>
+				<object access-modifier="private" name="DisplayNameColumn" display-name="DisplayNameColumn" uuid="2038dc9c-d397-47c8-8021-f806f5e7f9c7" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Отображаемое имя" ver="2"/>
+					<designed target="Id" value="display_name" ver="2"/>
+					<designed target="Type" value="4" ver="2"/>
+				</object>
+				<object access-modifier="private" name="CdtColumn" display-name="CdtColumn" uuid="d677209d-c974-4c22-b06c-cce32a102eb2" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Тип" ver="2"/>
+					<designed target="Id" value="cdt" ver="2"/>
+					<designed target="Type" value="5" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Browser" display-name="Browser" uuid="4fef3feb-e12a-40ed-be87-d65aaac540bf" base-type="ApSourceBrowser" base-type-id="2159a654-022a-44f7-8d92-fc737a94ab96" ver="2" cardinal="1">
+					<designed target="DescriptionPreferred" value="true" ver="2"/>
+					<init target="Source" ver="4" ref="here.ApSource"/>
+					<do-trace access-modifier="private" target="DescriptionPreferred" ver="4">
+						<body>
+							<![CDATA[here.DescriptionPreferred]]>
+						</body>
+					</do-trace>
+				</object>
+			</object>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="e6420c68-76db-4f56-a0c8-f8442dff95bf" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="4">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Initialized">
+					<body kind="om">
+						<![CDATA[SetColumnName("Дерево сигналов", 0);
+SetColumnHidden(0, false);
+SetColumnHidden(1, true);
+SetColumnHidden(2, true);
+SetColumnHidden(3, true);
+SetColumnHidden(4, true);
+SetColumnHidden(5, true);]]>
+					</body>
+				</do-on>
+			</object>
+			<do access-modifier="private" name="Browse" display-name="Browse" ver="4" type="" type-id="">
+				<body kind="om">
+					<![CDATA[itemId: string = "";
+if (ChildCount(itemId) == 0)
+{
+	DataSource.Browser.GetChildren(itemId);
+
+	Updater.itemId = itemId;
+	Updater.Active= true;
+}]]>
+				</body>
+			</do>
+			<do access-modifier="private" name="GetDataType" display-name="GetDataType" ver="4" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+				<body kind="om">
+					<![CDATA[return String.ToUint4(GetItemText(itemId, 4), 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="03f184e3-a132-4c6a-a43a-a7c7e95fc069" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ItemExpanded">
+				<body kind="om">
+					<![CDATA[SetItemIcon(itemId, true);
+
+if (ChildCount(itemId) == 0)
+{
+	tag: string = DataSource.GetFullName(itemId);
+	DataSource.Browser.GetChildren(tag);
+	
+	Updater.itemId = itemId;
+	Updater.Active= true;
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="ItemCollapsed">
+				<body kind="om">
+					<![CDATA[SetItemIcon(itemId, false);]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="ItemPressed">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+{
+	tag: string = DataSource.GetFullName(itemId);
+	tagJson: string = "{\"data\":[{\"tag\":\"" + tag + "\"}]}";
+	Drag.Image = GetItemIconPath(itemId, false);
+	Drag.SetText(tagJson);
+	Drag.DoDragDrop();
+}]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Updater" display-name="Updater" uuid="64fcddaf-bd6a-4662-a395-be1c9569b302" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="4">
+				<designed target="Period" value="200" ver="4"/>
+				<designed target="Active" value="false" ver="4"/>
+				<object access-modifier="private" name="itemId" display-name="itemId" uuid="83d509bd-ec5a-460b-a7bb-522dea6d282c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnTimer">
+					<body kind="om">
+						<![CDATA[Active = false;
+SetChildrenIcons(itemId);]]>
+					</body>
+				</do-on>
+			</object>
+			<do access-modifier="private" name="SetChildrenIcons" display-name="SetChildrenIcons" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[// Обработка элементов узла
+var childrenJson = EnumChildrenJSON(parentId);
+if (childrenJson != "")
+{
+	var children = JSON.parse(childrenJson);
+
+	// Устанавливаем иконку для каждого элемента
+	for (let i = 0; i < children.length; i++)
+		SetItemIcon(children[i], false);
+}]]>
+				</body>
+				<param access-modifier="private" name="parentId" display-name="" uuid="06bd6833-a3c3-4046-aba4-f0b6a5f3401a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="SetItemIcon" display-name="SetItemIcon" ver="4" type="" type-id="">
+				<body kind="om">
+					<![CDATA[icon: string = GetItemIconPath(itemId, isExpanded);
+SetItemIconPath(itemId, icon, 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="62334341-eda5-4fb4-a58b-c52c9a77ef7d" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="7f94dd38-83e5-4a2d-86e8-952e292487f6" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			</do>
+			<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="4" event="ItemDoubleClicked">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+	SelectedItem = DataSource.GetFullName(itemId);
+else SelectedItem = "";]]>
+				</body>
+			</do-on>
+			<do access-modifier="private" name="GetItemIconPath" display-name="GetItemIconPath" ver="4" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<param access-modifier="private" name="itemId" display-name="" uuid="6470eac9-4616-44d7-8662-c7f25fb494d4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+
+fileName: string;
+if (cdt == 0) fileName += isExpanded ? "FolderOpened.png" : "FolderClosed.png";
+else if (cdt == 1) fileName = "SByte.png";
+else if (cdt == 3) fileName = "Byte.png";
+else if (cdt == 9) fileName = "Int16.png";
+else if (cdt == 8) fileName = "UInt16.png";
+else if (cdt == 7) fileName = "Int32.png";
+else if (cdt == 6) fileName = "UInt32.png";
+else if (cdt == 13) fileName = "Int64.png";
+else if (cdt == 12) fileName = "UInt64.png";
+else if (cdt == 14) fileName = "Single.png";
+else if (cdt == 15) fileName = "Double.png";
+else if (cdt == 5) fileName = "Boolean.png";
+else if (cdt == 17) fileName = "String.png";
+else if (cdt == 18) fileName = "DateTime.png";
+else fileName = "Object.png";
+
+return "Trends_TreeIcons/" + fileName;
+]]>
+				</body>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="4e1c0e83-3e3b-4781-8afb-36329cde4d55" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			</do>
+			<do access-modifier="private" name="SaveToFile" display-name="SaveToFile" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[var ut= {"UserTree":[]}
+ut.UserTree.push({"Signal":""});
+ut.UserTree[0].Signal = {"UserTree":"МНА 1/МНА 1. Давление нефти на выходе","OpcTag": "B","EUnit": "МПа","Description": "Описание","DataType":""};
+ut.UserTree.push({"Signal":""});
+ut.UserTree[1].Signal = {"UserTree":"МНА 1/МНА 1. Давление нефти на выходе1","OpcTag": "C","EUnit": "МПа","Description": "Описание1","DataType":""};
+var tofile = JSON.stringify(ut, null, 1);
+Files.WriteTextFile(filePath, tofile);]]>
+				</body>
+				<param access-modifier="private" name="filePath" display-name="" uuid="429838d4-9d60-400c-a9c0-5c85a2c1c673" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do-trace access-modifier="private" target="Font" ver="4">
+				<body>
+					<![CDATA[here.Font]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="b84a2cc8-4ea8-4695-851e-f5aec6854725" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+				<designed target="Weight" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="SearchResultsTree" display-name="SearchResultsTree" uuid="d7469835-fa6b-4681-bd58-3e596d79e889" base-type="Tree" base-type-id="bebad81f-83c4-4dc1-8ac4-e7fe7b6ee966" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="false" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="200" ver="4"/>
+			<designed target="Height" value="275" ver="4"/>
+			<designed target="Font" value="Segoe UI,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="4"/>
+			<designed target="FrameVisible" value="true" ver="4"/>
+			<designed target="ColumnCount" value="1" ver="4"/>
+			<object access-modifier="private" name="DataSource" display-name="DataSource" uuid="1ae8dfae-a49f-49b8-9e3c-ce68f8f8ee8a" base-type="TreeDataSource" base-type-id="be3b13bc-c755-41ae-bc8c-867e6c690575" ver="2">
+				<object access-modifier="private" name="NameColumn" display-name="NameColumn" uuid="a8b73555-4057-49c5-997e-26f03d5dfbff" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Имя" ver="2"/>
+					<designed target="Id" value="name" ver="2"/>
+					<designed target="Type" value="1" ver="2"/>
+				</object>
+				<object access-modifier="private" name="IdColumn" display-name="IdColumn" uuid="4522095a-d74e-490c-b6e1-124602b31ae3" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Идентификатор" ver="2"/>
+					<designed target="Id" value="id" ver="2"/>
+					<designed target="Type" value="2" ver="2"/>
+				</object>
+				<object access-modifier="private" name="ParentIdColumn" display-name="ParentIdColumn" uuid="dfd2253c-745c-46ee-99bf-3161d2b17b78" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Родитель" ver="2"/>
+					<designed target="Id" value="parent_id" ver="2"/>
+					<designed target="Type" value="3" ver="2"/>
+				</object>
+				<object access-modifier="private" name="DisplayNameColumn" display-name="DisplayNameColumn" uuid="546293d1-ca1f-4fcd-9fd6-6cc73f86d22d" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Отображаемое имя" ver="2"/>
+					<designed target="Id" value="display_name" ver="2"/>
+					<designed target="Type" value="4" ver="2"/>
+				</object>
+				<object access-modifier="private" name="CdtColumn" display-name="CdtColumn" uuid="b0cac8a9-723b-491a-a406-d45a18b9dcf2" base-type="TreeColumn" base-type-id="b2427bd0-4897-43ca-b426-97290870cf62" ver="2">
+					<designed target="Name" value="Тип" ver="2"/>
+					<designed target="Id" value="cdt" ver="2"/>
+					<designed target="Type" value="5" ver="2"/>
+				</object>
+				<object access-modifier="private" name="Browser" display-name="Browser" uuid="8a9dd82a-90fb-4647-b454-5ea7ac1e97f3" base-type="ApSourceBrowser" base-type-id="2159a654-022a-44f7-8d92-fc737a94ab96" ver="2" cardinal="1">
+					<designed target="DescriptionPreferred" value="true" ver="2"/>
+					<init target="Source" ver="4" ref="here.ApSource"/>
+					<do-trace access-modifier="private" target="DescriptionPreferred" ver="4">
+						<body>
+							<![CDATA[here.DescriptionPreferred]]>
+						</body>
+					</do-trace>
+				</object>
+				<!--<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnNodeReceived">
+					<body kind="om">
+						<![CDATA[//Debug.Log("Получено узлов "+ String.ToString(nodeCount));
+
+// все полученные узлы будут в корне дерева, поэтому обновим иконки корневых элементов
+SetChildrenIcons("");
+
+// без смены фокуса не обновляется содержимое дерева
+SearchResultsTree.Focus = true;
+SearchBar.PatternEdit.Focus = true;]]>
+					</body>
+				</do-on>-->
+			</object>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="381f9bdb-f4b4-457c-9a45-8a7642912995" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="4">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Initialized">
+					<body kind="om">
+						<![CDATA[SetColumnName("Дерево сигналов", 0);
+SetColumnHidden(1, true);
+SetColumnHidden(2, true);
+SetColumnHidden(3, true);
+SetColumnHidden(4, true);
+SetColumnHidden(5, true);]]>
+					</body>
+				</do-on>
+			</object>
+			<do access-modifier="private" name="SetChildrenIcons" display-name="SetChildrenIcons" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[// Обработка элементов узла
+var childrenJson = EnumChildrenJSON(parentId);
+if (childrenJson != "")
+{
+	var children = JSON.parse(childrenJson);
+
+	// Устанавливаем иконку для каждого элемента
+	for (let i = 0; i < children.length; i++)
+		SetItemIcon(children[i], false);
+}]]>
+				</body>
+				<param access-modifier="private" name="parentId" display-name="" uuid="06bd6833-a3c3-4046-aba4-f0b6a5f3401a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="SetItemIcon" display-name="SetItemIcon" ver="4" type="" type-id="">
+				<body kind="om">
+					<![CDATA[icon: string = GetItemIconPath(itemId, isExpanded);
+SetItemIconPath(itemId, icon, 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="62334341-eda5-4fb4-a58b-c52c9a77ef7d" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="7f94dd38-83e5-4a2d-86e8-952e292487f6" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			</do>
+			<do access-modifier="private" name="GetItemIconPath" display-name="GetItemIconPath" ver="4" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<param access-modifier="private" name="itemId" display-name="" uuid="6470eac9-4616-44d7-8662-c7f25fb494d4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+
+fileName: string;
+if (cdt == 0) fileName += isExpanded ? "FolderOpened.png" : "FolderClosed.png";
+else if (cdt == 1) fileName = "SByte.png";
+else if (cdt == 3) fileName = "Byte.png";
+else if (cdt == 9) fileName = "Int16.png";
+else if (cdt == 8) fileName = "UInt16.png";
+else if (cdt == 7) fileName = "Int32.png";
+else if (cdt == 6) fileName = "UInt32.png";
+else if (cdt == 13) fileName = "Int64.png";
+else if (cdt == 12) fileName = "UInt64.png";
+else if (cdt == 14) fileName = "Single.png";
+else if (cdt == 15) fileName = "Double.png";
+else if (cdt == 5) fileName = "Boolean.png";
+else if (cdt == 17) fileName = "String.png";
+else if (cdt == 18) fileName = "DateTime.png";
+else fileName = "Object.png";
+
+return "Trends_TreeIcons/" + fileName;]]>
+				</body>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="4e1c0e83-3e3b-4781-8afb-36329cde4d55" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+			</do>
+			<do access-modifier="private" name="GetDataType" display-name="GetDataType" ver="4" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+				<body kind="om">
+					<![CDATA[return String.ToUint4(GetItemText(itemId, 4), 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="03f184e3-a132-4c6a-a43a-a7c7e95fc069" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ItemPressed">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+{
+	tag: string = DataSource.GetFullName(itemId);
+	tagJson: string = "{\"data\":[{\"tag\":\"" + tag + "\"}]}";
+	Drag.Image = GetItemIconPath(itemId, false);
+	Drag.SetText(tagJson);
+	Drag.DoDragDrop();
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="ItemDoubleClicked">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+	SelectedItem = DataSource.GetFullName(itemId);
+else SelectedItem = "";]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Font" ver="4">
+				<body>
+					<![CDATA[here.Font]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="5e5ddba4-3d29-4535-8cbe-50d642a875ff" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+				<designed target="Weight" value="0" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="CustomTree" display-name="CustomTree" uuid="d2ce352b-3145-4e6e-8ece-4841363d6d7d" base-type="Tree" base-type-id="bebad81f-83c4-4dc1-8ac4-e7fe7b6ee966" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="false" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="200" ver="4"/>
+			<designed target="Height" value="275" ver="4"/>
+			<designed target="Font" value="Segoe UI,9,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="4"/>
+			<designed target="FrameVisible" value="true" ver="4"/>
+			<designed target="ColumnCount" value="7" ver="4"/>
+			<do access-modifier="private" name="LoadFromFile" display-name="LoadFromFile" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[RemoveChildren("");
+
+// Рекурсивная функция добавления вложенных элементов дерева
+function AddTreeItem(parentId, sA, n, tag, eUnit, description, dataType)
+{
+	var name = sA[n];
+	
+	// если это последний элемент добавляемой ветки
+	if (n == sA.length - 1)		
+	{
+		var itemId = AddItem(parentId, name);
+		SetItemText(itemId, tag, 1);
+		SetItemText(itemId, name, 2);
+		SetItemText(itemId, description, 3);			
+		SetDataType(itemId, dataType);
+		SetItemText(itemId, eUnit, 5);
+		
+		if (descriptionPreferred && description != null)
+			SetItemText(itemId, description, 0);
+		else SetItemText(itemId, name, 0);
+	}
+	else
+	{
+		// ищем существующий узел среди дочерних узлов
+		var itemId = "";
+		var childrenJson= EnumChildrenJSON(parentId);
+		if (childrenJson != "")
+		{
+			var i = 0;
+			var children = JSON.parse(childrenJson);
+			while (i < children.length)
+			{
+				// если узел уже существует
+				if (GetItemText(children[i], 0) == name)
+				{
+					itemId = children[i];
+					break;
+				}
+				i = i + 1;
+			}			
+		}
+		
+		// добавляем узел, если не нашли
+		if (itemId == "")
+		{
+			itemId = AddItem(parentId, name);
+			SetItemText(itemId, name, 0);
+		}
+		
+		// рекурсивный вызов добавления следующего уровня дерева
+		AddTreeItem(itemId, sA, n + 1, tag, eUnit, description, dataType);
+	}
+}
+
+if (Files.Exists(filePath))
+{
+	// Загрузка файла
+	//var t0 = new Date();
+	var curContent = Files.ReadTextFile(filePath);
+	var ut = JSON.parse(curContent);
+	
+	// Формирование дерева
+	//var t1 = new Date();	
+	var i=0;	
+	while (i < ut.UserTree.length)
+	{
+		var signal = ut.UserTree[i].Signal;
+		var sName= signal.UserTree;
+		var tag = signal.OpcTag;
+		var eUnit = signal.EUnit;
+		var description = signal.Description;
+		var dataType = signal.DataType;
+		if (dataType == null) dataType = "variant"; // необязательный параметр, но должен быть, чтобы отличать от папки			
+		AddTreeItem("", sName.split("/"), 0, tag, eUnit, description, dataType);
+		i = i + 1;
+	}
+	SetChildrenIcons("");
+	//var t2 = new Date();
+	//Debug.Log("Сигналов: " + ut.UserTree.length + ", Загрузка файла: "+(t1-t0)+", Формирование дерева: "+(t2-t1));
+}
+else
+	Debug.Log("Не найден файл " + filePath);]]>
+				</body>
+				<param access-modifier="private" name="filePath" display-name="" uuid="3332f21a-798c-4c95-8b68-a80f5cd01461" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="UpdateNames" display-name="UpdateNames" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[function UpdateChildrenNames(parentId)
+{
+	var childrenJson = EnumChildrenJSON(parentId); // получаем список элементов ветки
+	if (childrenJson != "")
+	{
+		var children = JSON.parse(childrenJson); // преобразуем список в массив
+	
+		var i = 0;
+		while (i < children.length)
+		{
+			var itemId = children[i];
+			var name = GetItemText(itemId, 2);
+			
+			// имена и описания заданы только у сигналов (если имя пустое, то это папка и мы ее не обрабатываем)
+			if (name != null && name != "")
+			{
+				if (descriptionPreferred)
+				{
+					var description = GetItemText(itemId, 3);
+					if (description != null && description != "")
+						SetItemText(itemId, description, 0);
+					else SetItemText(itemId, name, 0);
+				}
+				else
+					SetItemText(itemId, name, 0);
+			}
+			
+			UpdateChildrenNames(itemId);
+			i = i + 1;
+		}
+	}
+}
+
+// проверяем, чтобы не делать обновление имен узлов повторно
+if (descriptionPreferred != showDescriptions)
+{	
+	descriptionPreferred = showDescriptions;
+	
+	if (Visible)
+	{	
+		//Debug.Log("Изменение режима отображения описаний: " + showDescriptions);
+		UpdateChildrenNames("");
+	}
+}
+]]>
+				</body>
+				<param access-modifier="private" name="showDescriptions" display-name="" uuid="60e6eec5-f71d-4c8f-9f0e-71d7afd3311d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			</do>
+			<do access-modifier="private" name="SetDataType" display-name="SetDataType" ver="4" type="" type-id="">
+				<body kind="om">
+					<![CDATA[cdt: uint4;
+
+if (dataType == "") cdt = 0;
+else if (dataType == "bool") cdt = 5;
+else if (dataType == "int1") cdt = 1;
+else if (dataType == "uint1") cdt = 3;
+else if (dataType == "int2") cdt = 9;
+else if (dataType == "uint2") cdt = 8;
+else if (dataType == "int4") cdt = 7;
+else if (dataType == "uint4") cdt = 6;
+else if (dataType == "uint8") cdt = 12;
+else if (dataType == "int8") cdt = 13;
+else if (dataType == "float") cdt = 14;
+else if (dataType == "double") cdt = 15;
+else if (dataType == "string") cdt = 17;
+else if (dataType == "time") cdt = 18;
+else cdt = 0xFFFFFFFF; // variant
+
+SetItemData(itemId, cdt, 4);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="bd06df1b-9e06-4d62-afb2-cb6b4ee7ea95" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+				<param access-modifier="private" name="dataType" display-name="" uuid="c6395942-01f1-4ff6-ac2e-5b2d110aaef5" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="GetDataType" display-name="GetDataType" ver="4" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+				<body kind="om">
+					<![CDATA[return Variant.ToUint4(GetItemData(itemId, 4), 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="03f184e3-a132-4c6a-a43a-a7c7e95fc069" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="SetChildrenIcons" display-name="SetChildrenIcons" ver="4" type="" type-id="">
+				<body kind="javascript">
+					<![CDATA[// пропускаем обработанные ранее узлы
+if (GetItemData(parentId, 5))
+	return;
+
+// Обработка элементов узла
+var childrenJson = EnumChildrenJSON(parentId);
+if (childrenJson != "")
+{
+	var children = JSON.parse(childrenJson);
+
+	// Устанавливаем иконку для каждого элемента
+	for (let i = 0; i < children.length; i++)
+		SetItemIcon(children[i], false);
+}
+
+// помечаем узел как обработанный
+SetItemData(parentId, true, 5);]]>
+				</body>
+				<param access-modifier="private" name="parentId" display-name="" uuid="06bd6833-a3c3-4046-aba4-f0b6a5f3401a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+			</do>
+			<do access-modifier="private" name="GetItemIconPath" display-name="GetItemIconPath" ver="4" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+				<param access-modifier="private" name="itemId" display-name="" uuid="6470eac9-4616-44d7-8662-c7f25fb494d4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+
+fileName: string;
+if (cdt == 0) fileName += isExpanded ? "FolderOpened.png" : "FolderClosed.png";
+else if (cdt == 1) fileName = "SByte.png";
+else if (cdt == 3) fileName = "Byte.png";
+else if (cdt == 9) fileName = "Int16.png";
+else if (cdt == 8) fileName = "UInt16.png";
+else if (cdt == 7) fileName = "Int32.png";
+else if (cdt == 6) fileName = "UInt32.png";
+else if (cdt == 13) fileName = "Int64.png";
+else if (cdt == 12) fileName = "UInt64.png";
+else if (cdt == 14) fileName = "Single.png";
+else if (cdt == 15) fileName = "Double.png";
+else if (cdt == 5) fileName = "Boolean.png";
+else if (cdt == 17) fileName = "String.png";
+else if (cdt == 18) fileName = "DateTime.png";
+else fileName = "Object.png";
+
+return "Trends_TreeIcons/" + fileName;]]>
+				</body>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="0536eeda-d4d2-4c3e-8c16-a8c298e2f978" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			</do>
+			<do access-modifier="private" name="SetItemIcon" display-name="SetItemIcon" ver="4" type="" type-id="">
+				<body kind="om">
+					<![CDATA[icon: string = GetItemIconPath(itemId, isExpanded);
+SetItemIconPath(itemId, icon, 0);]]>
+				</body>
+				<param access-modifier="private" name="itemId" display-name="" uuid="62334341-eda5-4fb4-a58b-c52c9a77ef7d" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="4"/>
+				<param access-modifier="private" name="isExpanded" display-name="" uuid="7f94dd38-83e5-4a2d-86e8-952e292487f6" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			</do>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ItemPressed">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+{
+	// создаем json-структуру для тэга
+	data: string = "\"tag\":\"" + GetItemText(itemId, 1) + "\"";
+	
+	description: string = 	GetItemText(itemId, 3);
+	if (description != "")
+		data += ",\"description\":\"" + description + "\"";
+	
+	eunits: string = 	GetItemText(itemId, 5);
+	if (eunits != "")
+		data += ",\"eunits\":\"" + eunits + "\"";
+		
+	tagJson: string = "{\"data\":[{" + data + "}]}";
+
+	// начинаем перетаскивание
+	Drag.Image = GetItemIconPath(itemId, false);
+	Drag.SetText(tagJson);
+	Drag.DoDragDrop();
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="ItemDoubleClicked">
+				<body kind="om">
+					<![CDATA[cdt: uint4 = GetDataType(itemId);
+if (cdt > 0)
+{
+	// Вначале запоминаем описание и единицы измерения выделенного сигнала для того,
+	//	чтобы они были определены при срабатывания обработчика SelectedItem
+	SelectedItem_Description = GetItemText(itemId, 3);
+	SelectedItem_EUnit = GetItemText(itemId, 5);
+	SelectedItem = GetItemText(itemId, 1);
+}
+else
+{
+	SelectedItem_Description = "";
+	SelectedItem_EUnit = "";
+	SelectedItem = "";
+}]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="8e6a80c8-094d-4f4a-b605-173c8f36da93" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="4">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Initialized">
+					<body kind="om">
+						<![CDATA[CustomTree.SetColumnName("Дерево сигналов", 0);
+CustomTree.SetColumnHidden(1, true); // tag
+CustomTree.SetColumnHidden(2, true); // name
+CustomTree.SetColumnHidden(3, true); // description
+CustomTree.SetColumnHidden(4, true); // dataType
+CustomTree.SetColumnHidden(5, true); // eUnit
+CustomTree.SetColumnHidden(6, true); // isUpdated]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="ItemExpanded">
+				<body kind="om">
+					<![CDATA[SetItemIcon(itemId, true);
+if (ChildCount(itemId) > 0)
+	SetChildrenIcons(itemId);]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="ItemCollapsed">
+				<body kind="om">
+					<![CDATA[SetItemIcon(itemId, false);]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="descriptionPreferred" display-name="descriptionPreferred" uuid="8e05666d-7abe-4e2b-a206-4c318277c460" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+			<do-trace access-modifier="private" target="Font" ver="4">
+				<body>
+					<![CDATA[here.Font]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="012189d2-37e6-4dff-992e-aec996507811" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+				<designed target="Weight" value="0" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="e7814a1a-15f4-4d88-bfc5-08f95a46f3ba" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+			<designed target="Orientation" value="1" ver="4"/>
+			<designed target="Gap" value="0" ver="4"/>
+		</object>
+		<do access-modifier="private" name="ShowTree" display-name="ShowTree" ver="4" type="" type-id="">
+			<body kind="om">
+				<![CDATA[/* Отобразить одно из трех деревьев:
+	0 - дерево сигналов,
+	1 - результаты поиска,
+	2 - пользовательское дерево
+*/
+
+ApItemTree.Visible = index == 0;
+SearchResultsTree.Visible = index == 1;
+CustomTree.Visible = index == 2;
+
+ApItemTree.LayoutWeight_1 = index == 0 ? 1 : 0;
+SearchResultsTree.LayoutWeight_1 = index == 1 ? 1 : 0;
+CustomTree.LayoutWeight_1 = index == 2 ? 1 : 0;]]>
+			</body>
+			<param access-modifier="private" name="index" display-name="" uuid="552c8b8d-f320-4c27-9686-abbd9319fb91" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="4"/>
+		</do>
+	</object>
+	<object access-modifier="private" name="Drag" display-name="Drag" uuid="dc06ef64-c94d-4e8f-ac3f-384d99f7d444" base-type="DragNDrop" base-type-id="c4ddb32f-3653-44c8-be57-3a595e10c2fb" ver="4">
+		<designed target="DragEnabled" value="true" ver="4"/>
+		<designed target="DropEnabled" value="false" ver="4"/>
+		<designed target="Image" value="" ver="4"/>
+	</object>
+	<init target="Font" ver="4" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="48b04f2c-fbe5-4d1d-9e64-822224b98ee6" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+		<designed target="Orientation" value="2" ver="4"/>
+		<designed target="Gap" value="0" ver="4"/>
+	</object>
+</type>
+

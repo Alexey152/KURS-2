@@ -1,0 +1,710 @@
+<type access-modifier="private" name="Trends_Table" display-name="Форма таблицы графиков" uuid="2eaa655b-e7df-43ce-a704-693e19fb182e" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="1000" ver="2"/>
+	<designed target="Height" value="450" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="Таблица данных" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="true" ver="2"/>
+	<designed target="WindowSizeMode" value="1" ver="2"/>
+	<designed target="WindowBorderStyle" value="1" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<param access-modifier="private" name="init_ApSource" display-name="init_ApSource" uuid="ed8c4c93-4a6f-4100-9311-1d36b3e18678" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="Item_table" display-name="Item_table" uuid="2fa01dc3-f31f-4aa1-a627-8d3cc3671e24" base-type="ApItem" base-type-id="9bc9fdb8-ccbc-45af-b711-95945c17a630" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnAdviseStateChanged">
+			<body kind="om">
+				<![CDATA[//pTrends.DebugTool_1.Log(Item_table.Path+" : "+Item_table.AdviseStateString);
+
+return;
+if(Item_table.Advised==true)
+{
+//	pTrends.DebugTool_1.Log(Item_table.Path+" : "+Item_table.AdviseStateString);
+	if (pTrends.ActiveMode==0){
+		FT_t1 = Variant.ToUint8(pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Axis_X.Min,0);
+		FT_t2 = Variant.ToUint8(pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Axis_X.Max,0);
+	}else{
+		FT_t1 = Variant.ToUint8(pTrends.WS.RS.Main_Charts.Chart_History_mode.Axis_X.Min,0);
+		FT_t2 = Variant.ToUint8(pTrends.WS.RS.Main_Charts.Chart_History_mode.Axis_X.Max,0);	
+	}
+//	pTrends.DebugTool_1.Log(DateTime.ToString(FT_t1)+" - "+DateTime.ToString(FT_t2));
+	BottomRec.Table_1.TableModel_1.ApItemValueQuery_1.HistoricalRangeStart = FT_t1;
+	BottomRec.Table_1.TableModel_1.ApItemValueQuery_1.HistoricalRangeEnd = FT_t2;
+	BottomRec.Table_1.TableModel_1.ApItemValueQuery_1.Reload(); 
+	BottomRec.Table_1.TableModel_1.BeginReadAsync(); 
+}
+else
+{
+	BottomRec.Table_1.TableModel_1.ApItemValueQuery_1.Active=false;
+}]]>
+			</body>
+		</do-on>
+		<init target="Source" ver="2" ref="ApSource"/>
+		<init target="Path" ver="2" ref="init_path"/>
+	</object>
+	<object access-modifier="private" name="ApSource" display-name="ApSource" uuid="028f0336-c5fc-4343-86bd-5c3b1dd3a18a" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="2">
+		<designed target="Active" value="true" ver="2"/>
+		<init target="ParentSource" ver="2" ref="init_ApSource"/>
+	</object>
+	<object access-modifier="private" name="FT_t1" display-name="FT_t1" uuid="8b92841e-6d37-4808-b10b-6080898151a4" base-type="uint8" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561" ver="2"/>
+	<object access-modifier="private" name="FT_t2" display-name="FT_t2" uuid="9b25a764-81d9-48f4-a94a-cd5d6735b97e" base-type="uint8" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="3b86ac6d-9cd4-4ace-ab0b-fe377a5e3cb9" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Files" display-name="Files" uuid="435f7ccb-b83a-4c3c-8962-b124cf639d85" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="2"/>
+	<do access-modifier="private" name="ConvertToDate" display-name="ConvertToDate" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<param access-modifier="private" name="NewDate" display-name="" uuid="7418a056-d9be-45f0-86dd-c4bc9ea42493" base-type="uint8" base-type-id="c8ff7701-da6e-4d53-888a-81fa680ff561" ver="2"/>
+		<body kind="om">
+			<![CDATA[// преобразуем в локальное время и преобразуем в строку
+NewDate = DateTime.ToLocal(NewDate);
+StringDate: string = DateTime.ToString(NewDate);
+return StringDate;]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="ValueRound" display-name="ValueRound" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="om">
+			<![CDATA[ValRound: double = Math.Round(Value,  NumDecimals);
+if (NumDecimals > 0) {NumDecimals += 1;} 
+else {NumDecimals = 0;}
+LenValStr: int4 = Str.Length(Str.ToString(TypeConvert.ToInt4(Math.Truncate(Value)))) +  TypeConvert.ToInt4(NumDecimals);
+ColForRemove: int4 = Str.Length(Str.ToString(ValRound)) - LenValStr;
+ValString: string = Str.Remove(Str.ToString(ValRound), LenValStr, ColForRemove);
+return ValString;
+
+]]>
+		</body>
+		<param access-modifier="private" name="Value" display-name="" uuid="5bbc14a2-191b-4652-92ea-a52eb03eec8e" base-type="float8" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="2"/>
+		<param access-modifier="private" name="NumDecimals" display-name="" uuid="7a0b53af-034a-460e-b92d-558f735bdba7" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="2"/>
+	</do>
+	<do access-modifier="private" name="TimeZone" display-name="TimeZone" ver="2" type="uint8" type-id="c8ff7701-da6e-4d53-888a-81fa680ff561">
+		<body kind="om">
+			<![CDATA[time_zone: uint8 = DateTime.Now()-DateTime.UtcNow();
+return (time_zone);]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="pTrends" display-name="pTrends" uuid="0d73cd5d-f142-46a1-8c08-64d5a621d2e2" base-type="Trends" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="2"/>
+	<param access-modifier="private" name="init_path" display-name="init_path" uuid="8cb3c628-cbb1-416c-b15d-ecc67b17ca92" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[if (event.KeyCode==75) Close();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[Focus = true;
+
+if (pTrends.ActiveMode == pTrends.Const.amOPERATIVE)
+{
+	FT_t1 = pTrends.Main_Panel.private.LeftBorderStoryInterval;	// В таблицу загружаем хранимый интервал данных
+	FT_t2 = pTrends.Main_Panel.private.RightBorderStoryInterval;
+	BottomRec.Table_1.TableModel_1.Exporter_2.Reload();
+}
+else
+{
+	FT_t1 = pTrends.WS.RS.Main_Charts.Chart_History_mode.DataSource_1.ApItemValueQuery_1.HistoricalRangeStart;
+	FT_t2 = pTrends.WS.RS.Main_Charts.Chart_History_mode.DataSource_1.ApItemValueQuery_1.HistoricalRangeEnd;	
+	BottomRec.Table_1.TableModel_1.Exporter_1.Reload();
+}
+
+BottomRec.Table_1.TableColumn_6.Hidden = !pTrends.UseServerTime;
+
+
+//DebugTool_1.Log("Table, T1:"+DateTime.ToString(FT_t1)+" ,T2:"+DateTime.ToString(FT_t2));
+BottomRec.Table_1.ApplySort();
+
+TopRec.ComboQuality.AddItem("Любого качества");
+TopRec.ComboQuality.AddItem("Хорошего качества (>=192)");
+TopRec.ComboQuality.AddItem("Плохого качества (<192)");
+TopRec.ComboQuality.SelectedIndex = 0;
+
+TopRec.ComboTitle.AddItem("По всем описаниям");
+TopRec.ComboTag.AddItem("По всем тегам");
+TopRec.ComboTag.SelectedIndex = 0;
+
+TopRec.ComboRangeDot.AddItem("С граничными точками");
+TopRec.ComboRangeDot.AddItem("Без граничных точек");
+TopRec.ComboRangeDot.SelectedIndex = 0;
+TopRec.ComboTitle.SelectedIndex = 0;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="174fd331-a0c0-4987-b75c-d53259dcc858" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="100" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnTimer">
+			<body kind="om">
+				<![CDATA[Focus= true;
+Active = false;
+BottomRec.Table_1.TableModel_1.BeginReadAsync();
+]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="init_ChartHistory" display-name="init_ChartHistory" uuid="9a1a5953-41d1-440e-9d14-2bb63018e59a" base-type="Chart" base-type-id="447c3e77-56f5-497c-950c-067da367ad6a" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="Timer_2" display-name="Timer_2" uuid="2acb3b11-bd00-4d36-bae0-7eea594f29cc" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="1000" ver="3"/>
+		<designed target="Active" value="true" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[Active= false;
+BottomRec.Table_1.TableIterator.FirstSelected();
+var StrList=[];
+var TagList=[];
+StrList[0]=BottomRec.Table_1.GetCellData(BottomRec.Table_1.TableIterator.CurrentRow,0);
+TagList[0]=BottomRec.Table_1.GetCellData(BottomRec.Table_1.TableIterator.CurrentRow,1);
+var i=0;
+while (!BottomRec.Table_1.TableIterator.End())
+{
+	var vs=BottomRec.Table_1.GetCellData(BottomRec.Table_1.TableIterator.CurrentRow,0);
+	i=0;
+	while (i<StrList.length){
+		if (vs==StrList[i]) i=StrList.length+1;
+		i++;
+	}
+	if (i==StrList.length) StrList[StrList.length]=vs;
+
+	vs=BottomRec.Table_1.GetCellData(BottomRec.Table_1.TableIterator.CurrentRow,1);
+	i=0;
+	while (i<TagList.length){
+		if (vs==TagList[i]) i=TagList.length+1;
+		i++;
+	}
+	if (i==TagList.length) TagList[TagList.length]=vs;
+	BottomRec.Table_1.TableIterator.Next();
+}
+
+for (i=0;i<StrList.length;i++){
+		TopRec.ComboTitle.AddItem(StrList[i]);
+}
+for (i=0;i<TagList.length;i++){
+		TopRec.ComboTag.AddItem(TagList[i]);
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="TopRec" display-name="TopRec" uuid="67ce7e9a-c910-4722-8ec4-603aa217aec9" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="1" ver="3"/>
+		<designed target="Y" value="-1" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="800" ver="3"/>
+		<designed target="Height" value="50" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="ca09957a-c694-4c39-8b31-64e72c74c160" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+			<designed target="Weight" value="50" ver="3"/>
+		</object>
+		<object access-modifier="private" name="btnSave" display-name="btnSave" uuid="a199eccf-821f-4731-9c2d-ac23c4485371" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+			<designed target="X" value="4.5" ver="2"/>
+			<designed target="Y" value="5.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="78" ver="2"/>
+			<designed target="Height" value="40" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="Text" value="Сохранить" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+			<designed target="BrushColor" value="0xffe8e8e8" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<designed target="OnClickBrushColor" value="0xffe8e8e8" ver="2"/>
+			<designed target="OnClickBrushStyle" value="1" ver="2"/>
+			<designed target="OnHoverBrushColor" value="0xffe8e8e8" ver="2"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+			<designed target="PenColor" value="0xff808080" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="OnClickPenColor" value="0xff000000" ver="2"/>
+			<designed target="OnClickPenStyle" value="1" ver="2"/>
+			<designed target="OnClickPenWidth" value="1" ver="2"/>
+			<designed target="OnHoverPenColor" value="0xff00aaff" ver="2"/>
+			<designed target="OnHoverPenStyle" value="1" ver="2"/>
+			<designed target="OnHoverPenWidth" value="1" ver="2"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+			<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+			<designed target="DisabledBrushStyle" value="1" ver="3"/>
+			<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+			<designed target="DisabledPenStyle" value="1" ver="3"/>
+			<designed target="DisabledPenWidth" value="1" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick">
+				<body kind="om">
+					<![CDATA[//Enabled = false;
+Open_SaveDialog.Invoke();]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="ComboTitle" display-name="ComboTitle" uuid="d51df486-bc40-4db1-9a55-8afd429e89c8" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="90" ver="3"/>
+			<designed target="Y" value="21" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="256" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="SelectedChanged">
+				<body kind="om">
+					<![CDATA[if (selected == 0) 
+{
+	BottomRec.Table_1.TableColumn_1.JsonFilter = "";
+}
+else 
+{
+//	BottomRec.Table_1.TableColumn_1.JsonFilter = "{""value"":"""+ComboTitle.Text+"""}";
+	BottomRec.Table_1.TableColumn_1.JsonFilter = "{\"==\" : { \"data\" : \"" + ComboTitle.Text + "\" }}";
+}
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<init target="SelectedIndex" ver="4" value="0"/>
+		</object>
+		<object access-modifier="private" name="ComboTag" display-name="ComboTag" uuid="1c3c3dfa-6d7f-4fc7-8549-fc9dfc9e7a4b" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="357" ver="3"/>
+			<designed target="Y" value="21" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="256" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="SelectedChanged">
+				<body kind="om">
+					<![CDATA[if (selected==0) {
+	BottomRec.Table_1.TableColumn_2.JsonFilter = "";
+}else {
+//	BottomRec.Table_1.TableColumn_1.JsonFilter = "{""value"":"""+ComboTitle.Text+"""}";
+	BottomRec.Table_1.TableColumn_2.JsonFilter = "{\"==\" : { \"data\" : \""+ComboTag.Text+"\" }}";
+}
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<init target="SelectedIndex" ver="4" value="0"/>
+		</object>
+		<object access-modifier="private" name="ComboQuality" display-name="ComboQuality" uuid="c8a6a2d2-aeb9-489f-b8be-d1ae56b14480" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="622" ver="3"/>
+			<designed target="Y" value="21" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="167" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="SelectedChanged">
+				<body kind="om">
+					<![CDATA[if (selected==0) {
+	BottomRec.Table_1.TableColumn_7.JsonFilter = "";
+}
+if (selected==1) {
+//	BottomRec.Table_1.TableColumn_4.JsonFilter = "{"">"":191}";
+	BottomRec.Table_1.TableColumn_7.JsonFilter = "{\">\" : { \"data\" : 191 }}";
+}
+if (selected==2) {
+//	BottomRec.Table_1.TableColumn_4.JsonFilter = "{""<"":192}";
+	BottomRec.Table_1.TableColumn_7.JsonFilter = "{\"<\" : { \"data\" : 192 }}";
+}
+//BottomRec.Table_1.]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<init target="SelectedIndex" ver="4" value="0"/>
+		</object>
+		<object access-modifier="private" name="ComboRangeDot" display-name="ComboRangeDot" uuid="3f940f96-3a09-4b20-96dc-6d7be35e12f2" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="3">
+			<designed target="X" value="798" ver="3"/>
+			<designed target="Y" value="21" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="150" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="Editable" value="false" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="SelectedIndex" value="-1" ver="3"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="MaxVisibleItems" value="10" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="SelectedChanged">
+				<body kind="om">
+					<![CDATA[if (selected==0) 
+{
+	BottomRec.Table_1.TableColumn_5.JsonFilter = "";
+}
+if (selected==1) 
+{
+//	BottomRec.Table_1.TableColumn_5.JsonFilter = "{\">\" : { \"\" : "+Str.ToString(FT_t1)+" } && \"<\" : { \"\" : "+Str.ToString(FT_t2)+" }}";
+	BottomRec.Table_1.TableColumn_5.JsonFilter = "{\"AND\":[{\">\":{\"data\":"+Str.ToString(FT_t1)+"}},{\"<=\":{\"data\":"+Str.ToString(FT_t2)+"}}]}";
+}
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<init target="SelectedIndex" ver="4" value="0"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="BottomRec" display-name="BottomRec" uuid="11fd6573-898b-402b-a003-b52396e6ab60" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="-50" ver="3"/>
+		<designed target="Y" value="-50" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="100" ver="3"/>
+		<designed target="Height" value="101" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="40ce98c3-5cad-4b69-b5e4-1983d37f26b0" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+			<designed target="Weight" value="400" ver="3"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="16643485-709d-4b4a-b361-d3640d4ab882" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+			<designed target="Orientation" value="1" ver="3"/>
+			<designed target="Gap" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="7fb735f9-343b-44a0-a73a-fda5a7cd624c" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+			<designed target="X" value="3" ver="2"/>
+			<designed target="Y" value="57" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Width" value="793" ver="2"/>
+			<designed target="Height" value="389" ver="2"/>
+			<designed target="SelectionBehavior" value="1" ver="2"/>
+			<designed target="SelectionMode" value="3" ver="2"/>
+			<object access-modifier="private" name="TableColumn_1" display-name="TableColumn_1" uuid="f17dd940-ffa3-49a4-9820-5d57b8aed750" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="График" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="line" ver="2"/>
+				<designed target="BackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="214" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%g" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+				<designed target="SortMode" value="0" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_2" display-name="TableColumn_2" uuid="2aac9de1-35a1-4b98-84be-306492dad288" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Тег сигнала" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="tag" ver="2"/>
+				<designed target="BackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="214" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%g" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_3" display-name="TableColumn_3" uuid="f0ca1653-a5dd-48ea-b026-83b296c6f0c5" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Значение" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="value" ver="2"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="80" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%g" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_4" display-name="TableColumn_4" uuid="9b02ae7b-c1ac-46d0-84c6-f9e7cb1e9c81" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Единицы" ver="2"/>
+				<designed target="Description" value="" ver="2"/>
+				<designed target="Id" value="unit" ver="2"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="70" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%g" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_5" display-name="TableColumn_5" uuid="d5a92d08-e07d-4799-a9d2-59cd6d1fcd7f" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Время" ver="2"/>
+				<designed target="Description" value="Время" ver="2"/>
+				<designed target="Id" value="timestamp" ver="2"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="150" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="true" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="1000" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseTitleClick">
+					<body kind="om">
+						<![CDATA[DebugTool_1.Log("TableColumn_5.TitleClick");
+SortOrder = (SortOrder==0)?(1):(0);
+//SortingEnabled = true;
+//ApplySort();]]>
+					</body>
+				</do-on>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_6" display-name="TableColumn_6" uuid="460e95e4-7d5a-4908-b8ae-fefdd0b41a86" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Время сервера" ver="2"/>
+				<designed target="Description" value="Время" ver="2"/>
+				<designed target="Id" value="server_timestamp" ver="2"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="150" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="true" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="1000" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseTitleClick">
+					<body kind="om">
+						<![CDATA[DebugTool_1.Log("TableColumn_5.TitleClick");
+SortOrder = (SortOrder==0)?(1):(0);
+//SortingEnabled = true;
+//ApplySort();]]>
+					</body>
+				</do-on>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableColumn_7" display-name="TableColumn_7" uuid="68ed7d91-b23f-42e0-b199-b0bd548b054e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+				<designed target="Title" value="Качество" ver="2"/>
+				<designed target="Description" value="Качество" ver="2"/>
+				<designed target="Id" value="quality" ver="2"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+				<designed target="ForegroundColor" value="4278190080" ver="2"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="TitleBackgroundColor" value="0xffe2e2e2" ver="2"/>
+				<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+				<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="Width" value="70" ver="2"/>
+				<designed target="WidthResizeMode" value="0" ver="2"/>
+				<designed target="Hidden" value="false" ver="2"/>
+				<designed target="NumberFormat" value="%d" ver="2"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+				<designed target="Emptiable" value="true" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="3"/>
+				<designed target="JsonFilter" value="" ver="3"/>
+				<designed target="SortingEnabled" value="false" ver="3"/>
+				<designed target="SortOrder" value="0" ver="3"/>
+				<designed target="SortPriority" value="0" ver="3"/>
+				<designed target="WordWrap" value="false" ver="3"/>
+				<designed target="TitleTextAlignment" value="132" ver="3"/>
+				<designed target="ColumnOwnId" value="" ver="4"/>
+			</object>
+			<object access-modifier="private" name="TableIterator" display-name="TableIterator" uuid="c917f202-488c-4f63-8c0a-60579689035b" base-type="TableIterator" base-type-id="b368f2dc-9de9-47fc-b7ae-1d9c28047eba" ver="2">
+				<designed target="CurrentRow" value="0" ver="2"/>
+			</object>
+			<designed target="LatestRowTracking" value="false" ver="2"/>
+			<designed target="HeaderHeight" value="21" ver="3"/>
+			<designed target="HeaderVisible" value="true" ver="3"/>
+			<designed target="RowHeight" value="30" ver="3"/>
+			<designed target="RowOrder" value="0" ver="3"/>
+			<object access-modifier="private" name="TableModel_1" display-name="TableModel_1" uuid="03d1fa52-6cc8-4342-a3f3-6ceac93dd486" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+				<designed target="Frozen" value="false" ver="3"/>
+				<designed target="MaxRowCount" value="10000" ver="3"/>
+				<object access-modifier="private" name="ApItemValueQuery_1" display-name="ApItemValueQuery_1" uuid="9bd1d4f8-f298-4515-bee5-4a4d127a8654" base-type="ApItemValueQuery" base-type-id="66ce99c8-b124-42cf-b541-4299b9f17462" ver="2">
+					<designed target="Mode" value="1" ver="2"/>
+					<designed target="HistoricalRangeStart" value="0" ver="2"/>
+					<designed target="HistoricalRangeEnd" value="0" ver="2"/>
+					<designed target="Active" value="true" ver="2"/>
+					<designed target="OperativeInterval" value="60" ver="2"/>
+					<designed target="OperativeBufferSize" value="1000" ver="2"/>
+					<designed target="PreloadHistoricalData" value="true" ver="2"/>
+					<init target="Item" ver="2" ref="Item_table"/>
+				</object>
+				<object access-modifier="private" name="Exporter_1" display-name="Exporter_1" uuid="ee1289b9-50e0-4e64-a89b-fc82206e2373" base-type="Exporter" base-type-id="2a508563-364d-4472-b86f-4a1a2242c583" ver="3">
+					<designed target="Sort" value="true" ver="3"/>
+					<designed target="SortColumnNumber" value="3" ver="3"/>
+					<init target="Chart" ver="3" ref="init_ChartHistory"/>
+				</object>
+				<object access-modifier="private" name="Exporter_2" display-name="Exporter_2" uuid="93e6f805-f049-4a87-b1d9-69aae06e8678" base-type="Exporter" base-type-id="2a508563-364d-4472-b86f-4a1a2242c583" ver="3">
+					<designed target="Sort" value="true" ver="3"/>
+					<designed target="SortColumnNumber" value="3" ver="3"/>
+					<init target="Chart" ver="3" ref="init_ChartOper"/>
+				</object>
+			</object>
+			<init target="TableModel" ver="3" ref="TableModel_1"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="261b98d9-f78f-4c94-ad5a-890af3bf7a09" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+		<designed target="Orientation" value="2" ver="3"/>
+		<designed target="Gap" value="0" ver="3"/>
+	</object>
+	<param access-modifier="private" name="init_ChartOper" display-name="init_ChartOper" uuid="d3698553-ffb5-4641-aba1-b66a1474e2e5" base-type="Chart" base-type-id="447c3e77-56f5-497c-950c-067da367ad6a" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="sFilePath" display-name="sFilePath" uuid="9f1e82bb-23a4-4e91-9ba6-da2947383145" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	<object access-modifier="private" name="nSaveMode" display-name="nSaveMode" uuid="90c983e7-eadf-406c-aa07-0ac4b204de56" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	<object access-modifier="private" name="Open_SaveDialog" display-name="Open_SaveDialog" uuid="14fc1344-2fc1-4216-bb3b-0bafa0a128c7" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="InvokeTrigger" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked" form-by-id="false" form-action="open-dialog">
+			<object access-modifier="private" uuid="8f5e339e-beb2-4e73-af93-3ff43d7ce804" base-type="SaveDialog" base-type-id="72e38291-2275-4423-acaf-294346f028ea" ver="3">
+				<init target="pTableForm" ver="3" ref="here"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SaveFile" display-name="SaveFile" uuid="566a5a0b-6e74-42a1-9010-c7e4cb97659c" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="3">
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="InvokeTrigger" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[if (nSaveMode==0){
+	BottomRec.Table_1.Save(sFilePath,"csv");
+}else{
+	BottomRec.Table_1.Save(sFilePath,"xlsx");
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="WindowSizeChanged">
+		<body kind="om">
+			<![CDATA[Width = WindowWidth;
+Height = WindowHeight;
+BottomRec.LayoutWeight_1.Weight = height - 50;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="3" event="Closed">
+		<body kind="om">
+			<![CDATA[pTrends.Main_Panel.ToolBar.btnTableView.Active = true;]]>
+		</body>
+	</do-on>
+</type>
+

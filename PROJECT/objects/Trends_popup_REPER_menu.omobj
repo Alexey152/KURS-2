@@ -1,0 +1,204 @@
+<type access-modifier="private" name="Trends_popup_REPER_menu" display-name="Trends_popup_REPER_menu" uuid="8f19c586-ed41-49b2-be0d-6e52e5e8cb3a" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="180" ver="2"/>
+	<designed target="Height" value="60" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="false" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="false" ver="2"/>
+	<designed target="AlwaysOnTop" value="true" ver="2"/>
+	<designed target="WindowSizeMode" value="1" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="0" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="btnRemoveSelect" display-name="btnRemoveSelect" uuid="178e7fc4-302a-4b76-b6d4-64f1ec8be6c2" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="3" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="137" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="  Удалить выбранный репер" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="0xff000000" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="0" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="0xffc0c0c0" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[pTrends.Main_Panel.private.RemoveActiveReper();
+Close();]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="4"/>
+		<designed target="DisabledBrushStyle" value="1" ver="4"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="4"/>
+		<designed target="DisabledPenStyle" value="1" ver="4"/>
+		<designed target="DisabledPenWidth" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="btnRemoveAll" display-name="btnRemoveAll" uuid="49fad799-ea65-4988-9d18-99cdb6f63065" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="30.5" ver="2"/>
+		<designed target="Y" value="106.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="137" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Text" value="  Удалить все реперы" ver="2"/>
+		<designed target="TextAlignment" value="129" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="0" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="0xffc0c0c0" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[pTrends.Main_Panel.private.RemoveAllRepers();
+Close();]]>
+			</body>
+		</do-on>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="4"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="4"/>
+		<designed target="DisabledBrushStyle" value="1" ver="4"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="4"/>
+		<designed target="DisabledPenStyle" value="1" ver="4"/>
+		<designed target="DisabledPenWidth" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="d2734627-6228-447b-b556-51e46d70b80b" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="2">
+		<designed target="Orientation" value="2" ver="2"/>
+		<designed target="Gap" value="2" ver="2"/>
+	</object>
+	<object access-modifier="private" name="pTrends" display-name="pTrends" uuid="d8c0d375-76d6-4c85-8ea8-39063afc59a8" base-type="Trends_1" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[var Lines = [];
+Lines[1] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_1;
+Lines[2] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_2;
+Lines[3] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_3;
+Lines[4] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_4;
+Lines[5] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_5;
+Lines[6] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_6;
+Lines[7] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_7;
+Lines[8] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_8;
+Lines[9] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_9;
+Lines[10] = pTrends.WS.RS.Main_Charts.Chart_Operative_mode.Line_10;
+Lines[21] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_1;
+Lines[22] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_2;
+Lines[23] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_3;
+Lines[24] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_4;
+Lines[25] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_5;
+Lines[26] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_6;
+Lines[27] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_7;
+Lines[28] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_8;
+Lines[29] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_9;
+Lines[30] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_10;
+Lines[31] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_11;
+Lines[34] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_12;
+Lines[33] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_13;
+Lines[34] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_14;
+Lines[35] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_15;
+Lines[36] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_16;
+Lines[37] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_17;
+Lines[38] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_18;
+Lines[39] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_19;
+Lines[40] = pTrends.WS.RS.Main_Charts.Chart_History_mode.Line_File_20;
+
+
+
+bInit = true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="65c2c45f-2580-47cd-857c-9e2a36eb6c0d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<object access-modifier="private" name="menu_1_Item" display-name="menu_1_Item" uuid="f05a37b6-09fb-4a4a-8f4b-4753207fae7b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2" cardinal="9"/>
+	<object access-modifier="private" name="menu_1_Item_Count" display-name="menu_1_Item_Count" uuid="6ae03a1c-809d-4778-acff-b4549797227b" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="2"/>
+	<init target="menu_1_Item_Count" ver="2" value="0"/>
+	<object access-modifier="private" name="mX" display-name="mX" uuid="3bdf4cf7-2a4e-46a2-b3e2-1e2450799baa" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+	<object access-modifier="private" name="mY" display-name="mY" uuid="421650de-04c8-4b80-8835-ca22f7adfed8" base-type="float4" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="2"/>
+	<object access-modifier="private" name="bCloseSubMenu" display-name="bCloseSubMenu" uuid="fd49c497-9c43-4e71-bafc-45466946b4ca" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<init target="bCloseSubMenu" ver="2" value="false"/>
+	<object access-modifier="private" name="bChoiseSubMenu" display-name="bChoiseSubMenu" uuid="d6551840-a50d-4586-9a16-ce29c416f3aa" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<init target="bChoiseSubMenu" ver="2" value="false"/>
+	<object access-modifier="private" name="SubMenuChoise" display-name="SubMenuChoise" uuid="f403bfdf-be5c-4261-9c61-41c2732154f6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value!="")
+{			// Замена шкалы выбранного графика
+	n0:int4 = pTrends.Main_Panel.private.GetIndexRowSelected(); // определяем выделенную строку
+	tag:string = Variant.ToString( pTrends.WS.RS.Main_Legend.Table_1.TableModel_1.GetCellData(n0,2),"_"); // читаем тэг из строки
+//	pTrends.DebugTool_1.Log(st);
+	if (value=="отдельная шкала") value=tag;
+	pTrends.SetGraphicAxis(tag,value);  // устанавливаем новую шкалу для выбранного графика
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="4" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[	if (!WindowActive ) Close();
+]]>
+		</body>
+	</do-on>
+</type>
+

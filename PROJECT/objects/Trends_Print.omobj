@@ -1,0 +1,1531 @@
+<type access-modifier="private" name="Trends_Print" display-name="SettingsPrintTrends_1" uuid="93c8f0a1-ecad-4223-992c-fc50d2e39fbb" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="1000" ver="2"/>
+	<designed target="Height" value="700" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="true" ver="2"/>
+	<designed target="ShowWindowMaximize" value="true" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="2" ver="2"/>
+	<designed target="WindowBorderStyle" value="1" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="0" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="Chart_History_mode" display-name="Chart_History_mode" uuid="e63de96c-9bb1-4da8-baa7-2ae57981de35" base-type="Chart" base-type-id="447c3e77-56f5-497c-950c-067da367ad6a" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="1000" ver="2"/>
+		<designed target="Height" value="600" ver="2"/>
+		<designed target="CursorPointSize" value="4" ver="2"/>
+		<designed target="CursorLineWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4294967295" ver="2"/>
+		<designed target="CursorColor" value="4288716964" ver="2"/>
+		<designed target="CursorLineBrushStyle" value="2" ver="2"/>
+		<designed target="ShowTimeLine" value="true" ver="2"/>
+		<designed target="ShowLegend" value="false" ver="2"/>
+		<designed target="Font" value="" ver="2"/>
+		<designed target="ZoomX" value="0" ver="2"/>
+		<designed target="ZoomY" value="0" ver="2"/>
+		<designed target="AutoUpdate" value="true" ver="2"/>
+		<object access-modifier="private" name="Axis_X" display-name="Axis_X" uuid="bd42a305-ce40-45c9-9664-5a2678a7b636" base-type="Axis" base-type-id="790efceb-e3a3-4c3f-b766-9557ba52a4d3" ver="2">
+			<designed target="Color" value="4286611584" ver="2"/>
+			<designed target="Type" value="1" ver="2"/>
+			<designed target="Align" value="1" ver="2"/>
+			<designed target="DataType" value="1" ver="2"/>
+			<designed target="Ticks" value="1" ver="2"/>
+			<designed target="Scale" value="2" ver="2"/>
+			<designed target="ScaleLog" value="false" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="UnitPos" value="1" ver="2"/>
+			<designed target="Format" value="%.4g" ver="2"/>
+			<designed target="FormatT" value="hh:mm:ss.zzz
+yyyy-MM-dd" ver="2"/>
+			<designed target="Min" value="132253502494890000" ver="2"/>
+			<designed target="Max" value="132253502495100000" ver="2"/>
+			<designed target="AxisName" value="" ver="2"/>
+			<designed target="AxisNamePos" value="0" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Font" value="" ver="2"/>
+			<designed target="ShowUnit" value="true" ver="3"/>
+			<designed target="Zoom" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Axis_Y" display-name="Axis_Y" uuid="032d432e-9fac-41ca-9070-78060e8c510c" base-type="Axis" base-type-id="790efceb-e3a3-4c3f-b766-9557ba52a4d3" ver="2" cardinal="11">
+			<designed target="Color" value="4286611584" ver="2"/>
+			<designed target="Type" value="2" ver="2"/>
+			<designed target="Align" value="1" ver="2"/>
+			<designed target="DataType" value="0" ver="2"/>
+			<designed target="Ticks" value="1" ver="2"/>
+			<designed target="Scale" value="2" ver="2"/>
+			<designed target="ScaleLog" value="false" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="UnitPos" value="1" ver="2"/>
+			<designed target="Format" value="%.4g" ver="2"/>
+			<designed target="FormatT" value="hh:mm:ss.zzz
+yyyy-MM-dd" ver="2"/>
+			<designed target="Min" value="0" ver="2"/>
+			<designed target="Max" value="1000" ver="2"/>
+			<designed target="AxisName" value="" ver="2"/>
+			<designed target="AxisNamePos" value="0" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Font" value="" ver="2"/>
+			<init target="Max" ver="2" value="500000000"/>
+			<designed target="Zoom" value="0" ver="3"/>
+			<designed target="ShowUnit" value="true" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="66069e1a-6e03-4f4f-ad61-fb4fb45401b8" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_1"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="877c534a-827d-44ac-8247-8594d464b2ce" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xffff0000" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_2"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_3" display-name="Line_3" uuid="f89f6a75-c749-4f52-976e-8ae394236b07" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff550000" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_3"/>
+			<init target="Visible" ver="2" value="false"/>
+			<designed target="SortByServerTimeColumn" value="false" ver="3"/>
+			<designed target="Tag" value="" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Line_4" display-name="Line_4" uuid="1ad9795a-4baa-4aa8-b056-e871147dbfc9" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff55007f" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_4"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="fcdbc02f-9982-40a7-8829-aeddb72952c1" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xffffaaff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_5"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="a944e1ab-c503-4679-a52a-560a9b4b5571" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff00ff00" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_6"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_7" display-name="Line_7" uuid="0c29a371-e634-402c-8d00-9cc16466e049" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xffaaaa7f" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_7"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_8" display-name="Line_8" uuid="c3f43dcf-e72c-47a0-b076-06f7938779c0" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xffff55ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_8"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_9" display-name="Line_9" uuid="62004383-8203-4b54-9ecd-d0615c196ae8" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff005500" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_9"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="Line_10" display-name="Line_10" uuid="0436ced3-3b49-4672-814b-8850bcc4a0ca" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff00aa00" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_10"/>
+			<init target="Visible" ver="2" value="false"/>
+		</object>
+		<object access-modifier="private" name="DataSource_1" display-name="DataSource_1" uuid="ddd59c5f-e949-43c0-80f1-f01ca322f9d5" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_2" display-name="DataSource_2" uuid="2d684249-809c-41cf-acba-4879c8f37898" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_3" display-name="DataSource_3" uuid="42311282-3244-40be-83bd-4739897a49c9" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_4" display-name="DataSource_4" uuid="445eb4a6-c29d-47d7-a840-2c794932fd38" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_5" display-name="DataSource_5" uuid="960c6da6-95be-4d9f-9582-d4361656e10e" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_6" display-name="DataSource_6" uuid="67171b21-ce39-46e4-b0f1-a30c8aa95bf6" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_7" display-name="DataSource_7" uuid="0f00f204-719a-4dfa-8963-7d69124331de" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_8" display-name="DataSource_8" uuid="a70b9265-d4b7-4ecb-a7d7-ed59f9ddb4a5" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_9" display-name="DataSource_9" uuid="193d643e-2f19-439c-bf42-1148efa5990f" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="DataSource_10" display-name="DataSource_10" uuid="adb71ec7-86e1-4837-9779-64087f124d93" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ReadFinished">
+				<body kind="om">
+					<![CDATA[FileReadyCount= FileReadyCount+1;		// считаем количество загруженных графиков
+]]>
+				</body>
+			</do-on>
+		</object>
+		<designed target="AlignLegend" value="0" ver="2"/>
+		<object access-modifier="private" name="private" display-name="private" uuid="7f7cbe65-4d82-4d3b-af70-17fe86d7c731" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="55" ver="2"/>
+			<designed target="Y" value="63" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="Height" value="100" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_1" display-name="Line_Level_1" uuid="1491e311-89cb-48b6-b08e-38bbd2c76862" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_2" display-name="Line_Level_2" uuid="2c0438d2-bd8b-4545-81a3-5d729d6d6df3" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_3" display-name="Line_Level_3" uuid="170e9d9d-d8e6-42d4-973a-d3f47682f22c" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_4" display-name="Line_Level_4" uuid="769a9bc7-d38c-49ab-9fcd-273af13df0ef" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_5" display-name="Line_Level_5" uuid="b3265434-85ba-44a8-86dc-cdc4176c15d1" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_6" display-name="Line_Level_6" uuid="52c3fea8-b77e-409a-aa10-f4e2a9026c9e" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_7" display-name="Line_Level_7" uuid="2cb4cecf-14aa-4a57-9f8e-71d946c2d6df" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_8" display-name="Line_Level_8" uuid="cbb329f0-9637-49cd-a2f1-40a02a87d7bc" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_9" display-name="Line_Level_9" uuid="ab23e915-1ff5-4965-9474-505bd23c1d4e" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+			<designed target="Tag" value="" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Line_Level_10" display-name="Line_Level_10" uuid="ed33b6bc-e77f-480a-bf1b-013ecd78dd0c" base-type="Line" base-type-id="3337f550-4fea-4eff-8ef4-2e7b87f33711" ver="2">
+			<designed target="Color" value="0xff0000ff" ver="2"/>
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Unit" value="" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="PointSize" value="0" ver="2"/>
+			<designed target="LineBrushStyle" value="1" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="zOrder" value="0" ver="2"/>
+			<designed target="drawingType" value="0" ver="2"/>
+			<designed target="ColumnNumberTime" value="2" ver="2"/>
+			<designed target="ColumnNumberValue" value="0" ver="2"/>
+			<designed target="ShowActiveControllineLabels" value="true" ver="2"/>
+			<init target="Visible" ver="2" value="false"/>
+			<init target="PointSize" ver="2" value="0"/>
+			<init target="AxisX" ver="2" ref="Axis_X"/>
+			<init target="AxisY" ver="2" ref="Axis_Y"/>
+			<init target="DataSource" ver="2" ref="DataSource_Level_1"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_1" display-name="DataSource_Level_1" uuid="02655393-afa3-4b63-872f-50729bb19d82" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_2" display-name="DataSource_Level_2" uuid="deedad76-268e-4547-9d16-130d5d52750b" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_3" display-name="DataSource_Level_3" uuid="011b7fc2-6d2c-472c-a2c1-968c82a81f7f" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_4" display-name="DataSource_Level_4" uuid="bc98dee9-a2ad-4965-bb60-207bdeca1287" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_5" display-name="DataSource_Level_5" uuid="f0493e97-d788-47c6-8718-31095c2cdcc7" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_6" display-name="DataSource_Level_6" uuid="6f08c37a-4525-495b-837e-ffaaa0370f58" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_7" display-name="DataSource_Level_7" uuid="d81e90c7-c513-4157-a6af-d140cf16b3bd" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_8" display-name="DataSource_Level_8" uuid="aa1a3895-d2cc-4d36-8dc1-d8035d4ed540" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+			<designed target="LoadColumns" value="false" ver="3"/>
+			<designed target="Sort" value="true" ver="3"/>
+			<designed target="SortColumnNumber" value="2" ver="3"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_9" display-name="DataSource_Level_9" uuid="0df1c06a-542b-4349-b31f-96426829fffa" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<object access-modifier="private" name="DataSource_Level_10" display-name="DataSource_Level_10" uuid="db8999a5-6bce-48f8-b4d1-94eff3b9a01c" base-type="DataSource" base-type-id="22b9b931-37d6-455b-b200-df50e9527bc8" ver="2">
+			<designed target="LengthReserved" value="550000" ver="2"/>
+		</object>
+		<designed target="Extrapolation" value="true" ver="2"/>
+		<designed target="CursorMode" value="3" ver="2"/>
+		<designed target="ActiveControllineColor" value="4294901760" ver="2"/>
+		<designed target="ActiveControllineWidth" value="3" ver="2"/>
+		<designed target="MovePointLabels" value="false" ver="2"/>
+		<designed target="EnableScaleAxisX" value="false" ver="3"/>
+		<object access-modifier="private" name="ControlLine" display-name="ControlLine" uuid="8a6de3fe-c31c-4870-87ca-2ba48e9d0279" base-type="ControlLine" base-type-id="2e433efa-cce5-4c91-a032-e0721a75e119" ver="2" cardinal="21">
+			<designed target="Color" value="0xff000000" ver="2"/>
+			<designed target="LineWidth" value="1" ver="2"/>
+			<designed target="Value" value="0" ver="2" type-id="7ad62ecf-96dd-4751-9b96-e77954b44409"/>
+			<designed target="BrushStyle" value="2" ver="2"/>
+			<designed target="BrushOpacity" value="1" ver="2"/>
+			<designed target="ShowValues" value="true" ver="2"/>
+			<designed target="BgValuesColor" value="4292006610" ver="2"/>
+			<designed target="BgValuesOpacity" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Format" value="%.4g" ver="2"/>
+			<designed target="Font" value="" ver="2"/>
+			<designed target="Mode" value="0" ver="3"/>
+			<object access-modifier="private" name="CrossPoint" display-name="CrossPoint" uuid="7ad73ef0-4bfd-41e9-9023-64076dc1b409" base-type="CrossPoint" base-type-id="04cb0bc4-a63d-40a0-af0e-e212ca856e1a" ver="3" cardinal="41">
+				<designed target="Color" value="0xff808080" ver="3"/>
+				<designed target="BrushStyle" value="2" ver="3"/>
+				<designed target="BrushOpacity" value="1" ver="3"/>
+				<designed target="BgValuesColor" value="0xffd2d2d2" ver="3"/>
+				<designed target="BgValuesOpacity" value="0.8" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Font" value="" ver="3"/>
+				<designed target="ToolTipText" value="???" ver="3"/>
+			</object>
+			<init target="Axis" ver="3" ref="Chart_History_mode.Axis_X"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="DataChanged">
+				<body kind="om">
+					<![CDATA[//p_Trends.DebugTool_1.Log("DataChanged Reper ");
+i:int4 = 1;
+while (i <= FileReadyCount)		// Перебираем все линии для данного репера
+{
+	vv:variant = this.CrossPoint[i].GetValue(0);
+//	p_Trends.DebugTool_1.Log("r Reper:"+" Point:"+Str.ToString(i)+" Value:"+Str.ToString(Variant.ToUint8(vv,0)));
+	if ( Variant.IsEmpty(vv) )
+	{
+		this.CrossPoint[i].ToolTipText = "???";
+	}
+	else
+	{
+		vq:variant = this.CrossPoint[i].GetValue(1);
+		vvs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vv,-1),p_Trends.YAxisPrecision);
+		vqs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vq,-1),0);
+		this.CrossPoint[i].ToolTipText = vvs + " ("+vqs+")";
+	}
+	i = i + 1;
+}
+//  DebugTool_1.Log("Reper_2 : "+Line_2.GetActiveControllineLabels());
+]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ChangeValue">
+				<body kind="om">
+					<![CDATA[//p_Trends.DebugTool_1.Log("ChangeValue Reper ");
+i:int4 = 1;
+while (i <= p_Trends.Main_Panel.private.ExParams.LinesCount)
+{
+	vv:variant = this.CrossPoint[i].GetValue(0);
+//	DebugTool_1.Log("r Reper:"+Str.ToString(A)+" Point:"+Str.ToString(i)+" Value:"+Str.ToString(Variant.ToUint8(vv,0)));
+	if ( Variant.IsEmpty(vv) )
+	{
+		this.CrossPoint[i].ToolTipText = "???";
+	}
+	else
+	{
+		vq:variant = this.CrossPoint[i].GetValue(1);
+		vvs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vv,-1),p_Trends.YAxisPrecision);
+		vqs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vq,-1),0);
+		this.CrossPoint[i].ToolTipText = vvs + " ("+vqs+")";
+	}
+	i = i + 1;
+}
+//  DebugTool_1.Log("Reper_2 : "+Line_2.GetActiveControllineLabels());
+]]>
+				</body>
+			</do-on>
+			<designed target="ShowAxisValues" value="true" ver="4"/>
+		</object>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="0d443702-6e50-40f6-bd3f-4e25b711cc35" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+			<designed target="Weight" value="600" ver="3"/>
+		</object>
+		<designed target="Padding" value="50,50,50,50" ver="3"/>
+		<designed target="ShowWinOptions" value="false" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MousePress">
+			<body kind="om">
+				<![CDATA[Chart_History_mode.ShowTimeLine = !Chart_History_mode.ShowTimeLine;
+p_Trends.DebugTool_1.Log("Print.Open.ShowTimeLine = "+Str.ToString(Chart_History_mode.ShowTimeLine));
+Chart_History_mode.Update();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="p_Trends" display-name="p_Trends" uuid="ba8e6459-723b-4e40-8ebe-10a3779e9d8c" base-type="Trends" base-type-id="81673f92-ac48-4244-bfe3-ddbdcc98167a" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="Table_1" display-name="Table_1" uuid="7cdfd618-d54e-4e73-b697-596d4a512ec0" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="600" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Width" value="1000" ver="2"/>
+		<designed target="Height" value="100" ver="2"/>
+		<designed target="SelectionBehavior" value="1" ver="2"/>
+		<designed target="SelectionMode" value="3" ver="2"/>
+		<object access-modifier="private" name="TableColumn_0" display-name="TableColumn_0" uuid="a5f99a49-903f-4df5-9495-604c73e56954" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2" cardinal="1">
+			<designed target="Title" value="" ver="2"/>
+			<designed target="Description" value="цвет линии графика" ver="2"/>
+			<designed target="Id" value="Advise" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="20" ver="2"/>
+			<designed target="WidthResizeMode" value="2" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%s" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="132" ver="2"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_11" display-name="TableColumn_11" uuid="fbc945e5-b4c8-4e4a-9640-08e9b5bf6b58" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2" cardinal="1">
+			<designed target="Title" value="Шкала" ver="2"/>
+			<designed target="Description" value="цвет линии графика" ver="2"/>
+			<designed target="Id" value="ColorAxis" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="50" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%s" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_1.State]]>
+				</body>
+			</do-trace>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_1" display-name="TableColumn_1" uuid="7d1bc6c4-2345-4bbc-928f-86085569ade3" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Цвет" ver="2"/>
+			<designed target="Description" value="цвет линии графика" ver="2"/>
+			<designed target="Id" value="ColorLine" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="50" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%s" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_2.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_2" display-name="TableColumn_2" uuid="5dfb42f1-b7c1-49eb-93ba-dbdf40401b7f" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Описание" ver="2"/>
+			<designed target="Description" value="Описание" ver="2"/>
+			<designed target="Id" value="Description" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="200" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%s" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_3.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_3" display-name="TableColumn_3" uuid="17ede525-2bac-449f-96cc-fb6a69419d41" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Имя" ver="2"/>
+			<designed target="Description" value="тег сигнала" ver="2"/>
+			<designed target="Id" value="Tag" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="39" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%s" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_4.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+			<designed target="ColumnOwnId" value="" ver="4"/>
+			<designed target="SortMode" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_4" display-name="TableColumn_4" uuid="8626f88d-ecff-4f28-8e03-64c83390d92d" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Значение" ver="2"/>
+			<designed target="Description" value="Значение" ver="2"/>
+			<designed target="Id" value="Value" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="63" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_5.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_5" display-name="TableColumn_5" uuid="5cd661c4-5a2e-4019-9b98-435dc8b796e1" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Единицы" ver="2"/>
+			<designed target="Description" value="Единицы измерения" ver="2"/>
+			<designed target="Id" value="EU" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="60" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_6.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_6" display-name="TableColumn_6" uuid="21cc9c50-06bc-46c3-b2aa-835ae70c6523" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Время" ver="2"/>
+			<designed target="Description" value="Метка времени" ver="2"/>
+			<designed target="Id" value="Time" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="130" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_7.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_7" display-name="TableColumn_7" uuid="1f801631-c3c5-4ec1-a799-fd27206cd95c" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Качество" ver="2"/>
+			<designed target="Description" value="Качество сигнала " ver="2"/>
+			<designed target="Id" value="Quality" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="60" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_8.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_8" display-name="TableColumn_8" uuid="deb28518-dfff-40ce-bf71-7514ba3936e3" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Минимум" ver="2"/>
+			<designed target="Description" value="Минимальное значение" ver="2"/>
+			<designed target="Id" value="Minimum" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_9.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_9" display-name="TableColumn_9" uuid="f49f142e-d90c-4b38-bbcd-e139d304d31b" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Максимум" ver="2"/>
+			<designed target="Description" value="Максимальное значение" ver="2"/>
+			<designed target="Id" value="Maximum" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_10.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableColumn_10" display-name="TableColumn_10" uuid="3f735e57-9e3b-4162-8597-3d2d5896c000" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Количество" ver="2"/>
+			<designed target="Description" value="Количество точек на графике" ver="2"/>
+			<designed target="Id" value="Quantity" ver="2"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="TitleBackgroundColor" value="0xffddcfd5" ver="2"/>
+			<designed target="TitleForegroundColor" value="0xff000000" ver="2"/>
+			<designed target="TitleFont" value="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="WidthResizeMode" value="3" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<do-trace access-modifier="private" target="Hidden" ver="3">
+				<body>
+					<![CDATA[!pSettingsForm.RightPanel.ColumnView.Checkbox_11.State]]>
+				</body>
+			</do-trace>
+			<designed target="JsonFilter" value="" ver="3"/>
+			<designed target="SortingEnabled" value="false" ver="3"/>
+			<designed target="SortOrder" value="0" ver="3"/>
+			<designed target="SortPriority" value="0" ver="3"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+			<designed target="TitleTextAlignment" value="132" ver="3"/>
+		</object>
+		<designed target="LatestRowTracking" value="false" ver="2"/>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="26" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<object access-modifier="private" name="TableModel_1" display-name="TableModel_1" uuid="17622906-9233-423e-b7fb-ee7ffe15b199" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="3">
+			<designed target="Frozen" value="false" ver="3"/>
+			<designed target="MaxRowCount" value="10000" ver="3"/>
+		</object>
+		<init target="TableModel" ver="3" ref="TableModel_1"/>
+		<object access-modifier="private" name="TableDecorator" display-name="TableDecorator" uuid="48bd7ba0-fe07-40e8-bda8-88fe6e2fcc90" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="2" cardinal="1">
+			<designed target="JsonDecorator" value="" ver="3"/>
+		</object>
+		<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="c11d38b2-09ba-4102-994a-9af1e24323fd" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+			<designed target="Weight" value="100" ver="3"/>
+		</object>
+		<do access-modifier="private" name="InitDecorator" display-name="InitDecorator" ver="4" type="" type-id="">
+			<body kind="javascript">
+				<![CDATA[var Object = {};
+Object.Decorating = [];
+Object.StyleDictionary = [];
+
+var colorDecorating_1 = {};				// Правило для отображения цвета линии
+colorDecorating_1["decoration_rule_name"] = "rule_ColorLine";
+colorDecorating_1["columnstyle"] = {'ColorLine':"style_ColorLine"};
+Object.Decorating.push(colorDecorating_1);
+
+var userStyle_1 = {};
+userStyle_1["style_name"] = "style_ColorLine";
+userStyle_1["style"] = {'background_color':'data:ColorLine','color': 'data:ColorLine'};
+Object.StyleDictionary.push(userStyle_1);
+
+var colorDecorating_2 = {};				// Правило для отображения цвета оси
+colorDecorating_2["decoration_rule_name"] = "rule_ColorAxis";
+colorDecorating_2["columnstyle"] = {'ColorAxis':"style_ColorAxis"};
+Object.Decorating.push(colorDecorating_2);
+
+var userStyle_2 = {};
+userStyle_2["style_name"] = "style_ColorAxis";
+userStyle_2["style"] = {'background_color':'data:ColorAxis','color': 'data:ColorAxis'};
+Object.StyleDictionary.push(userStyle_2);
+
+var adviseDecorating_1 = {};			// Правило декорирования при не отвечающем сервере
+adviseDecorating_1["decoration_rule_name"] = "rule_AdviseWarning_1";
+adviseDecorating_1["columnstyle"] = {'Advise':"style_AdviseWarning_1"};
+adviseDecorating_1["decoration_rule"] = {'data:Advise': '!'};
+Object.Decorating.push(adviseDecorating_1);
+
+var userStyle_3 = {};
+userStyle_3["style_name"] = "style_AdviseWarning_1";
+userStyle_3["style"] = {'background_color':'#ffffff00','text_align': 'center'};
+Object.StyleDictionary.push(userStyle_3);
+
+var adviseDecorating_2 = {};		// Правило декорирования при отсутствии тэга сигнала
+adviseDecorating_2["decoration_rule_name"] = "rule_AdviseWarning_2";
+adviseDecorating_2["columnstyle"] = {'Advise':"style_AdviseWarning_2"};
+adviseDecorating_2["decoration_rule"] = {'data:Advise': '! '};		// Признак отличается от предыдущего наличием пробела!
+Object.Decorating.push(adviseDecorating_2);
+
+var userStyle_4 = {};
+userStyle_4["style_name"] = "style_AdviseWarning_2";
+userStyle_4["style"] = {'background_color':'#ffff0000','text_align': 'center'};
+Object.StyleDictionary.push(userStyle_4);
+
+var vs = JSON.stringify(Object, null, 2);
+TableDecorator.JsonDecorator = vs;
+]]>
+			</body>
+		</do>
+		<do access-modifier="private" name="Init" display-name="Init" ver="4" type="" type-id="">
+			<body kind="om">
+				<![CDATA[	TableModel_1.AddColumn("Advise",     "","","","string",false,true);
+	TableModel_1.AddColumn("ColorAxis",  "","","","uint4" ,false,true);
+	TableModel_1.AddColumn("ColorLine",  "","","","uint4" ,false,true);
+	TableModel_1.AddColumn("Description","","","","string",false,true);
+	TableModel_1.AddColumn("Tag",        "","","","string",false,true);
+	TableModel_1.AddColumn("Value",      "","","","string",false,true);
+	TableModel_1.AddColumn("EU",         "","","","string",false,true);
+	TableModel_1.AddColumn("Time",       "","","","string",false,true);
+	TableModel_1.AddColumn("Quality",    "","","","string",false,true);
+	TableModel_1.AddColumn("Minimum",    "","","","string",false,true);
+	TableModel_1.AddColumn("Maximum",    "","","","string",false,true);
+	TableModel_1.AddColumn("Quantity",   "","","","string",false,true);
+	TableModel_1.AddColumn("Color_decor","","","","string",false,true);
+]]>
+			</body>
+		</do>
+		<do access-modifier="private" name="ReFresh" display-name="ReFresh" ver="4" type="" type-id="">
+			<body kind="javascript">
+				<![CDATA[var TableColumn = [];
+var no_value = "";
+
+
+TableColumn[0] = Table_1.TableColumn_0;		
+TableColumn[1] = Table_1.TableColumn_1;		
+TableColumn[2] = Table_1.TableColumn_2;		
+TableColumn[3] = Table_1.TableColumn_3;		
+TableColumn[4] = Table_1.TableColumn_4;		
+TableColumn[5] = Table_1.TableColumn_5;		
+TableColumn[6] = Table_1.TableColumn_6;		
+TableColumn[7] = Table_1.TableColumn_7;		
+TableColumn[8] = Table_1.TableColumn_8;		
+TableColumn[9] = Table_1.TableColumn_9;		
+TableColumn[10] = Table_1.TableColumn_10;	
+TableColumn[11] = Table_1.TableColumn_11;	
+
+var i,vs,vs1;
+for (i=1; i<=p_Trends.Main_Panel.private.ExParams.LinesCount; i++)		// перебираем параметры загруженные из файла
+{
+		if (Table_1.TableModel_1.GetRowCount()<p_Trends.Main_Panel.private.ExParams.LinesCount){
+			Table_1.TableModel_1.AddRow(); // если строк не хватает добавляем
+		}
+		Table_1.TableModel_1.SetCellData(i-1, 0, p_Trends.Main_Panel.private.ExParams.Advised[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 1, p_Trends.Main_Panel.private.ExParams.Ycolor[i]);
+log("colorY"+i+"="+p_Trends.Main_Panel.private.ExParams.Ycolor[i].toString(16));
+		Table_1.TableModel_1.SetCellData(i-1, 2, p_Trends.Main_Panel.private.ExParams.LineColor[i]);
+log("colorL"+i+"="+p_Trends.Main_Panel.private.ExParams.LineColor[i].toString(16));
+		Table_1.TableModel_1.SetCellData(i-1, 3, p_Trends.Main_Panel.private.ExParams.Description[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 4, p_Trends.Main_Panel.private.ExParams.ItemTag[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 5, p_Trends.Main_Panel.private.ExParams.LegendValues[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 6, p_Trends.Main_Panel.private.ExParams.ItemEU[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 7, p_Trends.Main_Panel.private.ExParams.LegendTime[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 8, p_Trends.Main_Panel.private.ExParams.LegendQuality[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 9, p_Trends.Main_Panel.private.ExParams.LegendMin[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 10,p_Trends.Main_Panel.private.ExParams.LegendMax[i]);
+		Table_1.TableModel_1.SetCellData(i-1, 11,p_Trends.Main_Panel.private.ExParams.LegendQuantity[i]);
+/*
+		Table_1.TableColumn_11.TableDecorator[i].Subcondition=Table_1.TableModel_1.GetCellData(i-1,0);//для определения срабатывания условия 
+		Table_1.TableColumn_11.TableDecorator[i].BackgroundColor= p_Trends.Main_Panel.private.ExParams.Ycolor[i];
+		Table_1.TableColumn_11.TableDecorator[i].ForegroundColor= p_Trends.Main_Panel.private.ExParams.Ycolor[i];
+		Table_1.TableColumn_1.TableDecorator[i].Subcondition=Table_1.TableModel_1.GetCellData(i-1,1);//для определения срабатывания условия 
+		Table_1.TableColumn_1.TableDecorator[i].BackgroundColor= p_Trends.Main_Panel.private.ExParams.LineColor[i];
+		Table_1.TableColumn_1.TableDecorator[i].ForegroundColor= p_Trends.Main_Panel.private.ExParams.LineColor[i];*/
+}
+		
+	Table_1.TableColumn_0.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[0];
+	Table_1.TableColumn_11.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[1];
+	Table_1.TableColumn_1.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[2];
+	Table_1.TableColumn_2.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[3];
+	Table_1.TableColumn_3.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[4];
+	Table_1.TableColumn_4.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[5];
+	Table_1.TableColumn_5.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[6];
+	Table_1.TableColumn_6.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[7];
+	Table_1.TableColumn_7.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[8];
+	Table_1.TableColumn_8.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[9];
+	Table_1.TableColumn_9.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[10];
+	Table_1.TableColumn_10.Width = p_Trends.Main_Panel.private.ExParams.LegendColumnWidth[11];
+var fullWidthTable = 0;		// Подсчитываем суммарную ширину столбцов
+for (i=0; i<=11; i++)
+	if (!TableColumn[i].Hidden)	fullWidthTable = fullWidthTable + TableColumn[i].Width;
+
+if (fullWidthTable < 1000) fullWidthTable = 1000;
+here.Width = fullWidthTable + 2;  // ширину формы определяем исходя из суммарной ширины столбцов, чтобы не было полосы прокрутки
+pSettingsForm.Frame_1.LayoutWeight_1 = fullWidthTable+18;
+pSettingsForm.Width = fullWidthTable + 150;
+
+var nRows = p_Trends.Main_Panel.private.ExParams.LinesCount;	// Определяем количество строк в легенде
+if (nRows<1) nRows = 1;																// Проверяем минимальный размер легенды по строкам
+var vf = 18+Table_1.HeaderHeight+nRows*Table_1.RowHeight;
+if (Table_1.LayoutWeight_1 != vf) Table_1.LayoutWeight_1 = vf ;	// Вычисляем размер легенды и используем его в качестве веса
+
+
+while (Table_1.TableModel_1.GetRowCount()>p_Trends.Main_Panel.private.ExParams.LinesCount)
+{
+	Table_1.RemoveRow(Table_1.TableModel_1.GetRowCount()-1);
+}
+]]>
+			</body>
+		</do>
+	</object>
+	<object access-modifier="private" name="pbPrinDlg" display-name="pbPrinDlg" uuid="66d59212-b681-479a-b6ed-2f11d8140316" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value) here.PrintDialog();
+pSettingsForm.bPrintDlg= false;
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="pSettingsForm" display-name="pSettingsForm" uuid="e4dbf4b6-63f0-49af-83ee-3e8f1217160d" base-type="SettingsPrintTrends" base-type-id="9ea85c57-5943-4aa2-a7c6-3e8b12cba954" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="14c3ec40-0a64-4c9b-a64a-05eecf44aa19" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<init target="bInit" ver="2" value="false"/>
+	<do-trace access-modifier="private" target="pbPrinDlg" ver="3">
+		<body>
+			<![CDATA[pSettingsForm.bPrintDlg]]>
+		</body>
+	</do-trace>
+	<init target="pbPrinDlg" ver="2" value="false"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[
+FileReadyCount =0;
+FileLoadCount =0;
+Chart_History_mode.Axis_X.Ticks = p_Trends.WS.RS.Main_Charts.Chart_History_mode.Axis_X.Ticks;
+Chart_History_mode.Axis_X.FormatT = p_Trends.WS.RS.Main_Charts.Chart_History_mode.Axis_X.FormatT;
+Chart_History_mode.ShowTimeLine = p_Trends.ShowMiniTrends;
+p_Trends.DebugTool_1.Log("Print.Open.ShowTimeLine = "+Str.ToString(Chart_History_mode.ShowTimeLine));
+i:int4 =0; n:uint4 =1;
+while (i <= p_Trends.Const.MAX_LINES)
+{
+	Chart_History_mode.Axis_Y[i].Format = p_Trends.WS.RS.Main_Charts.Chart_History_mode.Axis_Y[i].Format;
+	Chart_History_mode.Axis_Y[i].Ticks = p_Trends.WS.RS.Main_Charts.Chart_History_mode.Axis_Y[i].Ticks;
+	Chart_History_mode.Axis_Y[i].Align = n;
+	n= (n==1&&i!=0)?(2):(1);
+	i= i+1;
+}
+
+if (p_Trends.FileManager.Exists(p_Trends.Main_Panel.private.ExportTrendsPath))
+{
+	fileName:string= "00.json";
+	fileName= p_Trends.FileManager.CombinePath(p_Trends.Main_Panel.private.ExportTrendsPath,fileName);
+	p_Trends.Main_Panel.private.ImportParams(fileName);
+	p_Trends.FileManager.RemoveRecursive(fileName);
+	i= 1;
+	while (i <= p_Trends.Main_Panel.private.ExParams.LinesCount)
+	{
+		fileName= Str.ToString(i)+".json";
+		fileName= p_Trends.FileManager.CombinePath(p_Trends.Main_Panel.private.ExportTrendsPath,fileName);
+		if (p_Trends.FileManager.Exists(fileName)){	// если очередной файл для загрузки существует
+			if (i==1) Chart_History_mode.DataSource_1.Load(fileName,"json");
+			if (i==2) Chart_History_mode.DataSource_2.Load(fileName,"json");
+			if (i==3) Chart_History_mode.DataSource_3.Load(fileName,"json");
+			if (i==4) Chart_History_mode.DataSource_4.Load(fileName,"json");
+			if (i==5) Chart_History_mode.DataSource_5.Load(fileName,"json");
+			if (i==6) Chart_History_mode.DataSource_6.Load(fileName,"json");
+			if (i==7) Chart_History_mode.DataSource_7.Load(fileName,"json");
+			if (i==8) Chart_History_mode.DataSource_8.Load(fileName,"json");
+			if (i==9) Chart_History_mode.DataSource_9.Load(fileName,"json");
+			if (i==10) Chart_History_mode.DataSource_10.Load(fileName,"json");//*/
+			p_Trends.FileManager.RemoveRecursive(fileName);
+			FileLoadCount= FileLoadCount +1;
+		}
+		i= i+1;
+	}
+	p_Trends.FileManager.RemoveRecursive(p_Trends.Main_Panel.private.ExportTrendsPath);
+		Chart_History_mode.Axis_X.Scale = 0;
+		v1:variant;
+		v2:variant;
+		if (p_Trends.ActiveMode == 0){
+			v1 = p_Trends.Main_Panel.private.ExParams.Xmin;
+			v2 = p_Trends.Main_Panel.private.ExParams.Xmax;
+		}else{
+			v1 = p_Trends.Main_Panel.private.ExParams.tHistRangeStart;
+			v2 = p_Trends.Main_Panel.private.ExParams.tHistRangeEnd;
+		}
+		Chart_History_mode.Axis_X.SetInterval(v1, v2);
+	i=0;
+	while (i < p_Trends.Main_Panel.private.ExParams.RepersCount)
+	{
+		Chart_History_mode.ControlLine[i].LineWidth = p_Trends.ControlLineWidth;
+		Chart_History_mode.ControlLine[i].Color = p_Trends.ControlLineColor;
+		Chart_History_mode.ControlLine[i].Visible = true;
+		Chart_History_mode.ControlLine[i].Value = p_Trends.Main_Panel.private.ExParams.RepersValues[i];
+		if (Variant.ToUint8(Chart_History_mode.ControlLine[i].Value, 0) == p_Trends.Main_Panel.private.ExParams.ReperActiveValue)
+				Chart_History_mode.ControlLine[i].setActive(true);
+		i = i + 1;
+	}
+	Chart_History_mode.ActiveControllineWidth = p_Trends.ControlLineSelectWidth;
+	Chart_History_mode.ActiveControllineColor = p_Trends.ControlLineSelectColor;
+	Table_1.Init();
+	Table_1.InitDecorator();
+	Chart_History_mode.Update();
+}
+else
+{
+	p_Trends.Main_Panel.private.MessagesClear();
+	p_Trends.Main_Panel.private.MessageAdd("Указанный путь не найден");
+	p_Trends.Main_Panel.private.ShowMessage.Invoke();
+}
+
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="FileLoadCount" display-name="FileLoadCount" uuid="949f9162-e8c4-4861-aa03-61974462b195" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="2"/>
+	<object access-modifier="private" name="FileReadyCount" display-name="FileReadyCount" uuid="781eea5e-c622-4d58-97b0-48269308c576" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[var Lines=[]
+Lines[1]=Chart_History_mode.Line_1;
+Lines[2]=Chart_History_mode.Line_2;
+Lines[3]=Chart_History_mode.Line_3;
+Lines[4]=Chart_History_mode.Line_4;
+Lines[5]=Chart_History_mode.Line_5;
+Lines[6]=Chart_History_mode.Line_6;
+Lines[7]=Chart_History_mode.Line_7;
+Lines[8]=Chart_History_mode.Line_8;
+Lines[9]=Chart_History_mode.Line_9;
+Lines[10]=Chart_History_mode.Line_10;
+var v1,v2;
+
+if (FileLoadCount>0)
+{				// 
+	if (value == FileLoadCount )
+	{  // Если Количество загруженных файлов достигло количества запросов	
+//		log("PrintLoad "+value+"-"+FileLoadCount);
+		var i=1;
+		while (i <= value)
+		{
+			Lines[i].Visible= true;
+			Lines[i].Color= p_Trends.Main_Panel.private.ExParams.LineColor[i];
+			Lines[i].LineWidth= p_Trends.Main_Panel.private.ExParams.LineWidth[i];
+			Lines[i].Unit= p_Trends.Main_Panel.private.ExParams.ItemEU[i];
+			Lines[i].drawingType = (p_Trends.InterpolationLine==true)?(0):(1);
+//			log("Unit = "+Lines[i].Unit);
+			i++;
+		}
+		if (p_Trends.Main_Panel.private.ExParams.bGlobalRanges==false)
+		{																// Индивидуальный масштаб графиков включен
+			i=1;
+			while (i<=value) 
+			{
+				var id = Chart_History_mode.Axis_Y[p_Trends.Main_Panel.private.ExParams.Item_numAxis[i]].GetID();
+				Lines[i].SetAxisById(id);
+				var v1 = (p_Trends.Main_Panel.private.ExParams.Ymin[i]);
+				var v2 = (p_Trends.Main_Panel.private.ExParams.Ymax[i]);
+				if (i==p_Trends.Main_Panel.private.ExParams.Item_numAxis[i])	Chart_History_mode.Axis_Y[i].Visible = true;
+				Chart_History_mode.Axis_Y[i].Scale = 0; // без масштабирования
+				Chart_History_mode.Axis_Y[i].SetInterval(v1,v2);
+				Chart_History_mode.Axis_Y[i].Color= p_Trends.Main_Panel.private.ExParams.Ycolor[i];
+				if (p_Trends.ShowEU)	Chart_History_mode.Axis_Y[i].UnitPos = 1;
+				else Chart_History_mode.Axis_Y[i].UnitPos = 4;
+				i=i+1;
+			}
+		}else{																														// Индивидуальный масштаб графиков вЫключен
+			var v1 = p_Trends.Main_Panel.private.ExParams.Ymin[0];
+			var v2 = p_Trends.Main_Panel.private.ExParams.Ymax[0];
+			Chart_History_mode.Axis_Y[0].Scale = 0; // без масштабирования
+			Chart_History_mode.Axis_Y[0].SetInterval(v1,v2);
+			Chart_History_mode.Axis_Y[0].Visible = true;
+			Chart_History_mode.Axis_Y[0].Color= p_Trends.Main_Panel.private.ExParams.Ycolor[0];
+			if (p_Trends.ShowEU)	Chart_History_mode.Axis_Y[i].UnitPos = 1;
+			else Chart_History_mode.Axis_Y[i].UnitPos = 4;
+			var id = Chart_History_mode.Axis_Y[0].GetID();
+			i=1;
+			while (i<=value) {
+				Lines[i].SetAxisById(id);
+				i=i+1;
+			}
+		}
+/*		Chart_History_mode.Axis_X.Scale = 0;
+		if (p_Trends.ActiveMode==0){
+			v1 = p_Trends.Main_Panel.private.ExParams.Xmin;
+			v2 = p_Trends.Main_Panel.private.ExParams.Xmax;
+		}else{
+			v1 = p_Trends.Main_Panel.private.ExParams.tHistRangeStart;
+			v2 = p_Trends.Main_Panel.private.ExParams.tHistRangeEnd;
+		}
+		Chart_History_mode.Axis_X.SetInterval(v1,v2);//*/
+//		log(p_Trends.Main_Panel.private.VariantToDateTime(v1)+" " +p_Trends.Main_Panel.private.VariantToDateTime(v2));
+		i=0;
+		while (i < p_Trends.Main_Panel.private.ExParams.RepersCount)
+		{
+			Chart_History_mode.ControlLine[i].Visible = true;
+			Chart_History_mode.ControlLine[i].Value = p_Trends.Main_Panel.private.ExParams.RepersValues[i];
+			if (Chart_History_mode.ControlLine[i].Value == p_Trends.Main_Panel.private.ExParams.ReperActiveValue)
+				Chart_History_mode.ControlLine[i].setActive(true);
+			var j=1;
+			while (j <= value){
+				Chart_History_mode.ControlLine[i].CrossPoint[j].SetLineID(Lines[j].ID);
+//				Сразу данные получить не получается...
+				j=j+1;
+			}
+			i=i+1;
+		}
+
+//		Table_1.LayoutWeight_1.Weight = p_Trends.Main_Panel.private.ExParams.LegendHeight;
+		Chart_History_mode.LayoutWeight_1.Weight = here.Height- Table_1.LayoutWeight_1.Weight;
+		Chart_History_mode.Update();
+		Table_1.ReFresh();
+	}
+	if (value==-1){
+		p_Trends.Main_Panel.private.MessageAdd("Не достаточно прав для создания файла");
+		p_Trends.Main_Panel.private.MessageAdd(" в указанном каталоге!");
+		p_Trends.Main_Panel.private.ShowMessage.Invoke();
+	}
+}
+Timer_1.Active = true;]]>
+			</body>
+		</do-on>
+	</object>
+	<init target="FileLoadCount" ver="2" value="0"/>
+	<init target="FileReadyCount" ver="2" value="0"/>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="1e611f68-fbd2-44a6-b11b-ca6a399ec8d9" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+		<designed target="Period" value="1" ver="3"/>
+		<designed target="Active" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+			<body kind="om">
+				<![CDATA[/*	vv:variant = Chart_History_mode.ControlLine[0].CrossPoint[1].GetValue(0);
+	vq:variant = Chart_History_mode.ControlLine[0].CrossPoint[1].GetValue(1);
+	vvs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vv,-1),p_Trends.YAxisPrecision);
+	vqs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vq,-1),0);
+	p_Trends.DebugTool_1.Log(GetCrossPointData(0,1));//*/
+
+		i:int4=0;
+		while (i<p_Trends.Main_Panel.private.ExParams.RepersCount){
+			j:int4=1;
+			while (j<=FileLoadCount){
+				Chart_History_mode.ControlLine[i].CrossPoint[j].ToolTipText = GetCrossPointData(i,j);
+				j=j+1;
+			}
+			i=i+1;
+		}
+Active = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="GetCrossPointData" display-name="GetCrossPointData" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="om">
+			<![CDATA[vv:variant = Chart_History_mode.ControlLine[nControlLine].CrossPoint[nLine].GetValue(0);
+vq:variant = Chart_History_mode.ControlLine[nControlLine].CrossPoint[nLine].GetValue(1);
+vvs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vv,-1),p_Trends.YAxisPrecision);
+vqs:string = p_Trends.Main_Panel.private.ValueRound(Variant.ToDouble(vq,-1),0);
+return vvs+"("+vqs+")";]]>
+		</body>
+		<param access-modifier="private" name="nControlLine" display-name="" uuid="cb661a70-7fe0-4ca5-a646-e5b3281233e7" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+		<param access-modifier="private" name="nLine" display-name="" uuid="3baf8dc1-70d8-474f-8b8c-22723e2b6c6b" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	</do>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="f29609f4-da1e-49ed-854e-24ab6be4da96" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+		<designed target="Orientation" value="2" ver="3"/>
+		<designed target="Gap" value="0" ver="3"/>
+	</object>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="bNeedRefreshLegend" display-name="bNeedRefreshLegend" uuid="a23918ce-9daf-4b11-97d7-1ebdfc1b31a1" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[Table_1.ReFresh();]]>
+			</body>
+		</do-on>
+	</object>
+	<do-trace access-modifier="private" target="bNeedRefreshLegend" ver="3">
+		<body>
+			<![CDATA[pSettingsForm.bReFreshLegend]]>
+		</body>
+	</do-trace>
+</type>
+

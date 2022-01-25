@@ -1,0 +1,1240 @@
+<type access-modifier="private" name="Alarms_ExportAlarmsSettings" display-name="Alarms_ExportAlarmsSettings" uuid="3b4031c4-d45e-4596-9232-5120026222ce" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="322" ver="2"/>
+	<designed target="Height" value="530" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="340" ver="2"/>
+	<designed target="WindowHeight" value="530" ver="2"/>
+	<designed target="WindowCaption" value="Настройка видимости столбцов" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="HideCloums" display-name="HideCloums" uuid="dea6df46-e63b-4c92-88e0-e76e6ae7e924" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="15.5" ver="2"/>
+		<designed target="Y" value="16.1335" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="293" ver="2"/>
+		<designed target="Height" value="467" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Box_1" display-name="Box_1" uuid="3c3a01c3-73cc-4026-aef9-1e68f9553716" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="13" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_1" display-name="Checkbox_1" uuid="895f4053-c951-4edf-af47-0484cd17fc93" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="17" ver="2"/>
+				<designed target="Height" value="23" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_1.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="81f7acc1-ac0f-4a6a-8a3c-20836a362330" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Время генерации" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_2" display-name="Box_2" uuid="75eceaea-8812-4491-aba2-b8eca728a571" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="43" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_2" display-name="Checkbox_2" uuid="19cf00b8-c926-439c-a546-fc5288722a6c" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_2.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="c61f9226-e95c-46e6-812c-46aec66b11ca" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Время срабатывания" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_3" display-name="Box_3" uuid="77a8bd1c-4ecf-4384-a651-9d3a0fc35c59" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="73" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_3" display-name="Checkbox_3" uuid="3c55bf58-a9fe-400e-aef7-6dfab29ad987" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_3.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f3eea1e1-426b-4bfd-999b-0b6b3382fc6b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Время дективации" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_4" display-name="Box_4" uuid="0c4e3579-5999-4a9c-a479-2a429d360a1f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="103" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_4" display-name="Checkbox_4" uuid="df09f966-944e-41ec-bcb1-9fe4dc7098b3" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_4.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="bc6d7dad-f74a-49cf-8ae1-1e3f3ff852b7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Сообщение" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_5" display-name="Box_5" uuid="22ae7995-fedd-40ab-ab4f-9b9626a4ae79" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="133" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_5" display-name="Checkbox_5" uuid="d0e78aaf-39ad-4b33-b7de-d499cec24734" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_5.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="77bf3d31-fd25-4de2-8ae6-ba71d849338c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Источник" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_6" display-name="Box_6" uuid="202c1239-304d-44cf-b08e-d8245111c8e3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="163" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_6" display-name="Checkbox_6" uuid="5eaeeadd-5cab-421c-a2e2-2356637ab001" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_6.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="4b8e96f8-aba6-45e8-a0a5-bb62c616595e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Важность" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_7" display-name="Box_7" uuid="b42c7a4e-c86d-43af-8390-69b69080b589" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="193" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_7" display-name="Checkbox_7" uuid="1705ad68-d182-417b-a51a-0ddcdb4975e2" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_7.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="61dfb063-576f-4543-9733-8b6438c69ac5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Квитировано" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_8" display-name="Box_8" uuid="128fa7a8-87fb-4044-bb19-a3ba0fb1bb4a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="223" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_8" display-name="Checkbox_8" uuid="7e9a40e5-55c5-4d65-93d3-65b3250f2aca" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_8.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="d09ec449-6493-4067-8a77-fd6c300bb497" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Время квитирования" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_9" display-name="Box_9" uuid="92f5632d-a80e-41cf-b75a-134ae3a950f3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="253" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_9" display-name="Checkbox_9" uuid="903ca307-cac1-4054-8a87-a2c342f504a5" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_9.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="05bea9dc-de99-417e-8f22-63579f6eaae6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Пользователь" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_10" display-name="Box_10" uuid="f47c1cb1-70eb-4ed1-8298-6ddc3fe9d7ab" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="283" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_10" display-name="Checkbox_10" uuid="f514e422-4e8a-4e04-b66f-d69cad3535e3" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_10.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="6599ce93-c3f7-4a8b-9b46-f903d0396179" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Комментарий" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="56e4cf17-3c9f-4cad-8df6-c2480df1c871" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="9.3333" ver="2"/>
+			<designed target="Y" value="-9.66667" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="148.667" ver="2"/>
+			<designed target="Height" value="19.6667" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="0xfff0f0f0" ver="2"/>
+			<designed target="BrushStyle" value="1" ver="2"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="11f936c0-9a4b-42a8-bd99-90f266068128" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="3.98334" ver="2"/>
+				<designed target="Y" value="0" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="143.7" ver="2"/>
+				<designed target="Height" value="20" ver="2"/>
+				<designed target="Text" value="Содержание документа" ver="2"/>
+				<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+				<designed target="FontColor" value="0xff000000" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="DefaultState" display-name="DefaultState" uuid="9d986f69-7a33-4000-af24-c3871b01f06e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="-12" ver="2"/>
+			<designed target="Y" value="-11" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="100" ver="2"/>
+			<designed target="Height" value="100" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Colum_1" display-name="Colum_1" uuid="3de47ed3-f041-472d-bf4b-cfb7f55083ca" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_2" display-name="Colum_2" uuid="e3e86ae8-3028-4eaa-9ea0-0f9fe6d55686" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_3" display-name="Colum_3" uuid="0ca32729-1eaa-46d6-b6cb-c8e0e097d89e" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_4" display-name="Colum_4" uuid="a363cd22-7552-4422-abfe-3a75641b56e9" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_5" display-name="Colum_5" uuid="ea1b113e-a0a1-4ce2-9ee5-bcadd820f035" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_6" display-name="Colum_6" uuid="3ef4d63f-da36-426b-9c09-d2d6c1fca66d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_7" display-name="Colum_7" uuid="b9171a58-ee8c-4782-990c-c4425652b663" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_8" display-name="Colum_8" uuid="537a72bc-7168-4e0f-a94b-eca2aed1dcc9" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_9" display-name="Colum_9" uuid="468e9dfc-ff55-43a8-a4f3-fa6cebb3267c" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_10" display-name="Colum_10" uuid="f4e4049d-a487-412e-a155-cfac3132c5a4" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<object access-modifier="private" name="Colum_11" display-name="Colum_11" uuid="8ae8c8e2-cfda-45d3-ac94-cf591bbc2317" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_12" display-name="Colum_12" uuid="d45eed57-ae83-4a4e-87e6-2ae982a17167" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_13" display-name="Colum_13" uuid="2db67072-9811-405b-b784-98b131cde952" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_14" display-name="Colum_14" uuid="cd3acbf2-e133-4ace-8b72-e932dc5f2f3c" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<object access-modifier="private" name="Colum_15" display-name="Colum_15" uuid="ac7caf1e-3362-4a45-a701-f8f4f84dfff5" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Box_17" display-name="Box_17" uuid="552e45c6-5709-475d-ba1a-a77cef47b96f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="313" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_17" display-name="Checkbox_17" uuid="070627ba-1a6f-4dc0-b2e7-c2f9ab61f654" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_12.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="c7fe7723-92bf-4daa-a26e-9026488e1d30" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Квитировать" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_15" display-name="Box_15" uuid="4069ebf5-fcf1-4443-aaf1-00dab3bf55a0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="343" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_15" display-name="Checkbox_15" uuid="d6c037d6-021e-4ce5-aa8f-326e8556eef1" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_13.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="6062f0ac-d857-48d5-bc86-338d536fc1cb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Качество сигнала" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_16" display-name="Box_16" uuid="30daf890-3638-4bf4-b553-54dadb15606e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="373" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_16" display-name="Checkbox_16" uuid="1f1ee977-4427-46f8-a4c6-eda0017903a3" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_14.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="ac29f044-580c-4fa9-a646-36a310a35ff9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Значение сигнала" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<object access-modifier="private" name="Box_18" display-name="Box_18" uuid="07711e2c-8dc1-44b2-bd40-daea79fcf57e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="403" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_18" display-name="Checkbox_18" uuid="c5746e4b-f2e0-4ab0-b103-5f2290541eef" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_11.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3407128d-01bb-488a-9033-3989c6ac0c0b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Активность" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+		<object access-modifier="private" name="Box_19" display-name="Box_19" uuid="6364a8e9-16d7-405f-a257-0883ad8d6ee8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="7" ver="2"/>
+			<designed target="Y" value="433" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="279.166" ver="2"/>
+			<designed target="Height" value="30" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffc0c0c0" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<object access-modifier="private" name="Checkbox_19" display-name="Checkbox_19" uuid="091c142c-5707-4260-85cb-6699402bbba7" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+				<designed target="X" value="7" ver="2"/>
+				<designed target="Y" value="5" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="20" ver="2"/>
+				<designed target="Height" value="24" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="State" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+					<body kind="om">
+						<![CDATA[if(me.Focus)
+{
+ExportAlarms_1.Table_1.Colum_15.Hidden =!me.State;
+}]]>
+					</body>
+				</do-on>
+				<init target="State" ver="2" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3d4995f3-67e4-4e99-868a-f2a37228e660" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="22" ver="2"/>
+					<designed target="Y" value="0" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="250" ver="2"/>
+					<designed target="Height" value="20" ver="2"/>
+					<designed target="Text" value="Группа важности" ver="2"/>
+					<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+					<designed target="FontColor" value="4278190080" ver="2"/>
+					<designed target="TextAlignment" value="129" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="4"/>
+				</object>
+			</object>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="om">
+			<![CDATA[//настройка текста чекбоксов
+HideCloums.Box_1.Checkbox_1.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_1.Title;
+HideCloums.Box_2.Checkbox_2.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_2.Title;
+HideCloums.Box_3.Checkbox_3.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_3.Title;
+HideCloums.Box_4.Checkbox_4.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_4.Title;
+HideCloums.Box_5.Checkbox_5.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_5.Title;
+HideCloums.Box_6.Checkbox_6.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_6.Title;
+HideCloums.Box_7.Checkbox_7.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_7.Title;
+HideCloums.Box_8.Checkbox_8.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_8.Title;
+HideCloums.Box_9.Checkbox_9.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_9.Title;
+HideCloums.Box_10.Checkbox_10.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_10.Title;
+HideCloums.Box_17.Checkbox_17.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_17.Title;
+HideCloums.Box_15.Checkbox_15.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_19.Title;
+HideCloums.Box_16.Checkbox_16.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_20.Title;
+HideCloums.Box_18.Checkbox_18.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_14.Title;
+HideCloums.Box_19.Checkbox_19.Text_1.Text = ExportAlarms_1.Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_21.Title;
+
+//заполнение чекбоксов
+HideCloums.Box_1.Checkbox_1.State = !ExportAlarms_1.Table_1.Colum_1.Hidden;
+HideCloums.Box_2.Checkbox_2.State = !ExportAlarms_1.Table_1.Colum_2.Hidden;
+HideCloums.Box_3.Checkbox_3.State = !ExportAlarms_1.Table_1.Colum_3.Hidden;
+HideCloums.Box_4.Checkbox_4.State = !ExportAlarms_1.Table_1.Colum_4.Hidden;
+HideCloums.Box_5.Checkbox_5.State = !ExportAlarms_1.Table_1.Colum_5.Hidden;
+HideCloums.Box_6.Checkbox_6.State = !ExportAlarms_1.Table_1.Colum_6.Hidden;
+HideCloums.Box_7.Checkbox_7.State = !ExportAlarms_1.Table_1.Colum_7.Hidden;
+HideCloums.Box_8.Checkbox_8.State = !ExportAlarms_1.Table_1.Colum_8.Hidden;
+HideCloums.Box_9.Checkbox_9.State = !ExportAlarms_1.Table_1.Colum_9.Hidden;
+HideCloums.Box_10.Checkbox_10.State = !ExportAlarms_1.Table_1.Colum_10.Hidden;
+HideCloums.Box_18.Checkbox_18.State = !ExportAlarms_1.Table_1.Colum_11.Hidden;
+HideCloums.Box_17.Checkbox_17.State = !ExportAlarms_1.Table_1.Colum_12.Hidden;
+HideCloums.Box_15.Checkbox_15.State = !ExportAlarms_1.Table_1.Colum_13.Hidden;
+HideCloums.Box_16.Checkbox_16.State = !ExportAlarms_1.Table_1.Colum_14.Hidden;
+HideCloums.Box_19.Checkbox_19.State = !ExportAlarms_1.Table_1.Colum_15.Hidden;
+
+//значения до нажатия OK
+HideCloums.DefaultState.Colum_1 = ExportAlarms_1.Table_1.Colum_1.Hidden;
+HideCloums.DefaultState.Colum_2 = ExportAlarms_1.Table_1.Colum_2.Hidden;
+HideCloums.DefaultState.Colum_3 = ExportAlarms_1.Table_1.Colum_3.Hidden;
+HideCloums.DefaultState.Colum_4 = ExportAlarms_1.Table_1.Colum_4.Hidden;
+HideCloums.DefaultState.Colum_5 = ExportAlarms_1.Table_1.Colum_5.Hidden;
+HideCloums.DefaultState.Colum_6 = ExportAlarms_1.Table_1.Colum_6.Hidden;
+HideCloums.DefaultState.Colum_7 = ExportAlarms_1.Table_1.Colum_7.Hidden;
+HideCloums.DefaultState.Colum_8 = ExportAlarms_1.Table_1.Colum_8.Hidden;
+HideCloums.DefaultState.Colum_9 = ExportAlarms_1.Table_1.Colum_9.Hidden;
+HideCloums.DefaultState.Colum_10 = ExportAlarms_1.Table_1.Colum_10.Hidden;
+HideCloums.DefaultState.Colum_11 = ExportAlarms_1.Table_1.Colum_11.Hidden;
+HideCloums.DefaultState.Colum_12 = ExportAlarms_1.Table_1.Colum_12.Hidden;
+HideCloums.DefaultState.Colum_13 = ExportAlarms_1.Table_1.Colum_13.Hidden;
+HideCloums.DefaultState.Colum_14 = ExportAlarms_1.Table_1.Colum_14.Hidden;
+HideCloums.DefaultState.Colum_15 = ExportAlarms_1.Table_1.Colum_15.Hidden;
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="f5711191-b041-4a7c-afbd-f2657227ea3d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="62.5" ver="2"/>
+		<designed target="Y" value="496" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="Text" value="ОК" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick" form-action="close"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="b0a7e0e4-9746-4762-ad76-85a02fe5869e" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="2">
+		<designed target="X" value="197.5" ver="2"/>
+		<designed target="Y" value="496" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="75" ver="2"/>
+		<designed target="Height" value="23" ver="2"/>
+		<designed target="Checkable" value="false" ver="2"/>
+		<designed target="Text" value="Отмена" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="4278190080" ver="2"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="2"/>
+		<designed target="BrushColor" value="4293980400" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="2"/>
+		<designed target="OnClickBrushStyle" value="1" ver="2"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="2"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="2"/>
+		<designed target="OnClickPenStyle" value="1" ver="2"/>
+		<designed target="OnClickPenWidth" value="1" ver="2"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="2"/>
+		<designed target="OnHoverPenStyle" value="1" ver="2"/>
+		<designed target="OnHoverPenWidth" value="1" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="om">
+				<![CDATA[ActionUndoChanges.Invoke();
+ActionClose.Invoke();]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="ActionClose" display-name="ActionClose" uuid="bc8ca417-1644-40eb-b2b9-4d1ef282c967" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked" form-action="close"/>
+	</object>
+	<object access-modifier="private" name="ActionUndoChanges" display-name="ActionUndoChanges" uuid="08ef2b79-bf0f-4522-9ba1-6eed2269f82c" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked">
+			<body kind="om">
+				<![CDATA[ExportAlarms_1.Table_1.Colum_1.Hidden = HideCloums.DefaultState.Colum_1;
+ExportAlarms_1.Table_1.Colum_2.Hidden = HideCloums.DefaultState.Colum_2;
+ExportAlarms_1.Table_1.Colum_3.Hidden = HideCloums.DefaultState.Colum_3;
+ExportAlarms_1.Table_1.Colum_4.Hidden = HideCloums.DefaultState.Colum_4;
+ExportAlarms_1.Table_1.Colum_5.Hidden = HideCloums.DefaultState.Colum_5;
+ExportAlarms_1.Table_1.Colum_6.Hidden = HideCloums.DefaultState.Colum_6;
+ExportAlarms_1.Table_1.Colum_7.Hidden = HideCloums.DefaultState.Colum_7;
+ExportAlarms_1.Table_1.Colum_8.Hidden = HideCloums.DefaultState.Colum_8;
+ExportAlarms_1.Table_1.Colum_9.Hidden = HideCloums.DefaultState.Colum_9;
+ExportAlarms_1.Table_1.Colum_10.Hidden = HideCloums.DefaultState.Colum_10;
+ExportAlarms_1.Table_1.Colum_11.Hidden = HideCloums.DefaultState.Colum_11;
+ExportAlarms_1.Table_1.Colum_12.Hidden = HideCloums.DefaultState.Colum_12;
+ExportAlarms_1.Table_1.Colum_13.Hidden = HideCloums.DefaultState.Colum_13;
+ExportAlarms_1.Table_1.Colum_14.Hidden = HideCloums.DefaultState.Colum_14;
+ExportAlarms_1.Table_1.Colum_15.Hidden = HideCloums.DefaultState.Colum_15;]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="Closed">
+		<body kind="om">
+			<![CDATA[ActionUndoChanges.Invoke();
+ExportAlarms_1.Focus = true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="7a445ec9-0727-42f1-b9f4-6c9cb9fe38ca" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) Close();
+]]>
+		</body>
+	</do-on>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="ExportAlarms_1" display-name="ExportAlarms_1" uuid="25cb4b3a-a843-445d-9439-db062a82ca07" base-type="ExportAlarms" base-type-id="4eaa655b-e7df-43ce-a704-693e19fb182e" base-const="true" base-ref="true" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

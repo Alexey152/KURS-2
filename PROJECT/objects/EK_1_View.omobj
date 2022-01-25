@@ -1,0 +1,2273 @@
+<type access-modifier="private" name="EK_1_View" display-name="EK_1_View" uuid="a4f68f3a-39ae-467c-af25-880c9dd85f66" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="834" ver="4"/>
+	<designed target="Height" value="581" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="0" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="0xffdedede" ver="4"/>
+	<designed target="BrushStyle" value="1" ver="4"/>
+	<designed target="WindowX" value="0" ver="4"/>
+	<designed target="WindowY" value="0" ver="4"/>
+	<designed target="WindowWidth" value="834" ver="4"/>
+	<designed target="WindowHeight" value="581" ver="4"/>
+	<designed target="WindowCaption" value="Текущие показания ЕК1 и Текон (лето)" ver="4"/>
+	<designed target="ShowWindowCaption" value="true" ver="4"/>
+	<designed target="ShowWindowMinimize" value="true" ver="4"/>
+	<designed target="ShowWindowMaximize" value="true" ver="4"/>
+	<designed target="ShowWindowClose" value="true" ver="4"/>
+	<designed target="AlwaysOnTop" value="false" ver="4"/>
+	<designed target="WindowSizeMode" value="0" ver="4"/>
+	<designed target="WindowBorderStyle" value="1" ver="4"/>
+	<designed target="WindowState" value="0" ver="4"/>
+	<designed target="WindowScalingMode" value="0" ver="4"/>
+	<designed target="MonitorNumber" value="0" ver="4"/>
+	<designed target="WindowPosition" value="0" ver="4"/>
+	<designed target="WindowCloseMode" value="0" ver="4"/>
+	<object access-modifier="private" name="Rectangle_7" display-name="Rectangle_7" uuid="4439ab8a-0903-4566-832d-f50643404250" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="0" ver="4"/>
+		<designed target="Y" value="0.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="834" ver="4"/>
+		<designed target="Height" value="581" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xff000000" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_5" display-name="Rectangle_5" uuid="265d535d-a12b-4059-adfe-9912eb632d30" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="356" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="831" ver="4"/>
+		<designed target="Height" value="224" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="a_Anal" display-name="a_Anal" uuid="eb85c984-123b-4b93-bdb9-7fbfd17eace0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="15.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="7a3c28c1-eda6-48a4-be0d-f5b2d04694c5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="38b1d183-3388-44f0-ac96-31f1e5ff3aa3" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="93d4e59e-0b48-4dff-8ef5-845af997f35f" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST01_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="9181118e-12c5-460b-b40b-ef89211a97c4" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="6b622a21-b909-4468-af29-6d1d838857e1" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="393f290c-2dbe-4185-9baa-905eb81394d5" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="e5ebb152-7be7-407d-b85d-82c02cd89ea1" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="6d7cff15-6179-4fa5-beef-6e1f08a84029" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_6" display-name="a_Anal_6" uuid="4e808780-17b5-486c-8294-c17f11c43409" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="45.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="43f5c3fd-47c8-4f03-a0a0-59e92dc71703" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="f9a0d3f6-e476-4af8-8f80-4dbe1129ff16" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="29b28147-7691-4e6b-98d1-c229231ec48c" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST02_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="d2f9ee48-f469-46e2-b8d7-d7c44e55874f" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="a1a9b090-a1a9-45b3-874e-65a512d08fc9" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="4cb82d9e-120b-4648-8208-8e84296339e3" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="0f2c0bf0-2767-4631-9128-489eac7b36ab" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="7b0eda7a-891f-4b3d-b3d7-da43bd39f25e" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_12" display-name="a_Anal_12" uuid="da465fbc-48c3-474c-a92f-acc47bcffb16" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="74.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="2606461d-a2e0-4a8d-aa1e-dd9358ea39da" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="7c663fda-4d97-40f5-bf00-169974deb313" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="a420b022-2636-4474-8f6e-cf0975546cab" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST03_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="ba603082-9475-4b34-b061-a2e9392c960d" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="5b9de71f-8020-4d13-a626-771f460bc4c4" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="3b90b35c-2b1a-47fc-96c1-670cff37d613" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="31d1e988-14bd-4da6-a69c-8266a1af9660" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="7ef2258b-fa5d-42d4-b441-01b1fa51028d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_18" display-name="a_Anal_18" uuid="6e490d78-4a82-4ac5-a471-817e95df3286" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="104.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="f5b73de9-8471-415c-8432-ae915e9f516d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="7339f11c-5ee4-49df-90da-2bf3a10f93c8" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="c63b74a4-1c04-492e-93df-ee1936303456" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST04_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="a0c5816a-7960-44ce-8087-13593f08b1ea" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="46e731d3-3d27-4c2f-bc9f-84ad0a0aa6b5" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="0788f233-54d0-433d-b203-66f7a30f90be" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="e01b0892-8638-4f94-b03b-b838caa1e65f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="246cd389-349d-42fd-998d-e2d44a846ac2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_21" display-name="a_Anal_21" uuid="e83a0439-f686-4cf8-a1f5-2a71a5518ac7" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="134.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="0bda9207-f9f8-4d6b-a255-d3418763a1e0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="8a7077ac-1cbb-4f2e-8d57-1399459dc184" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="614e7024-38b4-4ae7-8c81-5e77c2670b76" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST05_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="57594cd1-d448-4387-96e6-571543926a4c" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="c38eaa02-3cd4-442e-93e9-8776e400392f" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="42ce9b9d-e44a-4af6-a20c-111d9f6dcac5" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1992b048-5108-4ffb-aa45-33701d66493b" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="3b56aeaa-d621-40fb-864b-22667b0f7378" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_24" display-name="a_Anal_24" uuid="012f0ac3-784c-46b3-bcb5-39d990799d3e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="295" ver="1"/>
+			<designed target="Y" value="164.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="5e0d279d-2020-45d8-afa5-aec02887e2e0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="2f375e5a-95a6-4c4d-9d8e-22c58a12dead" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="2b277d2a-67a8-4984-b0a4-0c67f5653e1d" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST06_10.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="3d26b6b2-f844-4de2-adc0-77617f9f1203" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="cdef0378-5f3f-4ca1-b181-0e3264c3efdc" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="8bd84595-2833-4948-902c-894b578f8e71" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="c02329a1-1093-4837-ad53-26d8a54d2f9f" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="426d47dd-816d-417f-b0ca-7ab28766f980" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Text_41" display-name="Text_41" uuid="6f774ca5-d706-4a49-a87c-1a08ad83cd44" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="5" ver="4"/>
+			<designed target="Y" value="-5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Текущее значение уставок" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_42" display-name="Text_42" uuid="8776f2d2-0984-439d-be4a-1c98f7fc6ef3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="12" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Плотность газа при нормальных условиях" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_43" display-name="Text_43" uuid="1580d2a3-0229-4608-a87d-2ccb1037da4a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="42" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Содержание СО2" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_44" display-name="Text_44" uuid="9f4db45e-76dc-4764-8ed9-d53982e2f2b3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="72" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Содержание N2" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_45" display-name="Text_45" uuid="3bb1b485-3690-4e69-8d26-7bfdd68caa2a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="102" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Подстановочная температура газа" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_13" display-name="Text_13" uuid="5e4b3708-3295-4ec9-9622-b06bd75ef420" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="131" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Подстановочное давление газа" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_46" display-name="Text_46" uuid="126048df-49c9-47c2-90c4-047336450de0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="162" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Коэффициент сжимаемости" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Text_15" display-name="Text_15" uuid="cdca6b8e-1c3e-4fb0-b05e-398926220079" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="15" ver="4"/>
+			<designed target="Y" value="188" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="226" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Калорийность газа" ver="4"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="TextAlignment" value="129" ver="4"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_25" display-name="a_Anal_25" uuid="a7954dd9-3202-4248-90f1-57c38d06aa61" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="515" ver="1"/>
+			<designed target="Y" value="194.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="c6bcd280-c80e-4112-8dd9-ded7aa9524bb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="f0ba7a9b-3e9b-4f9f-817d-fe786552fc28" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="d4803f34-b164-48c1-8ce2-dd154ade0cae" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST8.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="50945634-5e35-4ba4-8268-1db66c0437d6" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="0ac43304-7fbf-4c76-82ff-1a9b9bb1b696" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="5c6292f2-cf2e-4524-a209-14a52895fcb6" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="35db4f96-1596-4342-9e92-0ecbcdb6be0d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="447580a9-6880-4e45-9371-6baeb29f68a2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_26" display-name="a_Anal_26" uuid="313114c1-d803-466a-828e-cc177ba58f29" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="515" ver="1"/>
+			<designed target="Y" value="15.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="6f39b2a5-3ed1-4177-8c52-407cd9a37250" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="63cc2797-f7dd-46bf-a7f6-3c4c78c10e81" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="903dffe6-3e61-432e-8bd0-42423ea60d33" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST5.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="939fc821-1232-4fc2-bfd0-607e5c3bf306" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="10638bb7-588d-40ab-9312-1063bc1a1aae" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="599f9516-7a95-45ee-bca0-37a9913867e6" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1e6e42c1-0065-43b0-9c5c-525cc7383903" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="4a0ceb07-33f3-4af5-9196-f89c1edbda4a" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_27" display-name="a_Anal_27" uuid="b64d26f6-5f82-4c1b-90eb-1280b083102c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="515" ver="1"/>
+			<designed target="Y" value="45.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="cd5d309d-7253-4ce8-84b9-699dec836f4a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="e5f17c9e-5c1e-491b-a2a9-2de6dc4b61d7" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="29651c97-4f64-4a6d-8ef7-9b80dd621806" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST6.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="41a6e8a9-6e7d-4ed2-ba5a-86bfd1c58f0a" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="ece10c7a-1ac0-468b-8de7-d37cc102402a" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="4cc6d737-a340-47fd-a444-d8dd118e9970" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="8098b076-e82e-4a37-aa02-b4060c7950ae" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="e3e9ff39-7174-48f1-8d4e-71f78d1b3f56" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="a_Anal_28" display-name="a_Anal_28" uuid="8774c340-b2cf-496c-adb3-8f809fc73509" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="1">
+			<designed target="X" value="515" ver="1"/>
+			<designed target="Y" value="74.5" ver="1"/>
+			<designed target="Rotation" value="0" ver="1"/>
+			<designed target="Scale" value="1" ver="1"/>
+			<designed target="Visible" value="true" ver="1"/>
+			<designed target="Enabled" value="true" ver="1"/>
+			<designed target="Tooltip" value="" ver="1"/>
+			<designed target="Width" value="100" ver="1"/>
+			<designed target="Height" value="25" ver="1"/>
+			<designed target="RoundingRadius" value="0" ver="1"/>
+			<designed target="PenColor" value="0xff626262" ver="1"/>
+			<designed target="PenStyle" value="1" ver="1"/>
+			<designed target="PenWidth" value="1" ver="1"/>
+			<designed target="BrushColor" value="0xffffffff" ver="1"/>
+			<designed target="BrushStyle" value="1" ver="1"/>
+			<object access-modifier="private" name="txtValue" display-name="txtValue" uuid="875cf98c-26dc-4a91-9fad-c761a39b9a73" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="1">
+				<designed target="X" value="3" ver="1"/>
+				<designed target="Y" value="1" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="95" ver="1"/>
+				<designed target="Height" value="25" ver="1"/>
+				<designed target="Text" value="******" ver="1"/>
+				<designed target="Font" value="Arial,11,-1,5,75,0,0,0,0,0,Полужирный" ver="1"/>
+				<designed target="FontColor" value="4278190080" ver="1"/>
+				<designed target="TextAlignment" value="132" ver="1"/>
+				<object access-modifier="private" name="ValueFormat" display-name="ValueFormat" uuid="33f560cc-0f58-48bd-a517-da5d2b1423ee" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="1">
+					<designed target="InValue" value="" ver="1"/>
+					<init target="Format" ver="1">
+						<object access-modifier="private" uuid="cf45da3f-24e5-49fc-ba7b-5134fc0fd9db" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="1">
+							<init target="DigitsCount" ver="4" value="2"/>
+						</object>
+					</init>
+					<do-trace access-modifier="private" target="InValue" ver="4">
+						<body>
+							<![CDATA[parent.TR_Val.Value]]>
+						</body>
+					</do-trace>
+				</object>
+				<do-trace access-modifier="private" target="Text" ver="4">
+					<conditional-expr>
+						<condition>
+							<![CDATA[me.TR_Val.Quality<192]]>
+						</condition>
+						<expr>
+							<![CDATA["******"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[me.ValueFormat.OutValue]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<object access-modifier="private" name="TR_Val" display-name="TR_Val" uuid="84567e67-8b69-4364-ba50-b4c397662bf7" base-type="ApItemFloat4" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="4">
+					<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+					<init target="Path" ver="4" value="STATION.ACONST7.rVal"/>
+				</object>
+				<object access-modifier="private" name="Round" display-name="Round" uuid="fbb605f1-056e-4ede-8929-0671a7569ae6" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="4"/>
+				<init target="Round" ver="4" value="2"/>
+			</object>
+			<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="6ffcce3a-4853-41ca-8176-fc4c6794fffb" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="1">
+				<designed target="X" value="0" ver="1"/>
+				<designed target="Y" value="25" ver="1"/>
+				<designed target="Rotation" value="0" ver="1"/>
+				<designed target="Scale" value="1" ver="1"/>
+				<designed target="Visible" value="true" ver="1"/>
+				<designed target="Enabled" value="true" ver="1"/>
+				<designed target="Tooltip" value="" ver="1"/>
+				<designed target="Width" value="100" ver="1"/>
+				<designed target="Height" value="24" ver="1"/>
+				<designed target="PenColor" value="0xffffffff" ver="1"/>
+				<designed target="PenStyle" value="1" ver="1"/>
+				<designed target="PenWidth" value="2" ver="1"/>
+				<designed target="BrushColor" value="4278190080" ver="1"/>
+				<designed target="BrushStyle" value="0" ver="1"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="37ba8726-8434-4d21-9da5-518e19a7ec65" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="0" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="52cad891-866e-40b6-bdf3-f962af1c76ad" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="0" ver="1"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="76aa6b60-f3a3-4d17-bc47-1347e567897d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="1">
+					<designed target="X" value="100" ver="1"/>
+					<designed target="Y" value="-24" ver="1"/>
+				</object>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="EK_1" display-name="EK_1" uuid="bc72605f-5a88-4b4c-9a03-89cc4de78fe6" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+			<designed target="X" value="654.5" ver="4"/>
+			<designed target="Y" value="180.5" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="165" ver="4"/>
+			<designed target="Height" value="37" ver="4"/>
+			<designed target="RoundingRadius" value="0" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="1" ver="4"/>
+			<designed target="PenWidth" value="2" ver="4"/>
+			<designed target="BrushColor" value="0xffaaffff" ver="4"/>
+			<designed target="BrushStyle" value="1" ver="4"/>
+			<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="9b0d2ebd-78ab-4111-a7de-44d570746aec" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+				<designed target="X" value="0" ver="4"/>
+				<designed target="Y" value="0" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="164" ver="4"/>
+				<designed target="Height" value="0" ver="4"/>
+				<designed target="PenColor" value="0xffffffff" ver="4"/>
+				<designed target="PenStyle" value="1" ver="4"/>
+				<designed target="PenWidth" value="2" ver="4"/>
+				<designed target="BrushColor" value="4278190080" ver="4"/>
+				<designed target="BrushStyle" value="0" ver="4"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="c346aeab-8798-4805-a605-fe6cc599b22d" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+					<designed target="X" value="0" ver="4"/>
+					<designed target="Y" value="0" ver="4"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="ada25bb6-8024-4360-914c-595f1fb0ebec" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+					<designed target="X" value="164" ver="4"/>
+					<designed target="Y" value="0" ver="4"/>
+				</object>
+				<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="71814ad8-f6da-412a-abce-26fc99ea9892" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+					<designed target="X" value="0" ver="4"/>
+					<designed target="Y" value="1" ver="4"/>
+					<designed target="ZValue" value="0" ver="4"/>
+					<designed target="Rotation" value="0" ver="4"/>
+					<designed target="Scale" value="1" ver="4"/>
+					<designed target="Visible" value="true" ver="4"/>
+					<designed target="Opacity" value="1" ver="4"/>
+					<designed target="Enabled" value="true" ver="4"/>
+					<designed target="Tooltip" value="" ver="4"/>
+					<designed target="Width" value="0" ver="4"/>
+					<designed target="Height" value="36" ver="4"/>
+					<designed target="PenColor" value="0xffffffff" ver="4"/>
+					<designed target="PenStyle" value="1" ver="4"/>
+					<designed target="PenWidth" value="2" ver="4"/>
+					<designed target="BrushColor" value="4278190080" ver="4"/>
+					<designed target="BrushStyle" value="0" ver="4"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="8da9a8d2-46bf-4113-91c1-b95ad10eb038" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+						<designed target="X" value="0" ver="4"/>
+						<designed target="Y" value="0" ver="4"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="7e125e19-edc0-43b6-a459-5fab9cc0a453" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+						<designed target="X" value="0" ver="4"/>
+						<designed target="Y" value="36" ver="4"/>
+					</object>
+				</object>
+			</object>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="87e69ca1-3322-4469-b759-5a78d31e70d5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+				<designed target="X" value="1" ver="4"/>
+				<designed target="Y" value="2" ver="4"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Rotation" value="0" ver="4"/>
+				<designed target="Scale" value="1" ver="4"/>
+				<designed target="Visible" value="true" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="Tooltip" value="" ver="4"/>
+				<designed target="Width" value="163" ver="4"/>
+				<designed target="Height" value="33" ver="4"/>
+				<designed target="Text" value="Ввод параметров ЕК1 и Текон" ver="4"/>
+				<designed target="Font" value="Sans Serif,11,-1,5,50,1,0,0,0,0" ver="4"/>
+				<designed target="FontColor" value="4278190080" ver="4"/>
+				<designed target="TextAlignment" value="132" ver="4"/>
+			</object>
+			<object access-modifier="private" name="Open" display-name="Open" uuid="ba0d952a-00be-4a2f-b496-15d850a97bb4" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="4">
+				<designed target="Enabled" value="true" ver="4"/>
+				<designed target="InvokeTrigger" value="false" ver="4"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Invoked" form-by-id="false" form-action="open">
+					<object access-modifier="private" uuid="4b4d3339-7dfb-4872-9718-71fce8b93abe" base-type="AlarmHist" base-type-id="ced82ab2-bd98-4cb2-9427-c89bec54d34e" ver="4">
+						<designed target="WindowPosition" value="1" ver="4"/>
+						<init target="JSONTextFilter" ver="4" value='{"message" : "ИБ. *"}'/>
+					</object>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="MouseClick" form-by-id="false" form-action="open-new">
+				<object access-modifier="private" uuid="b95f8eda-5a24-4a61-a0ff-b29b3606198f" base-type="EK_1" base-type-id="dc54b5e2-8512-432a-8af4-9cd54707bd7f" ver="4">
+					<designed target="ShowWindowCaption" value="true" ver="4"/>
+					<designed target="ShowWindowMinimize" value="false" ver="4"/>
+					<designed target="ShowWindowMaximize" value="false" ver="4"/>
+					<designed target="ShowWindowClose" value="false" ver="4"/>
+					<designed target="AlwaysOnTop" value="false" ver="4"/>
+					<designed target="WindowState" value="0" ver="4"/>
+					<designed target="WindowPosition" value="2" ver="4"/>
+				</object>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_4" display-name="Rectangle_4" uuid="306323c0-772f-437f-be96-c626fe215657" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="147.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="831" ver="4"/>
+		<designed target="Height" value="208" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_3" display-name="Rectangle_3" uuid="8c6eecce-ff24-4b56-9270-8486a0f0ae62" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="91.5" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="831" ver="4"/>
+		<designed target="Height" value="55" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_2" display-name="Rectangle_2" uuid="122a1756-575a-461a-adad-ccba4f812f16" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="2" ver="4"/>
+		<designed target="Y" value="37" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="831" ver="4"/>
+		<designed target="Height" value="55" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffdedede" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_1" display-name="Analog_1" uuid="57f351df-3687-4fa7-8fb3-7b8c4d2ae7a9" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="60" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI0001_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_9" display-name="Text_9" uuid="0db85c7b-3618-4b8b-9011-b1cd0214d482" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="5" ver="4"/>
+		<designed target="Y" value="30" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="226" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="Температура газа" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_2" display-name="Analog_2" uuid="334fe787-07f6-4b16-9aae-f685e44f93bf" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="117" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI0002_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_10" display-name="Text_10" uuid="6c6d14d9-0491-4563-92d4-caed4987ecf1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="7" ver="4"/>
+		<designed target="Y" value="88" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="226" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="Давление газа" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_3" display-name="Analog_3" uuid="f95c93a2-9810-4e02-9bd9-815c338fd6c4" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="175" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI0003_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_11" display-name="Text_11" uuid="049be76c-1c0e-4a33-9a79-c425d65dfef7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="17.5005" ver="4"/>
+		<designed target="Y" value="171" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="54" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="рабочий" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_4" display-name="Analog_4" uuid="ab900a86-8891-4818-ab2c-d5a4f0b08e5f" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="205" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0001_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_12" display-name="Text_12" uuid="c4895e4d-dd8f-45a7-aa5f-b8f76a9a8923" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="17.5005" ver="4"/>
+		<designed target="Y" value="201" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="60" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущий" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_5" display-name="Analog_5" uuid="03a6cc2e-3b04-416c-a594-f210041ee078" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="205" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0002_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_6" display-name="Analog_6" uuid="16ab2148-3713-45f5-b8cd-d002b5ad36b2" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="235" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0003_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_14" display-name="Text_14" uuid="4b363338-bf30-43f6-aa06-0b37929d0f87" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="17.5005" ver="4"/>
+		<designed target="Y" value="231" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущие сутки" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_7" display-name="Analog_7" uuid="1cf6553e-5b3f-4441-bacf-e71cb51160b4" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="235" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0004_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_10" display-name="Analog_10" uuid="1b6cca6f-360e-426e-98be-93416ba26975" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="295" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0010_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_18" display-name="Text_18" uuid="615632cc-e0d5-4b0f-985a-cab2e5c205fa" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="18.0005" ver="4"/>
+		<designed target="Y" value="291" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="83.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="нарастающим итогом" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_11" display-name="Analog_11" uuid="bc4c2abe-cedf-4284-b32d-ba250eac6b75" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="60" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0008_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_19" display-name="Text_19" uuid="332bccf1-26ee-47c0-8742-68deb5d5a0cf" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="228" ver="4"/>
+		<designed target="Y" value="56" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="часовая" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_12" display-name="Analog_12" uuid="a2bfe4c5-0490-49d0-8480-da70b3340ccd" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="117" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0009_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_21" display-name="Text_21" uuid="9910b868-b2e5-4fb4-88f9-1a29d5c68cdd" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="17.5005" ver="4"/>
+		<designed target="Y" value="56" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущая" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_22" display-name="Text_22" uuid="b9e1c69b-1dba-4b3b-9775-bf3d861d7ae1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="17.5005" ver="4"/>
+		<designed target="Y" value="115" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущее" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_23" display-name="Text_23" uuid="699f0226-c396-499e-a315-02b55f327000" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="227.5" ver="4"/>
+		<designed target="Y" value="115" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="часовое" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_24" display-name="Text_24" uuid="ee2e3aca-24b1-4827-a853-2ee7d6a257a1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="7" ver="4"/>
+		<designed target="Y" value="143" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="226" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="Расход газа" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_25" display-name="Text_25" uuid="300fdf6b-701f-486c-a972-39444debf6fb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="227.5" ver="4"/>
+		<designed target="Y" value="203" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="часовой" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_26" display-name="Text_26" uuid="4b1c7555-66f2-4ad5-81cf-cfb01ca42e84" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="227.5" ver="4"/>
+		<designed target="Y" value="231" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="предыдущие сутки" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_13" display-name="Analog_13" uuid="22a77877-745c-4921-8e0d-470d162eb2eb" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="96.25" ver="4"/>
+		<designed target="Y" value="265" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0005_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_27" display-name="Text_27" uuid="e08672f9-6699-485a-9cd1-3c73389e9604" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="18.0005" ver="4"/>
+		<designed target="Y" value="261" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущий месяц" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_14" display-name="Analog_14" uuid="050d1b38-9466-4a90-a160-23ab018acd25" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="265" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR0006_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_28" display-name="Text_28" uuid="b3e3bb9a-937c-4da2-9b81-f788c90586c3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="227" ver="4"/>
+		<designed target="Y" value="261" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="предыдущий месяц" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_15" display-name="Analog_15" uuid="c964a481-6667-4555-9c2e-7c3473daca00" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="60" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI004_4"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_31" display-name="Text_31" uuid="85638fbe-f968-442b-adeb-8bf957a5dfa6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="432.5" ver="4"/>
+		<designed target="Y" value="56" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="89.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущая" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_16" display-name="Analog_16" uuid="b75eb2ed-cdf6-4d25-86fe-736bc9494218" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="115" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI0002_2"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_32" display-name="Text_32" uuid="0f93f1dd-0d29-43ec-8ab2-90998e90c6ab" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="432" ver="4"/>
+		<designed target="Y" value="111" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="89.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущее" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_17" display-name="Analog_17" uuid="f3be1fcf-4023-4dfc-aba7-243d1816b413" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="173" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AI005_8"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_33" display-name="Text_33" uuid="b7fe44fe-e373-4182-945a-69706458a81f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="432" ver="4"/>
+		<designed target="Y" value="169" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="89.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="рабочий" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_18" display-name="Analog_18" uuid="95c82832-3a26-432f-9553-ebb8ed28f1a4" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="205" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR005_17"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_34" display-name="Text_34" uuid="18dd3910-0da4-43e2-b622-9085be7b63e5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="433" ver="4"/>
+		<designed target="Y" value="201" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="60" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущий" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_19" display-name="Analog_19" uuid="c1b02428-5ff1-47cf-897a-ca6973367bf0" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="706.25" ver="4"/>
+		<designed target="Y" value="205" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR006_18"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_35" display-name="Text_35" uuid="962dd35d-787b-488a-a44a-33d6528d0cf6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="433" ver="4"/>
+		<designed target="Y" value="231" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущие сутки" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_36" display-name="Text_36" uuid="aad7cfb5-0eae-431a-becd-dd34714f820a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="642.5" ver="4"/>
+		<designed target="Y" value="203" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="64.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="часовой" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_37" display-name="Text_37" uuid="63096df6-867b-4c4a-8b37-fbee047a8d12" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="642" ver="4"/>
+		<designed target="Y" value="231" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="предыдущие сутки" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_20" display-name="Analog_20" uuid="b377ca31-9bc6-4954-9158-39c6eec5cd13" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="235" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR007_19"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_21" display-name="Analog_21" uuid="8e73755c-a492-4178-94b3-6b4a70d1e78f" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="706.25" ver="4"/>
+		<designed target="Y" value="235" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR008_20"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_22" display-name="Analog_22" uuid="c8c110f4-b750-49c7-9e13-f61272eec034" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="265" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR008_1_36"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_38" display-name="Text_38" uuid="feb728b1-7610-4fbc-a539-74d3746ef8ca" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="433" ver="4"/>
+		<designed target="Y" value="261" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="текущий месяц" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_23" display-name="Analog_23" uuid="ea63a2f3-e19f-4840-914b-4774b9604b0f" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="706.25" ver="4"/>
+		<designed target="Y" value="265" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR008_2_37"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_39" display-name="Text_39" uuid="7b8849f8-fd30-43e2-b8bb-b8e11c7e93f3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="642" ver="4"/>
+		<designed target="Y" value="261" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="75.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="предыдущий месяц" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_24" display-name="Analog_24" uuid="9e1cf0fb-38de-4119-8e71-207f19908f1f" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="511.25" ver="4"/>
+		<designed target="Y" value="295" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.AR005_1_41"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_40" display-name="Text_40" uuid="40117fc9-6b70-40ec-b72d-597aa9a501c3" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="434" ver="4"/>
+		<designed target="Y" value="291" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="83.999" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="за текущие 5 минут" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="db6affa3-d8d2-4b6b-a0d1-fd89d7849e70" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+		<designed target="X" value="3.5" ver="4"/>
+		<designed target="Y" value="3" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="797" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="0xff000000" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="0xff000066" ver="4"/>
+		<designed target="BrushStyle" value="1" ver="4"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="94baac9f-bf84-4f69-beb1-130354248fb9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+			<designed target="X" value="1" ver="4"/>
+			<designed target="Y" value="1" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="790" ver="4"/>
+			<designed target="Height" value="30" ver="4"/>
+			<designed target="Text" value="Текущие показания ЕК1 и Текон (лето)" ver="4"/>
+			<designed target="Font" value="Arimo,12,-1,5,75,0,0,0,0,0,Bold" ver="4"/>
+			<designed target="FontColor" value="0xffffffff" ver="4"/>
+			<designed target="TextAlignment" value="132" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Rectangle_6" display-name="Rectangle_6" uuid="a8a0c19f-0cfa-433d-94bd-6a3f4029de7f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="801.5" ver="3"/>
+		<designed target="Y" value="15.5" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="1" ver="3"/>
+		<designed target="Height" value="1" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="4278190080" ver="3"/>
+		<designed target="BrushStyle" value="0" ver="3"/>
+		<object access-modifier="private" name="ClosseButton" display-name="ClosseButton" uuid="7c49ba27-648c-419a-81ae-7c4fa57280c6" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="8" ver="3"/>
+			<designed target="Y" value="-8" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="20" ver="3"/>
+			<designed target="Height" value="20" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="0" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffcdcdcd" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="5e5229e7-81ca-4928-b0c1-32f2a1642a66" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="20" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="20.5" ver="3"/>
+				<designed target="Height" value="20.5" ver="3"/>
+				<designed target="PenColor" value="0xfff5f5f5" ver="3"/>
+				<designed target="PenStyle" value="1" ver="3"/>
+				<designed target="PenWidth" value="1.5" ver="3"/>
+				<designed target="BrushColor" value="0xffffffff" ver="3"/>
+				<designed target="BrushStyle" value="0" ver="3"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="4cd9f819-a6a6-4650-8ef2-4fbbe194df22" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="0" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="c88e835b-a346-40bd-a4a1-62768d4c41c8" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="-20.5" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="cc6bbd6d-6039-4383-94e3-d8d0357bb94c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="20.5" ver="3"/>
+					<designed target="Y" value="-20.5" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="e49d9a52-ad7c-4466-afcc-82abe482c67f" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3" cardinal="1">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="20" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="20.5" ver="3"/>
+				<designed target="Height" value="20.5" ver="3"/>
+				<designed target="PenColor" value="0xff626262" ver="3"/>
+				<designed target="PenStyle" value="1" ver="3"/>
+				<designed target="PenWidth" value="1.5" ver="3"/>
+				<designed target="BrushColor" value="0xffffffff" ver="3"/>
+				<designed target="BrushStyle" value="0" ver="3"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="92de6d55-df14-4244-b2e7-0d5d1d905ec2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="0" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="f27ffe28-bbef-4ae7-b723-e05a5f43db6b" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="20.5" ver="3"/>
+					<designed target="Y" value="0" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Point_3" display-name="Point_3" uuid="89c369f6-ea41-4ef0-9a54-6e813562615c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="20.5" ver="3"/>
+					<designed target="Y" value="-20.5" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<object access-modifier="private" name="BitNum" display-name="BitNum" uuid="5c214ff0-0bfb-4914-ab9c-6bd7ce4a7faa" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="2" ver="3"/>
+				<designed target="Y" value="-0.666667" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="15" ver="3"/>
+				<designed target="Height" value="20" ver="3"/>
+				<designed target="Text" value="20" ver="3"/>
+				<designed target="Font" value="Sans Serif,9,-1,5,50,0,0,0,0,0" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="33" ver="3"/>
+				<init target="Visible" ver="3" value="false"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseRelease" form-action="close"/>
+			<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="96b07749-fe5f-4c2d-b002-9bcfb75b11c9" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+				<designed target="X" value="4" ver="3"/>
+				<designed target="Y" value="3" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="13" ver="3"/>
+				<designed target="PenColor" value="0xffffffff" ver="3"/>
+				<designed target="PenStyle" value="1" ver="3"/>
+				<designed target="PenWidth" value="2" ver="3"/>
+				<designed target="BrushColor" value="4278190080" ver="3"/>
+				<designed target="BrushStyle" value="0" ver="3"/>
+				<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="ecd3039a-f8d8-4499-ad58-21a2ddfb5852" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="0" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="d17ae6af-909d-4957-9786-95e66b179007" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+					<designed target="X" value="13" ver="3"/>
+					<designed target="Y" value="13" ver="3"/>
+				</object>
+				<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="9068a80d-b357-45ca-bb13-4f2695b08901" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="3">
+					<designed target="X" value="0" ver="3"/>
+					<designed target="Y" value="0" ver="3"/>
+					<designed target="Rotation" value="0" ver="3"/>
+					<designed target="Scale" value="1" ver="3"/>
+					<designed target="Visible" value="true" ver="3"/>
+					<designed target="Enabled" value="true" ver="3"/>
+					<designed target="Tooltip" value="" ver="3"/>
+					<designed target="Width" value="13" ver="3"/>
+					<designed target="Height" value="13" ver="3"/>
+					<designed target="PenColor" value="0xffffffff" ver="3"/>
+					<designed target="PenStyle" value="1" ver="3"/>
+					<designed target="PenWidth" value="2" ver="3"/>
+					<designed target="BrushColor" value="4278190080" ver="3"/>
+					<designed target="BrushStyle" value="0" ver="3"/>
+					<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="d71ddf28-22e6-4dcb-87eb-6fadc6dc8814" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="0" ver="3"/>
+						<designed target="Y" value="13" ver="3"/>
+					</object>
+					<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1999a72b-e64a-4d03-b7d9-185daedbd88e" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="3">
+						<designed target="X" value="13" ver="3"/>
+						<designed target="Y" value="0" ver="3"/>
+					</object>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseLeave">
+				<body kind="om">
+					<![CDATA[me.Line_5.PenWidth=1;
+me.Line_6.PenWidth=1;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseEnter">
+				<body kind="om">
+					<![CDATA[me.Line_5.PenWidth=2;
+me.Line_6.PenWidth=2;]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="dcb30e4a-7e34-4538-bd34-49252170123b" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="3">
+			<designed target="Weight" value="1e-08" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Text_47" display-name="Text_47" uuid="23ec1d44-ad5f-41fe-b5ca-ff7495f1810b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="429" ver="4"/>
+		<designed target="Y" value="30" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="398" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="Дублирующие значения (Текон)" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="132" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="31511200-8387-4bda-8526-efb2de9a8c17" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="4">
+		<designed target="X" value="423" ver="4"/>
+		<designed target="Y" value="36" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="0" ver="4"/>
+		<designed target="Height" value="542" ver="4"/>
+		<designed target="PenColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="PenStyle" value="1" ver="4"/>
+		<designed target="PenWidth" value="2" ver="4"/>
+		<designed target="BrushColor" value="0xffcdcdcd" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="bed225e3-7a60-4342-a255-224ed5af0061" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="0" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="2b3a4ea5-1998-4a40-8e5d-ca6df8ed13c4" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="4">
+			<designed target="X" value="0" ver="4"/>
+			<designed target="Y" value="542" ver="4"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Text_48" display-name="Text_48" uuid="9faa0260-5942-4ef2-b878-1f34b3dc4119" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="4">
+		<designed target="X" value="7" ver="4"/>
+		<designed target="Y" value="323" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="226" ver="4"/>
+		<designed target="Height" value="30" ver="4"/>
+		<designed target="Text" value="Контрактный час" ver="4"/>
+		<designed target="Font" value="PT Astra Sans,9,-1,5,75,1,0,0,0,0,Bold Italic" ver="4"/>
+		<designed target="FontColor" value="4278190080" ver="4"/>
+		<designed target="TextAlignment" value="129" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_25" display-name="Analog_25" uuid="589b25f1-850b-43c0-8a89-2652892ea0e6" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="291.25" ver="4"/>
+		<designed target="Y" value="325" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.ACONST00_10"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Analog_26" display-name="Analog_26" uuid="2d9b08ab-944b-4959-88cb-0bba50ec199e" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="706.25" ver="4"/>
+		<designed target="Y" value="325" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.ACONST00_1"/>
+		<init target="in_Round" ver="4" value="2"/>
+		<designed target="Scale" value="0.9" ver="4"/>
+	</object>
+</type>
+

@@ -1,0 +1,20 @@
+<object access-modifier="private" name="OpenWindows" display-name="OpenWindows" uuid="e5164853-10c2-4d38-984f-a5940c472dd7" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="3">
+	<object access-modifier="private" name="Popup_DP" display-name="Popup_DP" uuid="d79b63d2-655a-4ca9-9c44-9c4e6693aef0" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<init target="Popup_DP" ver="3" value="false"/>
+	<object access-modifier="private" name="WindowGroup" display-name="WindowGroup" uuid="92395c31-1b6d-4608-9862-bb6c057e7634" base-type="WindowGroup" base-type-id="854fabd1-f7b5-4958-a934-ffd0b5d1a7e4" ver="3"/>
+	<object access-modifier="private" name="MenuGroup" display-name="MenuGroup" uuid="ee1e8ac4-8332-4563-9469-d2f9370c5377" base-type="WindowGroup" base-type-id="854fabd1-f7b5-4958-a934-ffd0b5d1a7e4" ver="3"/>
+	<object access-modifier="private" name="MenuGroupLevel3" display-name="MenuGroupLevel3" uuid="73181cf2-1b33-4b0c-98f5-4f34c54938dd" base-type="WindowGroup" base-type-id="854fabd1-f7b5-4958-a934-ffd0b5d1a7e4" ver="3"/>
+	<object access-modifier="private" name="DP_Alias" display-name="DP_Alias" uuid="ebf7ae95-e2e3-4dd3-bf37-255fa36741bc" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="Popup_Security" display-name="Popup_Security" uuid="f5f106f7-7cd9-4749-b7af-48a25dd2d2b7" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Popup_TrendHist" display-name="Popup_TrendHist" uuid="c35e11d0-2ada-49ad-b9a3-df919d68ac8a" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Popup_UstMap" display-name="Popup_UstMap" uuid="88bb3405-0152-4ca7-bef8-8dd458b7e1aa" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Popup_AlarmHist" display-name="Popup_AlarmHist" uuid="ae5207e4-7795-4cd8-b08c-1b87a780dfdb" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Popup_Moto" display-name="Popup_Moto" uuid="44a6544d-167f-4ee7-8124-7e933852936d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Popup_AP" display-name="Popup_AP" uuid="25f0f747-281a-4acb-a120-9391e8fa4d9f" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="AP_Alias" display-name="AP_Alias" uuid="18f573bb-b8b2-4e2c-8121-c8d8bc7909e7" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="Popup_Kran" display-name="Popup_Kran" uuid="adc5786a-4945-4d65-8883-88508444a9fe" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="Kran_Alias" display-name="Kran_Alias" uuid="76310a37-b88f-49e4-8d36-e3c769a1c834" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="DiagD_Alias" display-name="DiagD_Alias" uuid="31502c48-ea3d-49e6-8976-6fba3c8ba20f" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="DiagA_Alias" display-name="DiagA_Alias" uuid="68858c35-9de8-4e1f-87ee-3662740e531d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+</object>
+

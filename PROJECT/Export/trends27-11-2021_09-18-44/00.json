@@ -1,0 +1,61 @@
+{
+  "LinesCount": 0,
+  "TInterval": [
+    132824669332960000,
+    132824675332960000
+  ],
+  "GlobalRanges": false,
+  "IndexAxis": [],
+  "AxisMin": [
+    0
+  ],
+  "AxisMax": [
+    100
+  ],
+  "fixYMin": [
+    {}
+  ],
+  "fixYMax": [
+    {}
+  ],
+  "Advised": [],
+  "AxisColor": [
+    4286611584
+  ],
+  "LineColor": [],
+  "Description": [],
+  "Tag": [],
+  "Units": [],
+  "LinesWidth": [],
+  "Values": [],
+  "Time": [],
+  "Quality": [],
+  "Minimum": [],
+  "Maximum": [],
+  "Quantity": [],
+  "AutoRange": false,
+  "RepersCount": 0,
+  "RepersValues": [],
+  "ActiveMode": 1,
+  "THistInterval": [
+    132824531163330000,
+    132824567163340000
+  ],
+  "ReperActive": 0,
+  "nColumnT": [],
+  "LegendColumnWidth": [
+    20,
+    50,
+    50,
+    139,
+    221,
+    75,
+    70,
+    130,
+    60,
+    100,
+    100,
+    100
+  ],
+  "LegendHeight": 0
+}

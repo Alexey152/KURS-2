@@ -1,0 +1,605 @@
+<type access-modifier="private" name="Alarms_DataField" display-name="Alarms_DataField" uuid="73812737-d1fa-4c53-8159-38f42d0d362c" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<object access-modifier="private" name="Field" display-name="Field" uuid="24b61766-ebf2-4091-a8fb-b2438382410d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="107" ver="3"/>
+		<designed target="Height" value="21" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xffffffff" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="ValueEdit" display-name="ValueEdit" uuid="30b71808-4f67-4957-81d5-766b33618ea1" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+			<designed target="X" value="3" ver="3"/>
+			<designed target="Y" value="1" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="0.01" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="1" ver="3"/>
+			<designed target="Height" value="19" ver="3"/>
+			<designed target="Text" value="" ver="3"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="129" ver="3"/>
+			<designed target="HideInput" value="false" ver="3"/>
+			<designed target="PlaceholderText" value="" ver="3"/>
+			<designed target="ReadOnly" value="false" ver="3"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="FocusChanged">
+				<body kind="om">
+					<![CDATA[if (!hasFocus) selectedUnit = 0;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+				<body kind="om">
+					<![CDATA[if (me.Focus)
+{
+	SetValue(text);
+	Text = "";
+}]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="KeyPress">
+				<body kind="om">
+					<![CDATA[key: uint4 = event.KeyCode;
+if (key == 107) ChangeValue(0);
+if (key == 105) ChangeValue(1);
+if (key == 106)
+{
+	if (selectedUnit < 3) selectedUnit += 1;
+	else selectedUnit = 1;
+}
+if (key == 108)
+{
+	if (selectedUnit > 1) selectedUnit -= 1;
+	else selectedUnit = 3;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Day" display-name="Day" uuid="ca829f5c-9065-45c8-be44-f3320e7debc5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="2.375" ver="3"/>
+			<designed target="Y" value="2.18182" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="13" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="066cb223-8947-477f-8a18-6c9ac9742831" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="00" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<body>
+						<![CDATA[String.ToString(day)]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="d6df1fc5-d81a-411a-9654-27be75a3417b" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 1;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="6030fc6b-cf5b-44ee-8df0-ba1b64edbcb0" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="Month" display-name="Month" uuid="3b5588e4-658b-4f07-9728-f56b8acb224a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="17.5909" ver="3"/>
+			<designed target="Y" value="2.18182" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="48" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="fd1f3391-c2bc-4a43-8740-d7571322cb74" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="53.9091" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="сентября" ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 1]]>
+						</condition>
+						<expr>
+							<![CDATA["января"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 2]]>
+						</condition>
+						<expr>
+							<![CDATA["февраля"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 3]]>
+						</condition>
+						<expr>
+							<![CDATA["марта"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 4]]>
+						</condition>
+						<expr>
+							<![CDATA["апреля"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 5]]>
+						</condition>
+						<expr>
+							<![CDATA["мая"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 6]]>
+						</condition>
+						<expr>
+							<![CDATA["июня"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 7]]>
+						</condition>
+						<expr>
+							<![CDATA["июля"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 8]]>
+						</condition>
+						<expr>
+							<![CDATA["августа"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 9]]>
+						</condition>
+						<expr>
+							<![CDATA["сентября"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 10]]>
+						</condition>
+						<expr>
+							<![CDATA["октября"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 11]]>
+						</condition>
+						<expr>
+							<![CDATA["ноября"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[month == 12]]>
+						</condition>
+						<expr>
+							<![CDATA["декабря"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["месяц"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="619ef8d5-377b-405a-b41f-687f28f28b1e" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 2;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="259419de-1e62-49da-9be5-032512d3d203" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="Year" display-name="Year" uuid="fc77d07e-bf32-469a-883c-f5eec8bd05e0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+			<designed target="X" value="66.5909" ver="3"/>
+			<designed target="Y" value="2.18182" ver="3"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="37" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="RoundingRadius" value="0" ver="3"/>
+			<designed target="PenColor" value="4278190080" ver="3"/>
+			<designed target="PenStyle" value="1" ver="3"/>
+			<designed target="PenWidth" value="1" ver="3"/>
+			<designed target="BrushColor" value="0xffffffff" ver="3"/>
+			<designed target="BrushStyle" value="1" ver="3"/>
+			<object access-modifier="private" name="Number" display-name="Number" uuid="6deffcdf-e878-4543-99c3-c45ddcae0e97" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+				<designed target="X" value="0" ver="3"/>
+				<designed target="Y" value="0" ver="3"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Rotation" value="0" ver="3"/>
+				<designed target="Scale" value="1" ver="3"/>
+				<designed target="Visible" value="true" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<designed target="Enabled" value="true" ver="3"/>
+				<designed target="Tooltip" value="" ver="3"/>
+				<designed target="Width" value="13" ver="3"/>
+				<designed target="Height" value="16" ver="3"/>
+				<designed target="Text" value="2020 г." ver="3"/>
+				<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="3"/>
+				<designed target="FontColor" value="4278190080" ver="3"/>
+				<designed target="TextAlignment" value="132" ver="3"/>
+				<do-trace access-modifier="private" target="Text" ver="3">
+					<body>
+						<![CDATA[String.ToString(year) + " г."]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="selected" display-name="selected" uuid="b43b8a30-4f9e-45fe-a2d2-cc08937a17cd" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+					<body kind="om">
+						<![CDATA[if (value) 
+{
+	BrushColor = 0xff00aaff;
+	Number.FontColor = 0xffffffff;
+	ValueEdit.Focus = true;
+}
+else 
+{
+	BrushColor = 0xffffffff;
+	Number.FontColor = 0xff000000;
+}]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[selectedUnit = 3;]]>
+				</body>
+			</do-on>
+			<init target="selected" ver="3" value="false"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="faedfd50-b005-407f-a7d8-11ca758d242e" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+				<designed target="Orientation" value="1" ver="3"/>
+				<designed target="Gap" value="0" ver="3"/>
+			</object>
+			<init target="PenStyle" ver="3" value="0"/>
+		</object>
+		<object access-modifier="private" name="tempDay" display-name="tempDay" uuid="bb3120c9-2389-4370-8633-45885fee436d" base-type="uint1" base-type-id="f73099bc-ee13-42cf-82bb-87368b826707" ver="3"/>
+		<object access-modifier="private" name="tempMonth" display-name="tempMonth" uuid="1fe6ea4d-97b1-44c4-8359-98251f47bfc4" base-type="uint1" base-type-id="f73099bc-ee13-42cf-82bb-87368b826707" ver="3"/>
+		<object access-modifier="private" name="tempYear" display-name="tempYear" uuid="d2f757e5-59c3-4d0a-a9e0-4e4cd63aae3e" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="3"/>
+	</object>
+	<object access-modifier="private" name="day" display-name="day" uuid="2d5d3867-f364-4040-a927-8d5612cb029e" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value > 0) Field.tempDay = Value;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="month" display-name="month" uuid="24c10448-8d64-4a12-9a4e-f00ca76a752c" base-type="notifying_uint1" base-type-id="fed14c54-414c-56bd-549a-8d761c4d6200" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value <= 0) Value = Field.tempMonth;
+// Проверка макс.количества дней
+if (day > GetMaxValue(1)) day = TypeConvert.ToUint1(GetMaxValue(1)); 
+Field.tempMonth = Value;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="year" display-name="year" uuid="adf21f76-2be9-4ece-b4d8-5b495c3777a1" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="3"/>
+	<object access-modifier="private" name="selectedUnit" display-name="selectedUnit" uuid="3d729337-73b7-4cc8-89c2-2bce5b5f3729" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[// Выделение соответствующего поля
+Field.Day.selected = (value == 1)?(true):(false);
+Field.Month.selected = (value == 2)?(true):(false);
+Field.Year.selected = (value == 3)?(true):(false);
+
+// Проверка на корректность полей
+if (value != 1) if (day == 0) day = Field.tempDay;
+if (value != 2)
+{
+	if (year > GetMaxValue(3)) year = TypeConvert.ToUint2(Field.tempYear);
+	if (year >= 0 && year <= 49) year = TypeConvert.ToUint2(2000 + year);
+	if (year > 50 && year <= 99) year = TypeConvert.ToUint2(1900 + year);
+	
+	Field.tempYear = year;
+	
+	if (day > GetMaxValue(1)) day = TypeConvert.ToUint1(GetMaxValue(1));
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="ChangeValue" display-name="ChangeValue" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[// Изменение значения времени (-1 или +1)
+
+newValue: int4 = (mode == 0)?(-1):(1);
+index: int1 = selectedUnit;
+result: int4;
+maxValue: uint2 = GetMaxValue(selectedUnit);
+
+if (index == 1) 
+{
+	result = TypeConvert.ToInt4(day) + newValue; 
+	if (result < 0) result = maxValue;
+	if (result > maxValue) result = 0;
+	day = TypeConvert.ToUint1(result);
+}
+if (index == 2) 
+{
+	result = TypeConvert.ToInt4(month) + newValue; 
+	if (result < 1) result = maxValue;
+	if (result > maxValue) result = 1;
+	month = TypeConvert.ToUint1(result);
+}
+if (index == 3) 
+{
+	result = TypeConvert.ToInt4(year) + newValue; 
+	if (result < 0) result = maxValue;
+	if (result > maxValue) result = maxValue;
+	year = TypeConvert.ToUint2(result);
+}]]>
+		</body>
+		<param access-modifier="private" name="mode" display-name="" uuid="dc274cd1-ffab-4d11-84a6-70d3c2a3764a" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	</do>
+	<init target="day" ver="3" value="12"/>
+	<do access-modifier="private" name="SetValue" display-name="SetValue" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[// Проверка на корректность значений
+var mask =  /\D+/;
+var str = inputValue;
+var currentValue = GetSelectedValue().toString();
+
+var maxValue = GetMaxValue(0); // Максимально возможное значение
+var maxLength = (selectedUnit == 3)?(4):(2);
+
+// Если введено не число, выходим
+if (mask.test(str) || str == "" || isNaN(Number.parseInt(str))) return;
+
+if (currentValue.length > maxLength - 1) currentValue = "";
+var resultInt = Number.parseInt(currentValue + str);
+if (resultInt > 0 && resultInt <= maxValue) str = resultInt.toString();
+else if (selectedUnit == 3 && resultInt > maxValue) // Для года особое поведение при установки макс.значения
+{
+	str = Field.tempYear.toString();
+}
+
+// Установка значения в соответствующее свойство
+if (selectedUnit.Value == 1) day.Value = Number.parseInt(str);
+if (selectedUnit.Value == 2) month.Value = Number.parseInt(str);
+if (selectedUnit.Value == 3) year.Value = Number.parseInt(str);]]>
+		</body>
+		<param access-modifier="private" name="inputValue" display-name="" uuid="fcc3714e-4677-4885-befa-4c55508f76e2" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+	<do access-modifier="private" name="GetSelectedValue" display-name="GetSelectedValue" ver="3" type="int4" type-id="74222947-f188-4195-8e0e-e33bd9827255">
+		<body kind="om">
+			<![CDATA[if (selectedUnit == 1) return day;
+if (selectedUnit == 2) return month;
+if (selectedUnit == 3) return year;
+return 0;]]>
+		</body>
+	</do>
+	<init target="month" ver="3" value="56"/>
+	<init target="year" ver="3" value="08"/>
+	<init target="selectedUnit" ver="3" value="0"/>
+	<do access-modifier="private" name="Set_Size" display-name="Set_Size" ver="3" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da" form-by-id="true">
+		<param access-modifier="private" name="Mode" display-name="" uuid="76ee9dc6-5e57-44b8-965c-0a753a9571dc" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="2"/>
+		<body kind="javascript">
+			<![CDATA[// Функция задания размеров иконки. Если 0 или -1 - скрываем иконку, если больше 0 и есть разрешение на отображение - задаем параметры по исходным данным
+var typeHeight = 0;
+var typeWidth = 0;
+var dayHeight = 0;
+var dayWidth = 0;
+var yearHeight = 0;
+var yearWidth = 0;
+var monthHeight = 0;
+var monthWidth = 0;
+
+// Режим ручного скрытия. Выйти из режима можно только кодом Set_Size(1)
+if (Mode <= 0) if (Mode == 0) Visible = false; 
+
+// Отображать кнопку при наличии разрешения
+if (Mode > 0){
+	Visible = true;
+	typeHeight = 21;
+	typeWidth = 107;
+	dayHeight = 16;
+	dayWidth = 13;
+	yearHeight = 16;
+	yearWidth = 37;
+	monthHeight = 16;
+	monthWidth = 48;
+}
+
+Field.Width = typeWidth;
+Field.Height = typeHeight;
+
+Field.Day.Width = dayWidth;
+Field.Day.Height = dayHeight;
+
+Field.Month.Width = monthWidth;
+Field.Month.Height = monthHeight;
+
+Field.Year.Width = yearWidth;
+Field.Year.Height = yearHeight;
+
+Alarms_1.Main_panel.ToolBar.Height = Alarms_1.Main_panel.ToolBar.Height; //Необходимо для обновления разметки]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="ed40014d-c921-4638-a8a6-a73f1521c508" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="c390f1c1-d859-4868-aed6-7a161a192c43" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="3"/>
+	<do access-modifier="private" name="CheckIntercalaryYear" display-name="CheckIntercalaryYear" ver="3" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8">
+		<body kind="om">
+			<![CDATA[/*
+Чтобы определить, является ли год високосным, выполните следующие действия:
+
+1.Если год делится на 4 без остатка, перейдите на шаг 2. В противном случае перейдите к выполнению действия 5.
+2.Если год делится на 100 без остатка, перейдите на шаг 3. В противном случае перейдите к выполнению действия 4.
+3.Если год делится на 400 без остатка, перейдите на шаг 4. В противном случае перейдите к выполнению действия 5.
+4.Год високосный (366 дней).
+5.Год не високосный год (365 дней).
+
+true - год високосный
+*/
+
+
+input: int4 = value;
+if (input % 4 == 0) 
+{
+	if (input % 100 == 0)
+	{
+		if (input % 400 == 0) return true;
+	}
+	else return true;
+}
+else return false;
+return false;]]>
+		</body>
+		<param access-modifier="private" name="value" display-name="" uuid="51c1ac82-6f34-42ee-8a83-f96c72da0e73" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="3"/>
+	</do>
+	<do access-modifier="private" name="GetMaxValue" display-name="GetMaxValue" ver="3" type="uint2" type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12">
+		<body kind="om">
+			<![CDATA[mode: int1;
+mode = (unit != 0)?(unit):(selectedUnit);
+
+if (mode == 1)
+{
+	if (month < 8) 
+	{
+		if (month % 2 != 0) return 31;
+		else if (month == 2)
+		{
+			if (CheckIntercalaryYear(year)) return 29;
+			else return 28;
+		}
+		else return 30;
+	}
+	else if (month % 2 == 0) return 31;
+	else return 30;
+}
+if (mode == 2) return 12;
+if (mode == 3) return 9998;
+return 0;]]>
+		</body>
+		<param access-modifier="private" name="unit" display-name="" uuid="03910b15-2cfe-466e-8613-e061e3521902" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	</do>
+</type>
+

@@ -1,0 +1,85 @@
+<type access-modifier="private" name="IBP" display-name="IBP" uuid="0c2d1109-0238-4d49-abc3-55b4823813e7" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="400" ver="4"/>
+	<designed target="Height" value="300" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="0" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="4293913575" ver="4"/>
+	<designed target="BrushStyle" value="1" ver="4"/>
+	<designed target="WindowX" value="0" ver="4"/>
+	<designed target="WindowY" value="0" ver="4"/>
+	<designed target="WindowWidth" value="1920" ver="4"/>
+	<designed target="WindowHeight" value="1080" ver="4"/>
+	<designed target="WindowCaption" value="MainForm" ver="4"/>
+	<designed target="ShowWindowCaption" value="true" ver="4"/>
+	<designed target="ShowWindowMinimize" value="true" ver="4"/>
+	<designed target="ShowWindowMaximize" value="true" ver="4"/>
+	<designed target="ShowWindowClose" value="true" ver="4"/>
+	<designed target="AlwaysOnTop" value="false" ver="4"/>
+	<designed target="WindowSizeMode" value="0" ver="4"/>
+	<designed target="WindowBorderStyle" value="1" ver="4"/>
+	<designed target="WindowState" value="0" ver="4"/>
+	<designed target="WindowScalingMode" value="0" ver="4"/>
+	<designed target="MonitorNumber" value="0" ver="4"/>
+	<designed target="WindowPosition" value="0" ver="4"/>
+	<designed target="WindowCloseMode" value="0" ver="4"/>
+	<object access-modifier="private" name="Analog_28" display-name="Analog_28" uuid="2648c635-47c3-4891-b309-66826a4eadd2" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10" ver="4"/>
+		<designed target="Y" value="40" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU001"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_29" display-name="Analog_29" uuid="56419fb2-cb9a-4e4f-b736-725a1505fc29" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="70" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU002"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_30" display-name="Analog_30" uuid="c4c8308d-d7f7-402a-8430-ff5ba1a39206" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="100" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU003"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_31" display-name="Analog_31" uuid="b9ec726c-ee14-451a-bf86-35993ac482b7" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="130" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU004"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_32" display-name="Analog_32" uuid="086095e0-6da0-41fd-a896-ab4350bfc323" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="160" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU005"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_33" display-name="Analog_33" uuid="8b099ac1-c72f-4057-9a1d-afc3a71f4e89" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="190" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU006"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+	<object access-modifier="private" name="Analog_34" display-name="Analog_34" uuid="638b4891-20a7-430f-9eab-3ea59e699dd4" base-type="Analog" base-type-id="1d7631eb-155f-41c1-90c2-5b42fce3abd8" ver="4">
+		<designed target="X" value="10.25" ver="4"/>
+		<designed target="Y" value="220" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<init target="in_Alias" ver="4" value="STATION.OIP8.AU003_1"/>
+		<init target="in_Round" ver="4" value="2"/>
+	</object>
+</type>
+

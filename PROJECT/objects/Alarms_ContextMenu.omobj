@@ -1,0 +1,734 @@
+<type access-modifier="private" name="Alarms_ContextMenu" display-name="Alarms_ContextMenu" uuid="e370bb8d-718a-43d0-80bf-f2f271b7c121" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<designed target="Width" value="1" ver="3"/>
+	<designed target="Height" value="1" ver="3"/>
+	<designed target="PenColor" value="4278190080" ver="3"/>
+	<designed target="PenStyle" value="0" ver="3"/>
+	<designed target="PenWidth" value="0" ver="3"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="3"/>
+	<designed target="BrushStyle" value="1" ver="3"/>
+	<designed target="WindowX" value="0" ver="3"/>
+	<designed target="WindowY" value="0" ver="3"/>
+	<designed target="WindowWidth" value="1920" ver="3"/>
+	<designed target="WindowHeight" value="1080" ver="3"/>
+	<designed target="WindowCaption" value="MainForm" ver="3"/>
+	<designed target="ShowWindowCaption" value="false" ver="3"/>
+	<designed target="ShowWindowMinimize" value="true" ver="3"/>
+	<designed target="ShowWindowMaximize" value="true" ver="3"/>
+	<designed target="ShowWindowClose" value="true" ver="3"/>
+	<designed target="AlwaysOnTop" value="true" ver="3"/>
+	<designed target="WindowSizeMode" value="1" ver="3"/>
+	<designed target="WindowBorderStyle" value="2" ver="3"/>
+	<designed target="WindowState" value="0" ver="3"/>
+	<designed target="WindowScalingMode" value="0" ver="3"/>
+	<designed target="MonitorNumber" value="0" ver="3"/>
+	<designed target="WindowPosition" value="0" ver="3"/>
+	<designed target="WindowCloseMode" value="0" ver="3"/>
+	<object access-modifier="private" name="List" display-name="List" uuid="dfc671d0-53de-4149-bcd4-81f67aaeb777" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="225" ver="3"/>
+		<designed target="Height" value="388.939" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="0" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xffffffff" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="Blanker" display-name="Blanker" uuid="35c75af5-796e-4322-b3e7-221ffe9caa50" base-type="Blanker" base-type-id="91658436-6b0b-47e1-bf20-c5092f6fa242" ver="3">
+			<designed target="X" value="112" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="OperativeMode" display-name="OperativeMode" uuid="369a6c81-5002-4fef-972b-472a87d04cac" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3" cardinal="1">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="238.833" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.ActiveMode==0)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Оперативный режим"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (Alarms.ActiveMode ==1) Alarms.ActiveMode=0;
+Close();
+]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_operative_mode_icon_16.png"/>
+		</object>
+		<object access-modifier="private" name="HistoricalMode" display-name="HistoricalMode" uuid="8dc67d31-9d97-4cac-a31e-252582887c08" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="258.613" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.ActiveMode==1)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Исторический режим"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (Alarms.ActiveMode == 0) Alarms.ActiveMode=1;
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_historical_mode_icon_16.png"/>
+		</object>
+		<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="5e21a0e9-c6f0-4237-93d6-f7cd6ed1e199" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="40.5599" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="2" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Acknow" display-name="Acknow" uuid="2537e5e1-0433-45d3-978f-7e58da2b4daa" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="285.173" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Квитировать"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.AckSelected();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<do-trace access-modifier="private" target="Permission" ver="3">
+				<body>
+					<![CDATA[!Alarms.FollowLatestEvent]]>
+				</body>
+			</do-trace>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_ack_one_16.png"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="e0a6a87c-83d5-40eb-bb43-3351bf844fcd" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="3">
+			<designed target="Orientation" value="2" ver="3"/>
+			<designed target="Gap" value="0" ver="3"/>
+		</object>
+		<object access-modifier="private" name="AcknowAll" display-name="AcknowAll" uuid="0772dcde-7f3e-4660-9179-d262e8cf9e8a" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="304.953" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Квитировать все"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.AckAll();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_ack_all_16.png"/>
+		</object>
+		<object access-modifier="private" name="AddComment" display-name="AddComment" uuid="18fac3f9-0171-4569-b955-1df421af41b6" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="324.733" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Добавить комментарий"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (Alarms.ActiveMode == 0 && Alarms.Main_panel.private.OperTableEmpty.Value) Close();
+if (Alarms.ActiveMode == 1 && Alarms.Main_panel.private.HistTableEmpty.Value) Close();
+
+Alarms.Main_panel.private.AckComment= Alarms.Main_panel.private.ComputerName;//Комментарий квитирования по умолчанию
+Alarms.Main_panel.private.Open_CommentAck.initMode = 1;//Режим ввода комментария
+Alarms.Main_panel.private.Open_CommentAck.Invoke();//Открываем окно ввода комментария
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="Permission" ver="3">
+				<body>
+					<![CDATA[(Alarms.ActiveMode == 0)?(!Alarms.Main_panel.private.OperTableEmpty && !Alarms.FollowLatestEvent):(!Alarms.Main_panel.private.HistTableEmpty)]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="eaff5d7f-9ae6-459a-ae38-a501cda4d068" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="106.68" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="3" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Snapshot" display-name="Snapshot" uuid="7ae2f515-0d01-4fa6-862d-7c51a2ca951d" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="351.293" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.Main_panel.ToolBar.SnapshotON)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Снимок"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (Alarms.Main_tables_Operative.Table_Operative_mode.TableModel_1.Frozen) Alarms.Main_panel.ToolBar.SnapshotON = false;
+else Alarms.Main_panel.ToolBar.SnapshotON = true;
+Alarms.Main_panel.ToolBar.btnClearAll.Active = !Alarms.Main_panel.ToolBar.SnapshotON;
+Alarms.Main_tables_Operative.Table_Operative_mode.TableModel_1.Frozen = !Alarms.Main_tables_Operative.Table_Operative_mode.TableModel_1.Frozen;
+Alarms.Main_panel.ToolBar.SnapshotON = Alarms.Main_tables_Operative.Table_Operative_mode.TableModel_1.Frozen;
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_table_snapshot_icon_16.png"/>
+		</object>
+		<object access-modifier="private" name="Line_3" display-name="Line_3" uuid="6adff660-2bda-4db0-ae7c-5a8d0001f0eb" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="133.24" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="4" ver="3"/>
+		</object>
+		<object access-modifier="private" name="SoundMute" display-name="SoundMute" uuid="b7698b4f-a73f-4617-b433-ac769673bec9" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="377.853" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Включить проигрывание звуков"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-trace access-modifier="private" target="Title" ver="3">
+				<body>
+					<![CDATA[(Alarms.Mute)?("Включить проигрывание звуков"):("Отключить проигрывание звуков")]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<body>
+					<![CDATA[(Alarms.Mute)?("Alarms_Icons/alarms_sound_disabled_16.png"):("Alarms_Icons/alarms_sound_enabled_16.png")]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress" form-by-id="false">
+				<body kind="om">
+					<![CDATA[Alarms.Mute = !Alarms.Mute;
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+		</object>
+		<object access-modifier="private" name="SoundNext" display-name="SoundNext" uuid="813eeb4b-66c7-4fb8-ad0d-eb57e78182be" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="397.633" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Пропустить звук"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress" form-by-id="false">
+				<body kind="om">
+					<![CDATA[Alarms.Sound_1.Active = false; 			  			// прерываем текущий звук события
+Alarms.Main_panel.private.SoundQueue2=""; 	// удаляем второй звук события
+Alarms.SkipCurrentSound(); 			// переходим к следующему событию
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_sound_forward_16.png"/>
+		</object>
+		<object access-modifier="private" name="SoundQueueClear" display-name="SoundQueueClear" uuid="f25fd824-e451-4c16-ab6f-f8fb3ea29ac5" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="417.413" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Очистить очередь звуков"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress" form-by-id="false">
+				<body kind="om">
+					<![CDATA[Alarms.ClearSoundQueue();
+Close();
+
+
+]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_sound_queue_clear_16.png"/>
+		</object>
+		<object access-modifier="private" name="Line_4" display-name="Line_4" uuid="359c050d-0b0e-4268-91a8-081d35d2cf06" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="199.359" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="5" ver="3"/>
+		</object>
+		<object access-modifier="private" name="TableClean" display-name="TableClean" uuid="6d33287e-dccb-4b67-8c1d-9286fab6d5ad" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="443.972" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Очистить список"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="MousePress" form-by-id="false">
+				<body kind="om">
+					<![CDATA[Alarms.ClearOperativeEventList();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="Permission" ver="4">
+				<body>
+					<![CDATA[!Alarms.Main_panel.ToolBar.SnapshotON]]>
+				</body>
+			</do-trace>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_table_clean_16.png"/>
+		</object>
+		<object access-modifier="private" name="FilterView" display-name="FilterView" uuid="dab0583c-f404-4f79-8ca4-65ef4d1bee33" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="108.675" ver="3"/>
+			<designed target="Y" value="451.752" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.StatePanel.ViewFilterON)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Фильтр отображения..."/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.Main_panel.private.Action_ViewFilterForm.Invoke();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_table_filter_16.png"/>
+		</object>
+		<object access-modifier="private" name="DefaultSorting" display-name="DefaultSorting" uuid="bcf7df8a-b2ae-4f46-9ef5-08f6bd700ede" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="129.5" ver="3"/>
+			<designed target="Y" value="503.333" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Сортировать по умолчанию"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="javascript">
+					<![CDATA[var sortArray = [];
+sortArray.push({'Id':'time', 'SortOrder':1, 'SortPriority':2});
+sortArray.push({'Id':'active_time', 'SortOrder':1, 'SortPriority':1});
+
+Alarms.Main_panel.private.SetSorting(JSON.stringify(sortArray));
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<body>
+					<![CDATA[(Alarms.Main_panel.private.defaultSorting)?("Alarms_Icons/alarms_base_checkmark_16.png"):("")]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.Main_panel.private.defaultSorting)?(true):(false)]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Sorting" display-name="Sorting" uuid="f0fd1b3a-e0e2-404c-a1e7-ed45dc218e0b" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="483.532" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Сортировка..."/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.Main_panel.private.Action_SortForm.Invoke();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(!Alarms.Main_panel.private.defaultSorting)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_sort_16.png"/>
+		</object>
+		<object access-modifier="private" name="Line_5" display-name="Line_5" uuid="c8b58319-9db2-4888-bbb6-e0f5f33126ef" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="265.479" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="6" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Print" display-name="Print" uuid="0e70c7b8-b922-4193-940e-99775d68e7bd" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="510.092" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Печать..."/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.Main_panel.private.Action_PrintForm.Invoke();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="Permission" ver="3">
+				<body>
+					<![CDATA[(Alarms.ActiveMode == 0)?(!Alarms.Main_panel.private.OperTableEmpty):(!Alarms.Main_panel.private.HistTableEmpty  && !Alarms.Main_panel.private.LoadingHistory)]]>
+				</body>
+			</do-trace>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_grid-print-16.png"/>
+		</object>
+		<object access-modifier="private" name="Export" display-name="Export" uuid="9ef97e08-a737-4b48-bfb1-6a7cce416503" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="529.872" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Сохранить..."/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[if (Alarms.ActiveMode == 0) Alarms.Main_panel.private.Action_ExportOperTable.Invoke();
+else Alarms.Main_panel.private.Action_ExportHistoryTable.Invoke();
+
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<do-trace access-modifier="private" target="Permission" ver="3">
+				<body>
+					<![CDATA[(Alarms.ActiveMode == 0)?(!Alarms.Main_panel.private.OperTableEmpty):(!Alarms.Main_panel.private.HistTableEmpty  && !Alarms.Main_panel.private.LoadingHistory)]]>
+				</body>
+			</do-trace>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_table_excel_icon_2_16.png"/>
+		</object>
+		<object access-modifier="private" name="Line_6" display-name="Line_6" uuid="b1e96dbf-4d63-4533-b1dd-045bde988a24" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="311.819" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="7" ver="3"/>
+		</object>
+		<object access-modifier="private" name="ShowToolbar" display-name="ShowToolbar" uuid="ffbdd427-afa7-45c3-b12d-6dc7659ddef1" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="556.432" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Показывать панель инструментов"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.DisplayToolbar = !Alarms.DisplayToolbar;
+Close();]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<body>
+					<![CDATA[(Alarms.DisplayToolbar)?("Alarms_Icons/alarms_base_checkmark_16.png"):("")]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.DisplayToolbar)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+		</object>
+		<object access-modifier="private" name="ShowStatePanel" display-name="ShowStatePanel" uuid="b442366e-d249-467a-90cf-a60769e3dbe6" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="576.212" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Показывать строку состояния"/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.DisplayStatePanel = !Alarms.DisplayStatePanel;
+Close();]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<body>
+					<![CDATA[(Alarms.DisplayStatePanel)?(true):(false)]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="FileImage" ver="3">
+				<body>
+					<![CDATA[(Alarms.DisplayStatePanel)?("Alarms_Icons/alarms_base_checkmark_16.png"):("")]]>
+				</body>
+			</do-trace>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+		</object>
+		<object access-modifier="private" name="Line_7" display-name="Line_7" uuid="d0773b6b-a79e-47dc-82a7-07393f428267" base-type="Line" base-type-id="34cf4e47-2408-4e7f-bc77-f51dfb4233ec" ver="3">
+			<designed target="X" value="-14.25" ver="3"/>
+			<designed target="Y" value="358.159" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="initWidth" ver="3" value="250"/>
+			<designed target="Tooltip" value="8" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Parameters" display-name="Parameters" uuid="a578817b-f0b4-4151-87ca-ed31ec758506" base-type="MenuItem" base-type-id="04e3bbef-2c63-476b-9113-c2b21a47da51" ver="3">
+			<designed target="X" value="94.675" ver="3"/>
+			<designed target="Y" value="602.772" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<init target="Active" ver="3" value="false"/>
+			<init target="Title" ver="3" value="Параметры..."/>
+			<init target="Checked" ver="3" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MousePress">
+				<body kind="om">
+					<![CDATA[Alarms.Main_panel.private.Action_SettingsForm.Invoke();
+Close();]]>
+				</body>
+			</do-on>
+			<init target="initWidth" ver="3" value="250"/>
+			<init target="Permission" ver="3" value="true"/>
+			<init target="FileImage" ver="4" value="Alarms_Icons/alarms_table_gear_icon_16.png"/>
+		</object>
+		<object access-modifier="private" name="Blanker_1" display-name="Blanker_1" uuid="3ae63cfb-4e17-4aa6-be62-e46c70d16edc" base-type="Blanker" base-type-id="91658436-6b0b-47e1-bf20-c5092f6fa242" ver="3">
+			<designed target="X" value="112" ver="3"/>
+			<designed target="Y" value="384.719" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Alarms" display-name="Alarms" uuid="4f22a4d8-b2b0-4060-a169-a782fc2f786b" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="3"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="WindowActivationChanged">
+		<body kind="om">
+			<![CDATA[if (!WindowActive)
+{
+	//Debug.Log("Close context menu");
+	Close();
+}
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="OpenFiltrForm" display-name="OpenFiltrForm" uuid="8c3813c8-f084-4105-9ff7-792fd07ce994" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="3"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="Opened">
+		<body kind="javascript">
+			<![CDATA[//Debug.Log("Open context menu");
+
+//Определяем размеры списка и скрываем по необходимости кнопки
+var heightList = 0;//Высота окна
+var widthList = List.OperativeMode.Field.Width; //Ширина окна
+var formObject = [];//Массив объектов списка
+var lastNotEmptyGroup = -1; // Индекс последней непустой группы
+
+//////Проверка разрешений на кнопки
+//Опер.режим
+if (!(Alarms.UseSecurity.Value ? Alarms.CurrentEventsAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.CurrentEventsAvailable.Value)) List.OperativeMode.Set_Size(0);
+//Ист.режим
+if (!(Alarms.UseSecurity.Value ? Alarms.EventHistoryAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.EventHistoryAvailable.Value)) List.HistoricalMode.Set_Size(0);
+//Квитировать
+if (!(Alarms.UseSecurity.Value ? Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.UserName.Value != "") || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.Acknow.Set_Size(0);
+//Квитировать все
+if (!(Alarms.UseSecurity.Value ? Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.UserName.Value != "") || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.AcknowAll.Set_Size(0);
+//Добавить комментарий
+if (!(Alarms.UseSecurity.Value ? Alarms.AllowAddComment.Value && Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.AllowAddComment.Value && Alarms.AcknowledgmentAvailable.Value && Alarms.Main_panel.private.UserName.Value != "")) List.AddComment.Set_Size(0);
+if (!(Alarms.ActiveMode.Value == 0 ? Alarms.CurrentEventsAvailable.Value : Alarms.EventHistoryAvailable.Value)) List.AddComment.Set_Size(0);
+//Снимок
+if (!(Alarms.UseSecurity.Value ? Alarms.SnapshotAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.SnapshotAvailable.Value) || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.Snapshot.Set_Size(0);
+//Отключить проигрывание звуков
+if (!(Alarms.UseSecurity.Value ? Alarms.SoundPlaybackManagmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.SoundPlaybackManagmentAvailable.Value) || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.SoundMute.Set_Size(0);
+//Пропустить звук
+if (!(Alarms.UseSecurity.Value ? Alarms.SoundPlaybackManagmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.SoundPlaybackManagmentAvailable.Value) || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.SoundNext.Set_Size(0);
+//Очистить очередь звуков
+if (!(Alarms.UseSecurity.Value ? Alarms.SoundPlaybackManagmentAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.SoundPlaybackManagmentAvailable.Value) || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.SoundQueueClear.Set_Size(0);
+//Очистить список
+if (!(Alarms.UseSecurity.Value ? Alarms.ClearingCurrentEventsAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.ClearingCurrentEventsAvailable.Value && Alarms.Main_panel.private.UserName.Value != "") || !Alarms.ActiveMode.Value == 0 || !Alarms.CurrentEventsAvailable.Value) List.TableClean.Set_Size(0);
+//Фильтр отображения
+if (!(Alarms.UseSecurity.Value ? Alarms.FilterAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.FilterAvailable.Value)) List.FilterView.Set_Size(0);
+//Сортировка по умолчанию
+if (!(Alarms.UseSecurity.Value ? Alarms.EventTableSortAvailability.Value && Alarms.Main_panel.private.BoolToken_8.Value && Alarms.IsFullAccessAllowed.Value : Alarms.EventTableSortAvailability.Value && Alarms.IsFullAccessAllowed.Value)) List.DefaultSorting.Set_Size(0);
+//Сортировка
+if (!(Alarms.UseSecurity.Value ? Alarms.EventTableSortAvailability.Value && Alarms.Main_panel.private.BoolToken_8.Value && Alarms.IsFullAccessAllowed.Value : Alarms.EventTableSortAvailability.Value && Alarms.IsFullAccessAllowed.Value)) List.Sorting.Set_Size(0);
+//Печать
+if (!(Alarms.UseSecurity.Value ? Alarms.PrintingAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.PrintingAvailable.Value)) List.Print.Set_Size(0);
+//Экспорт
+if (!(Alarms.UseSecurity.Value ? Alarms.ExportDataAvailability.Value && Alarms.Main_panel.private.BoolToken_8.Value : Alarms.ExportDataAvailability.Value)) List.Export.Set_Size(0);
+// Видимость команд скрытия/отображения областей окна
+if (!Alarms.GUIModificationAvailable.Value) List.ShowToolbar.Set_Size(0);
+if (!Alarms.GUIModificationAvailable.Value) List.ShowStatePanel.Set_Size(0);
+//Параметры
+if (!(Alarms.UseSecurity.Value ? Alarms.EditingSettingsAvailable.Value && Alarms.Main_panel.private.BoolToken_8.Value && Alarms.IsFullAccessAllowed.Value : Alarms.EditingSettingsAvailable.Value && Alarms.IsFullAccessAllowed.Value)) List.Parameters.Set_Size(0);
+
+//////////////////////////////////
+//Определяем наличие разделетилей
+var groups = [];
+groups.push(List.OperativeMode.Field.Height + List.HistoricalMode.Field.Height);
+groups.push(List.Acknow.Field.Height + List.AcknowAll.Field.Height + List.AddComment.Field.Height);
+groups.push(List.Snapshot.Field.Height);
+groups.push(List.SoundMute.Field.Height + List.SoundNext.Field.Height + List.SoundQueueClear.Field.Height);
+groups.push(List.TableClean.Field.Height + List.FilterView.Field.Height + List.DefaultSorting.Field.Height + List.Sorting.Field.Height);
+groups.push(List.Print.Field.Height + List.Export.Field.Height);
+groups.push(List.ShowToolbar.Field.Height + List.ShowStatePanel.Field.Height);
+groups.push(List.Parameters.Field.Height);
+
+var lines = [];
+lines.push(List.Line_1);
+lines.push(List.Line_2);
+lines.push(List.Line_3);
+lines.push(List.Line_4);
+lines.push(List.Line_5);
+lines.push(List.Line_6);
+lines.push(List.Line_7);
+
+for (let i = 0; i < groups.length; i++) {
+	if (groups[i] == 0 && i != groups.length - 1) lines[i].Set_Size(0);
+	if (groups[i] != 0) lastNotEmptyGroup = i;
+}
+
+// Удаляем последний разделитель
+if (lastNotEmptyGroup != -1 && lastNotEmptyGroup != groups.length - 1) lines[lastNotEmptyGroup].Set_Size(0);
+
+//Вычисляем высоту списка путем суммирования высот всех ее объектов
+formObject[0] = List.OperativeMode.Field.Height;
+formObject[1] = List.HistoricalMode.Field.Height;
+formObject[2] = List.Line_1.Field.Height;
+formObject[3] = List.Acknow.Field.Height;
+formObject[4] = List.AcknowAll.Field.Height;
+formObject[5] = List.AddComment.Field.Height;
+formObject[6] = List.Line_2.Field.Height;
+formObject[7] = List.Snapshot.Field.Height;
+formObject[8] = List.Line_3.Field.Height;
+formObject[9] = List.SoundMute.Field.Height;
+formObject[10] = List.SoundNext.Field.Height;
+formObject[11] = List.SoundQueueClear.Field.Height;
+formObject[12] = List.Line_4.Field.Height;
+formObject[13] = List.TableClean.Field.Height;
+formObject[14] = List.FilterView.Field.Height;
+formObject[15] = List.Sorting.Field.Height;
+formObject[16] = List.Line_5.Field.Height;
+formObject[17] = List.Print.Field.Height;
+formObject[18] = List.Export.Field.Height;
+formObject[19] = List.Line_6.Field.Height;
+formObject[20] = List.ShowToolbar.Field.Height;
+formObject[21] = List.ShowStatePanel.Field.Height;
+formObject[22] = List.Line_7.Field.Height;
+formObject[23] = List.Parameters.Field.Height;
+formObject[24] = List.DefaultSorting.Field.Height;
+
+for (let i = 0; i < formObject.length; i++) {
+	heightList += formObject[i];
+}
+
+//Задаем размер списка. 
+List.Width = widthList;
+List.Height = heightList;
+//Размеры формы
+Height = List.Height;
+Width = List.Width;
+//Размеры окна
+WindowHeight = List.Height;
+WindowWidth = List.Width;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="MonitorList_1" display-name="MonitorList_1" uuid="d150e351-94b0-46df-8cd5-1b13ba164824" base-type="MonitorList" base-type-id="c74bfc5a-253e-4144-8b20-917cf4cf333b" ver="3"/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="84b3dcc7-d158-428a-bb1d-198e5081bfd8" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Initialized">
+			<body kind="javascript">
+				<![CDATA[//Смещение окна в случае выхода за границы монитора
+var AllResolutionXP = 0;
+var AllResolutionXM = 0;
+var AllResolutionYP = 0;
+var AllResolutionYM = 0;
+var newX = WindowX;
+var newY = WindowY;
+var exit = false;
+
+for (let i = 0; i < MonitorList_1.Count(); i++)
+{
+	//Рассчет по координате X
+	if (MonitorList_1.GetX(i) >= 0)//Если монитор в положительных координатах
+	{
+		if (WindowX >= 0)//Если курсор мыши в положительных координатах
+		{
+			AllResolutionXP = AllResolutionXP + MonitorList_1.GetResolutionX(i);//Суммируем разрешения мониторов
+			if (WindowX<AllResolutionXP)//Определяем монитор, в котором сейчас находится курсор
+			{
+				if (WindowX + WindowWidth > AllResolutionXP) newX = AllResolutionXP - WindowWidth; //Если размеры окна выходят за координаты монитора
+			}
+		}
+	}
+	else //Если монитор в отрицательных координатах
+	{
+		if (WindowX < 0) //Если курсор мыши в отрицательных координатах
+		{
+			AllResolutionXM = AllResolutionXM - MonitorList_1.GetResolutionX(i);//Суммируем разность разрешений мониторов
+			if (WindowX>AllResolutionXM)//Определяем монитор, в котором сейчас находится курсор
+			{
+				if (WindowX + WindowWidth > Math.abs(AllResolutionXM+MonitorList_1.GetResolutionX(i))) newX = AllResolutionXM + MonitorList_1.GetResolutionX(i) - WindowWidth;//Если размеры окна выходят за координаты монитора
+			}
+		}
+	}
+	//Рассчет по координате Y
+	if (MonitorList_1.GetY(i) >= 0)//Если монитор в положительных координатах
+	{
+		if (WindowY >= 0)//Если курсор мыши в положительных координатах
+		{
+			AllResolutionYP = AllResolutionYP + MonitorList_1.GetResolutionY(i);//Суммируем разрешения мониторов
+			if (WindowY<AllResolutionYP)//Определяем монитор, в котором сейчас находится курсор
+			{
+				if (WindowY + WindowHeight > AllResolutionYP) newY = AllResolutionYP - WindowHeight; //Если размеры окна выходят за координаты монитора
+			}
+		}
+	}
+	else //Если монитор в отрицательных координатах
+	{
+		if (WindowY < 0) //Если курсор мыши в отрицательных координатах
+		{
+			AllResolutionYM = AllResolutionYM - MonitorList_1.GetResolutionY(i);//Суммируем разность разрешений мониторов
+			if (WindowY>AllResolutionYM)//Определяем монитор, в котором сейчас находится курсор
+			{
+				if (WindowY + WindowHeight > Math.abs(AllResolutionYM+MonitorList_1.GetResolutionY(i))) newY = AllResolutionYM + MonitorList_1.GetResolutionY(i) - WindowHeight;//Если размеры окна выходят за координаты монитора
+			}
+		}
+		
+	}
+	WindowX = newX;
+	WindowY = newY;
+	//Выходим при корректном положении окна
+	if (WindowX < AllResolutionXM && WindowY < AllResolutionYM) 
+	{
+		return;
+	}
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="Debug" display-name="Debug" uuid="d82055b3-ee4c-416a-94d5-42b2d838335d" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="4"/>
+</type>
+

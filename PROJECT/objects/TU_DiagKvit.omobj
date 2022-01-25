@@ -1,0 +1,73 @@
+<type access-modifier="private" name="TU_DiagKvit" display-name="TU_DiagKvit" uuid="538ab4ff-af1e-4664-81c0-07d92e13ab2b" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="1">
+	<designed target="X" value="0" ver="1"/>
+	<designed target="Y" value="0" ver="1"/>
+	<designed target="Rotation" value="0" ver="1"/>
+	<designed target="Scale" value="1" ver="1"/>
+	<designed target="Visible" value="true" ver="1"/>
+	<designed target="Enabled" value="true" ver="1"/>
+	<designed target="Tooltip" value="" ver="1"/>
+	<object access-modifier="private" name="opcCmd" display-name="opcCmd" uuid="d6a5fa39-6d81-43fa-8a88-76187fa426cd" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82">
+		<designed target="Value" value="0"/>
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="2">
+			<expr>
+				<![CDATA[here.in_Alias + here.in_CmdTag]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="opcName" display-name="opcName" uuid="74b2afd2-61e4-4f91-ba0b-c77be311fbfe" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="1">
+		<init target="Source" ver="1" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="2">
+			<expr>
+				<![CDATA[here.in_Alias+".ObjName"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="CmdTag" display-name="CmdTag" uuid="cfe0b87d-2dfd-48d5-97a0-4286e071025b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<object access-modifier="private" name="CmdName" display-name="CmdName" uuid="c18a9a07-beae-4b1c-927a-6a29809d9e7a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<object access-modifier="private" name="CmdNum" display-name="CmdNum" uuid="cfd16e94-d02b-4b5b-a78b-1d50f0f5d613" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb"/>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="fc949f48-ef16-49f3-b23d-84f0c595dc63" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<object access-modifier="private" name="OpenAccessDenied" display-name="OpenAccessDenied" uuid="8aa4f447-da64-49bc-ba67-9fb955fb32e4" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="false" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="1" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="d7d391ec-6f76-4ffe-9779-77bd4d11e93a" base-type="ConfirmDialog" base-type-id="2d5a1c0d-66f0-416a-b2c1-860cd0d2e88b" ver="1">
+				<init target="IsOKOnly" ver="1" value="true"/>
+				<init target="in_Title" ver="1" value="Внимание"/>
+				<init target="in_Message" ver="1" value="Доступ запрещен,недостаточно прав!"/>
+				<init target="MessageType" ver="1" value="error.png"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SendCommand" display-name="SendCommand" uuid="4e95bd61-ffbe-4905-8157-5773d70aa97e" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Invoked">
+			<body kind="om">
+				<![CDATA[opcCmd.Value = TypeConvert.ToUint2(CmdNum.Value);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Run" display-name="Run" uuid="145b5873-cc93-426e-adfb-17a9e974b086" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="1">
+		<designed target="Enabled" value="true" ver="1"/>
+		<designed target="InvokeTrigger" value="false" ver="1"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[//SergR
+//Проверяем права на подачу ТУ и либо сообщаем об отказе в доступе, либо открываем окно подтверждения ТУ
+if (unit.Security.EnableControl.Value)
+{SendCommand.Invoke();}
+else
+{OpenAccessDenied.Invoke();}]]>
+			</body>
+		</do-on>
+	</object>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="9e476131-97c9-44ef-b80d-92bbae9724ee" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<param access-modifier="private" name="in_CmdTag" display-name="in_CmdTag" uuid="bfb09046-e61b-4f56-b7f7-133b06280e51" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<init target="Alias" ver="2" ref="here.in_Alias"/>
+	<init target="CmdTag" ver="2" ref="here.in_CmdTag"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="ea393c27-ab99-4214-b465-2c352ca391df" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

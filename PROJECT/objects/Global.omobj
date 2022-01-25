@@ -1,0 +1,26 @@
+<object access-modifier="private" name="Global" display-name="Global" uuid="b884c527-d4fe-4f6c-9a81-3e4796d1c6a3" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="4">
+	<object access-modifier="private" name="OPCServer" display-name="OPCServer" uuid="299b1676-9666-46e3-9c07-68b2c3a50e62" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="4">
+		<designed target="Path" value="" ver="4"/>
+		<designed target="Active" value="true" ver="4"/>
+		<designed target="ReAdvise" value="0" ver="4"/>
+		<init target="Location" ver="4" value="127.0.0.1"/>
+		<init target="Port" ver="4" value="4395"/>
+		<init target="HistoryPort" ver="4" value="4950"/>
+		<init target="Timeout" ver="4" value="10000"/>
+		<init target="ConnectionEstablishTimeout" ver="4" value="10000"/>
+		<init target="MaxBufferPoolSize" ver="4" value="10000"/>
+	</object>
+	<object access-modifier="private" name="MessagesOper" display-name="MessagesOper" uuid="325d5ea4-15fd-4498-938d-4955df10dd9d" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="4">
+		<init target="Source" ver="4" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="4" value="MessagesOper.GenSource"/>
+	</object>
+	<object access-modifier="private" name="Network" display-name="Network" uuid="6207e092-be4a-4032-848d-11de248084ca" base-type="Network" base-type-id="aa841b9c-0610-4150-8495-3bfad7484a73" ver="4"/>
+	<object access-modifier="private" name="UserTree" display-name="UserTree" uuid="e1123d7d-494d-4e88-8c6e-82e0a28e2a39" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="SoundOff" display-name="SoundOff" uuid="3cf73bf8-5c85-4f74-9b5b-c7763fd25f6a" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<object access-modifier="private" name="Screen" display-name="Screen" uuid="0740d996-2955-44ab-9c15-33cc706b2c4b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="4"/>
+	<object access-modifier="private" name="Close_Project" display-name="Close_Project" uuid="b2f92b0c-ef5c-44f2-b759-328adf003445" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<object access-modifier="private" name="Close_Menu" display-name="Close_Menu" uuid="e8e560b0-e3bf-4b37-8829-c3c5f4db6426" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<object access-modifier="private" name="Alm_IC_on_Start" display-name="Alm_IC_on_Start" uuid="8789a068-a81a-4726-8559-b99eebf2b7df" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+	<object access-modifier="private" name="Local" display-name="Local" uuid="5226f799-215e-470a-b8f7-1cacc1ae7106" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="4"/>
+</object>
+

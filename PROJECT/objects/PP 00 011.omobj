@@ -1,0 +1,222 @@
+<type access-modifier="private" name="PP 00 011" display-name="PP 00 011" uuid="48febc44-e843-48b7-9de4-de89b7228125" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="2">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="c3272536-706b-451b-a27c-71a7fcc26536" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="180" ver="2"/>
+		<designed target="RoundingRadius" value="2" ver="2"/>
+		<designed target="PenColor" value="0xff000000" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="2" ver="2"/>
+		<designed target="BrushColor" value="0xff000000" ver="2"/>
+		<designed target="BrushStyle" value="1" ver="2"/>
+		<object access-modifier="private" name="RadialGradient_1" display-name="RadialGradient_1" uuid="4a5158df-c8b9-44b5-8248-8f99bb81d1bb" base-type="RadialGradient" base-type-id="ec8b2b95-2c92-44b2-a9aa-3ce4fc0f08b9" ver="2">
+			<designed target="XCenter" value="0.2" ver="2"/>
+			<designed target="YCenter" value="0.5" ver="2"/>
+			<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="1a31c686-e2c1-4eda-b954-d01cb96dd2d2" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="2">
+				<designed target="Position" value="0" ver="2"/>
+				<designed target="Color" value="0xff0b0b0b" ver="2"/>
+			</object>
+			<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="5df63113-5d38-4b05-ac9f-b2eb147f6043" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="2">
+				<designed target="Position" value="0.9" ver="2"/>
+				<designed target="Color" value="0xff3b3b3b" ver="2"/>
+			</object>
+		</object>
+		<do-trace access-modifier="private" target="PenColor" ver="3">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Basket_Board.Quality < 192 || Basket_Kvit_State.Quality < 192]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Basket_Board]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Basket_Kvit_State]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<object access-modifier="private" name="Blik" display-name="Blik" uuid="0bab1c70-9a96-4976-8eb3-bca5e9e53c4e" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="3">
+			<designed target="Period" value="1000" ver="3"/>
+			<designed target="Active" value="false" ver="3"/>
+			<do-trace access-modifier="private" target="Active" ver="3">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Basket_Kvit_State.Value]]>
+					</condition>
+					<expr>
+						<![CDATA[true]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[false]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="OnTimer">
+				<body kind="om">
+					<![CDATA[Alarm.PenColor = Alarm.PenColor ^ 0x00ff0000; ]]>
+				</body>
+			</do-on>
+		</object>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="inNum" display-name="inNum" uuid="39eabf7f-0e3c-4f71-bc81-45f0b3a46b92" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="170" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="A3.2" ver="2"/>
+		<designed target="Font" value="Arial,8,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+		<designed target="FontColor" value="0xffffffff" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<do-trace access-modifier="private" target="Text" ver="2">
+			<body>
+				<![CDATA[in_Number.Value]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="ModName" display-name="ModName" uuid="6cf02870-5a20-4079-b1a8-9e6a1282a216" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="0" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="48" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="PP 00 011" ver="2"/>
+		<designed target="Font" value="Arial,7,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+		<designed target="FontColor" value="0xffffffff" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="in_Number" display-name="in_Number" uuid="bde526c2-dcee-44f7-9bb0-3db59d07bd5e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="in_Position" display-name="in_Position" uuid="0f8e11ec-48f8-489e-a57c-ed948acafa68" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="32c9fbd7-2101-48dd-8e80-b6890c10da91" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="30" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="24" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="PWI" ver="2"/>
+		<designed target="Font" value="Sans Serif,6,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="0xff00ff00" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="d8d4d20b-d111-4f2e-9c4f-e105e7172c79" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+		<designed target="X" value="24" ver="2"/>
+		<designed target="Y" value="30" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="24" ver="2"/>
+		<designed target="Height" value="10" ver="2"/>
+		<designed target="Text" value="PWE" ver="2"/>
+		<designed target="Font" value="Sans Serif,6,-1,5,50,0,0,0,0,0" ver="2"/>
+		<designed target="FontColor" value="0xff00ff00" ver="2"/>
+		<designed target="TextAlignment" value="132" ver="2"/>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<param access-modifier="private" name="in_Alias" display-name="in_Alias" uuid="6158654b-ef31-474a-9c1f-2d25437ce5d5" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	<object access-modifier="private" name="Basket_Board" display-name="Basket_Board" uuid="7699a114-e751-4543-90c3-128f85ac9046" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="2">
+		<init target="Source" ver="2" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="3">
+			<body>
+				<![CDATA[here.Alias + ".Board." +  in_Position]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Basket_Kvit_State" display-name="Basket_Kvit_State" uuid="9fba79a1-5c17-4462-a908-fdf07762a5da" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="2">
+		<init target="Source" ver="2" ref="unit.Global.OPCServer"/>
+		<do-trace access-modifier="private" target="Path" ver="3">
+			<body>
+				<![CDATA[here.Alias + ".Kvit_state." +  in_Position]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Basket_Cmd" display-name="Basket_Cmd" uuid="8b0dd1c1-23ba-497e-8043-4fdca2347639" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="2">
+		<init target="Source" ver="2" ref="unit.Global.OPCServer"/>
+		<init target="Path" ver="3">
+			<expr>
+				<![CDATA[here.in_Alias + ".Cmd"]]>
+			</expr>
+		</init>
+	</object>
+	<object access-modifier="private" name="KvitAlarm" display-name="KvitAlarm" uuid="56aeee07-bfaa-48b9-803d-c34a89ba6918" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked">
+			<body kind="om">
+				<![CDATA[Basket_Cmd.Value = String.ToUint2(in_Position,0);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Alias" display-name="Alias" uuid="2d425041-6a8a-4692-ab1a-c61d9fd9e58e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="1"/>
+	<init target="Alias" ver="3">
+		<expr>
+			<![CDATA[here.in_Alias]]>
+		</expr>
+	</init>
+	<designed target="Opacity" value="1" ver="3"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (unit.Security.EnableControl.Value){
+	KvitAlarm.Invoke();
+}]]>
+		</body>
+	</do-on>
+	<init target="in_Position" ver="3" value="2"/>
+	<init target="in_Number" ver="3" value="A2"/>
+</type>
+

@@ -1,0 +1,240 @@
+<type access-modifier="private" name="Trends_Settings_ToolBar" display-name="Trends_Settings_ToolBar" uuid="36f4eff5-c44b-426c-abe8-cd2b5bbd5f99" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="515" ver="4"/>
+	<designed target="Height" value="590" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="0" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="4293980400" ver="4"/>
+	<designed target="BrushStyle" value="1" ver="4"/>
+	<designed target="WindowX" value="0" ver="4"/>
+	<designed target="WindowY" value="0" ver="4"/>
+	<designed target="WindowWidth" value="1920" ver="4"/>
+	<designed target="WindowHeight" value="1080" ver="4"/>
+	<designed target="WindowCaption" value="MainForm" ver="4"/>
+	<designed target="ShowWindowCaption" value="true" ver="4"/>
+	<designed target="ShowWindowMinimize" value="true" ver="4"/>
+	<designed target="ShowWindowMaximize" value="true" ver="4"/>
+	<designed target="ShowWindowClose" value="true" ver="4"/>
+	<designed target="AlwaysOnTop" value="false" ver="4"/>
+	<designed target="WindowSizeMode" value="0" ver="4"/>
+	<designed target="WindowBorderStyle" value="1" ver="4"/>
+	<designed target="WindowState" value="0" ver="4"/>
+	<designed target="WindowScalingMode" value="0" ver="4"/>
+	<designed target="MonitorNumber" value="0" ver="4"/>
+	<designed target="WindowPosition" value="0" ver="4"/>
+	<designed target="WindowCloseMode" value="0" ver="4"/>
+	<object access-modifier="private" name="Rec_Item" display-name="Rec_Item" uuid="04ef395c-d2f8-4901-88c5-7c0b02982d68" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4" cardinal="22">
+		<designed target="X" value="52" ver="4"/>
+		<designed target="Y" value="40" ver="4"/>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Rotation" value="0" ver="4"/>
+		<designed target="Scale" value="1" ver="4"/>
+		<designed target="Visible" value="true" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+		<designed target="Enabled" value="true" ver="4"/>
+		<designed target="Tooltip" value="" ver="4"/>
+		<designed target="Width" value="403" ver="4"/>
+		<designed target="Height" value="299" ver="4"/>
+		<designed target="RoundingRadius" value="0" ver="4"/>
+		<designed target="PenColor" value="4278190080" ver="4"/>
+		<designed target="PenStyle" value="0" ver="4"/>
+		<designed target="PenWidth" value="1" ver="4"/>
+		<designed target="BrushColor" value="4278190080" ver="4"/>
+		<designed target="BrushStyle" value="0" ver="4"/>
+		<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="00da5539-bad5-46f8-9711-f104a0922eaa" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="4">
+			<designed target="Weight" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="a2f47dea-0a62-4c36-8bed-af753c732978" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="4">
+			<designed target="X" value="24" ver="4"/>
+			<designed target="Y" value="2" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="24" ver="4"/>
+			<designed target="Height" value="24" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="3" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="ImageFile" value="" ver="4"/>
+			<designed target="Active" value="true" ver="4"/>
+			<designed target="CurrentFrameNumber" value="0" ver="4"/>
+			<designed target="Speed" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Image_2" display-name="Image_2" uuid="5889a0cf-f34d-4e64-806c-ec5029cb87df" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="4">
+			<designed target="X" value="60" ver="4"/>
+			<designed target="Y" value="2" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="24" ver="4"/>
+			<designed target="Height" value="24" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="3" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="ImageFile" value="" ver="4"/>
+			<designed target="Active" value="true" ver="4"/>
+			<designed target="CurrentFrameNumber" value="0" ver="4"/>
+			<designed target="Speed" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Checkbox_1" display-name="Checkbox_1" uuid="0da18a59-de20-40d9-8b3d-005781db957f" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="4">
+			<designed target="X" value="119" ver="4"/>
+			<designed target="Y" value="7" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="388" ver="4"/>
+			<designed target="Height" value="17" ver="4"/>
+			<designed target="Text" value="Checkbox" ver="4"/>
+			<designed target="Font" value="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" ver="4"/>
+			<designed target="FontColor" value="4278190080" ver="4"/>
+			<designed target="State" value="false" ver="4"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="StateChanged">
+				<body kind="om">
+					<![CDATA[if (bInit) pSettingsMain.Data.bToolBarBtnVisible[Index] = state;
+]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="58e63cd8-8bdf-4bd6-bb30-14146b42d9f7" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="4">
+		<designed target="Orientation" value="2" ver="4"/>
+		<designed target="Gap" value="0" ver="4"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="Opened">
+		<body kind="om">
+			<![CDATA[i:int4 = 0;
+while (i < Rec_Item.Length){
+	Rec_Item[i].Image_1.PenStyle = 0;
+	Rec_Item[i].Image_2.PenStyle = 0;
+	i = i +1;
+}
+
+Rec_Item[0].Checkbox_1.Text = "Переключение режимов";
+Rec_Item[0].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnOperMode.Image_1.ImageFile;
+Rec_Item[0].Image_2.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnHistMode.Image_1.ImageFile;
+
+Rec_Item[1].Checkbox_1.Text = "Отображать маркеры точек";
+Rec_Item[1].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnChartPoints.Image_1.ImageFile;
+Rec_Item[1].Image_2.ImageFile = "";
+
+Rec_Item[2].Checkbox_1.Text = "Позиционирование графиков";
+Rec_Item[2].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnHand.Image_1.ImageFile;
+Rec_Item[2].Image_2.ImageFile = "";
+
+Rec_Item[3].Checkbox_1.Text = "Масштабирование графиков";
+Rec_Item[3].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnZoom.Image_1.ImageFile;
+Rec_Item[3].Image_2.ImageFile = "";
+
+Rec_Item[4].Checkbox_1.Text = "Добавление вертикальных реперов";
+Rec_Item[4].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnReperAdd.Image_1.ImageFile;
+Rec_Item[4].Image_2.ImageFile = "";
+
+Rec_Item[5].Checkbox_1.Text = "Удаление реперов";
+Rec_Item[5].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnReperDel.Image_1.ImageFile;
+Rec_Item[5].Image_2.ImageFile = "";
+
+Rec_Item[6].Checkbox_1.Text = "Просмотр графиков с индивидуальным масштабом";
+Rec_Item[6].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnIndiZoom.Image_1.ImageFile;
+Rec_Item[6].Image_2.ImageFile = "";
+
+Rec_Item[7].Checkbox_1.Text = "Фиксированный диапазон шкалы значений";
+Rec_Item[7].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnAutoRange.Image_1.ImageFile;
+Rec_Item[7].Image_2.ImageFile = "";
+
+Rec_Item[8].Checkbox_1.Text = "Показывать дерево сигналов/источников";
+Rec_Item[8].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnSignalTree.Image_1.ImageFile;
+Rec_Item[8].Image_2.ImageFile = "";
+
+Rec_Item[9].Checkbox_1.Text = "Параметры";
+Rec_Item[9].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnSettings.Image_1.ImageFile;
+Rec_Item[9].Image_2.ImageFile = "";
+
+Rec_Item[10].Checkbox_1.Text = "Открыть файл";
+Rec_Item[10].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnOpen.Image_1.ImageFile;
+Rec_Item[10].Image_2.ImageFile = "";
+
+Rec_Item[11].Checkbox_1.Text = "Сохранить в файл";
+Rec_Item[11].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnSave.Image_1.ImageFile;
+Rec_Item[11].Image_2.ImageFile = "";
+
+Rec_Item[12].Checkbox_1.Text = "Приостановить, продолжить";
+Rec_Item[12].Image_1.ImageFile = "Trends_Icons/trends_play.png";
+Rec_Item[12].Image_2.ImageFile = "Trends_Icons/trends_pause.png";
+
+Rec_Item[13].Checkbox_1.Text = "Печать";
+Rec_Item[13].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnPrint.Image_1.ImageFile;
+Rec_Item[13].Image_2.ImageFile = "";
+
+Rec_Item[14].Checkbox_1.Text = "Отобразить данные в табличном виде";
+Rec_Item[14].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnTableView.Image_1.ImageFile;
+Rec_Item[14].Image_2.ImageFile = "";
+
+Rec_Item[15].Checkbox_1.Text = "Восстановить исходный размер";
+Rec_Item[15].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnHome.Image_1.ImageFile;
+Rec_Item[15].Image_2.ImageFile = "";
+
+Rec_Item[16].Checkbox_1.Text = "Масштабирование";
+Rec_Item[16].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnZoomIn.Image_1.ImageFile;
+Rec_Item[16].Image_2.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnZoomOut.Image_1.ImageFile;
+
+Rec_Item[17].Checkbox_1.Text = "Автоматическое масштабирование легенды";
+Rec_Item[17].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnZoomLegend.Image_1.ImageFile;
+Rec_Item[17].Image_2.ImageFile = "";
+
+Rec_Item[18].Checkbox_1.Text = "Масштабирование по вертикали, горизонтали";
+Rec_Item[18].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnHZoom.Image_1.ImageFile;
+Rec_Item[18].Image_2.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.btnVZoom.Image_1.ImageFile;
+
+Rec_Item[19].Checkbox_1.Text = "Просмотр более старых, новых данных";
+Rec_Item[19].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.RecHistory.btnPrevPeriod.Image_1.ImageFile;
+Rec_Item[19].Image_2.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.RecHistory.btnNextPeriod.Image_1.ImageFile;
+
+Rec_Item[20].Checkbox_1.Text = "Запрос";
+Rec_Item[20].Image_1.ImageFile = pSettingsMain.pTrends.Main_Panel.ToolBar.RecHistory.btnHistRequest.Image_1.ImageFile;
+Rec_Item[20].Image_2.ImageFile = "";
+
+Rec_Item[21].Checkbox_1.Text = "Отображать интервал запроса истории";
+Rec_Item[21].Image_1.ImageFile = "Trends_Icons/hist_data.png";
+Rec_Item[21].Image_2.ImageFile = "";
+
+Init();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="pSettingsMain" display-name="pSettingsMain" uuid="f086cde2-dc91-43bd-90cb-1919cc4fb135" base-type="Trends_SettingsMain" base-type-id="73f343c2-cdfc-4c21-b5ea-f00c75151521" base-const="true" base-ref="true" ver="4"/>
+	<do access-modifier="private" name="Init" display-name="Init" ver="4" type="" type-id="">
+		<body kind="om">
+			<![CDATA[i:int4 = 0;
+while (i < Rec_Item.Length){
+	Rec_Item[i].Checkbox_1.State = pSettingsMain.Data.bToolBarBtnVisible[i];
+	i = i +1;
+}
+
+
+bInit = true;]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="c8dca941-1ab2-4f51-91d4-456b0f616e1e" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="4"/>
+	<init target="bInit" ver="4" value="false"/>
+</type>
+

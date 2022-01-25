@@ -1,0 +1,847 @@
+<type ver="2" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" base-type="Form" uuid="4d754945-ea42-4c97-9c9a-2aab992cab7b" display-name="SettingsColors_1" name="Alarms_SettingsSeverity" access-modifier="private">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="615" ver="2"/>
+	<designed target="Height" value="380" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="0xfff0f0f0" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="1920" ver="2"/>
+	<designed target="WindowHeight" value="1080" ver="2"/>
+	<designed target="WindowCaption" value="MainForm" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="RecBorder" display-name="RecBorder" uuid="740f6785-40a3-4737-8178-7bf4a8147d92" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="9.5" ver="2"/>
+		<designed target="Y" value="12.5" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="535" ver="2"/>
+		<designed target="Height" value="361.666" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xff323232" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="25621c74-fc39-4088-8259-d0e32fd2269b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="42" ver="2"/>
+			<designed target="Y" value="27" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="63" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Значения" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="118422d6-1883-4b17-b444-b715dfd9ba3a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="42" ver="2"/>
+			<designed target="Y" value="-7" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="55" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Группа" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+		</object>
+		<object access-modifier="private" name="ComboBox_1" display-name="ComboBox_1" uuid="0c821d1c-ec4d-44e4-a344-894d6bd58f32" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="2">
+			<designed target="X" value="123" ver="2"/>
+			<designed target="Y" value="-9" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="418" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Editable" value="false" ver="2"/>
+			<designed target="Text" value="" ver="2"/>
+			<designed target="SelectedIndex" value="-1" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="MaxVisibleItems" value="10" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="SelectedChanged">
+				<body kind="javascript">
+					<![CDATA[var vf;
+ValueBox.TextEdit_Value.Enabled = true;
+ValueBox.RecBorder_Alarm.Visible = false;
+switch (selected) {
+	case 0: if (pSettingsForm.Settings.Severity.Range1.JSON != "")
+		vf = pSettingsForm.Settings.Severity.Range1.JSON; 
+		Checkbox_1.State  = pSettingsForm.Settings.Severity.Range1.SoundEnable;
+		RepeatBox.TextEdit_Repeat.Text   = pSettingsForm.Settings.Severity.Range1.nSoundRepeats;
+		PriorityBox.TextEdit_Priority.Text = pSettingsForm.Settings.Severity.Range1.SoundPriority;
+		break;
+	case 1: if (pSettingsForm.Settings.Severity.Range2.JSON != "")
+		vf = pSettingsForm.Settings.Severity.Range2.JSON; 
+		Checkbox_1.State  = pSettingsForm.Settings.Severity.Range2.SoundEnable;
+		RepeatBox.TextEdit_Repeat.Text   = pSettingsForm.Settings.Severity.Range2.nSoundRepeats;
+		PriorityBox.TextEdit_Priority.Text = pSettingsForm.Settings.Severity.Range2.SoundPriority;
+		break;
+	case 2: if (pSettingsForm.Settings.Severity.Range3.JSON != "")
+		vf = pSettingsForm.Settings.Severity.Range3.JSON; 
+		Checkbox_1.State  = pSettingsForm.Settings.Severity.Range3.SoundEnable;
+		RepeatBox.TextEdit_Repeat.Text   = pSettingsForm.Settings.Severity.Range3.nSoundRepeats;
+		PriorityBox.TextEdit_Priority.Text = pSettingsForm.Settings.Severity.Range3.SoundPriority;
+		break;
+	case 3: if (pSettingsForm.Settings.Severity.Range4.JSON != "")
+		vf = pSettingsForm.Settings.Severity.Range4.JSON; 
+		Checkbox_1.State  = pSettingsForm.Settings.Severity.Range4.SoundEnable;
+		RepeatBox.TextEdit_Repeat.Text   = pSettingsForm.Settings.Severity.Range4.nSoundRepeats;
+		PriorityBox.TextEdit_Priority.Text = pSettingsForm.Settings.Severity.Range4.SoundPriority;
+		ValueBox.TextEdit_Value.Enabled = false;
+		break;
+}
+
+if (RepeatBox.TextEdit_Repeat.Text == "" || RepeatBox.TextEdit_Repeat.Text == "0") PriorityBox.TextEdit_Priority.Enabled = false;
+else PriorityBox.TextEdit_Priority.Enabled = true;
+
+ValueBox.TextEdit_Value.Text = vf;
+ValueBox.TextEdit_Value.prevText = vf;
+
+if (bInit) pSettingsForm.selectedIndex = SelectedIndex; //Запоминаем выбранное положение
+CheckRange();
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+			<do-trace access-modifier="private" target="Enabled" ver="3">
+				<body>
+					<![CDATA[!(RepeatBox.TextEdit_Repeat.error || PriorityBox.TextEdit_Priority.error)]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Checkbox_1" display-name="Checkbox_1" uuid="9ce62a23-b76e-4d08-a9f5-1753f81f5c4d" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="2">
+			<designed target="X" value="123" ver="2"/>
+			<designed target="Y" value="58" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="418" ver="2"/>
+			<designed target="Height" value="17" ver="2"/>
+			<designed target="Text" value="Проигрывать звуки" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="State" value="false" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="StateChanged">
+				<body kind="javascript">
+					<![CDATA[if (bInit)
+{
+	switch (ComboBox_1.SelectedIndex) 
+	{
+		case 0: 
+			if (pSettingsForm.Settings.Severity.Range1.SoundEnable != state) pSettingsForm.bModifyed = true;
+			pSettingsForm.Settings.Severity.Range1.SoundEnable = state;
+			break;
+		case 1: 
+			if (pSettingsForm.Settings.Severity.Range2.SoundEnable != state) pSettingsForm.bModifyed = true;
+			pSettingsForm.Settings.Severity.Range2.SoundEnable = state;
+			break;
+		case 2: 
+			if (pSettingsForm.Settings.Severity.Range3.SoundEnable != state) pSettingsForm.bModifyed = true;
+			pSettingsForm.Settings.Severity.Range3.SoundEnable = state;
+			break;
+		case 3: 
+			if (pSettingsForm.Settings.Severity.Range4.SoundEnable != state) pSettingsForm.bModifyed = true;
+			pSettingsForm.Settings.Severity.Range4.SoundEnable = state;
+			break;
+	}
+}
+RepeatBox.TextEdit_Repeat.Enabled = state;
+PriorityBox.TextEdit_Priority.Enabled = (state)?(RepeatBox.TextEdit_Repeat.Text != "" && RepeatBox.TextEdit_Repeat.Text != "0"):(state);
+pSettingsForm.CheckModify();
+
+]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Label" display-name="Label" uuid="21530a6e-c52b-4582-9963-2d868a937bc6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="123" ver="2"/>
+			<designed target="Y" value="90" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="128" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Количество повторов" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Label" display-name="Label" uuid="c459f20c-7f10-44ad-9ecb-1bed1812b8fd" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="123" ver="2"/>
+			<designed target="Y" value="123" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="150.667" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Приоритет проигрывания" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<object access-modifier="private" name="RepeatBox" display-name="RepeatBox" uuid="b9b790c5-9291-40b2-9f39-a01eec255136" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+			<designed target="X" value="283" ver="4"/>
+			<designed target="Y" value="88" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="41" ver="4"/>
+			<designed target="Height" value="20" ver="4"/>
+			<designed target="RoundingRadius" value="0" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="0" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="BrushColor" value="4278190080" ver="4"/>
+			<designed target="BrushStyle" value="0" ver="4"/>
+			<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="b6aaee51-c0a8-4b27-81f4-d3dd896013a3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+				<designed target="X" value="-1" ver="2"/>
+				<designed target="Y" value="-1" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="43" ver="2"/>
+				<designed target="Height" value="22" ver="2"/>
+				<designed target="RoundingRadius" value="0" ver="2"/>
+				<designed target="PenColor" value="0xffff0000" ver="2"/>
+				<designed target="PenStyle" value="1" ver="2"/>
+				<designed target="PenWidth" value="1" ver="2"/>
+				<designed target="BrushColor" value="4278190080" ver="2"/>
+				<designed target="BrushStyle" value="0" ver="2"/>
+				<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="103b6e30-bd9a-47cf-9f4e-1a13a7e4ea0a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="-6.82143" ver="2"/>
+					<designed target="Y" value="1.84524" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="6.16667" ver="2"/>
+					<designed target="Height" value="16.5" ver="2"/>
+					<designed target="Text" value="!" ver="2"/>
+					<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+					<designed target="FontColor" value="0xffff0000" ver="2"/>
+					<designed target="TextAlignment" value="33" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<do-trace access-modifier="private" target="Visible" ver="3">
+					<body>
+						<![CDATA[TextEdit_Repeat.error]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="TextEdit_Repeat" display-name="TextEdit_Repeat" uuid="c4c5adca-5f58-4fc6-9d9b-981f302c0453" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+				<designed target="X" value="0" ver="2"/>
+				<designed target="Y" value="0" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="41" ver="2"/>
+				<designed target="Height" value="20" ver="2"/>
+				<designed target="Text" value="0" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="HideInput" value="false" ver="2"/>
+				<designed target="PlaceholderText" value="" ver="2"/>
+				<designed target="ReadOnly" value="false" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+					<body kind="javascript">
+						<![CDATA[var mask =  /\D+/;
+var temp = "";
+var str = text;
+
+if (str == "0" || str == "" || !Checkbox_1.State) PriorityBox.TextEdit_Priority.Enabled = false;
+else PriorityBox.TextEdit_Priority.Enabled = true;
+
+if (bInit) {
+	// Реализуем отмену изменений, если есть запрещенные символы
+	if (mask.test(str)) {
+		switch (ComboBox_1.SelectedIndex)
+		{
+			case 0:
+				temp = pSettingsForm.Settings.Severity.Range1.nSoundRepeats;
+				break;
+			case 1: 
+				temp = pSettingsForm.Settings.Severity.Range2.nSoundRepeats;
+				break;
+			case 2: 
+				temp = pSettingsForm.Settings.Severity.Range3.nSoundRepeats;
+				break;
+			default:
+				break;
+		}	
+		Text = temp; // Возвращаем исходное значение
+	// Проверяем поле на корректность ввода и сохраняем
+	} else {
+		var v = Number.parseInt(str);
+		var error = false;
+		if (str == "" || isNaN(v) || v < 0 || v > 100) error = true;
+		
+		switch (ComboBox_1.SelectedIndex) {
+			case 0: 
+				pSettingsForm.Settings.Severity.Range1.nSoundRepeats = str;
+				pSettingsForm.Settings.Severity.Range1.repeatsError.Value = error;
+				break;
+			case 1: 
+				pSettingsForm.Settings.Severity.Range2.nSoundRepeats = str; 
+				pSettingsForm.Settings.Severity.Range2.repeatsError.Value = error;
+				break;
+			case 2: 
+				pSettingsForm.Settings.Severity.Range3.nSoundRepeats = str; 
+				pSettingsForm.Settings.Severity.Range3.repeatsError.Value = error;
+				break;
+			case 3: 
+				pSettingsForm.Settings.Severity.Range4.nSoundRepeats = str; 
+				pSettingsForm.Settings.Severity.Range4.repeatsError.Value = error;
+				break;
+			default: 
+				break;
+		}
+		pSettingsForm.Settings.Severity.CheckRangeError();
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+					</body>
+				</do-on>
+				<object access-modifier="private" name="error" display-name="error" uuid="8d071e19-ab1e-41f9-b091-dde9cc710bfe" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+				<do-trace access-modifier="private" target="error" ver="3">
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 0 && pSettingsForm.Settings.Severity.Range1.repeatsError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 1 && pSettingsForm.Settings.Severity.Range2.repeatsError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 2 && pSettingsForm.Settings.Severity.Range3.repeatsError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 3 && pSettingsForm.Settings.Severity.Range4.repeatsError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[false]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<init target="error" ver="3" value="false"/>
+				<do-trace access-modifier="private" target="Tooltip" ver="3">
+					<body>
+						<![CDATA[(error)?("Значение параметра должно быть целым числом в пределах от 0 до 100."):("")]]>
+					</body>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="PriorityBox" display-name="PriorityBox" uuid="54a9d82d-cfd4-41de-9a8d-bc2e286d4f96" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+			<designed target="X" value="283" ver="4"/>
+			<designed target="Y" value="121" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="41" ver="4"/>
+			<designed target="Height" value="20" ver="4"/>
+			<designed target="RoundingRadius" value="0" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="0" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="BrushColor" value="4278190080" ver="4"/>
+			<designed target="BrushStyle" value="0" ver="4"/>
+			<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="405013cc-9644-4638-978c-2e5921523276" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+				<designed target="X" value="-1" ver="2"/>
+				<designed target="Y" value="-1" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="43" ver="2"/>
+				<designed target="Height" value="22" ver="2"/>
+				<designed target="RoundingRadius" value="0" ver="2"/>
+				<designed target="PenColor" value="0xffff0000" ver="2"/>
+				<designed target="PenStyle" value="1" ver="2"/>
+				<designed target="PenWidth" value="1" ver="2"/>
+				<designed target="BrushColor" value="4278190080" ver="2"/>
+				<designed target="BrushStyle" value="0" ver="2"/>
+				<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="d46128e3-71e1-40ec-9810-a84f8db87963" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="-6.82143" ver="2"/>
+					<designed target="Y" value="1.84524" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="6.16667" ver="2"/>
+					<designed target="Height" value="16.5" ver="2"/>
+					<designed target="Text" value="!" ver="2"/>
+					<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+					<designed target="FontColor" value="0xffff0000" ver="2"/>
+					<designed target="TextAlignment" value="33" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+					<designed target="Opacity" value="1" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<do-trace access-modifier="private" target="Visible" ver="3">
+					<body>
+						<![CDATA[TextEdit_Priority.error]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="TextEdit_Priority" display-name="TextEdit_Priority" uuid="463fe20c-97ba-4292-9e8f-428586b3d6aa" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+				<designed target="X" value="0" ver="2"/>
+				<designed target="Y" value="0" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="41" ver="2"/>
+				<designed target="Height" value="20" ver="2"/>
+				<designed target="Text" value="0" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="HideInput" value="false" ver="2"/>
+				<designed target="PlaceholderText" value="" ver="2"/>
+				<designed target="ReadOnly" value="false" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<object access-modifier="private" name="error" display-name="error" uuid="c8d32724-a284-4594-bfcc-206b4bdbf278" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+				<init target="error" ver="3" value="false"/>
+				<do-trace access-modifier="private" target="error" ver="3">
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 0 && pSettingsForm.Settings.Severity.Range1.priorityError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 1 && pSettingsForm.Settings.Severity.Range2.priorityError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 2 && pSettingsForm.Settings.Severity.Range3.priorityError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[ComboBox_1.SelectedIndex == 3 && pSettingsForm.Settings.Severity.Range4.priorityError]]>
+						</condition>
+						<expr>
+							<![CDATA[true]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[false]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<do-trace access-modifier="private" target="Tooltip" ver="3">
+					<body>
+						<![CDATA[(error)?("Значение параметра должно быть целым числом в пределах от 0 до 100."):("")]]>
+					</body>
+				</do-trace>
+				<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="TextChanged">
+					<body kind="javascript">
+						<![CDATA[var mask =  /\D+/;
+var temp = "";
+var str = text;
+
+if (bInit) {
+	// Реализуем отмену изменений, если есть запрещенные символы
+	if (mask.test(str)) {
+		switch (ComboBox_1.SelectedIndex)
+		{
+			case 0:
+				temp = pSettingsForm.Settings.Severity.Range1.SoundPriority;
+				break;
+			case 1: 
+				temp = pSettingsForm.Settings.Severity.Range2.SoundPriority;
+				break;
+			case 2: 
+				temp = pSettingsForm.Settings.Severity.Range3.SoundPriority;
+				break;
+			default:
+				break;
+		}	
+		Text = temp; // Возвращаем исходное значение
+	// Проверяем поле на корректность ввода и сохраняем
+	} else {
+		var v = Number.parseInt(str);
+		var error = false;
+		if (str == "" || isNaN(v) || v < 0 || v > 100) error = true;
+		
+		switch (ComboBox_1.SelectedIndex) {
+			case 0: 
+				pSettingsForm.Settings.Severity.Range1.SoundPriority = str;
+				pSettingsForm.Settings.Severity.Range1.priorityError.Value = error;
+				break;
+			case 1: 
+				pSettingsForm.Settings.Severity.Range2.SoundPriority = str; 
+				pSettingsForm.Settings.Severity.Range2.priorityError.Value = error;
+				break;
+			case 2: 
+				pSettingsForm.Settings.Severity.Range3.SoundPriority = str; 
+				pSettingsForm.Settings.Severity.Range3.priorityError.Value = error;
+				break;
+			case 3: 
+				pSettingsForm.Settings.Severity.Range4.SoundPriority = str; 
+				pSettingsForm.Settings.Severity.Range4.priorityError.Value = error;
+				break;
+			default: 
+				break;
+		}
+		pSettingsForm.Settings.Severity.CheckRangeError();
+		pSettingsForm.CheckModify();
+	}
+}
+]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="ValueBox" display-name="ValueBox" uuid="f4f27df6-1ef7-48fe-994b-a624e2dccdd3" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+			<designed target="X" value="123" ver="4"/>
+			<designed target="Y" value="24" ver="4"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Rotation" value="0" ver="4"/>
+			<designed target="Scale" value="1" ver="4"/>
+			<designed target="Visible" value="true" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+			<designed target="Enabled" value="true" ver="4"/>
+			<designed target="Tooltip" value="" ver="4"/>
+			<designed target="Width" value="418" ver="4"/>
+			<designed target="Height" value="20" ver="4"/>
+			<designed target="RoundingRadius" value="0" ver="4"/>
+			<designed target="PenColor" value="4278190080" ver="4"/>
+			<designed target="PenStyle" value="0" ver="4"/>
+			<designed target="PenWidth" value="1" ver="4"/>
+			<designed target="BrushColor" value="4278190080" ver="4"/>
+			<designed target="BrushStyle" value="0" ver="4"/>
+			<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="88d4b6fb-2621-485a-9a24-555dac6855dd" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+				<designed target="X" value="-1" ver="2"/>
+				<designed target="Y" value="-1" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="420" ver="2"/>
+				<designed target="Height" value="22" ver="2"/>
+				<designed target="RoundingRadius" value="0" ver="2"/>
+				<designed target="PenColor" value="0xffff0000" ver="2"/>
+				<designed target="PenStyle" value="1" ver="2"/>
+				<designed target="PenWidth" value="1" ver="2"/>
+				<designed target="BrushColor" value="4278190080" ver="2"/>
+				<designed target="BrushStyle" value="0" ver="2"/>
+				<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="ef194ef1-2920-42d1-b01a-a82e812e2e5c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+					<designed target="X" value="-6.82143" ver="2"/>
+					<designed target="Y" value="1.84524" ver="2"/>
+					<designed target="Rotation" value="0" ver="2"/>
+					<designed target="Scale" value="1" ver="2"/>
+					<designed target="Visible" value="true" ver="2"/>
+					<designed target="Enabled" value="true" ver="2"/>
+					<designed target="Tooltip" value="" ver="2"/>
+					<designed target="Width" value="6.16667" ver="2"/>
+					<designed target="Height" value="16.5" ver="2"/>
+					<designed target="Text" value="!" ver="2"/>
+					<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+					<designed target="FontColor" value="0xffff0000" ver="2"/>
+					<designed target="TextAlignment" value="33" ver="2"/>
+					<designed target="ZValue" value="0" ver="3"/>
+				</object>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+			</object>
+			<object access-modifier="private" name="TextEdit_Value" display-name="TextEdit_Value" uuid="61c8f4ae-9053-4dcf-aa63-0774e2cbc6d7" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+				<designed target="X" value="0" ver="2"/>
+				<designed target="Y" value="0" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="418" ver="2"/>
+				<designed target="Height" value="20" ver="2"/>
+				<designed target="Text" value="" ver="2"/>
+				<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+				<designed target="FontColor" value="4278190080" ver="2"/>
+				<designed target="TextAlignment" value="129" ver="2"/>
+				<designed target="HideInput" value="false" ver="2"/>
+				<designed target="PlaceholderText" value="" ver="2"/>
+				<designed target="ReadOnly" value="false" ver="2"/>
+				<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="EditFinished">
+					<body kind="javascript">
+						<![CDATA[//провека допустимости значений
+if (bInit)
+{
+	var Values = ValueBox.TextEdit_Value.Text;
+	//Записываем значение в соответствующее поле
+	switch (ComboBox_1.SelectedIndex)
+	{
+		case 0:
+			pSettingsForm.Settings.Severity.Range1.JSON = Values;
+			break;
+		case 1: 
+			pSettingsForm.Settings.Severity.Range2.JSON = Values;
+			break;
+		case 2: 
+			pSettingsForm.Settings.Severity.Range3.JSON = Values;
+			break;
+	}
+
+	CheckRange(); //Функция проверки корректности значений полей
+	pSettingsForm.CheckModify();
+}
+return;
+
+
+]]>
+					</body>
+				</do-on>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="3"/>
+				<object access-modifier="private" name="prevText" display-name="prevText" uuid="3895f1d8-c5ce-43b9-8986-a041796988b8" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="9a4f4162-cec5-43e6-a3b7-7561bd49453d" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Initialized">
+			<body kind="om">
+				<![CDATA[RecBorder.ComboBox_1.AddItem("Особой важности");
+RecBorder.ComboBox_1.AddItem("Важные");
+RecBorder.ComboBox_1.AddItem("Значительные");
+RecBorder.ComboBox_1.AddItem("Прочие");
+RecBorder.ComboBox_1.SelectedIndex = pSettingsForm.selectedIndex;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="pSettingsForm" display-name="pSettingsForm" uuid="154ed3c9-1bc5-4dc4-91aa-eb806a884fe6" base-type="SettingsForm" base-type-id="82dc7618-130c-486c-840d-5d302f40306b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="8f31882f-6270-4aef-bf27-14fb146f191b" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="om">
+			<![CDATA[if (RecBorder.RepeatBox.TextEdit_Repeat.Text == "" || RecBorder.RepeatBox.TextEdit_Repeat.Text == "0") RecBorder.PriorityBox.TextEdit_Priority.Enabled = false;
+else RecBorder.PriorityBox.TextEdit_Priority.Enabled = true;
+bInit=true;
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="e911ba51-8b71-4bc6-a492-08349460c136" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<do access-modifier="private" name="CheckAllMatch" display-name="CheckAllMatch" ver="3" type="int1" type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed">
+		<body kind="javascript">
+			<![CDATA[// Функция проверки совпадений диапазонов полей
+var range1 = str1;
+var range2 = str2;
+var range3 = str3;
+var matchGroupNumber = -1; // Номер группы, с которой найдено совпадение
+var rangeGroup = [];
+
+rangeGroup[0] = pSettingsForm.Settings.Severity.Range1;
+rangeGroup[1] = pSettingsForm.Settings.Severity.Range2;
+rangeGroup[2] = pSettingsForm.Settings.Severity.Range3;
+
+// Функция проверки совпадений элементов в массиве
+function CheckMatch(str) {
+	let commonArray = str.split(",").filter(s => s!="");//#23420 отбрасываем пустые элементы
+	var uniqueArray = new Set(commonArray);
+	if (uniqueArray.size != commonArray.length) return true
+	return false;
+}
+
+// Вычисляем совпадения
+switch (numberRange) {
+	case 0:
+		if (CheckMatch(range1 + "," + range2) && !/[A-Za-z]/g.test(range1 + "," + range2)) matchGroupNumber = 1;
+		if (CheckMatch(range1 + "," + range3) && !/[A-Za-z]/g.test(range1 + "," + range3)) matchGroupNumber = 2;
+		break;
+	case 1:
+		if (CheckMatch(range2 + "," + range1) && !/[A-Za-z]/g.test(range2 + "," + range1)) matchGroupNumber = 0;
+		if (CheckMatch(range2 + "," + range3) && !/[A-Za-z]/g.test(range2 + "," + range3)) matchGroupNumber = 2;	
+		break;
+	case 2:
+		if (CheckMatch(range3 + "," + range1) && !/[A-Za-z]/g.test(range3 + "," + range1)) matchGroupNumber = 0;
+		if (CheckMatch(range3 + "," + range2) && !/[A-Za-z]/g.test(range3 + "," + range2)) matchGroupNumber = 1;
+		break;
+}
+
+// Запоминаем общую ошибку совпадений диапазонов
+var commonRange = "";
+if (!/[A-Za-z]/g.test(range1)) commonRange += range1 + ",";
+if (!/[A-Za-z]/g.test(range2)) commonRange += range2 + ",";
+if (!/[A-Za-z]/g.test(range3)) commonRange += range3 + ",";
+pSettingsForm.Settings.Severity.errorMatch = CheckMatch(commonRange);
+
+return matchGroupNumber;]]>
+		</body>
+		<param access-modifier="private" name="numberRange" display-name="" uuid="df194299-ed1a-4b48-ac7b-312e322b2e9a" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+		<param access-modifier="private" name="str1" display-name="" uuid="0059c20f-b404-47e1-a559-ee71be048402" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="str2" display-name="" uuid="b0781fb3-253e-4192-81b8-8897ed501580" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+		<param access-modifier="private" name="str3" display-name="" uuid="f69ea44d-e0eb-4703-a5f7-de1c27463bbc" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="3"/>
+	</do>
+	<object access-modifier="private" name="bDefSet" display-name="bDefSet" uuid="b237e9fa-8a11-4cdc-9889-d8a90e62ab37" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) pSettingsForm.Close();
+]]>
+		</body>
+	</do-on>
+	<do access-modifier="private" name="CheckRange" display-name="CheckRange" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[//Функция проверки корректности значений полей
+var errorStr = "";
+var parsedSeverityString = "";
+var errorMatchGroupNumber;
+var range = [], error = ["","","",""];
+var selectedIndex = RecBorder.ComboBox_1.SelectedIndex;
+if (selectedIndex < 0 || selectedIndex > 2) return;
+
+range[0] = pSettingsForm.Settings.Severity.Range1;
+range[1] = pSettingsForm.Settings.Severity.Range2;
+range[2] = pSettingsForm.Settings.Severity.Range3;
+
+//Проверяем поле на наличие синтаксической ошибки
+	parsedSeverityString = pSettingsForm.Settings.Severity.TryParseSeverityString(range[selectedIndex].JSON);
+	range[selectedIndex].JSON_temp = pSettingsForm.pAlarms.Main_panel.private.GapToArray(parsedSeverityString);
+
+////Проверка правильности ввода значения поля
+if (parsedSeverityString == "errorSyntax") error[selectedIndex] = "Ошибка ввода. Допустим ввод только чисел от 1 до 1000, дефиса, пробела и запятой";
+
+////Проверка, что в записи диапазона числа идут от меньшего к большему
+if (parsedSeverityString == "errorValues") error[selectedIndex] = "Ошибка ввода. Некорректное задание диапазона";
+
+////Проверка, что значения полей не пересекаются
+if (parsedSeverityString == "errorMatch") error[selectedIndex] = "Ошибка ввода. Значения введённого диапазона пересекаются";
+
+//Запоминаем ошибку для соответствующего диапазона
+range[selectedIndex].syntaxError = /./.test(error[selectedIndex]);
+
+//Проверяем все поля на совпадения между собой
+errorMatchGroupNumber = CheckAllMatch(selectedIndex,range[0].JSON_temp,range[1].JSON_temp,range[2].JSON_temp);
+if (errorMatchGroupNumber != -1) error[selectedIndex] = "Ошибка ввода. Значения группы \"" + RecBorder.ComboBox_1.GetItem(selectedIndex) + "\" совпадают со значениями группы \"" + RecBorder.ComboBox_1.GetItem(errorMatchGroupNumber) + "\"";
+
+// Записываем парсенную строку в случае отсутствия ошибки
+if (error[selectedIndex] == "") {
+	RecBorder.ValueBox.TextEdit_Value.Text = parsedSeverityString;
+	range[selectedIndex].JSON = parsedSeverityString;
+}
+
+//Записываем хинт ошибки выбранного поля важности (если есть)
+errorStr = error[selectedIndex]; 
+RecBorder.ValueBox.RecBorder_Alarm.Tooltip = errorStr;
+
+//Определяем видимость красной рамки по выбранному полю и наличия ошибок в нем
+RecBorder.ValueBox.RecBorder_Alarm.Visible = (((selectedIndex == 0) && error[0] != "") || ((selectedIndex == 1) && error[1] != "") || ((selectedIndex == 2) && error[2] != ""));
+
+//Формируем строку важности информационных значений как все незанятые элементы диапазона от остальных значений важности 
+if (!pSettingsForm.errorForm1) pSettingsForm.Settings.Severity.GetOtherEventsSeverity();
+pSettingsForm.Settings.Severity.CheckRangeError();
+return;
+
+]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="selectedIndex" display-name="selectedIndex" uuid="5b5e59d6-8b6a-4c69-9f09-4e35686ec972" base-type="int1" base-type-id="756a0a23-7e63-4a13-8a35-e8a38909e5ed" ver="3"/>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+	<object access-modifier="private" name="notifying_bool_1" display-name="notifying_bool_1" uuid="fee3e585-d756-42a6-8e93-f359fdb16517" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+</type>
+

@@ -1,0 +1,841 @@
+<type ver="2" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" base-type="Form" uuid="3a63182a-45e8-4259-a203-84dcd20232b8" display-name="Form_1" name="Alarms_FilterRequestForm" access-modifier="private">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="420" ver="2"/>
+	<designed target="Height" value="200" ver="2"/>
+	<designed target="PenColor" value="0xff000000" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="420" ver="2"/>
+	<designed target="WindowHeight" value="250" ver="2"/>
+	<designed target="WindowCaption" value="Фильтр запроса" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="1" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="8f9ecc19-6d9b-4190-866c-5ac473ba4577" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="Main_FilterForm" display-name="Main_FilterForm" uuid="191e0393-3335-4648-8838-9997c38e5445" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="70.0334" ver="2"/>
+		<designed target="Y" value="169.9" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="280" ver="2"/>
+		<designed target="Height" value="26" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="private" display-name="private" uuid="ac18aff4-6296-4b9b-98e2-13bff502f9eb" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="26" ver="2"/>
+			<designed target="Y" value="-93.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="21" ver="2"/>
+			<designed target="Height" value="17.5" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="4278190080" ver="2"/>
+			<designed target="PenStyle" value="0" ver="2"/>
+			<designed target="PenWidth" value="1" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="FilterString" display-name="FilterString" uuid="12629a5c-f868-4cf4-9f8f-ec5b453a1829" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+		</object>
+		<object access-modifier="private" name="Button_Cancel" display-name="Button_Cancel" uuid="9017d77e-4899-48c7-970d-f4c2efbc328c" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+			<designed target="X" value="156" ver="2"/>
+			<designed target="Y" value="-1" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="85" ver="2"/>
+			<designed target="Height" value="23" ver="2"/>
+			<designed target="Text" value="Отмена" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ButtonPressed">
+				<body kind="om">
+					<![CDATA[Close();]]>
+				</body>
+			</do-on>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="Button_Apply" display-name="Button_Apply" uuid="5718c2c7-2f6b-47f5-8eb7-3ebb720917f1" base-type="SystemButton" base-type-id="22504b6b-d24c-45e5-a9dd-6fb41e3d49c1" ver="2">
+			<designed target="X" value="33" ver="2"/>
+			<designed target="Y" value="-1" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="85" ver="2"/>
+			<designed target="Height" value="23" ver="2"/>
+			<designed target="Checkable" value="false" ver="2"/>
+			<designed target="Text" value="Применить" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="ButtonPressed">
+				<body kind="javascript">
+					<![CDATA[var severityStr = Severity.TextEdit_1.Text;
+var messageStr = Message.TextEdit_1.Text;
+var sourceStr = Source.TextEdit_1.Text;
+var objectInfo = {};
+var acknowState = here.Acknow.ComboBox_1.SelectedIndex;
+var JSONStr;
+var acknowStr;
+var Acknow;
+var error = false;
+objectInfo['AND'] = [];
+//Формируем JSON запрос в случае, если соответствующее поле фильтра заполнено
+if (severityStr.length > 0) 
+{
+	try
+	{
+		severityStr = Link_Alarms.Main_panel.private.JSONstringForFilter(severityStr,"severity",1,false);
+		if (severityStr == "error" || !Link_Alarms.SetAdvancedRequestFilterAsJson(severityStr)) throw 'myException';
+		severityStr = JSON.parse(severityStr);
+		objectInfo[objectInfo['AND'].push(severityStr)];
+	}
+	catch(err)
+	{
+		Severity.RecBorder_Alarm.Visible = true;
+		error = true;
+	}
+}
+if (messageStr.length > 0)
+{
+	try
+	{
+		messageStr = Link_Alarms.Main_panel.private.JSONstringForFilter(messageStr,"message",1,false);
+		if (messageStr == "error" || !Link_Alarms.SetAdvancedRequestFilterAsJson(messageStr)) throw 'myException';
+		messageStr = JSON.parse(messageStr);
+		objectInfo[objectInfo['AND'].push(messageStr)];
+	}
+	catch(err)
+	{
+		Message.RecBorder_Alarm.Visible = true;
+		error = true;
+	}
+}
+if (sourceStr.length > 0)
+{
+	try
+	{
+		sourceStr = Link_Alarms.Main_panel.private.JSONstringForFilter(sourceStr,"source",1,false);
+		if (sourceStr == "error" || !Link_Alarms.SetAdvancedRequestFilterAsJson(sourceStr)) throw 'myException';
+		sourceStr = JSON.parse(sourceStr);
+		objectInfo[objectInfo['AND'].push(sourceStr)];
+	}
+	catch(err)
+	{
+		Source.RecBorder_Alarm.Visible = true;
+		error = true;
+	}
+}
+
+if (here.Acknow.ComboBox_1.GetItem(acknowState) != "Все") 
+{
+	if (here.Acknow.ComboBox_1.GetItem(acknowState) == "Квитированные")
+	{
+		Acknow = '{"acked": true}';
+		acknowStr = JSON.parse(Acknow);
+	}
+	else
+	{
+		Acknow = '{"acked": false}';
+		acknowStr = JSON.parse(Acknow);
+	}
+	objectInfo[objectInfo['AND'].push(acknowStr)];
+}
+
+if (!error) 
+{
+	//записываем объект в виде строки. Если было заполнено только одно поле фильтра - выводим это поле, иначе - массив полей.
+	if (objectInfo['AND'].length > 1) JSONStr = JSON.stringify(objectInfo);
+	else JSONStr = JSON.stringify(objectInfo['AND'][0]);
+	
+	//Передача строки в функцию фильтрации (если true - без ошибок)
+	Link_Alarms.SetAdvancedRequestFilterAsJson(JSONStr);
+	
+	//Сохранение данных
+	Link_Alarms.Main_panel.private.RequestFilter.severity = Severity.TextEdit_1.Text;
+	Link_Alarms.Main_panel.private.RequestFilter.message = Message.TextEdit_1.Text;
+	Link_Alarms.Main_panel.private.RequestFilter.source = Source.TextEdit_1.Text;
+	Link_Alarms.Main_panel.private.RequestFilter.acknow = here.Acknow.ComboBox_1.GetItem(here.Acknow.ComboBox_1.SelectedIndex);
+	
+	//Функция вывода данных после запроса
+	Link_Alarms.Main_panel.private.LoadHistory();
+	Close();
+}
+else Journal.Text_1.Text = "Ошибка формирования запроса фильтра. Проверьте корректность введенных данных";]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Link_Alarms" display-name="Link_Alarms" uuid="9d764a16-3cdd-4c82-8f51-e6e34c5233c4" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="private" display-name="private" uuid="a0e9ce61-4699-4e25-868d-d3d0037046c5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="0" ver="2"/>
+		<designed target="Y" value="12" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="9.42857" ver="2"/>
+		<designed target="Height" value="5.42857" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+	</object>
+	<object access-modifier="private" name="Severity" display-name="Severity" uuid="c9c25859-7264-4650-b1a2-d9339a06a801" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="25" ver="2"/>
+		<designed target="Y" value="4" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="365" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="f50c2391-8453-4fd2-8e24-fa16570b3c00" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-7" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="67.8501" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Важность:" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="83adbaab-ce96-48bd-bf09-32a98db114a9" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="41391743-3d32-4052-b8aa-314e2a7c22d2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="3"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="20838765-1bd3-4ece-8ed8-27d5513f058e" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="HideInput" value="false" ver="2"/>
+			<designed target="PlaceholderText" value="" ver="2"/>
+			<designed target="ReadOnly" value="false" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="EditFinished">
+				<body kind="javascript">
+					<![CDATA[Severity.RecBorder_Alarm.Visible = false;
+/*var str = Severity.TextEdit_1.Text;
+//Инициализируем шаблоны
+//последовательная запись аргументов
+var mask1 = /[><=]\d+\s*[><=]\d+/g;
+//повторение знаков
+var mask2 = /[>]{2}|[<]{2}|[=]{2}|(><)|(<>)/g;
+//наличие букв латинского алфавита
+var mask3 = /\D[A-Za-z]/g;
+//проверка на соответствие записи типа аргумент-операнд-аргумент
+var mask4 =/[><=]*\d*[()]*\s*(\&\s*(НЕ)?[!]?|И\s*(НЕ)?[!]?|ИЛИ\s*(НЕ)?[!]?|\|\s*(НЕ)?[!]?|\s*(НЕ)?\s*[!]?){1}\s*[()]*[><=]+\d+/g;
+//наличие кириллицы
+var mask5 = /[А-Яа-я]/g;
+var count = 0;
+//общий паттерн
+var elementPattern = /([(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|[<>=\d*]+)/igu;
+var errorArray = [];
+var commonArray = [];
+
+commonArray = str.match(elementPattern);
+//опеределяем количество скобок
+if (commonArray != null) 
+{
+	for (let i = 0; i < commonArray.length; i++)
+	{
+		if (commonArray[i] == "(") count++;
+		if (commonArray[i] == ")") count--;
+	}
+}
+//тестируем строку по каждому шаблону
+errorArray.push(mask1.test(str));
+errorArray.push(mask2.test(str));
+errorArray.push(mask3.test(str));
+//в этих случаях несовпадение с шаблоном = неправильная запись
+str = str.replace(mask4,"");
+errorArray.push(mask5.test(str));
+//удаляем правильные совпадения
+str = str.replace(/[!]*[><=]+\d+/g,"");
+str = str.replace(/[(]/g,"");
+str = str.replace(/[)]/g,"");
+//если в строке что-то осталось или массив ошибок содержит ошибки, то подсвечиваем рамку
+if ((str.length > 0 && str != "")|| errorArray[0] || errorArray[1] || errorArray[2] || errorArray[3] || count != 0) 
+{
+	Severity.RecBorder_Alarm.Visible = true;
+	Journal.Text_1.Text = "Условия фильтрации содержат ошибки";
+}
+bErrorFlag = Severity.RecBorder_Alarm.Visible;*/]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="3"/>
+		</object>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Message" display-name="Message" uuid="96fdcbc0-6b9d-4b08-b90c-7328f965954f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="25" ver="2"/>
+		<designed target="Y" value="34" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="365" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="2cd0b639-d666-4edf-bd4e-66e3bd24877a" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-7" ver="2"/>
+			<designed target="Y" value="5.5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="72.2694" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Сообщение:" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+		</object>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="779f4173-4925-4da0-b59c-7393b22ecb58" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="fb5d1127-c393-4a6d-9500-5d50544db5b7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="7b3fc42b-43b7-4691-9654-c6cbc4a3eb39" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="0xff000000" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="HideInput" value="false" ver="2"/>
+			<designed target="PlaceholderText" value="" ver="2"/>
+			<designed target="ReadOnly" value="false" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="EditFinished">
+				<body kind="javascript">
+					<![CDATA[Message.RecBorder_Alarm.Visible = false;
+/*var str = Message.TextEdit_1.Text;
+//Инициализируем шаблоны
+//повторение знаков
+var mask1 = /[!]{2}|[=]{2}/g;
+var count = 0;
+
+//паттерн элемента
+var elementPattern = /[(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|(\s*[А-Яа-я0-9A-Za-z ?!=;,._-]*[^&()|]\s*)/g;
+//паттер оператора
+var operatorPattern = /([&])|([ИЛИ]+)|([|])|(И)/g;
+var errorArray = [];
+var commonArray = [];
+
+commonArray = str.match(elementPattern);
+//опеределяем количество скобок
+if (commonArray != null) 
+{
+	for (let i = 0; i < commonArray.length; i++)
+	{
+		if (commonArray[i] == "(") count++;
+		if (commonArray[i] == ")") count--;
+	}
+}
+//тестируем строку по каждому шаблону
+errorArray.push(mask1.test(str));
+//если в строке что-то осталось или массив ошибок содержит ошибки, то подсвечиваем рамку
+if (errorArray[0] || count != 0) 
+{
+	Message.RecBorder_Alarm.Visible = true;
+	Journal.Text_1.Text = "Условия фильтрации содержат ошибки";
+}
+bErrorFlag = Message.RecBorder_Alarm.Visible;
+*/]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<designed target="ZValue" value="0" ver="4"/>
+		<designed target="Opacity" value="1" ver="4"/>
+	</object>
+	<object access-modifier="private" name="Source" display-name="Source" uuid="fd0adf91-f572-4ba8-a05f-9755da83083c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="25" ver="2"/>
+		<designed target="Y" value="64" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="365" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="d750990e-853b-4a0c-803a-69f99209edb1" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="-7" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="114.1" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Источник события:" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="b168695e-0b15-4459-964f-6b0839b27e66" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="901ea04d-77a0-4e1a-87a6-5b04ef69bbc0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+				<designed target="ZValue" value="0" ver="4"/>
+				<designed target="Opacity" value="1" ver="4"/>
+			</object>
+			<designed target="ZValue" value="0" ver="3"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+		<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="7f79843e-1bd8-4bef-b93f-c5b782f4f239" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="2">
+			<designed target="X" value="118" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="0xff000000" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="HideInput" value="false" ver="2"/>
+			<designed target="PlaceholderText" value="" ver="2"/>
+			<designed target="ReadOnly" value="false" ver="2"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="EditFinished">
+				<body kind="javascript">
+					<![CDATA[Source.RecBorder_Alarm.Visible = false;
+/*var str = Source.TextEdit_1.Text;
+//Инициализируем шаблоны
+//повторение знаков
+var mask1 = /[!]{2}|[=]{2}/g;
+var count = 0;
+
+//общий паттерн
+var elementPattern = /([(]|[)]|(НЕ)|(ИЛИ)|(И)|[!]|[&]|[|]|[<>=\d*\w*[А-Яа-я]+)/igu;
+var errorArray = [];
+
+var commonArray = str.match(elementPattern);
+//опеределяем количество скобок
+if (commonArray != null) 
+{
+	for (let i = 0; i < commonArray.length; i++)
+	{
+		if (commonArray[i] == "(") count++;
+		if (commonArray[i] == ")") count--;
+	}
+}
+//тестируем строку по каждому шаблону
+errorArray.push(mask1.test(str));
+//если в строке что-то осталось или массив ошибок содержит ошибки, то подсвечиваем рамку
+if (errorArray[0] || count != 0) 
+{
+	Source.RecBorder_Alarm.Visible = true;
+	Journal.Text_1.Text = "Условия фильтрации содержат ошибки";
+}
+bErrorFlag = Source.RecBorder_Alarm.Visible;*/]]>
+				</body>
+			</do-on>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[Severity.TextEdit_1.Text = Link_Alarms.Main_panel.private.RequestFilter.severity;
+Message.TextEdit_1.Text = Link_Alarms.Main_panel.private.RequestFilter.message;
+Source.TextEdit_1.Text = Link_Alarms.Main_panel.private.RequestFilter.source;
+var acknow = Link_Alarms.Main_panel.private.RequestFilter.acknow;
+//Заполняем combobox
+Acknow.ComboBox_1.AddItem("Все");
+Acknow.ComboBox_1.AddItem("Неквитированные");
+Acknow.ComboBox_1.AddItem("Квитированные");
+if (acknow != "")
+{
+	if (acknow == "Квитированные") 
+		Acknow.ComboBox_1.SelectedIndex=2;
+	else if (acknow == "Неквитированные")
+		Acknow.ComboBox_1.SelectedIndex=1;
+	else
+		Acknow.ComboBox_1.SelectedIndex=0;
+}
+else
+{
+	Acknow.ComboBox_1.SelectedIndex=0;
+}
+
+bErrorFlag = false;
+ReadTitle();
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Journal" display-name="Journal" uuid="132a873a-a0b4-4d0d-9055-8ce96af02fee" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="18" ver="2"/>
+		<designed target="Y" value="127.4" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="378.4" ver="2"/>
+		<designed target="Height" value="36" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="0xffb3b3b3" ver="2"/>
+		<designed target="PenStyle" value="1" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3c0448aa-ed03-4bb0-9ad6-aade02e9b4f9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="2.73333" ver="2"/>
+			<designed target="Y" value="2" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="372" ver="2"/>
+			<designed target="Height" value="31" ver="2"/>
+			<designed target="Text" value="Заполните поля фильтра" ver="2"/>
+			<designed target="Font" value="Tahoma,8,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="33" ver="2"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="bErrorFlag" display-name="bErrorFlag" uuid="c2b7a4c4-df43-4722-8f32-aa571bb894e4" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[var error = (Severity.RecBorder_Alarm.Visible || Message.RecBorder_Alarm.Visible|| Source.RecBorder_Alarm.Visible)
+Main_FilterForm.Button_Apply.Enabled = !error;
+if (!error) Journal.Text_1 = "";
+
+
+
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="private_1" display-name="private_1" uuid="578e5061-2cc7-4cfc-9614-cd019e2204be" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="51.2857" ver="2"/>
+		<designed target="Y" value="94.286" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="9.42857" ver="2"/>
+		<designed target="Height" value="5.42857" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="1" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+	</object>
+	<object access-modifier="private" name="Acknow" display-name="Acknow" uuid="69fcb9ca-b505-4e57-a73d-a93d2017cb90" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+		<designed target="X" value="12.8335" ver="2"/>
+		<designed target="Y" value="92" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Tooltip" value="" ver="2"/>
+		<designed target="Width" value="398.333" ver="2"/>
+		<designed target="Height" value="30" ver="2"/>
+		<designed target="RoundingRadius" value="0" ver="2"/>
+		<designed target="PenColor" value="4278190080" ver="2"/>
+		<designed target="PenStyle" value="0" ver="2"/>
+		<designed target="PenWidth" value="0" ver="2"/>
+		<designed target="BrushColor" value="4278190080" ver="2"/>
+		<designed target="BrushStyle" value="0" ver="2"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="81ca7202-4b19-450f-900d-cb927f80188f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+			<designed target="X" value="5.1665" ver="2"/>
+			<designed target="Y" value="4" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="116.017" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Text" value="Квитировано:" ver="2"/>
+			<designed target="Font" value="Tahoma,9,-1,5,50,0,0,0,0,0,Обычный" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+		</object>
+		<object access-modifier="private" name="RecBorder_Alarm" display-name="RecBorder_Alarm" uuid="4837226f-1dd8-4dbd-b251-e7c0671700bc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="2">
+			<designed target="X" value="133" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="false" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="253" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="RoundingRadius" value="0" ver="2"/>
+			<designed target="PenColor" value="0xffff0000" ver="2"/>
+			<designed target="PenStyle" value="1" ver="2"/>
+			<designed target="PenWidth" value="2" ver="2"/>
+			<designed target="BrushColor" value="4278190080" ver="2"/>
+			<designed target="BrushStyle" value="0" ver="2"/>
+			<object access-modifier="private" name="Text_Alarm" display-name="Text_Alarm" uuid="31173384-3016-4286-9100-1e7d02a84e0d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="2">
+				<designed target="X" value="-6.82143" ver="2"/>
+				<designed target="Y" value="1.84524" ver="2"/>
+				<designed target="Rotation" value="0" ver="2"/>
+				<designed target="Scale" value="1" ver="2"/>
+				<designed target="Visible" value="true" ver="2"/>
+				<designed target="Enabled" value="true" ver="2"/>
+				<designed target="Tooltip" value="" ver="2"/>
+				<designed target="Width" value="6.16667" ver="2"/>
+				<designed target="Height" value="16.5" ver="2"/>
+				<designed target="Text" value="!" ver="2"/>
+				<designed target="Font" value="Tahoma,10,-1,5,75,0,0,0,0,0,Полужирный" ver="2"/>
+				<designed target="FontColor" value="0xffff0000" ver="2"/>
+				<designed target="TextAlignment" value="33" ver="2"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="ComboBox_1" display-name="ComboBox_1" uuid="f11dad0c-2d07-4f49-b6a8-45a087158fcc" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="2">
+			<designed target="X" value="130" ver="2"/>
+			<designed target="Y" value="5" ver="2"/>
+			<designed target="Rotation" value="0" ver="2"/>
+			<designed target="Scale" value="1" ver="2"/>
+			<designed target="Visible" value="true" ver="2"/>
+			<designed target="Enabled" value="true" ver="2"/>
+			<designed target="Tooltip" value="" ver="2"/>
+			<designed target="Width" value="254" ver="2"/>
+			<designed target="Height" value="20" ver="2"/>
+			<designed target="Editable" value="false" ver="2"/>
+			<designed target="Text" value="" ver="2"/>
+			<designed target="SelectedIndex" value="-1" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="FontColor" value="4278190080" ver="2"/>
+			<designed target="MaxVisibleItems" value="10" ver="2"/>
+			<designed target="ZValue" value="0" ver="4"/>
+			<designed target="Opacity" value="1" ver="4"/>
+		</object>
+	</object>
+	<do access-modifier="private" name="ReadTitle" display-name="ReadTitle" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[//Заполняем заголовки столбцов
+var Title = [], Column = [];
+var str = "";
+var hint = "";
+
+Title[0] = Severity;
+Title[1] = Message;
+Title[2] = Source;
+Title[3] = Acknow;
+
+Column[0] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_6;
+Column[1] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_4;
+Column[2] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_5;
+Column[3] = Link_Alarms.Main_tables_Operative.Table_Operative_mode.Colum_7;
+
+//Если заголовок не входит в поле, то ставим многоточие и переносим полное имя в хинт
+for (let i = 0; i < Title.length; i++)
+{
+	hint = "";
+	str = Column[i].Title + ":";
+	if (str.length > 25) 
+	{
+		hint = str;
+		str = str.substr(0,22) + "...";
+	}
+	Title[i].Text_1.Text = str;
+	Title[i].Text_1.Tooltip = hint;
+}
+
+
+
+]]>
+		</body>
+	</do>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

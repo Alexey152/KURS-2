@@ -1,0 +1,20 @@
+<type access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="0a351cb2-ea9c-4796-9cae-eda7c28df5ee" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="4">
+	<designed target="X" value="0" ver="4"/>
+	<designed target="Y" value="0" ver="4"/>
+	<designed target="ZValue" value="0" ver="4"/>
+	<designed target="Rotation" value="0" ver="4"/>
+	<designed target="Scale" value="1" ver="4"/>
+	<designed target="Visible" value="true" ver="4"/>
+	<designed target="Opacity" value="1" ver="4"/>
+	<designed target="Enabled" value="true" ver="4"/>
+	<designed target="Tooltip" value="" ver="4"/>
+	<designed target="Width" value="100" ver="4"/>
+	<designed target="Height" value="100" ver="4"/>
+	<designed target="RoundingRadius" value="0" ver="4"/>
+	<designed target="PenColor" value="4278190080" ver="4"/>
+	<designed target="PenStyle" value="1" ver="4"/>
+	<designed target="PenWidth" value="1" ver="4"/>
+	<designed target="BrushColor" value="4278190080" ver="4"/>
+	<designed target="BrushStyle" value="0" ver="4"/>
+</type>
+

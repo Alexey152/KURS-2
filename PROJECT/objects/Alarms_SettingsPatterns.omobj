@@ -1,0 +1,411 @@
+<type ver="2" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" base-type="Form" uuid="ebea196a-3107-4b8b-9ace-6843fabd4752" display-name="Alarms_SettingsPatterns" name="Alarms_SettingsPatterns" access-modifier="private">
+	<designed target="X" value="0" ver="2"/>
+	<designed target="Y" value="0" ver="2"/>
+	<designed target="Rotation" value="0" ver="2"/>
+	<designed target="Scale" value="1" ver="2"/>
+	<designed target="Visible" value="true" ver="2"/>
+	<designed target="Enabled" value="true" ver="2"/>
+	<designed target="Tooltip" value="" ver="2"/>
+	<designed target="Width" value="615" ver="2"/>
+	<designed target="Height" value="410" ver="2"/>
+	<designed target="PenColor" value="4278190080" ver="2"/>
+	<designed target="PenStyle" value="0" ver="2"/>
+	<designed target="PenWidth" value="1" ver="2"/>
+	<designed target="BrushColor" value="4293980400" ver="2"/>
+	<designed target="BrushStyle" value="1" ver="2"/>
+	<designed target="WindowX" value="0" ver="2"/>
+	<designed target="WindowY" value="0" ver="2"/>
+	<designed target="WindowWidth" value="550" ver="2"/>
+	<designed target="WindowHeight" value="410" ver="2"/>
+	<designed target="WindowCaption" value="Вид таблицы" ver="2"/>
+	<designed target="ShowWindowCaption" value="true" ver="2"/>
+	<designed target="ShowWindowMinimize" value="false" ver="2"/>
+	<designed target="ShowWindowMaximize" value="false" ver="2"/>
+	<designed target="ShowWindowClose" value="true" ver="2"/>
+	<designed target="AlwaysOnTop" value="false" ver="2"/>
+	<designed target="WindowSizeMode" value="0" ver="2"/>
+	<designed target="WindowBorderStyle" value="2" ver="2"/>
+	<designed target="WindowState" value="0" ver="2"/>
+	<designed target="WindowScalingMode" value="0" ver="2"/>
+	<designed target="MonitorNumber" value="0" ver="2"/>
+	<designed target="WindowPosition" value="2" ver="2"/>
+	<designed target="WindowCloseMode" value="0" ver="2"/>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="3b216221-c9d5-492e-9d90-05eccfc7c7c6" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="pSettingsForm" display-name="pSettingsForm" uuid="53d22bd5-80bc-4fbe-8f0c-8c16f95e423d" base-type="SettingsForm" base-type-id="82dc7618-130c-486c-840d-5d302f40306b" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="bInit" display-name="bInit" uuid="8e80e136-7d29-4584-b937-352edb46781e" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="2"/>
+	<init target="bInit" ver="2" value="false"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="Opened">
+		<body kind="javascript">
+			<![CDATA[RowNumber = -1;
+bInit = true;//Разрешение на обработку формами своих значений
+Focus = true; //Переводим Focus на форму для обработки нажатия клавиш
+pSettingsForm.CheckModify();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="KeyPress">
+		<body kind="om">
+			<![CDATA[vi: uint4 = event.KeyCode;
+if (vi==75) pSettingsForm.Close();
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="TextEdit_1" display-name="TextEdit_1" uuid="09f69e6e-4ec2-44cf-9c67-b0baaf80d4a6" base-type="TextEdit" base-type-id="53a97863-93f3-45a1-a2ea-9ff98d2dcdd9" ver="3">
+		<designed target="X" value="28" ver="3"/>
+		<designed target="Y" value="2" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="482" ver="3"/>
+		<designed target="Height" value="30" ver="3"/>
+		<designed target="Text" value="" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="TextAlignment" value="129" ver="3"/>
+		<designed target="HideInput" value="false" ver="3"/>
+		<designed target="PlaceholderText" value="Введите комментарий здесь" ver="3"/>
+		<designed target="ReadOnly" value="false" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="TextChanged">
+			<body kind="om">
+				<![CDATA[if (Text != "") NotEmpty = true;
+else NotEmpty = false;]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="PatternsTable" display-name="PatternsTable" uuid="a6311cb9-e15f-4162-8143-fb475b94df45" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="2">
+		<designed target="X" value="28" ver="2"/>
+		<designed target="Y" value="34" ver="2"/>
+		<designed target="Rotation" value="0" ver="2"/>
+		<designed target="Scale" value="1" ver="2"/>
+		<designed target="Visible" value="true" ver="2"/>
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="Width" value="482" ver="2"/>
+		<designed target="Height" value="335" ver="2"/>
+		<designed target="SelectionBehavior" value="1" ver="2"/>
+		<designed target="SelectionMode" value="1" ver="2"/>
+		<designed target="LatestRowTracking" value="false" ver="2"/>
+		<object access-modifier="private" name="Patterns" display-name="Patterns" uuid="33fce9ec-c8bd-4db0-9d0f-aa4f129848c0" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="2">
+			<designed target="Title" value="Шаблоны комментариев" ver="2"/>
+			<designed target="Description" value="" ver="2"/>
+			<designed target="Id" value="Patterns" ver="2"/>
+			<designed target="BackgroundColor" value="4293980400" ver="2"/>
+			<designed target="ForegroundColor" value="4278190080" ver="2"/>
+			<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="TextAlignment" value="129" ver="2"/>
+			<designed target="TitleBackgroundColor" value="4293980400" ver="2"/>
+			<designed target="TitleForegroundColor" value="4278190080" ver="2"/>
+			<designed target="TitleFont" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="2"/>
+			<designed target="Width" value="429" ver="2"/>
+			<designed target="WidthResizeMode" value="1" ver="2"/>
+			<designed target="Emptiable" value="true" ver="2"/>
+			<designed target="Hidden" value="false" ver="2"/>
+			<designed target="NumberFormat" value="%d" ver="2"/>
+			<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="2"/>
+			<designed target="JsonFilter" value="" ver="2"/>
+			<designed target="SortingEnabled" value="false" ver="2"/>
+			<designed target="SortOrder" value="0" ver="2"/>
+			<designed target="SortPriority" value="0" ver="2"/>
+			<designed target="WordWrap" value="false" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="SelectionChanged">
+			<body kind="javascript">
+				<![CDATA[//Ищем выбранное поле в таблице
+RowNumber = -1;
+for (let i=0; i < GetRowCount(); i++)
+{	
+	if (IsRowSelected(i)) 
+	{
+		RowNumber = i;
+		TextEdit_1.Text = GetCellData(i,0);
+	}
+}
+if (RowNumber == -1) TextEdit_1.Text = "";
+]]>
+			</body>
+		</do-on>
+		<designed target="HeaderHeight" value="21" ver="3"/>
+		<designed target="HeaderVisible" value="true" ver="3"/>
+		<designed target="RowHeight" value="30" ver="3"/>
+		<designed target="RowOrder" value="0" ver="3"/>
+		<init target="TableModel" ver="3" ref="SettingsForm_1.Settings.Patterns.Table"/>
+		<designed target="SelectionOverlayEnabled" value="true" ver="3"/>
+	</object>
+	<object access-modifier="private" name="NotEmpty" display-name="NotEmpty" uuid="671cc33b-a31c-4282-9340-ce2bac52343c" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="RowNumber" display-name="RowNumber" uuid="fe4f6629-fa26-4049-8f05-cf8140bdd920" base-type="notifying_int1" base-type-id="cc2bf8ea-3898-4228-bc8f-71a7738f0c62" ver="3"/>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="3" event="MouseClick">
+		<body kind="om">
+			<![CDATA[PatternsTable.SetSelectedRows("[]");]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="test" display-name="test" uuid="079bbd7a-bc37-429f-a006-fe9702d0ddf8" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<do access-modifier="private" name="ButtonPress" display-name="ButtonPress" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[Button_Delete_2.OnHoverPenColor = Button_Delete_2.PenColor;
+Button_Delete_2.OnHoverFontColor = 0xffc0c0c0;
+Button_Delete_2.OnHoverBrushColor = Button_Delete_2.BrushColor;]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="ButtonLeave" display-name="ButtonLeave" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[Button_Delete_2.OnHoverPenColor = 0xff00aaff;
+Button_Delete_2.OnHoverFontColor = 0xff000000;
+Button_Delete_2.OnHoverBrushColor = 0xffffffff;]]>
+		</body>
+	</do>
+	<param access-modifier="private" name="SettingsForm_1" display-name="SettingsForm_1" uuid="8ac53ae2-f371-4abb-b5f5-c0b741671e64" base-type="SettingsForm" base-type-id="82dc7618-130c-486c-840d-5d302f40306b" base-const="true" base-ref="true" ver="3"/>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="faf71b7b-bf96-4ed2-90a5-73f11d4ede39" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="514.5" ver="3"/>
+		<designed target="Y" value="2.5003" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="75" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Добавить" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[if (TextEdit_1.Text != "") 
+{
+	if (RowNumber == -1)
+	{	
+		pSettingsForm.Settings.Patterns.Table.AddRow();
+		pSettingsForm.Settings.Patterns.Table.SetCellData(pSettingsForm.Settings.Patterns.Table.GetRowCount()-1, 0, TextEdit_1.Text);
+	}
+	else 
+	{
+		pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber,0,TextEdit_1.Text);
+		PatternsTable.SetSelectedRows("[]");
+	}
+	TextEdit_1.Text = "";
+	pSettingsForm.CheckModify();
+}
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[(NotEmpty || RowNumber != -1)?(true):(false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="3">
+			<body>
+				<![CDATA[(RowNumber != -1)?("Изменить"):("Добавить")]]>
+			</body>
+		</do-trace>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+	</object>
+	<object access-modifier="private" name="Button_2" display-name="Button_2" uuid="0eb1d133-bf8b-46a3-a839-69ade227b220" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="514.5" ver="3"/>
+		<designed target="Y" value="30.833" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="75" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Удалить" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[(RowNumber != -1)?(true):(false)]]>
+			</body>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[pSettingsForm.Settings.Patterns.Table.RemoveRow(RowNumber);
+pSettingsForm.CheckModify();
+//PatternTable.SetSelectedRows("[]");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Button_3" display-name="Button_3" uuid="75dacab0-7672-4106-89f1-098464ee4301" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="514.5" ver="3"/>
+		<designed target="Y" value="58.8333" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="75" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Вверх" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[(RowNumber > 0)?(true):(false)]]>
+			</body>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[//Двигаем строку вверх
+var tempRow;
+var currentRow;
+
+//Перемещаем строку вверх
+currentRow = pSettingsForm.Settings.Patterns.Table.GetCellData(RowNumber,0);
+tempRow = pSettingsForm.Settings.Patterns.Table.GetCellData(RowNumber - 1,0);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber-1,0,currentRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber,0,tempRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber-1,0,currentRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber,0,tempRow);
+//Выделяем перенесенную строку
+PatternsTable.SetSelectedRows(JSON.stringify([RowNumber-1]));
+pSettingsForm.CheckModify();
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Button_4" display-name="Button_4" uuid="7cb8ccee-7ba6-4ab3-afc2-79d12576905c" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="3">
+		<designed target="X" value="514.5" ver="3"/>
+		<designed target="Y" value="85.833" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="75" ver="3"/>
+		<designed target="Height" value="23" ver="3"/>
+		<designed target="Checkable" value="false" ver="3"/>
+		<designed target="Text" value="Вниз" ver="3"/>
+		<designed target="TextAlignment" value="132" ver="3"/>
+		<designed target="Font" value="Tahoma,8.25,-1,5,50,0,0,0,0,0" ver="3"/>
+		<designed target="FontColor" value="4278190080" ver="3"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="3"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="3"/>
+		<designed target="BrushColor" value="4293980400" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<designed target="OnClickBrushColor" value="4288716960" ver="3"/>
+		<designed target="OnClickBrushStyle" value="1" ver="3"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="3"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="3"/>
+		<designed target="DisabledBrushColor" value="4288716960" ver="3"/>
+		<designed target="DisabledBrushStyle" value="1" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="3"/>
+		<designed target="OnClickPenStyle" value="1" ver="3"/>
+		<designed target="OnClickPenWidth" value="1" ver="3"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="3"/>
+		<designed target="OnHoverPenStyle" value="1" ver="3"/>
+		<designed target="OnHoverPenWidth" value="1" ver="3"/>
+		<designed target="DisabledPenColor" value="4288716960" ver="3"/>
+		<designed target="DisabledPenStyle" value="1" ver="3"/>
+		<designed target="DisabledPenWidth" value="1" ver="3"/>
+		<do-trace access-modifier="private" target="Enabled" ver="3">
+			<body>
+				<![CDATA[(RowNumber != PatternsTable.GetRowCount()-1 && RowNumber != -1)?(true):(false)]]>
+			</body>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="MouseClick">
+			<body kind="javascript">
+				<![CDATA[//Двигаем строку вверх
+var tempRow;
+var currentRow;
+
+//Перемещаем строку вниз
+currentRow = pSettingsForm.Settings.Patterns.Table.GetCellData(RowNumber,0);
+tempRow = pSettingsForm.Settings.Patterns.Table.GetCellData(RowNumber + 1,0);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber+1,0,currentRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber,0,tempRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber+1,0,currentRow);
+pSettingsForm.Settings.Patterns.Table.SetCellData(RowNumber,0,tempRow);
+//Выделяем перенесенную строку
+PatternsTable.SetSelectedRows(JSON.stringify([RowNumber + 1]));
+pSettingsForm.CheckModify();
+]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

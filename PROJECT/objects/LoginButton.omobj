@@ -1,0 +1,140 @@
+<type access-modifier="private" name="LoginButton" display-name="LoginButton" uuid="0ac16fd1-542c-42eb-b4bf-e9e36381a622" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="3">
+	<designed target="X" value="0" ver="3"/>
+	<designed target="Y" value="0" ver="3"/>
+	<designed target="Rotation" value="0" ver="3"/>
+	<designed target="Scale" value="1" ver="3"/>
+	<designed target="Visible" value="true" ver="3"/>
+	<designed target="Enabled" value="true" ver="3"/>
+	<designed target="Tooltip" value="" ver="3"/>
+	<object access-modifier="private" name="Select" display-name="Select" uuid="82d3625e-c5aa-4994-b812-62772b6f538c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="3">
+		<designed target="X" value="0" ver="3"/>
+		<designed target="Y" value="0" ver="3"/>
+		<designed target="Rotation" value="0" ver="3"/>
+		<designed target="Scale" value="1" ver="3"/>
+		<designed target="Visible" value="true" ver="3"/>
+		<designed target="Enabled" value="true" ver="3"/>
+		<designed target="Tooltip" value="" ver="3"/>
+		<designed target="Width" value="180" ver="3"/>
+		<designed target="Height" value="56" ver="3"/>
+		<designed target="RoundingRadius" value="0" ver="3"/>
+		<designed target="PenColor" value="4278190080" ver="3"/>
+		<designed target="PenStyle" value="1" ver="3"/>
+		<designed target="PenWidth" value="1" ver="3"/>
+		<designed target="BrushColor" value="0xffc4c4c4" ver="3"/>
+		<designed target="BrushStyle" value="1" ver="3"/>
+		<object access-modifier="private" name="Reg" display-name="Reg" uuid="69baa481-9801-4e14-a742-9bf649133118" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="0" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="180" ver="3"/>
+			<designed target="Height" value="24" ver="3"/>
+			<designed target="Text" value="Регистрация" ver="3"/>
+			<designed target="Font" value="PT Astra Sans,16,-1,5,75,0,0,0,0,0,Bold" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Text_User" display-name="Text_User" uuid="81ecfc65-a801-43f0-b8cc-c095d7961f53" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="24" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="180" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="Text" value="Пользователь: Администратор" ver="3"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,50,0,0,0,0,0,Regular" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+		</object>
+		<object access-modifier="private" name="Text_Group" display-name="Text_Group" uuid="52499859-9d8c-46f5-8a86-7641caaf0b3d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="3">
+			<designed target="X" value="0" ver="3"/>
+			<designed target="Y" value="40" ver="3"/>
+			<designed target="Rotation" value="0" ver="3"/>
+			<designed target="Scale" value="1" ver="3"/>
+			<designed target="Visible" value="true" ver="3"/>
+			<designed target="Enabled" value="true" ver="3"/>
+			<designed target="Tooltip" value="" ver="3"/>
+			<designed target="Width" value="180" ver="3"/>
+			<designed target="Height" value="16" ver="3"/>
+			<designed target="Text" value="Группа: Администраторы" ver="3"/>
+			<designed target="Font" value="PT Astra Sans,9,-1,5,50,0,0,0,0,0,Regular" ver="3"/>
+			<designed target="FontColor" value="4278190080" ver="3"/>
+			<designed target="TextAlignment" value="132" ver="3"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="MouseClick">
+			<body kind="om">
+				<![CDATA[if (!unit.OpenWindows.Popup_Security){
+	OpenPopWindow.Invoke();
+}]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseEnter">
+			<body kind="om">
+				<![CDATA[Select.PenWidth=2;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[Select.PenWidth=1;]]>
+			</body>
+		</do-on>
+		<designed target="ZValue" value="0" ver="3"/>
+		<designed target="Opacity" value="1" ver="3"/>
+		<init target="BrushColor" ver="4">
+			<expr>
+				<![CDATA[unit.Color.Gray]]>
+			</expr>
+		</init>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="4" event="MouseClick">
+			<app path="/usr/bin/fly-vkbd" command-line=""/>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="fb848381-10b0-44d2-ae88-59817c648b3b" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="3">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="4" event="CurrentUserChanged">
+			<body kind="om">
+				<![CDATA[if (unit.Security.SecurityContext.GuestMode)
+{
+    here.Select.Text_Group.Text="Группа: ";
+    here.Select.Text_User.Text="Пользователь: Гость";
+    //Foot_Frame.Footer.LogOff();
+    unit.Global.MessagesOper.Value="<Subcondition Message='АРМ "+unit.Global.Network.ComputerName+". Отсутствует зарегистрированный пользователь. Используется гостевой доступ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+}
+else
+{
+	GroupName: string = unit.Security.SecurityContext.GroupDisplayName(0);
+    here.Select.Text_Group.Text="Группа: " + GroupName;
+    here.Select.Text_User.Text="Пользователь: " + here.SecurityContext.CurrentUserDisplayName;
+    //Foot_Frame.Footer.LogOn(SecurityContext_1.CurrentUser);
+    unit.Global.MessagesOper.Value="<Subcondition Message='АРМ "+unit.Global.Network.ComputerName+". Регистрация пользователя под учетной записью "+ unit.Security.SecurityContext.CurrentUser +" выполнена успешно' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+}
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="4" event="ConnectedChanged">
+			<body kind="om">
+				<![CDATA[if (!SecurityContext.Connected)
+    {
+    here.Select.Text_Group.Text="";
+    here.Select.Text_User.Text="Незарегистрированный";
+    unit.Global.MessagesOper.Value="<Subcondition Message='. АРМ " + unit.Global.Network.ComputerName + ". Отсутствует связь со службой регистрации пользователей. "+here.SecurityContext.ConnectionError +" ' Value='' Sound='' Severity='9' Enabled='1' SoundEnabled='0' />";
+    }]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OpenPopWindow" display-name="OpenPopWindow" uuid="33a1b2c1-56ac-4a11-ac36-a4246ee52303" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="2">
+		<designed target="Enabled" value="true" ver="2"/>
+		<designed target="InvokeTrigger" value="false" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="Invoked" form-by-id="false" form-action="open-new">
+			<object access-modifier="private" uuid="134c42ea-7407-4132-b7ce-742faa8a1f75" base-type="Login" base-type-id="58a0546d-1b58-4773-b975-1614ea34f297" ver="3"/>
+		</do-on>
+	</object>
+	<designed target="ZValue" value="0" ver="3"/>
+	<designed target="Opacity" value="1" ver="3"/>
+</type>
+

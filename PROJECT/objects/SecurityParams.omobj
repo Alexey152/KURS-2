@@ -1,0 +1,714 @@
+<object access-modifier="private" name="SecurityParams" display-name="SecurityParams" uuid="a9e0ac9d-c9c3-4f78-82d4-fa17051f6fe7" base-type="JustDummy" base-type-id="34bc054d-53be-4c82-873b-bd509d7c7c3b" ver="2">
+	<object access-modifier="private" name="SecurityManagerCurrentUser" display-name="SecurityManagerCurrentUser" uuid="4691096d-eae0-4d2e-b45e-034824d9ce50" base-type="SecurityManagerUser" base-type-id="896178de-ae2c-4ff7-918c-3a0035e435ab" ver="2">
+		<designed target="Login" value="" ver="2"/>
+		<designed target="Name" value="" ver="2"/>
+		<designed target="Surname" value="" ver="2"/>
+		<designed target="MidName" value="" ver="2"/>
+		<designed target="DispalyName" value="" ver="2"/>
+		<designed target="Position" value="" ver="2"/>
+		<designed target="Unit" value="" ver="2"/>
+		<designed target="Email" value="" ver="2"/>
+		<designed target="Phone" value="" ver="2"/>
+		<designed target="Comment" value="" ver="2"/>
+		<designed target="ForcePassChange" value="true" ver="2"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="LoadComplete">
+			<body kind="javascript">
+				<![CDATA[CurrentUser_Login = Login;
+CurrentUser_Surname = Surname;
+CurrentUser_Name = Name;
+CurrentUser_MidName = MidName;
+CurrentUser_DispalyName = DispalyName;
+CurrentUser_Position = Position;
+CurrentUser_Unit = Unit;
+CurrentUser_Email = Email;
+CurrentUser_Phone = Phone;
+CurrentUser_Comment = Comment;
+CurrentUser_Group_RawValue = SecurityManagerCurrentUser.GetGroupsList();
+CurrentUser_Group = UserGroup(SecurityManagerCurrentUser.GetGroupsList());
+CurrentUser_GroupUid  = "";
+GetApplications_List = GetApplicationsList();
+UserRightUpdate = GetApplicationsList()
+unit.SecurityParams.UseGroupUpdate=true;
+]]>
+			</body>
+		</do-on>
+		<init target="SecurityManager" ver="2">
+			<object access-modifier="private" uuid="26579d4f-e36d-4281-810a-df4742b62add" base-type="SecurityManager" base-type-id="179958e0-f45a-40f3-9668-98e4ea2987da" ver="2">
+				<init target="SecurityContext" ver="2" ref="Global_SecurityContext"/>
+			</object>
+		</init>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="SaveComplete">
+			<body kind="om">
+				<![CDATA[DebugTool_1.Log("Сохранен");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityManagerApplication" display-name="SecurityManagerApplication" uuid="dab28edb-efa9-4db7-937b-427bf3f6cce9" base-type="SecurityManagerApplication" base-type-id="cfc3985c-54fc-4fe4-b001-cade048d6ee0" ver="2">
+		<designed target="ApplicationName" value="" ver="2"/>
+		<init target="SecurityManager" ver="2">
+			<object access-modifier="private" uuid="76938d86-734f-4de5-833d-2375d1803474" base-type="SecurityManager" base-type-id="179958e0-f45a-40f3-9668-98e4ea2987da" ver="2">
+				<init target="SecurityContext" ver="2" ref="Global_SecurityContext"/>
+			</object>
+		</init>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="LoadComplete">
+			<body kind="om">
+				<![CDATA[LastAppTokenList = GetTokensList();]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="3" event="SaveComplete">
+			<body kind="om">
+				<![CDATA[needSave = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityManagerGroup" display-name="SecurityManagerGroup" uuid="9f28c68f-f3da-4710-8fec-763905a04b36" base-type="SecurityManagerGroup" base-type-id="1b3328a7-7dbe-4010-9f89-ee41fc861a69" ver="2">
+		<designed target="GroupName" value="" ver="2"/>
+		<designed target="GroupDescription" value="" ver="2"/>
+		<init target="SecurityManager" ver="2">
+			<object access-modifier="private" uuid="483a6707-8dcc-472b-8f86-db76e01dfd38" base-type="SecurityManager" base-type-id="179958e0-f45a-40f3-9668-98e4ea2987da" ver="2">
+				<init target="SecurityContext" ver="2" ref="Global_SecurityContext"/>
+			</object>
+		</init>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="LoadComplete">
+			<body kind="om">
+				<![CDATA[LastMemberList = GetMembersList();
+GetApplicationsGroup = GetApplicationsList();
+
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="SaveComplete">
+			<body kind="om">
+				<![CDATA[DebugTool_1.Log("Сохранен");
+CurrentUser_GroupUid = "";]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="2" event="SaveFailed">
+			<body kind="om">
+				<![CDATA[DebugTool_1.Log("Ошибка сохранения");
+DebugTool_1.Log(FailReasonCode);
+CurrentUser_GroupUid = "";]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SecurityManager" display-name="SecurityManager" uuid="abaeec65-7cac-4355-8542-a9ca9ac2a785" base-type="SecurityManager" base-type-id="179958e0-f45a-40f3-9668-98e4ea2987da" ver="2">
+		<init target="SecurityContext" ver="2">
+			<object access-modifier="private" uuid="f77adb0c-4f97-4220-acbb-55b056c73890" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="2"/>
+		</init>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="2" event="RequestGroupListComplete">
+			<body kind="om">
+				<![CDATA[//Список групп 
+CurrentGroupList = JSONGroupList;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="2" event="RequestAppListComplete">
+			<body kind="om">
+				<![CDATA[AppList = JSONAppList;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="2" event="RequestUsersListComplete">
+			<body kind="om">
+				<![CDATA[UserList = JSONUsersList;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="2" event="DeleteUserComplete">
+			<body kind="om">
+				<![CDATA[DebugTool_1.Log("Пользователь удален");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Global_SecurityContext" display-name="Global_SecurityContext" uuid="d7733abe-d77a-4231-870f-b68b86ab2d0b" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="CurrentUserChanged">
+			<body kind="om">
+				<![CDATA[unit.Global_Params.currentUserLogin = "Текущий пользователь: " + CurrentUserDisplayName;
+unit.Global_Params.guestMode = GuestMode;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CurrentUser_Login" display-name="CurrentUser_Login" uuid="cb5add5d-913b-499e-b34e-a46f347232e1" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurentUserSeleted" display-name="CurentUserSeleted" uuid="d9c4eb03-0791-461d-b9c6-a39bf44998e6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[//unit.SecurityParams.SecurityManagerCurrentUser.Load(unit.SecurityParams.CurentUserSeleted);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CurrentUser_Surname" display-name="CurrentUser_Surname" uuid="f21e01bb-44ea-46af-9fa5-8f8fdb6d9713" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Name" display-name="CurrentUser_Name" uuid="0d472a02-972d-497f-8a10-0f44667186cd" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_MidName" display-name="CurrentUser_MidName" uuid="73c6e6b7-87f1-4c4b-a7b5-bdc14ceb9c03" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_DispalyName" display-name="CurrentUser_DispalyName" uuid="2dd6be2e-7c76-4d8a-af89-d15a34fee019" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Position" display-name="CurrentUser_Position" uuid="5110695c-1ff1-4969-abd1-e39d97a6680e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Unit" display-name="CurrentUser_Unit" uuid="f67027ff-35e6-4be5-bf94-bcb1ad21101a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Phone" display-name="CurrentUser_Phone" uuid="e2f22d5f-a012-441a-948e-13761c550e1a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Comment" display-name="CurrentUser_Comment" uuid="323f82e0-b232-4df7-b191-435d24c0b250" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<do access-modifier="private" name="UserGroup" display-name="UserGroup" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[//var temp_1 = JSON.parse(SecurityManagerUser.GetGroupsList()); // парсится json из фуекции
+var temp_1 = JSON.parse(JsonStringCurrent); // парсится json из фуекции
+var temp_string="";
+for (var i = 0; i<temp_1.data.length; i++) // цикл записи в строку групп в которых состоит пользователь
+{
+	temp_string = temp_string + JSON.stringify(temp_1.data[i].groupName);
+	temp_string = temp_string.replace('"','');//удалениеи ковычек
+	temp_string = temp_string.replace('"','');
+	if (i+1!=temp_1.data.length) // добавление запятых между группами
+		{
+			temp_string = temp_string + ",";
+		}
+}
+return temp_string;]]>
+		</body>
+		<param access-modifier="private" name="JsonStringCurrent" display-name="" uuid="886cf6bb-dffb-41b3-a35f-1e7350a319ac" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	</do>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="f14b8d2a-7220-48bf-a3bf-6dff1bd34e71" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="2"/>
+	<object access-modifier="private" name="GropupUsers_1" display-name="GropupUsers_1" uuid="e46189be-b2c5-4523-92c5-5d18c423a381" base-type="GropupUsers" base-type-id="025398a9-81c1-444e-ae9a-a2a35d5ea735" base-const="true" base-ref="true" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Email" display-name="CurrentUser_Email" uuid="44bb4631-ea23-4248-8397-95cdc56af32a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="LastMemberList" display-name="LastMemberList" uuid="d5affe21-40ca-475c-870e-61a77e788ef5" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="LastAppTokenList" display-name="LastAppTokenList" uuid="53b93de6-fb29-4d07-9fc0-716d1756ff8d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Pass" display-name="CurrentUser_Pass" uuid="15d12a26-f9eb-49b4-b049-bf2838951d76" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentGroupSelected" display-name="CurrentGroupSelected" uuid="cfb05f20-adb4-4ba2-bd48-b461d12d7693" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentGroupList" display-name="CurrentGroupList" uuid="6e7c60f2-cd78-4e87-a0ee-6bad8606cc11" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="AppList" display-name="AppList" uuid="94f81ad6-496f-40bd-b565-77e5ad5f0964" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="UserList" display-name="UserList" uuid="b8f2d5a3-c1f7-4f22-874b-ba64d9015ac5" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="AppCurrentRight" display-name="AppCurrentRight" uuid="155a2907-077e-41be-9f9e-352fc20b1a6c" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="AppCurrentRightType" display-name="AppCurrentRightType" uuid="ead603e9-157a-4867-a96f-af85f878cd18" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="AppCurrentApp" display-name="AppCurrentApp" uuid="9bd4e6e1-85dc-45f4-9acf-203ec05510a4" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Group" display-name="CurrentUser_Group" uuid="5506d47e-73cd-4c11-8d4e-83f94159e5a6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="PassComplexity" display-name="PassComplexity" uuid="c67cffe9-cdce-40cf-9688-d3cd4f769240" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="PassComplexityToolTip" display-name="PassComplexityToolTip" uuid="28e8173a-20ba-478a-9912-d989fcfcc16d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="GetApplications_List" display-name="GetApplications_List" uuid="27f96a0c-a1dd-4838-ab22-2819069ceabb" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[// получаем значение прав и эффективных прав
+var rightsArray = [];
+var effectiveRightsArray = [];
+
+if (value != "") {
+	if (JSON.parse(value).data != "") {
+		var userApps = JSON.parse(value);
+	
+		for (var i=0; i<userApps.data.length; i++ ) {
+			var userAppID = userApps.data[i].appID;
+			var userRight = JSON.parse(unit.SecurityParams.SecurityManagerCurrentUser.GetRights(userAppID));
+			var userEffectiveRight = JSON.parse(unit.SecurityParams.SecurityManagerCurrentUser.GetRights(userAppID));
+			
+			rightsArray = rightsArray.concat(userRight.data);
+			effectiveRightsArray = effectiveRightsArray.concat(userEffectiveRight.data);
+		}
+	}
+}
+
+var object = {};
+object.data = [];
+object.data = rightsArray;
+unit.SecurityParams.CurrentUser_Rights.Value = JSON.stringify(object);
+object.data = effectiveRightsArray;
+unit.SecurityParams.CurrentUser_EffectiveRights.Value= JSON.stringify(object);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="GroupRightUpdate" display-name="GroupRightUpdate" uuid="08d85cbd-bee1-43ea-a1df-a8f2f94b0e87" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="UserRightUpdate" display-name="UserRightUpdate" uuid="2eb956e8-0b2c-493c-95ff-123a77d61264" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="ListOfUserUpdate" display-name="ListOfUserUpdate" uuid="fda439b9-55e8-4ff5-b2af-f91395f00477" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="CanSave" display-name="CanSave" uuid="3a7fb028-47c8-4343-9896-27ad0d470e32" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2"/>
+	<object access-modifier="private" name="UseGroupUpdate" display-name="UseGroupUpdate" uuid="d354b8cb-4a10-4d6f-91b2-8c446d1c8a2b" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[//DebugTool_1.Log("Обновление групп пользователей");]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="ForcePassChange" display-name="ForcePassChange" uuid="c96b184a-4c21-417c-90ed-b91e063569a9" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[SecurityManagerCurrentUser.ForcePassChange = value;]]>
+			</body>
+		</do-on>
+	</object>
+	<do access-modifier="private" name="StringRights" display-name="StringRights" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[// если нашли нужное название парава то выводим его название и нужное значение, если нет то Nan
+var tokenValue = "";
+var returnString = "";
+var JSONString = {
+	RightName:"Nan",
+	tokenValueAllow: "Nan"
+};
+
+
+if (StringRightName=="SessionDurationLimit")		//проверка на правило и замена на преобразованое значение  - Максимальное время сессии, мин
+{
+	tokenValue = String(Number(StringTokenValueAllow)); //сек в минуты
+	JSONString = {
+		RightName: StringRightName,
+		tokenValueAllow: tokenValue
+	};
+	return JSON.stringify(JSONString);
+}
+
+if (StringRightName=="PasswordMinLength")		//проверка на правило Минимальная длина пароля
+{
+	tokenValue = StringTokenValueAllow;
+	passwordMinLength =tokenValue;
+	JSONString = {
+		RightName: StringRightName,
+		tokenValueAllow: tokenValue
+	};
+	return JSON.stringify(JSONString);
+}
+
+if (StringRightName=="PasswordsInHistory")		//проверка на правило Количество паролей в истории
+{
+	tokenValue = StringTokenValueAllow;
+	JSONString = {
+		RightName: StringRightName,
+		tokenValueAllow: tokenValue
+	};
+	return JSON.stringify(JSONString);
+}
+
+if (StringRightName=="PasswordComplexity")		//проверка на правило и замена на преобразованое значени  - Сложность пароля
+{	
+	var param_CurValue_int = Math.round(Number(StringTokenValueAllow));	//данные о пароле
+	unit.Global_Params.valuePasswordComplexity = param_CurValue_int;
+	//var PassComplexity = ""; 
+	// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы	
+	if ((param_CurValue_int&1)==1)
+	{					
+		tokenValue = "Цифры";
+	}
+	if ((param_CurValue_int&2)==2)
+	{				
+		if ((param_CurValue_int&1)==1)//добавление ; если есть предыдущие записи 
+		{
+			tokenValue = tokenValue + ";"
+		}
+		tokenValue = tokenValue + "Буквы нижнего регистра";
+	}				
+	if ((param_CurValue_int&4)==4)
+	{
+		if (((param_CurValue_int&1)==1)||((param_CurValue_int&2)==2))
+		{
+			tokenValue = tokenValue + ";";
+		}
+		tokenValue = tokenValue + "Буквы верхнего регистра";
+	}
+	if ((param_CurValue_int&8)==8)
+	{		
+		if (((param_CurValue_int&1)==1)||((param_CurValue_int&2)==2)||((param_CurValue_int&4)==4))
+		{
+			tokenValue = tokenValue + ";";
+		}	
+		tokenValue = tokenValue + "Cпец.символы";
+	}
+	JSONString = {
+		RightName: StringRightName,
+		tokenValueAllow: tokenValue
+	};
+	return JSON.stringify(JSONString);
+}
+
+if (StringRightName=="PasswordAge")		//проверка на правило Количество паролей в истории
+{
+	tokenValue = "Мин.:" + String(Number(StringTokenValueAllow.substring(0,StringTokenValueAllow.indexOf(";")))/86400) + ";"+"Макс.:" + String(Number(StringTokenValueAllow.substring(StringTokenValueAllow.indexOf(";")+1,StringTokenValueAllow.length))/86400);
+	JSONString = {
+		RightName: StringRightName,
+		tokenValueAllow: tokenValue
+	};
+	return JSON.stringify(JSONString);
+}
+//Выводится Nan если ничего не нашлось 
+return JSON.stringify(JSONString);
+]]>
+		</body>
+		<param access-modifier="private" name="StringRightName" display-name="" uuid="b1508ff0-f517-4a2d-b8f1-d41c6af1bb2e" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+		<param access-modifier="private" name="StringTokenValueAllow" display-name="" uuid="91e4ad83-cd82-4212-aeb5-a62684320860" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	</do>
+	<object access-modifier="private" name="ViewConfiguration" display-name="ViewConfiguration" uuid="cbf6f96d-d700-4a69-a49e-033cbecd3d9d" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="SecurityContext" ver="2" ref="Global_SecurityContext"/>
+		<init target="Application" ver="2" value="Alpha.Security"/>
+		<init target="Right" ver="2" value="ViewConfiguration"/>
+	</object>
+	<object access-modifier="private" name="ConfigurationAccess" display-name="ConfigurationAccess" uuid="38f17da1-789d-470a-b0b8-044e96a034e5" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="2">
+		<init target="SecurityContext" ver="2" ref="Global_SecurityContext"/>
+		<init target="Application" ver="2" value="Alpha.Security"/>
+		<init target="Right" ver="2" value="ConfigurationAccess"/>
+	</object>
+	<object access-modifier="private" name="CurComplexity" display-name="CurComplexity" uuid="56e70d8a-d919-43a1-8f80-2b9e9cc0b133" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="2" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[unit.SecurityParams.PassComplexity = "";
+if(unit.SecurityParams.CurComplexity!=0)
+{
+	if ((unit.SecurityParams.CurComplexity&1)==1)// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы
+	{		
+		unit.SecurityParams.PassComplexity+="(?=.*\\d)";
+		PassComplexityToolTip = "Цифры";
+	}
+	
+	if ((unit.SecurityParams.CurComplexity&2)==2)// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы
+	{					
+		unit.SecurityParams.PassComplexity+="(?=.*[a-zа-я])";		
+		if ((unit.SecurityParams.CurComplexity&1)==1)//добавление ; если есть предыдущие записи 
+		{
+			PassComplexityToolTip = PassComplexityToolTip + "\n"
+		}
+		PassComplexityToolTip = PassComplexityToolTip + "Буквы нижнего регистра";
+	}
+
+	if ((unit.SecurityParams.CurComplexity&4)==4)// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы
+	{					
+		unit.SecurityParams.PassComplexity+="(?=.*[A-ZА-Я])";
+		if ((unit.SecurityParams.CurComplexity&1)==1||(unit.SecurityParams.CurComplexity&2)==2)
+		{
+			PassComplexityToolTip = PassComplexityToolTip + "\n";
+		}
+		PassComplexityToolTip = PassComplexityToolTip + "Буквы верхнего регистра";
+	}
+
+	if ((unit.SecurityParams.CurComplexity&8)==8)// проверка на взведенный бит 1 - цифры 2 - буквы нижнего регистра 4 - буквы верхнего регистра 4 - спец.символы
+	{					
+		unit.SecurityParams.PassComplexity+="(?=.*[!@#$&])";
+
+		if ((unit.SecurityParams.CurComplexity&1)==1||(unit.SecurityParams.CurComplexity&2)==2||(unit.SecurityParams.CurComplexity&4)==4)
+		{
+			PassComplexityToolTip = PassComplexityToolTip + "\n";
+		}
+		PassComplexityToolTip = PassComplexityToolTip + "Cпец.символы";
+	}
+		unit.SecurityParams.PassComplexity+=".{"+passwordMinLength+",20}";
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="tempCount" display-name="tempCount" uuid="4a91bebc-f8b1-4f11-a825-16853356bf1f" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="2"/>
+	<object access-modifier="private" name="passwordMinLength" display-name="passwordMinLength" uuid="c72118db-b479-494e-a5f4-69c2ec8f2b4b" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="2"/>
+	<do access-modifier="private" name="StringRightsDefValue" display-name="StringRightsDefValue" ver="2" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[// если нашли нужное название парава то выводим его название и нужное значение, если нет то Nan
+
+if (StringRightName=="SessionDurationLimit")		//проверка на правило и замена на преобразованое значение  - Максимальное время сессии, мин
+{
+	return "750";
+}
+
+if (StringRightName=="PasswordMinLength")		//проверка на правило Минимальная длина пароля
+{
+	return "7";
+}
+
+if (StringRightName=="PasswordsInHistory")		//проверка на правило Количество паролей в истории
+{
+	return "3";
+}
+
+if (StringRightName=="PasswordComplexity")		//проверка на правило и замена на преобразованое значени  - Сложность пароля
+{	
+	return  "15";
+}
+
+if (StringRightName=="PasswordAge")		//проверка на правило Количество паролей в истории
+{
+	return "172800;7776000";
+}
+//Выводится Nan если ничего не нашлось 
+return "Nan";
+]]>
+		</body>
+		<param access-modifier="private" name="StringRightName" display-name="" uuid="b1508ff0-f517-4a2d-b8f1-d41c6af1bb2e" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="2"/>
+	</do>
+	<object access-modifier="private" name="needSave" display-name="needSave" uuid="1b327472-2f6e-4597-bded-ee463de36f1d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="userWithoutGroup" display-name="userWithoutGroup" uuid="96f0929a-b960-441e-8b9e-7219c4235550" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="3"/>
+	<object access-modifier="private" name="CurrentUser_GroupUid" display-name="CurrentUser_GroupUid" uuid="fc044769-0aa0-4860-b206-7a1f588cfdbf" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Group_RawValue" display-name="CurrentUser_Group_RawValue" uuid="ae329f59-da8d-4ea4-a178-9b3e394fc467" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2"/>
+	<object access-modifier="private" name="CurrentUser_Rights" display-name="CurrentUser_Rights" uuid="3438d220-4511-4544-8fac-bc641c811fc1" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="CurrentUser_EffectiveRights" display-name="CurrentUser_EffectiveRights" uuid="4888c452-03ec-488f-832c-cf6a7f4bfad5" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<do access-modifier="private" name="UpdateUserRights" display-name="UpdateUserRights" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[var currentRights = JSON.parse(CurrentUser_Rights.Value).data;
+var userRights = JSON.parse(GetCurrentUserRights()).data;	
+
+// Проверка на изменения существующих прав
+if (userRights != "") {	
+	//log("\nadded rights: " + JSON.stringify(rights));
+	//log("\nuserRights: " + JSON.stringify(userRights));
+	// Поиск прав, у которых изменились значения
+	var updatedRights = [];
+	for (var i = 0; i < currentRights.length; i++) {
+		var appName = currentRights[i].appName;
+		var tokenName = currentRights[i].tokenName;
+		var tokenValueAllow = currentRights[i].tokenValueAllow;
+		var tokenValueDeny = currentRights[i].tokenValueDeny;
+		var match = false;
+		var tempRight;
+		
+		for (var j = 0; j < userRights.length; j++) {
+			if (appName == userRights[j].appName && tokenName == userRights[j].tokenName) {
+				if (tokenValueAllow != userRights[j].tokenValueAllow || tokenValueDeny != userRights[j].tokenValueDeny) {
+					updatedRights.push(currentRights[i]);
+					currentRights.splice(i, 1);
+					i -= 1;
+					break;
+				}
+				if (tokenValueAllow == userRights[j].tokenValueAllow && tokenValueDeny == userRights[j].tokenValueDeny) {
+					currentRights.splice(i, 1);
+					i -= 1;
+					break;
+				}
+			}
+		}
+	}
+	//log("\ncurrentRights: " + JSON.stringify(currentRights));
+	//log("\nupdatedRights: " + JSON.stringify(updatedRights));
+	
+	// Изменяем значения прав
+	for (var i = 0; i < updatedRights.length; i++) {
+		SecurityManagerCurrentUser.ChangeRight(updatedRights[i].appName, updatedRights[i].tokenName, updatedRights[i].tokenValueAllow,	 updatedRights[i].tokenValueDeny);
+	}
+} 
+
+// Добавляем отсутствующие
+for (var i = 0; i < currentRights.length; i++) {
+	var tokenType;
+	if (currentRights[i].tokenType == "bool") tokenType = 1;
+	if (currentRights[i].tokenType == "string") tokenType = 0;
+	SecurityManagerCurrentUser.AddRight(currentRights[i].appName, currentRights[i].tokenName, tokenType, currentRights[i].tokenValueAllow,	 currentRights[i].tokenValueDeny);
+}
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="DeleteUserRights" display-name="DeleteUserRights" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var userApps = JSON.parse(GetApplications_List.Value).data;
+var userRights = JSON.parse(GetCurrentUserRights()).data;	
+
+var newRights = JSON.parse(CurrentUser_Rights.Value).data;
+if (userRights == "") return;
+if (newRights == "") {
+	for (var i = 0; i < userRights.length; i++) {
+		unit.SecurityParams.SecurityManagerCurrentUser.DeleteRight(userRights[i].appName, userRights[i].tokenName);
+	}
+	return;
+}
+
+//log("\nnewRights: " + JSON.stringify(newRights));
+var removableRights = [];
+for (var i = 0; i < userRights.length; i++) {
+	var appName = userRights[i].appName;
+	var tokenName = userRights[i].tokenName;
+	var match = false;
+	
+	for (var j = 0; j < newRights.length; j++) {
+		if (appName == newRights[j].appName && tokenName == newRights[j].tokenName) match = true;
+		//log(appName + " : " + newRights[j].appName + " | " + tokenName + " : " + newRights[j].tokenName);
+	}
+	
+	if (!match) removableRights.push(userRights[i]);
+	//log(match);
+}
+
+
+for (var i = 0; i < removableRights.length; i++) {
+	unit.SecurityParams.SecurityManagerCurrentUser.DeleteRight(removableRights[i].appName, removableRights[i].tokenName);
+}
+
+//log("\nremovableRights: " + JSON.stringify(removableRights));
+
+
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="SafeUser" display-name="SafeUser" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[DeleteUserRights();
+UpdateUserRights();
+SecurityManagerCurrentUser.Save();
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="GetCurrentUserRights" display-name="GetCurrentUserRights" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[// Функция получения прав текущего пользователя
+var userApps = JSON.parse(GetApplications_List.Value).data;
+var userRights = [];
+var obj = {};
+obj.data = [];
+
+if (userApps != "") {
+	for (var i=0; i< userApps.length; i++ ) {
+		var userAppID = userApps[i].appID;
+		userRights = userRights.concat(JSON.parse(unit.SecurityParams.SecurityManagerCurrentUser.GetRights(userAppID)).data);
+	}
+}
+
+obj.data = userRights;
+return JSON.stringify(obj);
+]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="CurrentGroup_Rights" display-name="CurrentGroup_Rights" uuid="4ae2bdbb-bdff-4765-b00f-beea3244f138" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<object access-modifier="private" name="GetApplicationsGroup" display-name="GetApplicationsGroup" uuid="dca49a69-394f-4c52-93f6-34a2ac6475d0" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="2">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="3" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[// получаем значение прав и эффективных прав
+var rightsArray = [];
+var effectiveRightsArray = [];
+
+if (value != "") {
+	if (JSON.parse(value).data != "") {
+		var userApps = JSON.parse(value);
+	
+		for (var i=0; i<userApps.data.length; i++ ) {
+			var userAppID = userApps.data[i].appID;
+			var userRight = JSON.parse(unit.SecurityParams.SecurityManagerGroup.GroupRights(userAppID));
+			var userEffectiveRight = JSON.parse(unit.SecurityParams.SecurityManagerGroup.GroupEffectiveRights(userAppID));
+			
+			rightsArray = rightsArray.concat(userRight.data);
+			effectiveRightsArray = effectiveRightsArray.concat(userEffectiveRight.data);
+		}
+	}
+}
+
+var object = {};
+object.data = [];
+object.data = rightsArray;
+unit.SecurityParams.CurrentGroup_Rights.Value = JSON.stringify(object);
+object.data = effectiveRightsArray;
+unit.SecurityParams.CurrenGroup_EffectiveRights.Value= JSON.stringify(object);]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CurrenGroup_EffectiveRights" display-name="CurrenGroup_EffectiveRights" uuid="6f916d56-a55f-4dd4-b0b7-2d77d5a5ef1b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="3"/>
+	<do access-modifier="private" name="SafeGroup" display-name="SafeGroup" ver="3" type="" type-id="">
+		<body kind="om">
+			<![CDATA[DeleteGroupRights();
+UpdateGroupRights();
+SecurityManagerGroup.Save();
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="DeleteGroupRights" display-name="DeleteGroupRights" ver="3" type="" type-id="">
+		<body kind="javascript">
+			<![CDATA[var groupApps = JSON.parse(GetApplicationsGroup).data;
+var groupRights;
+
+if (groupApps == "") return;
+for (var i=0; i<groupApps.length; i++ ) {
+	var groupAppID = groupApps[i].appID;
+	groupRights = JSON.parse(unit.SecurityParams.SecurityManagerGroup.GroupRights(groupAppID)).data;
+}
+
+//log("\nuserRights: " + JSON.stringify(userRights));
+
+var newRights = JSON.parse(CurrentGroup_Rights.Value).data;
+if (groupRights == "") return;
+if (newRights == "") {
+	for (var i = 0; i < groupRights.length; i++) {
+		unit.SecurityParams.SecurityManagerGroup.DeleteRight(groupRights[i].appName, groupRights[i].tokenName);
+	}
+	return;
+}
+
+//log("\nnewRights: " + JSON.stringify(newRights));
+var removableRights = [];
+for (var i = 0; i < groupRights.length; i++) {
+	var appName = groupRights[i].appName;
+	var tokenName = groupRights[i].tokenName;
+	var match = false;
+	
+	for (var j = 0; j < newRights.length; j++) {
+		if (appName == newRights[j].appName && tokenName == newRights[j].tokenName) match = true;
+		//log(appName + " : " + newRights[j].appName + " | " + tokenName + " : " + newRights[j].tokenName);
+	}
+	
+	if (!match) removableRights.push(groupRights[i]);
+	//log(match);
+}
+
+
+for (var i = 0; i < removableRights.length; i++) {
+	unit.SecurityParams.SecurityManagerGroup.DeleteRight(removableRights[i].appName, removableRights[i].tokenName);
+}
+
+//log("\nremovableRights: " + JSON.stringify(removableRights));
+
+
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="UpdateGroupRights" display-name="UpdateGroupRights" ver="3" type="" type-id="" form-by-id="true">
+		<body kind="javascript">
+			<![CDATA[var currentRights = JSON.parse(CurrentGroup_Rights.Value).data;
+var groupRights = JSON.parse(GetCurrentGroupRights()).data;	
+
+// Проверка на изменения существующих прав
+if (groupRights != "") {	
+	//log("\nadded rights: " + JSON.stringify(rights));
+	//log("\ngroupRights: " + JSON.stringify(groupRights));
+	// Поиск прав, у которых изменились значения
+	var updatedRights = [];
+	for (var i = 0; i < currentRights.length; i++) {
+		var appName = currentRights[i].appName;
+		var tokenName = currentRights[i].tokenName;
+		var tokenValueAllow = currentRights[i].tokenValueAllow;
+		var tokenValueDeny = currentRights[i].tokenValueDeny;
+		var match = false;
+		var tempRight;
+		
+		for (var j = 0; j < groupRights.length; j++) {
+			if (appName == groupRights[j].appName && tokenName == groupRights[j].tokenName) {
+				if (tokenValueAllow != groupRights[j].tokenValueAllow || tokenValueDeny != groupRights[j].tokenValueDeny) {
+					updatedRights.push(currentRights[i]);
+					currentRights.splice(i, 1);
+					i -= 1;
+					break;
+				}
+				if (tokenValueAllow == groupRights[j].tokenValueAllow && tokenValueDeny == groupRights[j].tokenValueDeny) {
+					currentRights.splice(i, 1);
+					i -= 1;
+					break;
+				}
+			}
+		}
+	}
+	//log("\ncurrentRights: " + JSON.stringify(currentRights));
+	//log("\nupdatedRights: " + JSON.stringify(updatedRights));
+	
+	// Изменяем значения прав
+	for (var i = 0; i < updatedRights.length; i++) {
+		SecurityManagerGroup.ChangeRight(updatedRights[i].appName, updatedRights[i].tokenName, updatedRights[i].tokenValueAllow, updatedRights[i].tokenValueDeny);
+	}
+} 
+
+// Добавляем отсутствующие
+for (var i = 0; i < currentRights.length; i++) {
+	var tokenType;
+	if (currentRights[i].tokenType == "bool") tokenType = 1;
+	if (currentRights[i].tokenType == "string") tokenType = 0;
+	SecurityManagerGroup.AddRight(currentRights[i].appName, currentRights[i].tokenName, tokenType, currentRights[i].tokenValueAllow, currentRights[i].tokenValueDeny);
+}
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="GetCurrentGroupRights" display-name="GetCurrentGroupRights" ver="3" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[// Функция получения прав текущего пользователя
+var groupApps = JSON.parse(GetApplicationsGroup.Value).data;
+var groupRights = [];
+var obj = {};
+obj.data = [];
+
+if (groupApps != "") {
+	for (var i=0; i< groupApps.length; i++ ) {
+		var groupAppID = groupApps[i].appID;
+		groupRights = groupRights.concat(JSON.parse(unit.SecurityParams.SecurityManagerGroup.GroupRights(groupAppID)).data);
+	}
+}
+
+obj.data = groupRights;
+return JSON.stringify(obj);
+]]>
+		</body>
+	</do>
+</object>
+
